@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./tiger.css/reset.css">
+    <link rel="stylesheet" href="./tiger.css/tiger.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="header_wrap"></div>
+        <div class="header_contacts">
+            <div class="header_logo"></div>
+            <div class="header_contacts_info">
+                <div class="header_contacts_info_item">
+                    <span class="header_contacts_item__telephon">8 (800) 700-09-35</span>
+                    <span class="header_contacts_item__tel_comment">Звонок по России бесплатный</span>
+                </div>
+                <button class="btn header_contacts_info_item__btn">Заказать звонок</button>
+                <div class="burger_menu"></div>
+            </div>
+        </div>
+        <div class="header_content">
+            <h2> ДОСТАВКА ГРУЗОВ <br> ПО ВСЕЙ РОССИИ И СНГ</h2>
+            <p>Получите расчет стоимости грузоперевозки за 60 секунд</p>
+            <div class="header_count">
+                <form class="header_count_form" id="prompt-form" method="post" action="/mail.php">
+                    <input class="  header_count_form_input" name="from" type="text" placeholder="Город отправления">
+                    <input class="  header_count_form_input" name="to" type="text" placeholder="Город доставки">
+                    <input class="  header_count_form_input" name="weight" type="text" placeholder="Масса груза, кг">
+                    <input class="  header_count_form__btn" type="submit" value="Быстрый рассчет">
+                </form>
+            </div>
+        </div>
+    </header>
+    <section class="price">
+        <h2>ПРОЙДИТЕ ТЕСТ ЗА 1 МИНУТУ И <span class="styled_price_header">УЗНАЙТЕ СТОИМОСТЬ ГРУЗОПЕРЕВОЗКИ</span> ПРямо
+            сейчас</h2>
+        <div class="apply_questions">
+            <p class="apply_questions_text"><span class="apply_questions_styled_text">Узнайте стоимость грузоперевозки</span>
+                за 60 секунд + получите гарантированную скидку</p>
+            <div class="progress_line">
+                <p class="apply_questions_text">Осталось ответить на 4 вопроса</p>
+                <div class="progrss_line_item progrss_line_item__active"></div>
+                <div class="progrss_line_item"></div>
+                <div class="progrss_line_item"></div>
+                <div class="progrss_line_item"></div>
+            </div>
+            <div class="current_question">
+                <span>Шаг<span class="current_question_number">1</span></span>
+                <div class="current_question_item current_question_item__active"></div>
+                <div class="current_question_item"></div>
+                <div class="current_question_item"></div>
+                <div class="current_question_item"></div>
+                <div class="current_question_item"></div>
+            </div>
+            <div class="apply_questions_start">
+                <div class="question_item">
+                    <div class="question_item_number">1</div>
+                    <p class="question_item_text">Ваш город отправки Москва?</p>
+                    <div class="question_item__answer">
+                        <label class="question_item__answer__checkbox" data.number = '1'>
+                            <input class=" " type="checkbox" name="development">
+                            <div class="question_item__answer__checkbox_wrap">
+                                <div class="question_item__answer__checkbox__checked"></div>
+                            </div>
+                            <span>Да</span>
+                        </label>
+                        <label class="question_item__answer__checkbox" data.number = '2'>
+                            <input class=" " type="checkbox" name="development">
+                            <div class="question_item__answer__checkbox_wrap">
+                                    <div class="question_item__answer__checkbox__checked checkbox_mark_invisible"></div>
+                            </div>
+                            <span>Нет </span>
+                        </label>
+                    </div>
+                </div>
+                <button class="btn apply_questions_start__btn">На следующий шаг</button>
+            </div>
+        </div>
+    </section>
+    <script src="./tiger.js/tiger.js"></script>
+</body>
+
+</html>
