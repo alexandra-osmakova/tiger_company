@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./tiger.css/reset.css">
     <link rel="stylesheet" href="./tiger.css/tiger.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/css/swiper.min.css">
+    <link rel="stylesheet" href="./tiger.css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <title>Document</title>
 </head>
@@ -509,29 +510,98 @@
             pellentesque a. Nullam ut eros eleifend.</p>
         <div class="online_apply_content">
             <form class="online_apply_content_form" id="prompt-form" method="post" action="/mail.php">
-                <span class="form_input_span">Откуда</span>
-                <input class="online_apply_content_style apply_count_form_input" name="from" type="text" placeholder="Из города">
-                <span class="form_input_span">Куда</span>
-                <input class="online_apply_content_style apply_count_form_input" name="to" type="text" placeholder="В город">
-                <span class="form_input_span">Масса груза, кг</span>
-                <select class="online_apply_content_style online_apply_select">
-                    <option>Пункт 1</option>
-                    <option>Пункт 2</option>
-                </select>
-                <span class="form_input_span">Тип авто</span>
-                <select class="online_apply_content_style online_apply_select">
-                    <option>Пункт 1</option>
-                    <option>Пункт 2</option>
-                </select>
-                <span class="form_input_span">Дата</span>
-                <select class="online_apply_content_style online_apply_select">
-                    <option>Пункт 1</option>
-                    <option>Пункт 2</option>
-                </select>
-                <button class="online_apply_content_style online_apply_form__btn" type="submit">Рассчитать стоимость</button>
+                <div class="form_item">
+                    <span class="form_input_span">Откуда</span>
+                    <input class="online_apply_content_style apply_count_form_input" name="from" type="text"
+                        placeholder="Из города">
+                </div>
+                <div class="form_item">
+                    <span class="form_input_span">Куда</span>
+                    <input class="online_apply_content_style apply_count_form_input" name="to" type="text" placeholder="В город">
+                </div>
+                <div class="form_item">
+                    <span class="form_input_span">Масса груза, кг</span>
+                    <select class="online_apply_content_style online_apply_select">
+                        <option>Пункт 1</option>
+                        <option>Пункт 2</option>
+                    </select>
+                    <label class="form_item_checkbox">
+                        <input type="checkbox">
+                        </input>
+                        <div class="form_item_checkbox_wrap">
+                            <span class="icon-check"></span>
+                        </div>
+                        <span class="form_item_checkbox_text">Нужны грузчики</span>
+                    </label>
+                </div>
+                <div class="form_item">
+                    <span class="form_input_span">Тип авто</span>
+                    <select class="online_apply_content_style online_apply_select">
+                        <option>Пункт 1</option>
+                        <option>Пункт 2</option>
+                    </select>
+                </div>
+                <div class="form_item">
+                    <span class="form_input_span">Дата</span>
+                    <select class="online_apply_content_style online_apply_select">
+                        <option>Пункт 1</option>
+                        <option>Пункт 2</option>
+                    </select>
+                </div>
+                <div class="form_item">
+                    <button class="online_apply_content_style online_apply_form__btn" type="submit">Рассчитать
+                        стоимость</button>
+                </div>
             </form>
         </div>
     </section>
+    <footer>
+        <div class="logo_section">
+            <div class="footer_logo"></div>
+        </div>
+        <div class="footer_item">
+            <p class="footer_item_text">Наша миссия заключается в сохранении эмоционального, материального благополучия
+                клиентов и развитии инфраструктуры за счёт быстрых и систематизированных грузоперевозок во всех
+                регионах России. Работая с 2010 года, мы успели провести более 11500 тысяч успешных грузоперевозок.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vitae fermentum velit. </p>
+            <a class="confidential_politics" href="">Политика конфиденциальности</a>
+            <span class="rights_reserved">Все права защищены. © Тайгер Логистик 2018</span>
+            <div class="creator_logo">
+                <div class="drim_logo"></div>
+                <span>Разработка сайта</span>
+            </div>
+        </div>
+        <div class="footer_item">
+            <span class="footer_item_title">ИНФОРМАЦИЯ</span>
+            <ul>
+                <li class="footer_item_info_links">Наши услуги</li>
+                <li class="footer_item_info_links">Наши преимущества</li>
+                <li class="footer_item_info_links">О компании</li>
+                <li class="footer_item_info_links">Отзывы</li>
+                <li class="footer_item_info_links">Информация об оплате</li>
+            </ul>
+
+        </div>
+        <div class="footer_item footer_social_links">
+            <span class="footer_item_title">МЫ В СОЦ СЕТЯХ</span>
+            <div class="social_link_container">
+                <span class="solcial_link icon-vk"></span>
+                <span class="solcial_link icon-instagram"></span>
+            </div>
+            <button class="online_apply_content_style footer_apply_form__btn" type="submit">Онлайн заявка</button>
+        </div>
+        <div class="footer_item">
+            <span class="footer_item_title">Контакты</span>
+            <div class="footer_contacts__content">
+                <span class="footer_contacts_item">ООО «ТАЙГЕР-ЛОГИСТИК»</span>
+                <span class="footer_contacts_item"><span class="footer_contact_styled">Телефон:</span> 8 800 700 09 35</span>
+                <span class="footer_contacts_item"><span class="footer_contact_styled">E-mail: </span> autotransport24@yandex.ru</span>
+                <span class="footer_contacts_item"><span class="footer_contact_styled">ОГРН</span> 1181690015121</span>
+                <span class="footer_contacts_item"><span class="footer_contact_styled">ИНН</span> 1655399042</span>
+                <span class="footer_contacts_item"><span class="footer_contact_styled">КПП</span> 165501001 </span>
+            </div>
+        </div>
+    </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/js/swiper.min.js"></script>
     <script src="./tiger.js/tiger.js"></script>
 </body>
