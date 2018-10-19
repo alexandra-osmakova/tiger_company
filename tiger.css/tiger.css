@@ -279,13 +279,29 @@ header {
 
 .apply_questions_start {
     width: 100%;
+    position: relative;
+    padding-bottom: 18rem;
 }
 
 .question_item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     padding: 3.625rem 2.9375rem 3.375rem ;
+}
+
+.invisible_item {
+    display: none;
+}
+
+.question_item__text_container {
+    display: flex;
+    align-items: center;
 }
 
 .question_item_number {
@@ -363,7 +379,7 @@ header {
 }
 
 
-.question_item_checkbox input[type="checkbox"] {
+.question_item_checkbox input[type="radio"] {
     display: none;
 }
 
@@ -374,6 +390,7 @@ header {
 .apply_questions_start__btn {
     width: 15.625rem;
     margin-left: 7.125rem;
+    margin-top: 3.6875rem;
     height: 3.5rem;
     background-color: #ffdb4d;
 }
@@ -968,6 +985,11 @@ header {
 
 .payment_info_type, .payment_info__type_text {
     width: 50%;
+
+    -o-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
 
 .payment_type_info_text {
@@ -1008,6 +1030,7 @@ header {
 
 .visible_item {
     opacity: 1;
+    visibility: visible;
 }
 
 .online_apply {
@@ -1407,10 +1430,12 @@ header {
 
 .header_menu_open  .header_contacts_info_item__btn {
     background-color: #ffdb4d;
+    margin-right: 5.1875rem;
 }
 
 .header_menu_open .header_logo {
     background-image: url(../tiger.img/company_logo_open_menu.png);
+    margin-left: 0.375rem;
 }
 
 .header_menu_open_image {
@@ -1436,6 +1461,7 @@ header {
     line-height: 4.5625rem;
     color: #000000;
     text-align: right;
+    letter-spacing: 0.05px;
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
@@ -1461,7 +1487,8 @@ header {
 }
 
 .header_menu_open_nav_point:hover { 
-    font-weight: bolder;
+    font-weight: bold;
+    letter-spacing: 0;
 }
 
 .header_menu_open_nav_point:hover .header_menu_open_nav_decoration {
@@ -1490,4 +1517,198 @@ header {
     background: url(../tiger.img/calendar.svg) no-repeat center;
     background-size: contain;
   }
+
+
+
+.modal_window_first, .modal_window_second {
+    display: none;
+    z-index: 9999;
+    background-color: #ffffff;
+    box-shadow: 0 0.125rem 1rem 0 rgba(155, 155, 155, 0.50);
+    padding: 2rem;
+    width: 50%;
+    margin: 0 auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    -o-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.modal_window_first {
+    width: 30%;
+}
+
+.modal_window_second {
+    width: 40%;
+    padding: 2.5rem;
+}
+
+.modal_img_container {
+    width: 4.6875rem;
+    height: 4.6875rem;
+    margin: 1rem auto;
+    border-radius: 100%;
+    background-color: rgba(227,24,125,0);
+    border: 0.125rem solid #ffdb4d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal_img {
+    background-image: url(../tiger.img/tick.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 2rem;
+    height: 2rem;
+}
+
+.modal_title {
+    font-size: 1.5rem;
+    color: #000000;
+}
+
+.modal_text {
+    font-size: 0.875rem;
+    color: #000000;
+    font-weight: 300;
+    margin: 1rem;
+}
+
+.modal_visible {
+    display: block;
+}
+
+.modal_window_second h2 {
+    font-size: 1.5rem;
+    color: #000000;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.modal_window_second h2::after {
+    content: "";
+    display: block;
+    width: 4.5rem;;
+    height: 0.1875rem;
+    margin: 1.5rem auto;
+    background-color: #ffdb4d;
+}
+
+.modal_window p {
+    margin: 1rem auto;
+    display: block;
+    width: 100%;
+    font-size: 1.3rem;
+    color: #4A4A4A;
+    letter-spacing: 0;
+    text-align: center;
+}
+
+.modal_window_input,
+.modal_window_submit_btn {
+    outline: none;
+    display: block;
+    width: 80%;
+    height: 3.5rem;
+    border-radius: 0.3125rem;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    margin: 1rem auto;
+    font-size: 0.875rem;
+    color: #b6b6b6;
+    outline: none;
+    display: block;
+    padding: 0.5rem;
+}
+
+.modal_window_input::placeholder {
+    font-size: 0.875rem;
+    color: #b6b6b6;
+    font-family: 'Roboto';
+    padding-left: 1.5rem;
+
+}
+
+.modal_window_submit_btn{
+    background-color: #ffdb4d;
+    box-shadow: 0px 6px 7px rgba(130,104,0,0.36);
+    border: unset;
+    color: #000000;
+    font-size: 0.9375rem;
+}
+
+.modal_agreement {
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    color: #8b8b8b;
+    font-weight: 300;
+    text-align: center;
+}
+
+.modal_agreement a {
+    color: #8b8b8b;
+}
+
+.close_btn {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    width: 2rem;
+    height: 2rem;
+    opacity: 0.3;
+
+    -o-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.close_btn:before, .close_btn:after {
+    position: absolute;
+    left: 0.9rem;
+    content: ' ';
+    height: 2rem;
+    width: 0.125rem;
+    background-color: #333;
+  }
+  .close_btn:before {
+    transform: rotate(45deg);
+  }
+  .close_btn:after {
+    transform: rotate(-45deg);
+  }
+
+  .close_btn:hover {
+    opacity: 1;
+  }
+
+.modal_overlay {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #000000;
+    opacity: 0.7;
+}
+
+#modal_overlay {
+    -o-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
  

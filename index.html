@@ -23,7 +23,7 @@
                         <span class="header_contacts_item__telephon">8 (800) 700-09-35</span>
                         <span class="header_contacts_item__tel_comment">Звонок по России бесплатный</span>
                     </div>
-                    <button class="btn header_contacts_info_item__btn">Заказать звонок</button>
+                    <button class="btn header_contacts_info_item__btn" onclick="modal_on_second()">Заказать звонок</button>
                     <span class="burger_menu_title">Меню</span>
                 </div>
             </div>
@@ -58,7 +58,7 @@
                     <span class="header_contacts_item__telephon">8 (800) 700-09-35</span>
                     <span class="header_contacts_item__tel_comment">Звонок по России бесплатный</span>
                 </div>
-                <button class="btn header_contacts_info_item__btn">Заказать звонок</button>
+                <button class="btn header_contacts_info_item__btn" onclick="modal_on_second()">Заказать звонок</button>
                 <div class="header_burger_menu">
                     <div class="menu__icon">
                         <span></span>
@@ -108,27 +108,124 @@
             </div>
             <div class="apply_questions_start">
                 <div class="question_item">
-                    <div class="question_item_number">1</div>
-                    <p class="question_item_text">Ваш город отправки Москва?</p>
+                    <div class="question_item__text_container">
+                        <div class="question_item_number">1</div>
+                        <p class="question_item_text">Ваш город отправки Москва?</p>
+                    </div>
                     <div class="apply_questions_checkbox_container">
                         <label class="question_item_checkbox">
-                            <input class="question_item_checkbox_input" type="checkbox">
+                            <input class="question_item_checkbox_input" type="radio" name="answer" value="yes">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
                             <span class="question_item_checkbox_text">Да</span>
                         </label>
                         <label class="question_item_checkbox">
-                            <input class="question_item_checkbox_input" type="checkbox">
+                            <input class="question_item_checkbox_input" type="radio" type="radio" name="answer" value="no">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
                             <span class="question_item_checkbox_text">Нет</span>
                         </label>
                     </div>
+                    <button class="btn apply_questions_start__btn apply_questions_start__btn_disabled" disabled>На
+                            следующий шаг</button>
                 </div>
-                <button class="btn apply_questions_start__btn apply_questions_start__btn_disabled" disabled>На
-                    следующий шаг</button>
+                <div class="question_item invisible_item">
+                    <div class="question_item__text_container">
+                        <div class="question_item_number">2</div>
+                        <p class="question_item_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit?</p>
+                    </div>
+                    <div class="apply_questions_checkbox_container">
+                        <label class="question_item_checkbox">
+                            <input class="question_item_checkbox_input" type="radio" type="radio" name="answer" value="yes">
+                            <div class="question_item_checkbox_wrap">
+                                <div class="checkbox_mark"></div>
+                            </div>
+                            <span class="question_item_checkbox_text">Да</span>
+                        </label>
+                        <label class="question_item_checkbox">
+                            <input class="question_item_checkbox_input" type="radio" type="radio" name="answer" value="no">
+                            <div class="question_item_checkbox_wrap">
+                                <div class="checkbox_mark"></div>
+                            </div>
+                            <span class="question_item_checkbox_text">Нет</span>
+                        </label>
+                    </div>
+                    <button class="btn apply_questions_start__btn apply_questions_start__btn_disabled" id='lol' disabled>На
+                            следующий шаг</button>
+                </div>
+                <div class="question_item invisible_item">
+                    <div class="question_item__text_container">
+                        <div class="question_item_number">3</div>
+                        <p class="question_item_text">Nulla quis neque imperdiet?</p>
+                    </div>
+                    <div class="apply_questions_checkbox_container">
+                        <label class="question_item_checkbox">
+                            <input class="question_item_checkbox_input" type="radio" type="radio" name="answer" value="yes">
+                            <div class="question_item_checkbox_wrap">
+                                <div class="checkbox_mark"></div>
+                            </div>
+                            <span class="question_item_checkbox_text">Да</span>
+                        </label>
+                        <label class="question_item_checkbox">
+                            <input class="question_item_checkbox_input" type="radio" type="radio" name="answer" value="no">
+                            <div class="question_item_checkbox_wrap">
+                                <div class="checkbox_mark"></div>
+                            </div>
+                            <span class="question_item_checkbox_text">Нет</span>
+                        </label>
+                    </div>
+                    <button class="btn apply_questions_start__btn apply_questions_start__btn_disabled" disabled>На
+                            следующий шаг</button>
+                </div>
+                <div class="question_item invisible_item">
+                    <div class="question_item__text_container">
+                        <div class="question_item_number">4</div>
+                        <p class="question_item_text">In pulvinar ipsum at maximus tincidunt?</p>
+                    </div>
+                    <div class="apply_questions_checkbox_container">
+                        <label class="question_item_checkbox">
+                            <input class="question_item_checkbox_input" type="radio" type="radio" name="answer" value="yes">
+                            <div class="question_item_checkbox_wrap">
+                                <div class="checkbox_mark"></div>
+                            </div>
+                            <span class="question_item_checkbox_text">Да</span>
+                        </label>
+                        <label class="question_item_checkbox">
+                            <input class="question_item_checkbox_input" type="radio" type="radio" name="answer" value="no">
+                            <div class="question_item_checkbox_wrap">
+                                <div class="checkbox_mark"></div>
+                            </div>
+                            <span class="question_item_checkbox_text">Нет</span>
+                        </label>
+                    </div>
+                    <button class="btn apply_questions_start__btn apply_questions_start__btn_disabled" disabled>На
+                            следующий шаг</button>
+                </div>
+                <div class="question_item invisible_item">
+                    <div class="question_item__text_container">
+                        <div class="question_item_number">5</div>
+                        <p class="question_item_text">Suspendisse aliquet volutpat ipsum?</p>
+                    </div>
+                    <div class="apply_questions_checkbox_container">
+                        <label class="question_item_checkbox">
+                            <input class="question_item_checkbox_input" type="radio" type="radio" name="answer" value="yes">
+                            <div class="question_item_checkbox_wrap">
+                                <div class="checkbox_mark"></div>
+                            </div>
+                            <span class="question_item_checkbox_text">Да</span>
+                        </label>
+                        <label class="question_item_checkbox">
+                            <input class="question_item_checkbox_input" type="radio" type="radio" name="answer" value="no">
+                            <div class="question_item_checkbox_wrap">
+                                <div class="checkbox_mark"></div>
+                            </div>
+                            <span class="question_item_checkbox_text">Нет</span>
+                        </label>
+                    </div>
+                    <button class="btn apply_questions_start__btn apply_questions_start__btn_disabled" onclick="modal_on_second()" disabled>Перейти к заказу</button>
+                </div>
             </div>
         </div>
     </section>
@@ -142,7 +239,7 @@
                 </div>
                 <div class="service_type__content_hover">
                     <span class="service_type__text_hover">Перевозки фурой от 20 тонн</span>
-                    <button class="service_type__btn btn">Заказать</button>
+                    <button class="service_type__btn btn" onclick="modal_on_second()">Заказать</button>
                 </div>
             </div>
             <div class="service_type__item">
@@ -152,7 +249,7 @@
                 </div>
                 <div class="service_type__content_hover">
                     <span class="service_type__text_hover">Перевозки отдельным транспортом от 1,5 до 20 тонн</span>
-                    <button class="service_type__btn btn">Заказать</button>
+                    <button class="service_type__btn btn" onclick="modal_on_second()">Заказать</button>
                 </div>
             </div>
             <div class="service_type__item">
@@ -162,7 +259,7 @@
                 </div>
                 <div class="service_type__content_hover">
                     <span class="service_type__text_hover">Попутные перевозки</span>
-                    <button class="service_type__btn btn">Заказать</button>
+                    <button class="service_type__btn btn" onclick="modal_on_second()">Заказать</button>
                 </div>
             </div>
             <div class="service_type__item">
@@ -172,7 +269,7 @@
                 </div>
                 <div class="service_type__content_hover">
                     <span class="service_type__text_hover">Сборные перевозки от 50 кг</span>
-                    <button class="service_type__btn btn">Заказать</button>
+                    <button class="service_type__btn btn" onclick="modal_on_second()">Заказать</button>
                 </div>
             </div>
             <div class="service_type__item">
@@ -182,7 +279,7 @@
                 </div>
                 <div class="service_type__content_hover">
                     <span class="service_type__text_hover">Перевозки межгород</span>
-                    <button class="service_type__btn btn">Заказать</button>
+                    <button class="service_type__btn btn" onclick="modal_on_second()">Заказать</button>
                 </div>
             </div>
             <div class="service_type__item">
@@ -192,7 +289,7 @@
                 </div>
                 <div class="service_type__content_hover">
                     <span class="service_type__text_hover">Перевозки рефрижератором</span>
-                    <button class="service_type__btn btn">Заказать</button>
+                    <button class="service_type__btn btn" onclick="modal_on_second()">Заказать</button>
                 </div>
             </div>
             <div class="service_type__item">
@@ -202,7 +299,7 @@
                 </div>
                 <div class="service_type__content_hover">
                     <span class="service_type__text_hover">Перевозки фурой от 20 тонн</span>
-                    <button class="service_type__btn btn">Заказать</button>
+                    <button class="service_type__btn btn" onclick="modal_on_second()">Заказать</button>
                 </div>
             </div>
             <div class="service_type__item">
@@ -212,7 +309,7 @@
                 </div>
                 <div class="service_type__content_hover">
                     <span class="service_type__text_hover">Перевозки отдельным транспортом от 1,5 до 20 тонн</span>
-                    <button class="service_type__btn btn">Заказать</button>
+                    <button class="service_type__btn btn" onclick="modal_on_second()">Заказать</button>
                 </div>
             </div>
             <div class="service_type__item">
@@ -222,7 +319,7 @@
                 </div>
                 <div class="service_type__content_hover">
                     <span class="service_type__text_hover">Попутные перевозки</span>
-                    <button class="service_type__btn btn">Заказать</button>
+                    <button class="service_type__btn btn" onclick="modal_on_second()">Заказать</button>
                 </div>
             </div>
         </div>
@@ -510,11 +607,11 @@
             <h3>Подробнее о способах оплаты:</h3>
             <div class="payment_info_column">
                 <div class="payment_info___type_item">
-                    <div data.number = '1' class="payment_info_type">
+                    <div class="payment_info_type" id='payment_info_type_first'>
                         <div class="payment_info__number">1</div>
                         <span class="payment_type_info_text">Безналичный расчет с НДС 18%</span>
                     </div>
-                    <div data.number = '2' class="payment_info__type_text">
+                    <div id='payment_info_text_first' class="payment_info__type_text">
                         <p>Оплата производится c НДС 18% на основании счета до выгрузки транспортного средства. По
                             решению
                             руководства компании возможна постоплата. Закрывающие документы мы отправим Вам курьером
@@ -523,33 +620,33 @@
                     </div>
                 </div>
                 <div class="payment_info___type_item">
-                    <div data.number = '2' class="payment_info_type">
+                    <div class="payment_info_type" id='payment_info_type_second'>
                         <div class="payment_info__number">2</div>
                         <span class="payment_type_info_text">Безналичный расчет без НДС</span>
                     </div>
-                    <div data.number = '2' class="payment_info__type_text">
+                    <div id='payment_info_text_second' class="payment_info__type_text">
                         <p>Aliquam eleifend turpis et libero tempus porttitor sollicitudin sed dui. Ut molestie ante a
                             libero pretium bibendum. Pellentesque nibh nibh, sodales sit amet ultrices eu, vulputate a
                             purus.</p>
                     </div>
                 </div>
                 <div class="payment_info___type_item">
-                    <div data.number = '3' class="payment_info_type">
+                    <div class="payment_info_type" id='payment_info_type_third'>
                         <div class="payment_info__number">3</div>
                         <span class="payment_type_info_text">Оплата наличными</span>
                     </div>
-                    <div data.number = '3' class="payment_info__type_text">
-                        <p>Aliquam eleifend turpis et libero tempus porttitor sollicitudin sed dui. Ut molestie ante a
-                            libero pretium bibendum. Pellentesque nibh nibh, sodales sit amet ultrices eu, vulputate a
-                            purus.</p>
+                    <div id='payment_info_text_third' class="payment_info__type_text">
+                        <p>Nulla quis neque imperdiet ex vehicula varius. Sed dolor odio, convallis vel porta at,
+                            cursus ut massa. Morbi maximus hendrerit justo, sed porttitor tellus hendrerit eu.
+                            Suspendisse pellentesque felis et purus semper, id feugiat orci tincidunt. </p>
                     </div>
                 </div>
                 <div class="payment_info___type_item">
-                    <div data.number = '4' class="payment_info_type">
+                    <div class="payment_info_type" id='payment_info_type_fourth'>
                         <div class="payment_info__number">4</div>
                         <span class="payment_type_info_text">Online оплата</span>
                     </div>
-                    <div data.number = '4' class="payment_info__type_text">
+                    <div id='payment_info_text_fourth' class="payment_info__type_text">
                         <p>Morbi ullamcorper porttitor ligula ac ornare. Quisque molestie diam id risus sagittis
                             auctor.
                             Proin gravida elit at purus hendrerit, et luctus enim faucibus. Duis a ex et ante interdum
@@ -594,18 +691,19 @@
                 <div class="form_item">
                     <span class="form_input_span">Тип авто</span>
                     <select class="online_apply_content_style online_apply_select styled-select slate">
-                            <option>Пункт 1</option>
-                            <option>Пункт 2</option>
-                            <option>Пункт 3</option>
-                            <option>Пункт 4</option>
+                        <option>Пункт 1</option>
+                        <option>Пункт 2</option>
+                        <option>Пункт 3</option>
+                        <option>Пункт 4</option>
                     </select>
                 </div>
                 <div class="form_item">
                     <span class="form_input_span">Дата</span>
-                    <input type="date" class="data_picker online_apply_content_style apply_count_form_input" placeholder="Выбрать">
+                    <input type="date" class="data_picker online_apply_content_style apply_count_form_input"
+                        placeholder="Выбрать">
                 </div>
                 <div class="form_item">
-                    <button class="online_apply_content_style online_apply_form__btn" type="submit">Рассчитать
+                    <button class="online_apply_content_style online_apply_form__btn" type="submit" onclick="modal_on_second()">Рассчитать
                         стоимость</button>
                 </div>
             </form>
@@ -644,7 +742,8 @@
                 <span class="solcial_link icon-vk"></span>
                 <span class="solcial_link icon-instagram"></span>
             </div>
-            <button class="online_apply_content_style footer_apply_form__btn" type="submit">Онлайн заявка</button>
+            <button class="online_apply_content_style footer_apply_form__btn" type="submit" onclick="modal_on_second()">Онлайн
+                заявка</button>
         </div>
         <div class="footer_item">
             <span class="footer_item_title">Контакты</span>
@@ -659,6 +758,30 @@
             </div>
         </div>
     </footer>
+    <section class="modal_window_first">
+        <div class="modal_img_container">
+            <div class="modal_img"></div>
+        </div>
+        <span class="modal_title">Заявка принята</span>
+        <p class="modal_text">Мы свяжемся с Вами в ближайшее время</p>
+        <div id="close_btn" class="close_btn" onclick="close_modal()">
+        </div>
+    </section>
+    <section class="modal_window_second">
+        <h2>Оставить заявку на доставку груза</h2>
+        <p class="modal_text">Заполните контактную форму и мы с вами свяжемся</p>
+        <div id="close_btn" class="close_btn" onclick="close_modal()">
+        </div>
+        <form id="prompt-form" method='post' action="">
+            <input class="modal_window_input" name="name" type="text" placeholder="Введите Ваше имя">
+            <input class="modal_window_input" id="phone-number" name="phone-number" type="text" maxlength="14"
+                placeholder="Контактный телефон" />
+            <input class="modal_window_submit_btn" type="submit" value="Оставить заявку" onclick="modal_on_first()">
+        </form>
+        <p class="modal_agreement">Отправляя заявку, вы подтверждаете свое согласие с <a href="">политикой
+                конфиденциальности</a></p>
+    </section>
+    <div id="modal_overlay"></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/js/swiper.min.js"></script>
     <script src="./tiger.js/countUp.js-master/countUp.js"></script>
     <script src="./tiger.js/tiger.js"></script>

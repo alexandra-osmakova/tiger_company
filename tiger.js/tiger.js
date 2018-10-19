@@ -30,40 +30,44 @@ menu__icon.addEventListener('click', function () {
 })
 
 var question_item_checkbox = document.getElementsByClassName('question_item_checkbox_input');
-var quiz_btn = document.getElementsByClassName('apply_questions_start__btn')[0];
+var quiz_btn = document.getElementsByClassName('apply_questions_start__btn');
 var quiz_step_mark = document.getElementsByClassName('current_question_item');
 var quiz_progress = document.getElementsByClassName('progrss_line_item');
 var quiz_current_number = document.getElementsByClassName('apply_questions_span')[0];
+var question_item = document.getElementsByClassName('question_item');
 var n = 0;
-
-
 
 for (var i = 0; i < question_item_checkbox.length; i++) {
   question_item_checkbox[i].addEventListener('click', quizStart)
 }
 
-quiz_btn.addEventListener('click', quizNextStep)
+for(var j = 0; j < quiz_btn.length; j++) {
+  quiz_btn[j].addEventListener('click', quizNextStep)
+}
 
 
 
 function quizStart() {
   for (var i = 0; i < question_item_checkbox.length; i++) {
     if (question_item_checkbox[i].checked) {
-      quiz_btn.disabled = false;
-      quiz_btn.classList.remove('apply_questions_start__btn_disabled');
+      quiz_btn[n].disabled = false;
+      quiz_btn[n].classList.remove('apply_questions_start__btn_disabled');
     }
   }
 }
 
 function quizNextStep() {
-  if (n <= 5) {
+  if (n < 5) {
+    question_item[n].classList.add('invisible_item');
+    question_item[n+1].classList.remove('invisible_item');
     quiz_step_mark[n].classList.remove('current_question_item__active');
     quiz_step_mark[n + 1].classList.add('current_question_item__active');
     quiz_progress[n + 1].classList.add('progrss_line_item__active');
     quiz_current_number.innerHTML = Number(quiz_current_number.innerHTML) - 1;
     n++
-  } else {
-
+  }
+  else {
+    n = 0;
   }
 }
 
@@ -171,9 +175,34 @@ function counter() {
   }
 }
 
+var modal_window_first = document.getElementsByClassName('modal_window_first')[0];
+var modal_window_second = document.getElementsByClassName('modal_window_second')[0];
+var modal_overlay = document.getElementById('modal_overlay');
+var close_modal_btn = document.getElementById('close_btn');
+var header_modal_btn = document.getElementsByClassName('promo_img_section__btn')[0];
+var service_types = document.getElementsByClassName('service_types')[0];
+
+
+
+function modal_on_first() {
+  modal_window_first.classList.add('modal_visible');
+  modal_overlay.classList.add('modal_overlay');
+}
+
+function modal_on_second() {
+    modal_window_second.classList.add('modal_visible');
+    modal_overlay.classList.add('modal_overlay');
+}
+
+function close_modal() {
+    modal_overlay.classList.remove('modal_overlay');
+    modal_window_second.classList.remove('modal_visible');
+}
+
+
+
 var payment_info_column = document.getElementsByClassName('payment_info_column')[0];
 var payment_info__type_text = document.getElementsByClassName('payment_info__type_text');
-var payment_info_type = document.getElementsByClassName('payment_info_type');
 
 window.onload = function () {
   payment_info__type_text[0].classList.add('visible_item')
@@ -181,14 +210,28 @@ window.onload = function () {
 payment_info_column.addEventListener('mouseover', hoverText, false);
 
 function hoverText(e) {
-  if (e.target.classList.contains('payment_info_type')) {
-      var target = e.target.dataset.number;
-      for (var i = 0; i < payment_info__type_text.length; i++) {
-          if (payment_info__type_text[i].dataset.number == target) {
-            payment_info__type_text[i].classList.add('visible_item');
-          } else {
-            payment_info__type_text[i].classList.remove('visible_item');
-          }
-      }
+  if (e.target.id === 'payment_info_type_fourth') {     
+    for(var i = 0; i < payment_info__type_text.length; i++) {
+      payment_info__type_text[i].classList.remove('visible_item');
+    }
+    payment_info__type_text[3].classList.add('visible_item');
+  }
+  else if (e.target.id === 'payment_info_type_third') {     
+    for(var i = 0; i < payment_info__type_text.length; i++) {
+      payment_info__type_text[i].classList.remove('visible_item');
+    }
+    payment_info__type_text[2].classList.add('visible_item');
+  }
+  else if (e.target.id === 'payment_info_type_second') {     
+    for(var i = 0; i < payment_info__type_text.length; i++) {
+      payment_info__type_text[i].classList.remove('visible_item');
+    }
+    payment_info__type_text[1].classList.add('visible_item');
+  }
+  else if (e.target.id === 'payment_info_type_first') {     
+    for(var i = 0; i < payment_info__type_text.length; i++) {
+      payment_info__type_text[i].classList.remove('visible_item');
+    }
+    payment_info__type_text[0].classList.add('visible_item');
   }
 };
