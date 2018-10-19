@@ -204,6 +204,7 @@ header {
     height: 3.1875rem;
     background-color: #e1e1e1;
     position: relative;
+    display: flex;
 }
 
 .progrss_line_item {
@@ -314,22 +315,28 @@ header {
     padding-top: 2.1875rem
 }
 
-
-.question_item__answer__checkbox {
+.apply_questions_checkbox_container {
+    width: 50%;
+    margin-left: 4.5rem;
+    margin-top: 2.1875rem;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    user-select: none;
-    width: 30%;
 }
 
-.question_item__answer__checkbox span {
+.question_item_checkbox {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.question_item_checkbox_text {
     font-size: 0.9375rem;
     color: #000000;
     text-align: center;
 }
 
-.question_item__answer__checkbox_wrap {
+
+
+.question_item_checkbox_wrap {
     position: relative;
     width: 1.3125rem;
     height: 1.3125rem;
@@ -339,7 +346,7 @@ header {
     margin-right: 1rem;
 }
 
-.question_item__answer__checkbox__checked {
+.checkbox_mark {
     width: 0.7rem;
     height: 0.7rem;
     background-color: #ffdb4d;
@@ -347,21 +354,32 @@ header {
     position: absolute;
     top: 0.25rem;
     left: 0.25rem;
-}
-
-.checkbox_mark_invisible {
     opacity: 0;
+
+    -o-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
 
-.question_item__answer__checkbox input[type="checkbox"] {
+
+.question_item_checkbox input[type="checkbox"] {
     display: none;
 }
+
+.question_item_checkbox input:checked + .question_item_checkbox_wrap .checkbox_mark{
+    opacity: 1;
+  }
 
 .apply_questions_start__btn {
     width: 15.625rem;
     margin-left: 7.125rem;
     height: 3.5rem;
     background-color: #ffdb4d;
+}
+
+.apply_questions_start__btn_disabled {
+    opacity: 0.5;
 }
 
 .services {
@@ -827,6 +845,51 @@ header {
     padding: 3rem 0!important;
 }
 
+.swiper-button-next, .swiper-button-prev {
+    top: 96%!important;
+}
+
+.swiper-button-next {
+    background-image: url(../tiger.img/right-arrow.svg)!important;
+    right: 40%!important;
+}
+
+.swiper-button-prev  {
+    background-image: url(../tiger.img/right-arrow.svg)!important;
+    left: 40%!important;
+
+    transform:matrix(-1.00,0.00,-0.00,-1.00,0,0);
+    -ms-transform:matrix(-1.00,0.00,-0.00,-1.00,0,0);
+    -webkit-transform:matrix(-1.00,0.00,-0.00,-1.00,0,0);
+}   
+
+.swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    background-color: unset!important;
+    border: 1px solid #ffdb4d;
+    display: inline-block;
+    border-radius: 100%;
+    opacity: 1!important;
+}
+
+.swiper-pagination-bullet-active {
+    position: relative;
+    transform: scale(1.5);
+}
+
+.swiper-pagination-bullet-active::after {
+    content: '';
+    display: block;
+    width: 4px;
+    height: 4px;
+    border-radius: 100%;
+    background-color: #ffdb4d;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+}
+
 .payment_info {
     width: 100%;
     padding: 4rem;
@@ -866,7 +929,7 @@ header {
 }
 
 .payment_info_column {
-    width: 50%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -898,6 +961,15 @@ header {
     transition: all 0.5s ease;
 }
 
+.payment_info_type {
+    display: flex;
+    align-items: center;
+}
+
+.payment_info_type, .payment_info__type_text {
+    width: 50%;
+}
+
 .payment_type_info_text {
     font-size: 1.125rem;
     color: #868686;
@@ -923,8 +995,9 @@ header {
 .payment_info__type_text {
     position: absolute;
     top: 1rem;
-    left: 1rem;
+    right: 1rem;
     padding: 1rem;
+    opacity: 0;
 }
 
 .payment_info__type_text p{
@@ -933,8 +1006,8 @@ header {
     color: #000000;
 }
 
-.invisible_item {
-    opacity: 0;
+.visible_item {
+    opacity: 1;
 }
 
 .online_apply {
@@ -1400,3 +1473,21 @@ header {
     opacity: 1;
     height: auto;
 }
+ 
+ .styled-select.slate {
+    background: url(../tiger.img/select_btn.svg) no-repeat right center;
+ }
+ 
+ .styled-select.slate select {
+    border: 1px solid #ccc;
+    font-size: 16px;
+    height: 34px;
+    width: 268px;
+ }
+.data_picker::-webkit-calendar-picker-indicator {
+    color: transparent;
+    opacity: 1;
+    background: url(../tiger.img/calendar.svg) no-repeat center;
+    background-size: contain;
+  }
+ 

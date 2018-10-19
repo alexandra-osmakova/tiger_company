@@ -90,8 +90,10 @@
             <p class="apply_questions_text"><span class="apply_questions_styled_text">Узнайте стоимость грузоперевозки</span>
                 за 60 секунд + получите гарантированную скидку</p>
             <div class="progress_line">
-                <p class="apply_questions_text">Осталось ответить на 4 вопроса</p>
+                <p class="apply_questions_text">Осталось ответить на <span class="apply_questions_span">4</span>
+                    вопроса</p>
                 <div class="progrss_line_item progrss_line_item__active"></div>
+                <div class="progrss_line_item"></div>
                 <div class="progrss_line_item"></div>
                 <div class="progrss_line_item"></div>
                 <div class="progrss_line_item"></div>
@@ -108,24 +110,25 @@
                 <div class="question_item">
                     <div class="question_item_number">1</div>
                     <p class="question_item_text">Ваш город отправки Москва?</p>
-                    <div class="question_item__answer">
-                        <label class="question_item__answer__checkbox" data.number='1'>
-                            <input class=" " type="checkbox" name="development">
-                            <div class="question_item__answer__checkbox_wrap">
-                                <div class="question_item__answer__checkbox__checked"></div>
+                    <div class="apply_questions_checkbox_container">
+                        <label class="question_item_checkbox">
+                            <input class="question_item_checkbox_input" type="checkbox">
+                            <div class="question_item_checkbox_wrap">
+                                <div class="checkbox_mark"></div>
                             </div>
-                            <span>Да</span>
+                            <span class="question_item_checkbox_text">Да</span>
                         </label>
-                        <label class="question_item__answer__checkbox" data.number='2'>
-                            <input class=" " type="checkbox" name="development">
-                            <div class="question_item__answer__checkbox_wrap">
-                                <div class="question_item__answer__checkbox__checked checkbox_mark_invisible"></div>
+                        <label class="question_item_checkbox">
+                            <input class="question_item_checkbox_input" type="checkbox">
+                            <div class="question_item_checkbox_wrap">
+                                <div class="checkbox_mark"></div>
                             </div>
-                            <span>Нет </span>
+                            <span class="question_item_checkbox_text">Нет</span>
                         </label>
                     </div>
                 </div>
-                <button class="btn apply_questions_start__btn">На следующий шаг</button>
+                <button class="btn apply_questions_start__btn apply_questions_start__btn_disabled" disabled>На
+                    следующий шаг</button>
             </div>
         </div>
     </section>
@@ -425,21 +428,21 @@
             <div class="about_numbers_container">
                 <div class="about_numbers_container_row">
                     <div class="about_numbers_item">
-                        <span class="about_number">6</span>
+                        <span id="first_item_to_count" class="about_number">6</span>
                         <span class="about_number_description">лет работы</span>
                     </div>
                     <div class="about_numbers_item">
-                        <span class="about_number">10</span>
+                        <span id="second_item_to_count" class="about_number">10</span>
                         <span class="about_number_description">лет работы</span>
                     </div>
                 </div>
                 <div class="about_numbers_container_row">
                     <div class="about_numbers_item about_number_selected_first">
-                        <span class="about_number">11000</span>
+                        <span id="third_item_to_count" class="about_number">11000</span>
                         <span class="about_number_description">заказов</span>
                     </div>
                     <div class="about_numbers_item about_number_selected_second">
-                        <span class="about_number">250</span>
+                        <span id="fourth_item_to_count" class="about_number">250</span>
                         <span class="about_number_description">постоянных клиентов</span>
                     </div>
                 </div>
@@ -507,42 +510,51 @@
             <h3>Подробнее о способах оплаты:</h3>
             <div class="payment_info_column">
                 <div class="payment_info___type_item">
-                    <div class="payment_info__number">1</div>
-                    <span class="payment_type_info_text">Безналичный расчет с НДС 18%</span>
+                    <div data.number = '1' class="payment_info_type">
+                        <div class="payment_info__number">1</div>
+                        <span class="payment_type_info_text">Безналичный расчет с НДС 18%</span>
+                    </div>
+                    <div data.number = '2' class="payment_info__type_text">
+                        <p>Оплата производится c НДС 18% на основании счета до выгрузки транспортного средства. По
+                            решению
+                            руководства компании возможна постоплата. Закрывающие документы мы отправим Вам курьером
+                            сразу
+                            по окончании перевозки.</p>
+                    </div>
                 </div>
                 <div class="payment_info___type_item">
-                    <div class="payment_info__number">2</div>
-                    <span class="payment_type_info_text">Безналичный расчет без НДС</span>
+                    <div data.number = '2' class="payment_info_type">
+                        <div class="payment_info__number">2</div>
+                        <span class="payment_type_info_text">Безналичный расчет без НДС</span>
+                    </div>
+                    <div data.number = '2' class="payment_info__type_text">
+                        <p>Aliquam eleifend turpis et libero tempus porttitor sollicitudin sed dui. Ut molestie ante a
+                            libero pretium bibendum. Pellentesque nibh nibh, sodales sit amet ultrices eu, vulputate a
+                            purus.</p>
+                    </div>
                 </div>
                 <div class="payment_info___type_item">
-                    <div class="payment_info__number">3</div>
-                    <span class="payment_type_info_text">Оплата наличными</span>
+                    <div data.number = '3' class="payment_info_type">
+                        <div class="payment_info__number">3</div>
+                        <span class="payment_type_info_text">Оплата наличными</span>
+                    </div>
+                    <div data.number = '3' class="payment_info__type_text">
+                        <p>Aliquam eleifend turpis et libero tempus porttitor sollicitudin sed dui. Ut molestie ante a
+                            libero pretium bibendum. Pellentesque nibh nibh, sodales sit amet ultrices eu, vulputate a
+                            purus.</p>
+                    </div>
                 </div>
                 <div class="payment_info___type_item">
-                    <div class="payment_info__number">4</div>
-                    <span class="payment_type_info_text">Online оплата</span>
-                </div>
-            </div>
-            <div class="payment_info_column">
-                <div class="payment_info__type_text">
-                    <p>Оплата производится c НДС 18% на основании счета до выгрузки транспортного средства. По решению
-                        руководства компании возможна постоплата. Закрывающие документы мы отправим Вам курьером сразу
-                        по окончании перевозки.</p>
-                </div>
-                <div class="payment_info__type_text invisible_item">
-                    <p>Aliquam eleifend turpis et libero tempus porttitor sollicitudin sed dui. Ut molestie ante a
-                        libero pretium bibendum. Pellentesque nibh nibh, sodales sit amet ultrices eu, vulputate a
-                        purus.</p>
-                </div>
-                <div class="payment_info__type_text invisible_item">
-                    <p>Cras odio magna, luctus in ligula id, ullamcorper luctus lorem. Vestibulum tortor nisi,
-                        dignissim porta tristique et, feugiat vel enim. Proin ipsum augue, sagittis placerat urna nec,
-                        molestie congue neque.</p>
-                </div>
-                <div class="payment_info__type_text invisible_item">
-                    <p>Morbi ullamcorper porttitor ligula ac ornare. Quisque molestie diam id risus sagittis auctor.
-                        Proin gravida elit at purus hendrerit, et luctus enim faucibus. Duis a ex et ante interdum
-                        euismod. Nunc accumsan diam nec fringilla scelerisque.</p>
+                    <div data.number = '4' class="payment_info_type">
+                        <div class="payment_info__number">4</div>
+                        <span class="payment_type_info_text">Online оплата</span>
+                    </div>
+                    <div data.number = '4' class="payment_info__type_text">
+                        <p>Morbi ullamcorper porttitor ligula ac ornare. Quisque molestie diam id risus sagittis
+                            auctor.
+                            Proin gravida elit at purus hendrerit, et luctus enim faucibus. Duis a ex et ante interdum
+                            euismod. Nunc accumsan diam nec fringilla scelerisque.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -564,9 +576,11 @@
                 </div>
                 <div class="form_item">
                     <span class="form_input_span">Масса груза, кг</span>
-                    <select class="online_apply_content_style online_apply_select">
+                    <select class="online_apply_content_style online_apply_select styled-select slate">
                         <option>Пункт 1</option>
                         <option>Пункт 2</option>
+                        <option>Пункт 3</option>
+                        <option>Пункт 4</option>
                     </select>
                     <label class="form_item_checkbox">
                         <input type="checkbox">
@@ -579,17 +593,16 @@
                 </div>
                 <div class="form_item">
                     <span class="form_input_span">Тип авто</span>
-                    <select class="online_apply_content_style online_apply_select">
-                        <option>Пункт 1</option>
-                        <option>Пункт 2</option>
+                    <select class="online_apply_content_style online_apply_select styled-select slate">
+                            <option>Пункт 1</option>
+                            <option>Пункт 2</option>
+                            <option>Пункт 3</option>
+                            <option>Пункт 4</option>
                     </select>
                 </div>
                 <div class="form_item">
                     <span class="form_input_span">Дата</span>
-                    <select class="online_apply_content_style online_apply_select">
-                        <option>Пункт 1</option>
-                        <option>Пункт 2</option>
-                    </select>
+                    <input type="date" class="data_picker online_apply_content_style apply_count_form_input" placeholder="Выбрать">
                 </div>
                 <div class="form_item">
                     <button class="online_apply_content_style online_apply_form__btn" type="submit">Рассчитать
@@ -647,6 +660,7 @@
         </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/js/swiper.min.js"></script>
+    <script src="./tiger.js/countUp.js-master/countUp.js"></script>
     <script src="./tiger.js/tiger.js"></script>
 </body>
 
