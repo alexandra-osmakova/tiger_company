@@ -1461,7 +1461,7 @@ header {
     line-height: 4.5625rem;
     color: #000000;
     text-align: right;
-    letter-spacing: 0.05px;
+    font-weight: normal;
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
@@ -1484,11 +1484,12 @@ header {
     -moz-transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
+
 }
 
 .header_menu_open_nav_point:hover { 
-    font-weight: bold;
-    letter-spacing: 0;
+    text-shadow: 1px 0 0 #000000;
+    letter-spacing: 0.5px;
 }
 
 .header_menu_open_nav_point:hover .header_menu_open_nav_decoration {

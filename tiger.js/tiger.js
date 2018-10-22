@@ -41,7 +41,7 @@ for (var i = 0; i < question_item_checkbox.length; i++) {
   question_item_checkbox[i].addEventListener('click', quizStart)
 }
 
-for(var j = 0; j < quiz_btn.length; j++) {
+for (var j = 0; j < quiz_btn.length; j++) {
   quiz_btn[j].addEventListener('click', quizNextStep)
 }
 
@@ -57,68 +57,21 @@ function quizStart() {
 }
 
 function quizNextStep() {
-  if (n < 5) {
+  if (n < 4) {
     question_item[n].classList.add('invisible_item');
-    question_item[n+1].classList.remove('invisible_item');
+    question_item[n + 1].classList.remove('invisible_item');
     quiz_step_mark[n].classList.remove('current_question_item__active');
     quiz_step_mark[n + 1].classList.add('current_question_item__active');
     quiz_progress[n + 1].classList.add('progrss_line_item__active');
     quiz_current_number.innerHTML = Number(quiz_current_number.innerHTML) - 1;
     n++
-  }
-  else {
-    n = 0;
-  }
-}
-
-
-var aboutItem = document.getElementsByClassName('about_content')[0];
-
-var isScrolling = false;
- 
-window.addEventListener("scroll", throttleScroll, false);
-
-function throttleScroll(e) {
-  if (isScrolling == false) {
-    window.requestAnimationFrame(function() {
-      scrolling(e);
-      isScrolling = false;
-    });
-  }
-  isScrolling = true;
-}
-
-document.addEventListener("DOMContentLoaded", scrolling, false);
-
-function scrolling(e) {
-
-  if (isPartiallyVisible(aboutItem)) {
-    counter() 
-  } 
-
-  if (isFullyVisible(aboutItem)) {
-        counter() 
+    console.log(n)
+  } else if (n == 4) {
+    question_item[4].classList.add('invisible_item');
+    question_item[0].classList.remove('invisible_item');
   }
 }
 
-function isPartiallyVisible(el) {
-  var elementBoundary = el.getBoundingClientRect();
-
-  var top = elementBoundary.top;
-  var bottom = elementBoundary.bottom;
-  var height = elementBoundary.height;
-
-  return ((top + height >= 0) && (height + window.innerHeight >= bottom));
-}
-
-function isFullyVisible(el) {
-  var elementBoundary = el.getBoundingClientRect();
-
-  var top = elementBoundary.top;
-  var bottom = elementBoundary.bottom;
-
-  return ((top >= 0) && (bottom <= window.innerHeight));
-}
 
 
 function counter() {
@@ -190,13 +143,13 @@ function modal_on_first() {
 }
 
 function modal_on_second() {
-    modal_window_second.classList.add('modal_visible');
-    modal_overlay.classList.add('modal_overlay');
+  modal_window_second.classList.add('modal_visible');
+  modal_overlay.classList.add('modal_overlay');
 }
 
 function close_modal() {
-    modal_overlay.classList.remove('modal_overlay');
-    modal_window_second.classList.remove('modal_visible');
+  modal_overlay.classList.remove('modal_overlay');
+  modal_window_second.classList.remove('modal_visible');
 }
 
 
@@ -210,28 +163,95 @@ window.onload = function () {
 payment_info_column.addEventListener('mouseover', hoverText, false);
 
 function hoverText(e) {
-  if (e.target.id === 'payment_info_type_fourth') {     
-    for(var i = 0; i < payment_info__type_text.length; i++) {
+  if (e.target.id === 'payment_info_type_fourth') {
+    for (var i = 0; i < payment_info__type_text.length; i++) {
       payment_info__type_text[i].classList.remove('visible_item');
     }
     payment_info__type_text[3].classList.add('visible_item');
-  }
-  else if (e.target.id === 'payment_info_type_third') {     
-    for(var i = 0; i < payment_info__type_text.length; i++) {
+  } else if (e.target.id === 'payment_info_type_third') {
+    for (var i = 0; i < payment_info__type_text.length; i++) {
       payment_info__type_text[i].classList.remove('visible_item');
     }
     payment_info__type_text[2].classList.add('visible_item');
-  }
-  else if (e.target.id === 'payment_info_type_second') {     
-    for(var i = 0; i < payment_info__type_text.length; i++) {
+  } else if (e.target.id === 'payment_info_type_second') {
+    for (var i = 0; i < payment_info__type_text.length; i++) {
       payment_info__type_text[i].classList.remove('visible_item');
     }
     payment_info__type_text[1].classList.add('visible_item');
-  }
-  else if (e.target.id === 'payment_info_type_first') {     
-    for(var i = 0; i < payment_info__type_text.length; i++) {
+  } else if (e.target.id === 'payment_info_type_first') {
+    for (var i = 0; i < payment_info__type_text.length; i++) {
       payment_info__type_text[i].classList.remove('visible_item');
     }
     payment_info__type_text[0].classList.add('visible_item');
   }
 };
+
+var clientWidth = document.documentElement.clientWidth;
+var about_numbers_container = document.getElementsByClassName('about_numbers_container')[0];
+
+// The checker
+const gambitGalleryIsInView = el => {
+	const scroll = window.scrollY || window.pageYOffset
+	const boundsTop = el.getBoundingClientRect().top + scroll
+	
+	const viewport = {
+		top: scroll,
+		bottom: scroll + window.innerHeight,
+	}
+	
+    const bounds = {
+		top: boundsTop,
+		bottom: boundsTop + el.clientHeight,
+	}
+	
+	return ( bounds.bottom >= viewport.top && bounds.bottom <= viewport.bottom ) 
+		|| ( bounds.top <= viewport.bottom && bounds.top >= viewport.top );
+}
+
+
+var aboutItem = document.getElementsByClassName('about_header_text')[0];
+var k = 0;
+
+var isScrolling = false;
+ 
+window.addEventListener("scroll", throttleScroll, false);
+
+function throttleScroll(e) {
+  if (isScrolling == false) {
+    window.requestAnimationFrame(function() {
+      scrolling(e);
+      isScrolling = false;
+    });
+  }
+  isScrolling = true;
+}
+
+document.addEventListener("DOMContentLoaded", scrolling, false);
+
+function scrolling(e) {
+
+  if (isPartiallyVisible(aboutItem) & k == 0) {
+    counter();
+    k++;
+  } 
+}
+
+function isPartiallyVisible(el) {
+  var elementBoundary = el.getBoundingClientRect();
+
+  var top = elementBoundary.top;
+  var bottom = elementBoundary.bottom;
+  var height = elementBoundary.height;
+
+  return ((top + height >= 0) && (height + window.innerHeight >= bottom));
+}
+
+var header_menu_open_nav_point = document.getElementsByClassName('header_menu_open_nav_point');
+
+for(var i = 0; i < header_menu_open_nav_point.length; i++) {
+  header_menu_open_nav_point[i].addEventListener('click', function() {
+    console.log(i);
+    this.classList.toggle('nav_item__bolder')
+  });
+}
+
