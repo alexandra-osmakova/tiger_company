@@ -246,12 +246,3 @@ function isPartiallyVisible(el) {
   return ((top + height >= 0) && (height + window.innerHeight >= bottom));
 }
 
-var header_menu_open_nav_point = document.getElementsByClassName('header_menu_open_nav_point');
-
-for(var i = 0; i < header_menu_open_nav_point.length; i++) {
-  header_menu_open_nav_point[i].addEventListener('click', function() {
-    console.log(i);
-    this.classList.toggle('nav_item__bolder')
-  });
-}
-
