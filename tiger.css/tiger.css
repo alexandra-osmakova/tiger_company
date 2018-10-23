@@ -403,6 +403,7 @@ header {
     width: 100%;
     background-color: #f2f2f2;
     padding: 2rem 0;
+    position: relative;
 }
 
 .services h2 {
@@ -1503,7 +1504,9 @@ header {
 }
  
  .styled-select.slate {
-    background: url(../tiger.img/select_btn.svg) no-repeat right center;
+    background: url(../tiger.img/arrow.svg);
+    background-repeat: no-repeat;
+    background-position: 13rem 1.5625rem;
  }
  
  .styled-select.slate select {
