@@ -865,6 +865,9 @@ header {
 
 .swiper-button-next, .swiper-button-prev {
     top: 96%!important;
+    width: 1.6875rem!important;
+    height: 2.75rem!important;
+    background-size: 27px 44px;
 }
 
 .swiper-button-next {
@@ -882,8 +885,8 @@ header {
 }   
 
 .swiper-pagination-bullet {
-    width: 0.5rem;
-    height: 0.5rem;
+    width: 0.6rem!important;
+    height: 0.6rem!important;
     background-color: unset!important;
     border: 0.0625rem solid #ffdb4d;
     display: inline-block;
@@ -899,13 +902,13 @@ header {
 .swiper-pagination-bullet-active::after {
     content: '';
     display: block;
-    width: 0.3125rem;
-    height: 0.3125rem;
-    border-radius: 100%;
+    width: 0.3rem;
+    height: 0.3rem;
+    border-radius: 51%;
     background-color: #ffdb4d;
     position: absolute;
-    top: 0.0625rem;
-    left: 0.0625rem;;
+    top: 0.1rem;
+    left: 0.1rem;
 }
 
 .payment_info {
@@ -1715,4 +1718,34 @@ header {
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
+
+
+@media screen and (min-width: 2461px) and (max-width: 2560px) {
+    html, body{
+        font-size: 32px;
+    }
+}
  
+@media screen and (min-width: 2171px) and (max-width: 2460px) {
+    html, body{
+        font-size: 28px;
+    }
+}
+
+@media screen and (min-width: 1851px) and (max-width: 2170px) {
+    html, body{
+        font-size: 24px;
+    }
+}
+
+@media screen and (min-width: 1700px) and (max-width: 1850px) {
+    html, body{
+        font-size: 22px;
+    }
+}
+
+@media screen and (min-width: 1440px) and (max-width: 1701px) {
+    html, body{
+        font-size: 18px;
+    }
+}
