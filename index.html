@@ -82,6 +82,25 @@
                 </form>
             </div>
         </div>
+        <div class="header_decoration_line">
+            <?xml version="1.0" encoding="UTF-8"?>
+            <svg enable-background="new 0 0 5333 885.4" version="1.1" viewBox="0 0 5333 885.4" xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg">
+                <style type="text/css">
+                    .st0 {
+                        fill: #FFFFFF;
+                    }
+
+                    .st1 {
+                        fill: #E0E0E0;
+                    }
+                </style>
+                <polygon class="st0" points="-6.1 841.3 1889.5 685.3 3680.1 288.9 5320.8 265.4 5333.4 892.2 1.6 892.2" />
+                <polygon class="st1" points="5333 275 5333 5 3679.7 289" />
+                <polygon points="1.1 676 1876.3 625 3680.1 288.9 1848.9 558.3 0.2 548.9" />
+                <polygon class="st1" points="-1.4 672.8 1873.7 621.8 3173 384 1921 700 -1.8 862.5" />
+            </svg>
+        </div>
     </header>
     <section class="price">
         <h2>ПРОЙДИТЕ ТЕСТ ЗА 1 МИНУТУ И <span class="styled_price_header">УЗНАЙТЕ СТОИМОСТЬ ГРУЗОПЕРЕВОЗКИ</span> ПРямо
@@ -90,9 +109,12 @@
             <p class="apply_questions_text"><span class="apply_questions_styled_text">Узнайте стоимость грузоперевозки</span>
                 за 60 секунд + получите гарантированную скидку</p>
             <div class="progress_line">
-                <p class="apply_questions_text">Осталось ответить на <span class="apply_questions_span">4</span>
-                    вопроса</p>
+                <p class="apply_questions_text">Осталось ответить на <span class="apply_questions_span">8</span>
+                    вопросов</p>
                 <div class="progrss_line_item progrss_line_item__active"></div>
+                <div class="progrss_line_item"></div>
+                <div class="progrss_line_item"></div>
+                <div class="progrss_line_item"></div>
                 <div class="progrss_line_item"></div>
                 <div class="progrss_line_item"></div>
                 <div class="progrss_line_item"></div>
@@ -105,36 +127,26 @@
                 <div class="current_question_item"></div>
                 <div class="current_question_item"></div>
                 <div class="current_question_item"></div>
+                <div class="current_question_item"></div>
+                <div class="current_question_item"></div>
+                <div class="current_question_item"></div>
             </div>
             <div class="apply_questions_start">
                 <div class="question_item">
                     <div class="question_item__text_container">
                         <div class="question_item_number">1</div>
-                        <p class="question_item_text">Ваш город отправки Москва?</p>
+                        <p class="question_item_text">Что вам нужно перевезти?</p>
                     </div>
-                    <div class="apply_questions_checkbox_container">
-                        <label class="question_item_checkbox">
-                            <input class="question_item_checkbox_input" type="radio" name="answer" value="yes">
-                            <div class="question_item_checkbox_wrap">
-                                <div class="checkbox_mark"></div>
-                            </div>
-                            <span class="question_item_checkbox_text">Да</span>
-                        </label>
-                        <label class="question_item_checkbox">
-                            <input class="question_item_checkbox_input" type="radio" type="radio" name="answer" value="no">
-                            <div class="question_item_checkbox_wrap">
-                                <div class="checkbox_mark"></div>
-                            </div>
-                            <span class="question_item_checkbox_text">Нет</span>
-                        </label>
-                    </div>
-                    <button class="btn apply_questions_start__btn apply_questions_start__btn_disabled" disabled>На
+                    <textarea class="quiz_textarea" name="parcel_type" id="parcel_type" cols="30" rows="5"></textarea>
+                    <div class="question_footer_content">
+                        <button class="btn apply_questions_start__btn apply_questions_start__btn_disabled" disabled>На
                             следующий шаг</button>
+                    </div>
                 </div>
                 <div class="question_item invisible_item">
                     <div class="question_item__text_container">
                         <div class="question_item_number">2</div>
-                        <p class="question_item_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit?</p>
+                        <p class="question_item_text">Выберите вид автотранспорта для доставки груза</p>
                     </div>
                     <div class="apply_questions_checkbox_container">
                         <label class="question_item_checkbox">
@@ -142,23 +154,71 @@
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
-                            <span class="question_item_checkbox_text">Да</span>
+                            <span class="question_item_checkbox_text">Догруз</span>
                         </label>
                         <label class="question_item_checkbox">
                             <input class="question_item_checkbox_input" type="radio" type="radio" name="answer" value="no">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
-                            <span class="question_item_checkbox_text">Нет</span>
+                            <span class="question_item_checkbox_text">Газель</span>
+                        </label>
+                        <label class="question_item_checkbox">
+                            <input class="question_item_checkbox_input" type="radio" type="radio" name="answer" value="no">
+                            <div class="question_item_checkbox_wrap">
+                                <div class="checkbox_mark"></div>
+                            </div>
+                            <span class="question_item_checkbox_text">3-тонник</span>
+                        </label>
+                        <label class="question_item_checkbox">
+                            <input class="question_item_checkbox_input" type="radio" type="radio" name="answer" value="no">
+                            <div class="question_item_checkbox_wrap">
+                                <div class="checkbox_mark"></div>
+                            </div>
+                            <span class="question_item_checkbox_text">5-тонник</span>
+                        </label>
+                        <label class="question_item_checkbox">
+                            <input class="question_item_checkbox_input" type="radio" type="radio" name="answer" value="no">
+                            <div class="question_item_checkbox_wrap">
+                                <div class="checkbox_mark"></div>
+                            </div>
+                            <span class="question_item_checkbox_text">10-тонник</span>
+                        </label>
+                        <label class="question_item_checkbox">
+                            <input class="question_item_checkbox_input" type="radio" type="radio" name="answer" value="no">
+                            <div class="question_item_checkbox_wrap">
+                                <div class="checkbox_mark"></div>
+                            </div>
+                            <span class="question_item_checkbox_text">Фура</span>
+                        </label>
+                        <label class="question_item_checkbox">
+                            <input class="question_item_checkbox_input" type="radio" type="radio" name="answer" value="no">
+                            <div class="question_item_checkbox_wrap">
+                                <div class="checkbox_mark"></div>
+                            </div>
+                            <span class="question_item_checkbox_text">Негабарит</span>
                         </label>
                     </div>
-                    <button class="btn apply_questions_start__btn apply_questions_start__btn_disabled" id='lol' disabled>На
+                    <div class="question_footer_content">
+                        <button class="btn apply_questions_start__btn apply_questions_start__btn_disabled" id='lol'
+                            disabled>На
                             следующий шаг</button>
+                        <label class="question_item_checkbox_mark_type">
+                            <input type="checkbox">
+
+                            <div class="question_item_checkbox_wrap_mark_type">
+                                <span class="icon-check"></span>
+                            </div>
+                            <span class="question_item_checkbox_text_mark_type">*Поставьте галочку, если для
+                                транспортировки
+                                груза необходим температурный режим </span>
+                        </label>
+                    </div>
                 </div>
                 <div class="question_item invisible_item">
                     <div class="question_item__text_container">
                         <div class="question_item_number">3</div>
-                        <p class="question_item_text">Nulla quis neque imperdiet?</p>
+                        <p class="question_item_text">Какая упаковка у вашего груза?</p>
                     </div>
                     <div class="apply_questions_checkbox_container">
                         <label class="question_item_checkbox">
@@ -166,23 +226,74 @@
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
-                            <span class="question_item_checkbox_text">Да</span>
+                            <span class="question_item_checkbox_text">Коробки</span>
                         </label>
                         <label class="question_item_checkbox">
                             <input class="question_item_checkbox_input" type="radio" type="radio" name="answer" value="no">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
-                            <span class="question_item_checkbox_text">Нет</span>
+                            <span class="question_item_checkbox_text">Паллеты</span>
+                        </label>
+                        <label class="question_item_checkbox">
+                            <input class="question_item_checkbox_input" type="radio" type="radio" name="answer" value="no">
+                            <div class="question_item_checkbox_wrap">
+                                <div class="checkbox_mark"></div>
+                            </div>
+                            <span class="question_item_checkbox_text">Ящики</span>
+                        </label>
+                        <label class="question_item_checkbox">
+                            <input class="question_item_checkbox_input" type="radio" type="radio" name="answer" value="no">
+                            <div class="question_item_checkbox_wrap">
+                                <div class="checkbox_mark"></div>
+                            </div>
+                            <span class="question_item_checkbox_text">Мешки</span>
+                        </label>
+                        <label class="question_item_checkbox">
+                            <input class="question_item_checkbox_input" type="radio" type="radio" name="answer" value="no">
+                            <div class="question_item_checkbox_wrap">
+                                <div class="checkbox_mark"></div>
+                            </div>
+                            <span class="question_item_checkbox_text">Биг-бэги</span>
+                        </label>
+                        <label class="question_item_checkbox">
+                            <input class="question_item_checkbox_input" type="radio" type="radio" name="answer" value="no">
+                            <div class="question_item_checkbox_wrap">
+                                <div class="checkbox_mark"></div>
+                            </div>
+                            <span class="question_item_checkbox_text">Обрешетка</span>
+                        </label>
+                        <label class="question_item_checkbox">
+                            <input class="question_item_checkbox_input" type="radio" type="radio" name="answer" value="no">
+                            <div class="question_item_checkbox_wrap">
+                                <div class="checkbox_mark"></div>
+                            </div>
+                            <span class="question_item_checkbox_text">Связки</span>
+                        </label>
+                        <label class="question_item_checkbox">
+                            <input class="question_item_checkbox_input" type="radio" type="radio" name="answer" value="no">
+                            <div class="question_item_checkbox_wrap">
+                                <div class="checkbox_mark"></div>
+                            </div>
+                            <span class="question_item_checkbox_text">Упаковки нет</span>
+                        </label>
+                        <label class="question_item_checkbox">
+                            <input class="question_item_checkbox_input" type="radio" type="radio" name="answer" value="no">
+                            <div class="question_item_checkbox_wrap">
+                                <div class="checkbox_mark"></div>
+                            </div>
+                            <span class="question_item_checkbox_text">Другая</span>
                         </label>
                     </div>
-                    <button class="btn apply_questions_start__btn apply_questions_start__btn_disabled" disabled>На
+                    <div class="question_footer_content">
+                        <button class="btn apply_questions_start__btn apply_questions_start__btn_disabled" disabled>На
                             следующий шаг</button>
+                    </div>
                 </div>
                 <div class="question_item invisible_item">
                     <div class="question_item__text_container">
                         <div class="question_item_number">4</div>
-                        <p class="question_item_text">In pulvinar ipsum at maximus tincidunt?</p>
+                        <p class="question_item_text">Какой вид погрузки вам необходим?</p>
                     </div>
                     <div class="apply_questions_checkbox_container">
                         <label class="question_item_checkbox">
@@ -190,23 +301,88 @@
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
-                            <span class="question_item_checkbox_text">Да</span>
+                            <span class="question_item_checkbox_text">Сверху</span>
                         </label>
                         <label class="question_item_checkbox">
                             <input class="question_item_checkbox_input" type="radio" type="radio" name="answer" value="no">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
-                            <span class="question_item_checkbox_text">Нет</span>
+                            <span class="question_item_checkbox_text">Сбоку</span>
+                        </label>
+                        <label class="question_item_checkbox">
+                            <input class="question_item_checkbox_input" type="radio" type="radio" name="answer" value="no">
+                            <div class="question_item_checkbox_wrap">
+                                <div class="checkbox_mark"></div>
+                            </div>
+                            <span class="question_item_checkbox_text">Сзади</span>
+                        </label>
+                        <label class="question_item_checkbox">
+                            <input class="question_item_checkbox_input" type="radio" type="radio" name="answer" value="no">
+                            <div class="question_item_checkbox_wrap">
+                                <div class="checkbox_mark"></div>
+                            </div>
+                            <span class="question_item_checkbox_text">Комбинированный</span>
+                        </label>
+                        <label class="question_item_checkbox">
+                            <input class="question_item_checkbox_input" type="radio" type="radio" name="answer" value="no">
+                            <div class="question_item_checkbox_wrap">
+                                <div class="checkbox_mark"></div>
+                            </div>
+                            <span class="question_item_checkbox_text">Без разницы</span>
                         </label>
                     </div>
-                    <button class="btn apply_questions_start__btn apply_questions_start__btn_disabled" disabled>На
+                    <div class="question_footer_content">
+                        <button class="btn apply_questions_start__btn apply_questions_start__btn_disabled" disabled>На
                             следующий шаг</button>
+                    </div>
                 </div>
                 <div class="question_item invisible_item">
                     <div class="question_item__text_container">
                         <div class="question_item_number">5</div>
-                        <p class="question_item_text">Suspendisse aliquet volutpat ipsum?</p>
+                        <p class="question_item_text">Введите город отправки:</p>
+                    </div>
+                    <textarea class="quiz_textarea" name="parcel_from" id="parcel_from" cols="30" rows="5"></textarea>
+                    <div class="question_footer_content">
+                        <button class="btn apply_questions_start__btn apply_questions_start__btn_disabled" id='lol'
+                            disabled>На
+                            следующий шаг</button>
+                        <label class="question_item_checkbox_mark_type">
+                            <input type="checkbox">
+
+                            <div class="question_item_checkbox_wrap_mark_type">
+                                <span class="icon-check"></span>
+                            </div>
+                            <span class="question_item_checkbox_text_mark_type">*Поставьте галочку, если в городе более
+                                одной точки погрузки </span>
+                        </label>
+                    </div>
+                </div>
+                <div class="question_item invisible_item">
+                    <div class="question_item__text_container">
+                        <div class="question_item_number">6</div>
+                        <p class="question_item_text">Введите город доставки</p>
+                    </div>
+                    <textarea class="quiz_textarea" name="parcel_to" id="parcel_to" cols="30" rows="5"></textarea>
+                    <div class="question_footer_content">
+                        <button class="btn apply_questions_start__btn apply_questions_start__btn_disabled" id='lol'
+                            disabled>На
+                            следующий шаг</button>
+                        <label class="question_item_checkbox_mark_type">
+                            <input type="checkbox">
+
+                            <div class="question_item_checkbox_wrap_mark_type">
+                                <span class="icon-check"></span>
+                            </div>
+                            <span class="question_item_checkbox_text_mark_type">*Поставьте галочку, если в городе более
+                                1 точки выгрузки</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="question_item invisible_item">
+                    <div class="question_item__text_container">
+                        <div class="question_item_number">7</div>
+                        <p class="question_item_text">Как срочно Вам нужно отправить груз?</p>
                     </div>
                     <div class="apply_questions_checkbox_container">
                         <label class="question_item_checkbox">
@@ -214,111 +390,225 @@
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
-                            <span class="question_item_checkbox_text">Да</span>
+                            <span class="question_item_checkbox_text">Срочно</span>
                         </label>
                         <label class="question_item_checkbox">
                             <input class="question_item_checkbox_input" type="radio" type="radio" name="answer" value="no">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
-                            <span class="question_item_checkbox_text">Нет</span>
+                            <span class="question_item_checkbox_text">В течение 1-2 дней</span>
+                        </label>
+                        <label class="question_item_checkbox">
+                            <input class="question_item_checkbox_input" type="radio" type="radio" name="answer" value="no">
+                            <div class="question_item_checkbox_wrap">
+                                <div class="checkbox_mark"></div>
+                            </div>
+                            <span class="question_item_checkbox_text">В течение 7 дней </span>
+                        </label>
+                        <label class="question_item_checkbox">
+                            <input class="question_item_checkbox_input" type="radio" type="radio" name="answer" value="no">
+                            <div class="question_item_checkbox_wrap">
+                                <div class="checkbox_mark"></div>
+                            </div>
+                            <span class="question_item_checkbox_text">В течение 30 дней</span>
                         </label>
                     </div>
-                    <button class="btn apply_questions_start__btn apply_questions_start__btn_disabled" onclick="modal_on_second()" disabled>Перейти к заказу</button>
+                    <div class="question_footer_content">
+                        <button class="btn apply_questions_start__btn apply_questions_start__btn_disabled" disabled>На
+                            следующий шаг</button>
+                    </div>
+                </div>
+                <div class="question_item invisible_item">
+                    <div class="question_item__text_container">
+                        <div class="question_item_number">8</div>
+                        <p class="question_item_text">Выберите форму вашей организации, <br> от которой будет
+                            заключаться договор</p>
+                    </div>
+                    <div class="apply_questions_checkbox_container">
+                        <label class="question_item_checkbox">
+                            <input class="question_item_checkbox_input" type="radio" type="radio" name="answer" value="yes">
+                            <div class="question_item_checkbox_wrap">
+                                <div class="checkbox_mark"></div>
+                            </div>
+                            <span class="question_item_checkbox_text">Физ. Лицо</span>
+                        </label>
+                        <label class="question_item_checkbox">
+                            <input class="question_item_checkbox_input" type="radio" type="radio" name="answer" value="no">
+                            <div class="question_item_checkbox_wrap">
+                                <div class="checkbox_mark"></div>
+                            </div>
+                            <span class="question_item_checkbox_text">Юр. Лицо</span>
+                        </label>
+                        <label class="question_item_checkbox">
+                            <input class="question_item_checkbox_input" type="radio" type="radio" name="answer" value="no">
+                            <div class="question_item_checkbox_wrap">
+                                <div class="checkbox_mark"></div>
+                            </div>
+                            <span class="question_item_checkbox_text">ИП</span>
+                        </label>
+                        <label class="question_item_checkbox">
+                            <input class="question_item_checkbox_input" type="radio" type="radio" name="answer" value="no">
+                            <div class="question_item_checkbox_wrap">
+                                <div class="checkbox_mark"></div>
+                            </div>
+                            <span class="question_item_checkbox_text">ООО</span>
+                        </label>
+                    </div>
+                    <div class="question_footer_content">
+                        <button class="btn apply_questions_start__btn apply_questions_start__btn_disabled" onclick="modal_on_second()"
+                            disabled>Перейти к заказу</button>
+                    </div>
                 </div>
             </div>
-        </div>
+            <div class="price_decoration_line">
+            </div>
     </section>
     <section class="services">
+        <div class="services_decoration_line_first">
+            <?xml version="1.0" encoding="utf-8"?>
+            <!-- Generator: Adobe Illustrator 20.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+            <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px" y="0px" viewBox="0 0 5333 265" style="enable-background:new 0 0 5333 265;" xml:space="preserve">
+                <style type="text/css">
+                    .st0 {
+                        fill: #FFFFFF;
+                    }
+
+                    .st1 {
+                        fill: #F6F6F6;
+                    }
+
+                    .st2 {
+                        fill: #E0E0E0;
+                    }
+                </style>
+                <polygon class="st0" points="5351,133 4323,33 -5,241 -0.8,-6.5 5350,-16 " />
+                <path class="st1" d="M-2.3,229.7c0,0,4039.3-105.9,4091.3-109.3c10-0.7,1244,127.3,1244,127.3v17.9H-0.8L-2.3,229.7z" />
+                <polygon class="st2" points="-5,231 4299,7 5333,99.1 5333,249.1 4103,123 " />
+            </svg>
+        </div>
+        <div class="services_decoration_line_second">
+            <?xml version="1.0" encoding="utf-8"?>
+            <!-- Generator: Adobe Illustrator 20.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+            <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px" y="0px" viewBox="0 0 5333 560" style="enable-background:new 0 0 5333 560;" xml:space="preserve">
+                <style type="text/css">
+                    .st0 {
+                        fill: #FFFFFF;
+                        stroke: #000000;
+                        stroke-miterlimit: 10;
+                    }
+
+                    .st1 {
+                        fill: #F6F6F6;
+                    }
+
+                    .st2 {
+                        fill: #E0E0E0;
+                    }
+
+                    .st3 {
+                        fill: #D4D4D4;
+                    }
+                </style>
+                <rect x="-12.6" y="-1.6" class="st0" width="5350.5" height="565" />
+                <polygon class="st1" points="3607,208 -1,316 3,0 5619,-4 " />
+                <polygon class="st2" points="-5.4,545.9 3811,286 5327,26 3463,210 -9,410 " />
+                <polygon class="st3" points="-13,304 3463,210 -9,410 " />
+            </svg>
+        </div>
         <h2>НАШИ УСЛУГИ</h2>
         <div class="service_types">
             <div class="service_type__item">
                 <div class="servise_type__item_wrap"></div>
                 <div class="service_type__content">
-                    <span class="service_type__text">Перевозки фурой от 20 тонн</span>
+                    <span class="service_type__text">Грузоперевозки по России отдельным транспортом от 1.5 до 20 тонн</span>
                 </div>
                 <div class="service_type__content_hover">
-                    <span class="service_type__text_hover">Перевозки фурой от 20 тонн</span>
+                    <span class="service_type__text_hover">Грузоперевозки по России отдельным транспортом от 1.5 до 20
+                        тонн</span>
                     <button class="service_type__btn btn" onclick="modal_on_second()">Заказать</button>
                 </div>
             </div>
             <div class="service_type__item">
                 <div class="servise_type__item_wrap"></div>
                 <div class="service_type__content">
-                    <span class="service_type__text">Перевозки отдельным транспортом от 1,5 до 20 тонн</span>
+                    <span class="service_type__text">Грузоперевозки фурами </span>
                 </div>
                 <div class="service_type__content_hover">
-                    <span class="service_type__text_hover">Перевозки отдельным транспортом от 1,5 до 20 тонн</span>
+                    <span class="service_type__text_hover">Грузоперевозки фурами </span>
                     <button class="service_type__btn btn" onclick="modal_on_second()">Заказать</button>
                 </div>
             </div>
             <div class="service_type__item">
                 <div class="servise_type__item_wrap"></div>
                 <div class="service_type__content">
-                    <span class="service_type__text">Попутные перевозки</span>
+                    <span class="service_type__text">Грузоперевозки рефрижераторами (с заданным температурным режимом)</span>
                 </div>
                 <div class="service_type__content_hover">
-                    <span class="service_type__text_hover">Попутные перевозки</span>
+                    <span class="service_type__text_hover">Грузоперевозки рефрижераторами (с заданным температурным
+                        режимом)</span>
                     <button class="service_type__btn btn" onclick="modal_on_second()">Заказать</button>
                 </div>
             </div>
             <div class="service_type__item">
                 <div class="servise_type__item_wrap"></div>
                 <div class="service_type__content">
-                    <span class="service_type__text">Сборные перевозки от 50 кг</span>
+                    <span class="service_type__text">Попутные грузоперевозки</span>
                 </div>
                 <div class="service_type__content_hover">
-                    <span class="service_type__text_hover">Сборные перевозки от 50 кг</span>
+                    <span class="service_type__text_hover">Попутные грузоперевозки</span>
                     <button class="service_type__btn btn" onclick="modal_on_second()">Заказать</button>
                 </div>
             </div>
             <div class="service_type__item">
                 <div class="servise_type__item_wrap"></div>
                 <div class="service_type__content">
-                    <span class="service_type__text">Перевозки межгород</span>
+                    <span class="service_type__text">Доставка сборных грузов по России от 50 до 800 кг (догрузом)</span>
                 </div>
                 <div class="service_type__content_hover">
-                    <span class="service_type__text_hover">Перевозки межгород</span>
+                    <span class="service_type__text_hover">Доставка сборных грузов по России от 50 до 800 кг (догрузом)</span>
                     <button class="service_type__btn btn" onclick="modal_on_second()">Заказать</button>
                 </div>
             </div>
             <div class="service_type__item">
                 <div class="servise_type__item_wrap"></div>
                 <div class="service_type__content">
-                    <span class="service_type__text">Перевозки рефрижератором</span>
+                    <span class="service_type__text">Переезды межгород</span>
                 </div>
                 <div class="service_type__content_hover">
-                    <span class="service_type__text_hover">Перевозки рефрижератором</span>
+                    <span class="service_type__text_hover">Переезды межгород</span>
                     <button class="service_type__btn btn" onclick="modal_on_second()">Заказать</button>
                 </div>
             </div>
             <div class="service_type__item">
                 <div class="servise_type__item_wrap"></div>
                 <div class="service_type__content">
-                    <span class="service_type__text">Перевозки фурой от 20 тонн</span>
+                    <span class="service_type__text">Перевозка личных вещей от 50 кг</span>
                 </div>
                 <div class="service_type__content_hover">
-                    <span class="service_type__text_hover">Перевозки фурой от 20 тонн</span>
+                    <span class="service_type__text_hover">Перевозка личных вещей от 50 кг</span>
                     <button class="service_type__btn btn" onclick="modal_on_second()">Заказать</button>
                 </div>
             </div>
             <div class="service_type__item">
                 <div class="servise_type__item_wrap"></div>
                 <div class="service_type__content">
-                    <span class="service_type__text">Перевозки отдельным транспортом от 1,5 до 20 тонн</span>
+                    <span class="service_type__text">Перевозка конкретных видов груза</span>
                 </div>
                 <div class="service_type__content_hover">
-                    <span class="service_type__text_hover">Перевозки отдельным транспортом от 1,5 до 20 тонн</span>
+                    <span class="service_type__text_hover">Перевозка конкретных видов груза</span>
                     <button class="service_type__btn btn" onclick="modal_on_second()">Заказать</button>
                 </div>
             </div>
             <div class="service_type__item">
                 <div class="servise_type__item_wrap"></div>
                 <div class="service_type__content">
-                    <span class="service_type__text">Попутные перевозки</span>
+                    <span class="service_type__text">Грузоперевозки Камазом от 5 до 10 тонн</span>
                 </div>
                 <div class="service_type__content_hover">
-                    <span class="service_type__text_hover">Попутные перевозки</span>
+                    <span class="service_type__text_hover">Грузоперевозки Камазом от 5 до 10 тонн</span>
                     <button class="service_type__btn btn" onclick="modal_on_second()">Заказать</button>
                 </div>
             </div>
@@ -326,12 +616,11 @@
     </section>
     <section class="advantages">
         <h2>НАШИ ПРЕИМУЩЕСТВА</h2>
-        <p class="advantages_header_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra sem
-            nunc, nec fringilla leo pellentesque a. Nullam ut eros eleifend, malesuada nunc nec, consectetur eros.
-            Fusce feugiat porta velit, quis hendrerit metus</p>
+        <p class="advantages_header_text">6 лет реального опыта на рынке грузоперевозок России, Беларуси и Казахстана
+            Перевозим ваши грузы с 2013 года. За это время мы совершили более 11000 грузоперевозок. </p>
         <div class="advantages_content">
             <div class="advantages_content__item">
-                <h3>Оформление всех <br> документов</h3>
+                <h3>Страхование груза</h3>
                 <div class="advantages_content__item_img_container">
                     <div class="advantages_content__item_img">
                         <svg enable-background="new 0 0 60 60" version="1.1" viewBox="0 0 60 60" xml:space="preserve"
@@ -347,12 +636,11 @@
                         </svg>
                     </div>
                 </div>
-                <p class="advantages_item_text">Sed semper risus a fringilla fermentum. Ut eget urna eu ipsum finibus
-                    ultrices in ac erat. Nam vestibulum sapien sit amet massa feugiat ultrices. Nunc placerat nibh ac
-                    imperdiet rhoncus. Ut sed dignissim sem.</p>
+                <p class="advantages_item_text">Делаем страховку Вашего груза по ставке 0.1% от описанной стоимости
+                    груза.</p>
             </div>
             <div class="advantages_content__item">
-                <h3>24 часа <br>на связи</h3>
+                <h3>Отслеживание груза 24/7</h3>
                 <div class="advantages_content__item_img_container">
                     <div class="advantages_content__item_img">
                         <?xml version="1.0" encoding="UTF-8"?>
@@ -367,12 +655,11 @@
                         </svg>
                     </div>
                 </div>
-                <p class="advantages_item_text">Sed semper risus a fringilla fermentum. Ut eget urna eu ipsum finibus
-                    ultrices in ac erat. Nam vestibulum sapien sit amet massa feugiat ultrices. Nunc placerat nibh ac
-                    imperdiet rhoncus. Ut sed dignissim sem.</p>
+                <p class="advantages_item_text">Вы можете отслеживать местоположение транспорта с вашим грузом, набрав
+                    бесплатный номер горячей линии 8800-700-09-35 и сообщив диспетчеру номер вашего договора-заявки.</p>
             </div>
             <div class="advantages_content__item">
-                <h3>Оформление всех <br>документов</h3>
+                <h3>Предоставление оригиналов отчетных документов. </h3>
                 <div class="advantages_content__item_img_container">
                     <div class="advantages_content__item_img">
                         <?xml version="1.0" encoding="UTF-8"?>
@@ -389,12 +676,11 @@
                         </svg>
                     </div>
                 </div>
-                <p class="advantages_item_text">Sed semper risus a fringilla fermentum. Ut eget urna eu ipsum finibus
-                    ultrices in ac erat. Nam vestibulum sapien sit amet massa feugiat ultrices. Nunc placerat nibh ac
-                    imperdiet rhoncus. Ut sed dignissim sem.</p>
+                <p class="advantages_item_text">Предоставляем полные пакет оригиналов отчетных документов.  Отправляем
+                    почтой в течении 5 дней с момента выгрузки транспорта.</p>
             </div>
             <div class="advantages_content__item">
-                <h3>Собственный <br>автопарк</h3>
+                <h3>Не платите за перевозку отдельным транспортом – перевезите догрузом!</h3>
                 <div class="advantages_content__item_img_container">
                     <div class="advantages_content__item_img">
                         <?xml version="1.0" encoding="UTF-8"?>
@@ -466,12 +752,13 @@
 
                     </div>
                 </div>
-                <p class="advantages_item_text">Sed semper risus a fringilla fermentum. Ut eget urna eu ipsum finibus
-                    ultrices in ac erat. Nam vestibulum sapien sit amet massa feugiat ultrices. Nunc placerat nibh ac
-                    imperdiet rhoncus. Ut sed dignissim sem.</p>
+                <p class="advantages_item_text">Груз от 50 до 800 кг называется Догрузом. Догруз может быть помещен в
+                    автомобиль, идущий попутным маршрутом, при наличии свободного места в кузове. Стоимость при такой
+                    перевозке существенно ниже, чем стоимость перевозки отдельной машиной, что дает Вам возможность
+                    сэкономить, а нам не ехать с полупустым кузовом.</p>
             </div>
             <div class="advantages_content__item">
-                <h3>24 часа<br> на связи</h3>
+                <h3>Перевозки отдельным попутным транспортом до 30% ниже рыночной стоимости перевозки!</h3>
                 <div class="advantages_content__item_img_container">
                     <div class="advantages_content__item_img">
                         <?xml version="1.0" encoding="UTF-8"?>
@@ -487,12 +774,13 @@
 
                     </div>
                 </div>
-                <p class="advantages_item_text">Sed semper risus a fringilla fermentum. Ut eget urna eu ipsum finibus
-                    ultrices in ac erat. Nam vestibulum sapien sit amet massa feugiat ultrices. Nunc placerat nibh ac
-                    imperdiet rhoncus. Ut sed dignissim sem.</p>
+                <p class="advantages_item_text">Половина наших перевозок отдельным транспортом осуществляется в
+                    попутном направлении. Стоимость такой перевозки до 30% ниже рыночной стоимости, однако подбор
+                    транспорта по низкой ставке осуществляется за 3-5 дней. Предупредите нас заранее, и мы предоставим
+                    Вам попутный транспорт!</p>
             </div>
             <div class="advantages_content__item">
-                <h3>Оформление всех <br>документов</h3>
+                <h3>Скорость работы</h3>
                 <div class="advantages_content__item_img_container">
                     <div class="advantages_content__item_img">
                         <?xml version="1.0" encoding="UTF-8"?>
@@ -509,9 +797,9 @@
                         </svg>
                     </div>
                 </div>
-                <p class="advantages_item_text">Sed semper risus a fringilla fermentum. Ut eget urna eu ipsum finibus
-                    ultrices in ac erat. Nam vestibulum sapien sit amet massa feugiat ultrices. Nunc placerat nibh ac
-                    imperdiet rhoncus. Ut sed dignissim sem.</p>
+                <p class="advantages_item_text">Среднее время подбора транспорта под запрос клиента – 55 минут  Среднее
+                    время согласования и подписания договора 16 минут
+                    Среднее расстояние, проходимое автотранспортом за сутки – 800 км.</p>
             </div>
         </div>
     </section>
@@ -522,7 +810,7 @@
             <p class="about_header_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra sem
                 nunc, nec fringilla leo pellentesque a. Nullam ut eros eleifend, malesuada nunc nec, consectetur eros.
                 Fusce feugiat porta velit, quis hendrerit metus</p>
-            <div id = "about_numbers_container" class="about_numbers_container">
+            <div id="about_numbers_container" class="about_numbers_container">
                 <div class="about_numbers_container_row">
                     <div class="about_numbers_item">
                         <span id="first_item_to_count" class="about_number animated">6</span>
@@ -544,6 +832,53 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="about_decoration_line">
+            <?xml version="1.0" encoding="UTF-8"?>
+            <svg enable-background="new 0 0 5333 249.1" version="1.1" viewBox="0 0 5333 249.1" xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg">
+                <style type="text/css">
+                    .st0 {
+                        fill: #FFFFFF;
+                    }
+
+                    .st1 {
+                        fill: #D4D4D4;
+                    }
+
+                    .st2 {
+                        fill: #FFDB4D;
+                    }
+                </style>
+                <polygon class="st0" points="5373 175 1403.6 61.4 -5.3 247.3 -5.3 -6 5343.7 -6" />
+                <polygon class="st1" points="-13 246 1235 2 5335 174 1431 98" />
+                <polygon class="st2" points="-6.8 246.6 1234.8 2 -6.8 137.1" />
+            </svg>
+        </div>
+        <div class="about_decoration_line_second">
+            <?xml version="1.0" encoding="utf-8"?>
+            <!-- Generator: Adobe Illustrator 20.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+            <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px" y="0px" viewBox="0 0 5332.9 452.5" style="enable-background:new 0 0 5332.9 452.5;" xml:space="preserve">
+                <style type="text/css">
+                    .st0 {
+                        fill: #FFFFFF;
+                        stroke: #000000;
+                        stroke-miterlimit: 10;
+                    }
+
+                    .st1 {
+                        fill: #E0E0E0;
+                    }
+
+                    .st2 {
+                        fill: #D4D4D4;
+                    }
+                </style>
+                <polygon class="st0" points="5342,390 3786,86 -62,294 2.5,465.8 5329.4,465.8 " />
+                <polygon class="st1" points="-12,290.5 3815.2,8.6 5344.9,92.6 5344.9,314.5 3698.1,122.2 " />
+                <polygon class="st2" points="5345,429.2 5344.9,312.5 3836.1,138.2 " />
+            </svg>
         </div>
     </section>
     <section class="clients_review">
@@ -655,6 +990,52 @@
                 </div>
             </div>
         </div>
+        <div class="payment_decoration_line_first">
+            <?xml version="1.0" encoding="utf-8"?>
+            <!-- Generator: Adobe Illustrator 20.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+            <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px" y="0px" viewBox="0 0 5332.9 380.1" style="enable-background:new 0 0 5332.9 380.1;" xml:space="preserve">
+                <style type="text/css">
+                    .st0 {
+                        fill: #FFFFFF;
+                    }
+
+                    .st1 {
+                        fill: #F6F6F6;
+                    }
+
+                    .st2 {
+                        fill: #E0E0E0;
+                    }
+                </style>
+                <rect x="-18.2" y="-23.6" class="st0" width="5356" height="400.3" />
+                <polygon class="st1" points="5372,266 3226.2,102.4 -118,384 5373.8,384.3 " />
+                <polygon class="st2" points="-8.9,373.1 3439.1,9.1 5335.1,85.1 5339.1,277.1 3279.1,145.1 " />
+            </svg>
+        </div>
+        <div class="payment_decoration_line_second">
+            <?xml version="1.0" encoding="utf-8"?>
+            <!-- Generator: Adobe Illustrator 20.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+            <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px" y="0px" viewBox="0 0 5348.7 450.9" style="enable-background:new 0 0 5348.7 450.9;" xml:space="preserve">
+                <style type="text/css">
+                    .st0 {
+                        fill: #FFFFFF;
+                    }
+
+                    .st1 {
+                        fill: #F6F6F6;
+                    }
+
+                    .st2 {
+                        fill: #E0E0E0;
+                    }
+                </style>
+                <rect x="-71.1" y="-102.6" class="st0" width="5488.9" height="587.9" />
+                <polygon class="st1" points="5399.8,293.3 822.7,71.4 -48,179 -41.1,-18.6 5381.8,-6.6 " />
+                <polygon class="st2" points="-19.3,175.9 736.7,7.9 5344.7,227.9 5356.7,439.9 832.7,95.9 " />
+            </svg>
+        </div>
     </section>
     <section class="online_apply">
         <h2><span class="apply_title_styled">ОНЛАЙН ЗАЯВКА</span> НА РАСЧЕТ <br> СТОИМОСТИ ДОСТАВКИ ГРУЗА</h2>
@@ -757,13 +1138,38 @@
                 <span class="footer_contacts_item"><span class="footer_contact_styled">КПП</span> 165501001 </span>
             </div>
         </div>
+        <div class="footer_decoration_line">
+            <?xml version="1.0" encoding="utf-8"?>
+            <!-- Generator: Adobe Illustrator 20.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+            <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px" y="0px" viewBox="0 0 5348.7 278.9" style="enable-background:new 0 0 5348.7 278.9;" xml:space="preserve">
+                <style type="text/css">
+                    .st0 {
+                        fill: #FFFFFF;
+                    }
+
+                    .st1 {
+                        fill: #F6F6F6;
+                    }
+
+                    .st2 {
+                        fill: #E0E0E0;
+                    }
+                </style>
+                <rect x="-2.8" y="-15.8" class="st0" width="5366" height="310" />
+                <polygon class="st1" points="5362,257 3096.3,69.4 -10,182 -16,282 5363.2,294.3 " />
+                <polygon class="st2" points="-43.3,182.9 3136.7,10.9 5388.7,138.9 5388.7,266.9 3048.7,98.9 " />
+            </svg>
+
+        </div>
     </footer>
     <section class="modal_window_first">
         <div class="modal_img_container">
             <div class="modal_img"></div>
         </div>
         <span class="modal_title">Заявка принята</span>
-        <p class="modal_text">Мы свяжемся с Вами в ближайшее время</p>
+        <p class="modal_text">Почти готово! Информация по вашей перевозке отправлена менеджеру и он уже взялся за
+            расчет стоимости перевозки. </p>
         <div id="close_btn" class="close_btn" onclick="close_modal()">
         </div>
     </section>

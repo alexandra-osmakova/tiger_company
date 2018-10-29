@@ -3,9 +3,11 @@
 <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 5333 249.1" style="enable-background:new 0 0 5333 249.1;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#D4D4D4;}
-	.st1{fill:#FFDB4D;}
+	.st0{fill:#FFFFFF;}
+	.st1{fill:#D4D4D4;}
+	.st2{fill:#FFDB4D;}
 </style>
-<polygon class="st0" points="-13,246 1235,2 5335,174 1431,98 "/>
-<polygon class="st1" points="-6.8,246.6 1234.8,2 -6.8,137.1 "/>
+<polygon class="st0" points="5373,175 1403.6,61.4 -5.3,247.3 -5.3,-6 5343.7,-6 "/>
+<polygon class="st1" points="-13,246 1235,2 5335,174 1431,98 "/>
+<polygon class="st2" points="-6.8,246.6 1234.8,2 -6.8,137.1 "/>
 </svg>

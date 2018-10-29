@@ -35,6 +35,7 @@ var quiz_step_mark = document.getElementsByClassName('current_question_item');
 var quiz_progress = document.getElementsByClassName('progrss_line_item');
 var quiz_current_number = document.getElementsByClassName('apply_questions_span')[0];
 var question_item = document.getElementsByClassName('question_item');
+var quiz_textarea = document.getElementsByClassName('quiz_textarea');
 var n = 0;
 
 for (var i = 0; i < question_item_checkbox.length; i++) {
@@ -45,6 +46,15 @@ for (var j = 0; j < quiz_btn.length; j++) {
   quiz_btn[j].addEventListener('click', quizNextStep)
 }
 
+for(var k = 0; k < quiz_textarea.length; k++) {
+  quiz_textarea[k].addEventListener('input',quizStart_texarea )
+}
+
+
+function quizStart_texarea() {
+      quiz_btn[n].disabled = false;
+      quiz_btn[n].classList.remove('apply_questions_start__btn_disabled');
+}
 
 
 function quizStart() {
@@ -57,7 +67,7 @@ function quizStart() {
 }
 
 function quizNextStep() {
-  if (n < 4) {
+  if (n <=6 ) {
     question_item[n].classList.add('invisible_item');
     question_item[n + 1].classList.remove('invisible_item');
     quiz_step_mark[n].classList.remove('current_question_item__active');
@@ -65,10 +75,13 @@ function quizNextStep() {
     quiz_progress[n + 1].classList.add('progrss_line_item__active');
     quiz_current_number.innerHTML = Number(quiz_current_number.innerHTML) - 1;
     n++
-    console.log(n)
-  } else if (n == 4) {
-    question_item[4].classList.add('invisible_item');
+  } else if (n == 7) {
+    quiz_step_mark[7].classList.remove('current_question_item__active');
+    quiz_step_mark[0].classList.add('current_question_item__active');
+    question_item[7].classList.add('invisible_item');
     question_item[0].classList.remove('invisible_item');
+    quiz_textarea[0].value = "";
+    n = 0;
   }
 }
 
@@ -150,6 +163,7 @@ function modal_on_second() {
 function close_modal() {
   modal_overlay.classList.remove('modal_overlay');
   modal_window_second.classList.remove('modal_visible');
+  modal_window_first.classList.remove('modal_visible');
 }
 
 

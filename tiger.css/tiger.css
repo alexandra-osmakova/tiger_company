@@ -16,9 +16,18 @@ header {
     background-image: url(../tiger.img/header_background.jpg);
     background-size: cover;
     background-position: center;
-    padding: 0 8.0625rem;
+    padding: 0 8.0625rem 9rem;
     background-repeat: no-repeat;
     position: relative;
+}
+
+.header_decoration_line {
+    width: 100%;
+    height: 2rem;
+    position: absolute;
+    bottom: 11.3125rem;
+    left: 0rem;
+    right: 0rem;
 }
 
 .header_wrap {
@@ -152,8 +161,10 @@ header {
 }
 
 .price {
+    position: relative;
     width: 65%;
     margin: 0 auto;
+    padding-bottom: 5rem;
 }
 
 .price h2 {
@@ -266,7 +277,7 @@ header {
     margin-left: 1.1875rem;
 }
 
-.current_question_item:nth-of-type(5)::after {
+.current_question_item:nth-of-type(8)::after {
     content: "";
     display: none;
 }
@@ -280,7 +291,7 @@ header {
 .apply_questions_start {
     width: 100%;
     position: relative;
-    padding-bottom: 18rem;
+    padding-bottom: 30rem;
 }
 
 .question_item {
@@ -294,6 +305,73 @@ header {
     flex-wrap: wrap;
     padding: 3.625rem 2.9375rem 3.375rem ;
 }
+ 
+.question_item textarea {
+    width: 100%;
+    margin: 2rem auto;
+    outline: none;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    color: #000000;
+    font-family: "Roboto";
+    resize: none;
+}
+
+.question_footer_content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    bottom: -1rem;
+    right: 4rem;
+}
+
+.question_item_checkbox_mark_type {
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: auto;
+  }
+
+  .question_item_checkbox_text_mark_type {
+    font-size: 0.7rem;
+    color: #000000;
+    text-align: center;
+    display: block;
+    margin-left: 0.8125rem;
+    width: 15.875rem;
+  }
+
+  .icon-check {
+    font-size: 0.8rem;
+    color: #000000;
+    opacity: 0;
+
+    -o-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+
+  .question_item_checkbox_mark_type .question_item_checkbox_wrap_mark_type {
+    width: 1.0625rem;
+    height: 1.0625rem;
+    background-color: #ffffff;
+    border: 0.0625rem solid #848484;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .question_item_checkbox_mark_type input[type="checkbox"] {
+    display: none;
+  }
+  
+  .question_item_checkbox_mark_type input:checked + .question_item_checkbox_wrap_mark_type .icon-check  {
+        opacity: 1;
+  }
 
 .invisible_item {
     display: none;
@@ -332,16 +410,17 @@ header {
 }
 
 .apply_questions_checkbox_container {
-    width: 50%;
-    margin-left: 4.5rem;
-    margin-top: 2.1875rem;
+    width: 100%;
+    padding: 2rem;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .question_item_checkbox {
     width: 50%;
     display: flex;
     align-items: center;
+    margin-top: 1rem;
 }
 
 .question_item_checkbox_text {
@@ -390,7 +469,7 @@ header {
 .apply_questions_start__btn {
     width: 15.625rem;
     margin-left: 7.125rem;
-    margin-top: 3.6875rem;
+    margin-right: 2rem;
     height: 3.5rem;
     background-color: #ffdb4d;
 }
@@ -401,10 +480,29 @@ header {
 
 .services {
     width: 100%;
-    background-color: #f2f2f2;
-    padding: 2rem 0;
+    background-color: #f6f6f6;
+    padding: 6rem 0;
     position: relative;
 }
+
+.services_decoration_line_first {
+    width: 100%;
+    height: 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;;
+}
+
+.services_decoration_line_second {
+    width: 100%;
+    height: 2rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;;
+}
+
 
 .services h2 {
     font-size: 1.875rem;
@@ -608,6 +706,7 @@ header {
 }
 
 .advantages_content__item {
+    height: 20rem;
     width: 48%;
     margin: 0.5rem auto;
     background-color: #f5f5f5;
@@ -648,7 +747,7 @@ header {
 
 .advantages_item_text {
     position: absolute;
-    top: 6.5rem;
+    top: 8.5rem;
     left: 2.5625rem;
     right: 2.5625rem;
     font-size: 0.875rem;
@@ -673,11 +772,29 @@ header {
 .about {
     position: relative;
     width: 100%;
-    padding: 2rem;
+    padding: 9rem 2rem;
     background-image: url(../tiger.img/about_background.jpeg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+.about_decoration_line {
+    width: 100%;
+    height: 2rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.about_decoration_line_second {
+    width: 100%;
+    height: 2rem;
+    position: absolute;
+    bottom: 2.5rem;
+    right: 0;
+    left: 0;
 }
 
 .about h2 {
@@ -913,9 +1030,29 @@ header {
 
 .payment_info {
     width: 100%;
-    padding: 4rem;
-    background-color: #f2f2f2;
+    padding: 6rem 4rem;
+    background-color: #f6f6f6;
+    position: relative;
 }
+
+.payment_decoration_line_first {
+    position: absolute;
+    width: 100%;
+    height: 2rem;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.payment_decoration_line_second {
+    position: absolute;
+    width: 100%;
+    height: 2rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
 
 .payment_info h2 {
     font-size: 1.875rem;
@@ -1039,7 +1176,7 @@ header {
 
 .online_apply {
     width: 100%;
-    padding: 2rem 8.125rem;
+    padding: 6rem 8.125rem;
 }
 
 .online_apply h2 {
@@ -1180,7 +1317,17 @@ header {
       display: flex;
       flex-wrap: wrap;
       padding: 3.375rem 8.0625rem;
-      background-color: #f2f2f2;
+      background-color: #f6f6f6;
+      position: relative;
+  }
+
+  .footer_decoration_line {
+      width: 100%;
+      height: 2rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
   }
 
   .logo_section {
