@@ -9,6 +9,7 @@ body {
     margin: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    -webkit-overflow-scrolling: touch;
 }
 
 header {
@@ -62,6 +63,11 @@ header {
     justify-content: space-between;
     align-items: center;
     padding-top: 2.75rem;
+}
+
+.header_menu {
+    display: flex;
+    align-items: center;
 }
 
 .header_contacts_info_item {
@@ -164,7 +170,7 @@ header {
     position: relative;
     width: 65%;
     margin: 0 auto;
-    padding-bottom: 5rem;
+    padding: 5rem 0;
 }
 
 .price h2 {
@@ -232,7 +238,7 @@ header {
 .progress_line p {
     position: absolute;
     top: 1rem;
-    left: 20rem;
+    left: 34%;
     font-size: 0.875rem;
     color: #000000;
     font-weight: 300;
@@ -315,6 +321,13 @@ header {
     color: #000000;
     font-family: "Roboto";
     resize: none;
+    border: 1px solid #000000;
+    border-radius: 0.3125rem;
+}
+
+
+.question_item_checkbox_text_mark_type {
+    margin-top: 1rem;
 }
 
 .question_footer_content {
@@ -783,7 +796,7 @@ header {
     width: 100%;
     height: 2rem;
     position: absolute;
-    top: 0;
+    top: -0.25rem;
     right: 0;
     left: 0;
 }
@@ -1161,6 +1174,7 @@ header {
     right: 1rem;
     padding: 1rem;
     opacity: 0;
+    display: none;
 }
 
 .payment_info__type_text p{
@@ -1172,6 +1186,7 @@ header {
 .visible_item {
     opacity: 1;
     visibility: visible;
+    display: block;
 }
 
 .online_apply {
@@ -1894,5 +1909,1477 @@ header {
 @media screen and (min-width: 1440px) and (max-width: 1701px) {
     html, body{
         font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 1001px) and (max-width: 1210px) {
+    html, body{
+        font-size: 15px;
+    }
+
+    .header_decoration_line {
+        bottom: 8.3125rem;
+    }
+
+    .header_count_form_input, .header_count_form__btn {
+        width: 40%;
+        margin: 1rem auto;
+    }
+
+    .header_count_form {
+        flex-wrap: wrap;
+    }
+
+    .form_item {
+        width: 40%;
+    }
+
+    .form_item:nth-of-type(1), .form_item:nth-of-type(2), .form_item:nth-of-type(3) {
+        padding-bottom: 2rem;
+    }
+
+    .footer_apply_form__btn {
+        width: 10rem;
+    }
+
+    .payment_info_type {
+        width: 60%;
+    }
+
+    .payment_info__type_text {
+        width: 40%;
+    }
+
+    .current_question_item::after {
+        top: 0.255rem;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1000px) {
+    html, body{
+        font-size: 14px;
+    }
+
+    header {
+        padding: 1.5rem;
+    }
+
+    .header_contacts_info_item__btn, .burger_menu_title {
+        display: none;
+    }
+
+    .header_contacts {
+        flex-direction: column-reverse;
+    }
+
+    .header_contacts_info {
+        padding: unset;
+    }
+
+    .header_logo {
+        margin: 1rem auto;
+        width: 7.125rem;
+        height: 7.8125rem;
+    }
+
+    .header_content h2 {
+        font-size: 2.2rem;
+    }
+
+    .header_content {
+        padding-top: 2rem;
+    }
+
+    .header_decoration_line {
+        bottom: 1.3125rem;
+    }
+
+    .header_count_form {
+        flex-wrap: wrap;
+    }
+
+    .header_count_form_input, .header_count_form__btn {
+        width: 40%;
+        margin: 1rem auto;
+
+    }
+
+    .question_item_checkbox {
+        width: 100%;
+    }
+
+    .styled_price_header {
+        margin: 0 2rem;
+    }
+
+
+    .service_type__item {
+        width: 50%;
+    }
+
+    .advantages {
+        padding: 4rem 1rem;
+    }
+
+    .advantages_content__item {
+        width: 100%;
+    }
+
+    .about_numbers_container_row {
+        flex-direction: column;
+        margin:  0 auto;
+    }
+
+    .about_numbers_item {
+        margin:  0 auto;
+    }
+
+    .payment_info {
+        padding: 6rem 1rem;
+    }
+
+    .payment_info_text {
+        width: 90%;
+        font-size: 1rem;
+    }
+
+    .payment_info_content {
+        padding: 0;
+    }
+
+    .payment_info___type_item {
+        flex-wrap: wrap;
+    }
+
+    .payment_info_type, .payment_info__type_text {
+        width: 100%;
+    }
+
+    .payment_info__type_text {
+        position: static;
+    }
+
+    .online_apply {
+        padding: 6rem 1rem;
+    }
+
+    .form_item {
+        width: 45%;
+    }
+
+    .form_item:nth-of-type(1), .form_item:nth-of-type(2), .form_item:nth-of-type(3) {
+        padding-bottom: 1rem;
+    }
+
+    .online_apply_content {
+        padding: 2rem 1rem;
+        margin-top: 2rem;
+    }
+
+    .styled-select.slate {
+        background-position: 28rem 1.5625rem;
+    }
+
+    .online_apply_content_style {
+        width: 100%;
+    }
+
+    .online_apply p, .footer_apply_form__btn, .modal_window_second, .modal_window_first{
+        width: 90%;
+    }
+
+    footer {
+        padding: 3.375rem 1rem 10rem;
+    }
+
+    .footer_item, .footer_item:nth-of-type(3) {
+        width: 50%;
+        margin: 1rem auto 0;
+        padding: 1rem;
+    }
+
+
+    .header_contacts_item__tel_comment {
+        display: none;
+    }
+
+    .header_menu_open .header_contacts {
+        padding: 1rem 2rem;
+    }
+
+    .header_menu_open .header_contacts_item__telephon, .header_menu_open .header_contacts_item__tel_comment {
+        position: absolute;
+        bottom: -30rem;
+        right: 3rem;
+    }
+
+    .header_menu_open .header_contacts_item__telephon {
+        font-size: 1.9rem;
+    }
+
+    .header_menu_open .header_contacts_item__tel_comment {
+        display: block;
+        font-size: 1.1rem;
+        margin: -1rem;
+    }
+
+    .header_menu_open_nav {
+        padding: 0;
+    }
+
+    .header_menu_open_image {
+        background-size: 150%;
+        background-position: -19.625rem 21%;    
+    }
+
+    .header_menu_open_nav_point {
+        font-size: 1.8rem;
+        line-height: unset;
+        margin: 1rem auto;
+    }
+
+    .header_menu_open_nav_decoration {
+        margin: 0 0.5rem;
+    }
+
+    .header_menu_open .header_contacts_info_item__btn {
+        width: 18.7rem;
+        height: 4.8rem;
+        font-size: 1.5rem;
+        display: block;
+        position: absolute;
+        bottom: -38rem;
+        right: -3rem;
+    }
+
+    .swiper-container-android .swiper-slide, .swiper-wrapper {
+        margin: 0 auto!important;
+    }
+
+    .clients_review {
+        padding: 1rem 2rem;
+    }
+
+    .swiper-button-prev {
+        left: 20%!important;
+    }
+
+    .swiper-button-next {
+        right: 20%!important;
+    }
+
+    .swiper-container {
+        padding: 0rem 0 5rem!important;
+    }
+
+    .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+        bottom: 1rem!important;
+    }
+
+    .swiper-pagination-bullet {
+        width: 1rem!important;
+        height: 1rem!important;
+    }
+
+    .swiper-pagination-bullet-active::after {
+        width: 0.428rem;
+        height: 0.428rem;;
+        top: 0.214rem;
+        left: 0.214rem;;
+    }
+
+    .about_decoration_line_second {
+        bottom: 0.5rem;
+    }
+
+}
+
+@media screen and (min-width: 426px) and (max-width: 600px) {
+    html, body{
+        font-size: 14px;
+    }
+
+    header {
+        padding: 1.5rem;
+    }
+
+    .header_contacts_info_item__btn, .burger_menu_title {
+        display: none;
+    }
+
+    .header_contacts {
+        flex-direction: column-reverse;
+    }
+
+    .header_contacts_info {
+        padding: unset;
+    }
+
+    .header_logo {
+        margin: 1rem auto;
+        width: 7.125rem;
+        height: 7.8125rem;
+    }
+
+    .header_content h2 {
+        font-size: 2.2rem;
+    }
+
+    .header_content {
+        padding-top: 2rem;
+    }
+
+    .header_decoration_line {
+        bottom: 2.3125rem;
+    }
+
+    .header_count_form {
+        flex-wrap: wrap;
+    }
+
+    .header_count_form_input, .header_count_form__btn {
+        width: 80%;
+        margin: 1rem auto;
+
+    }
+
+    .question_item_checkbox {
+        width: 100%;
+    }
+
+    .styled_price_header {
+        margin: 0 2rem;
+    }
+
+    .price {
+        width: 100%;
+        padding-top: 6rem;
+    }
+
+    .apply_questions {
+        border: unset;
+        padding: 0 1rem
+    }
+
+    .current_question {
+        display: none;
+    }
+
+    .question_footer_content {
+        flex-direction: column;
+        right: 0;
+        bottom: -3rem;
+    }
+
+    .apply_questions_start {
+        height: 36rem;
+    }
+
+    .apply_questions_start__btn {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .question_item_text {
+        width: 65%;
+    }
+
+    .service_type__item {
+        width: 100%;
+    }
+
+    .advantages {
+        padding: 4rem 1rem;
+    }
+
+    .advantages_content__item {
+        width: 100%;
+    }
+
+    .about_numbers_container_row {
+        flex-direction: column;
+        margin:  0 auto;
+    }
+
+    .about_numbers_item {
+        margin:  0 auto;
+    }
+
+    .payment_info {
+        padding: 6rem 1rem;
+    }
+
+    .payment_info_text {
+        width: 90%;
+        font-size: 1rem;
+    }
+
+    .payment_info_content {
+        padding: 0;
+    }
+
+    .payment_info___type_item {
+        flex-wrap: wrap;
+    }
+
+    .payment_info_type, .payment_info__type_text {
+        width: 100%;
+    }
+
+    .payment_info__type_text {
+        position: static;
+    }
+
+    .online_apply {
+        padding: 6rem 1rem;
+    }
+
+    .form_item {
+        width: 100%;
+    }
+
+    .form_item:nth-of-type(1), .form_item:nth-of-type(2), .form_item:nth-of-type(3) {
+        padding-bottom: 1rem;
+    }
+
+    .online_apply_content {
+        padding: 2rem 1rem;
+        margin-top: 2rem;
+    }
+
+    .styled-select.slate {
+        background-position: 25rem 1.5625rem;
+    }
+
+    .online_apply_content_style {
+        width: 100%;
+    }
+
+    .online_apply p, .footer_apply_form__btn, .modal_window_second, .modal_window_first{
+        width: 90%;
+    }
+
+    .footer_apply_form__btn {
+        position: absolute;
+        bottom: 3rem;
+        left: 1rem;
+        right: 1rem;
+    }
+
+    footer {
+        padding: 3.375rem 1rem 10rem;
+    }
+
+    .footer_item, .footer_item:nth-of-type(3) {
+        width: 100%;
+        margin: 1rem auto 0;
+    }
+
+    .footer_item_text, .confidential_politics, .rights_reserved, .creator_logo {
+        display: none;
+    }
+
+    .footer_item_title {
+        font-size: 1.5rem;
+    }
+
+    .footer_item_info_links, .footer_contacts_item, .footer_apply_form__btn {
+        font-size: 1.4rem;
+        line-height: 2.2rem;
+    }
+
+    .solcial_link {
+        font-size: 2rem;
+    }
+
+    .footer_logo {
+        width: 7.125rem;
+        height: 7.8125rem;
+    }
+
+    .header_contacts_item__tel_comment {
+        display: none;
+    }
+
+    .header_menu_open .header_contacts {
+        padding: 1rem 2rem;
+    }
+
+    .header_menu_open .header_contacts_item__telephon, .header_menu_open .header_contacts_item__tel_comment {
+        position: absolute;
+        bottom: -30rem;
+        right: 3rem;
+    }
+
+    .header_menu_open .header_contacts_item__telephon {
+        font-size: 1.9rem;
+    }
+
+    .header_menu_open .header_contacts_item__tel_comment {
+        display: block;
+        font-size: 1.1rem;
+        margin: -1rem;
+    }
+
+    .header_menu_open_nav {
+        padding: 0;
+    }
+
+    .header_menu_open_image {
+        background-size: 200%;
+        background-position: -23.625rem 21%;        
+    }
+
+    .header_menu_open_nav_point {
+        font-size: 1.8rem;
+        line-height: unset;
+        margin: 1rem auto;
+    }
+
+    .header_menu_open_nav_decoration {
+        margin: 0 0.5rem;
+    }
+
+    .header_menu_open .header_contacts_info_item__btn {
+        width: 18.7rem;
+        height: 4.8rem;
+        font-size: 1.5rem;
+        display: block;
+        position: absolute;
+        bottom: -38rem;
+        right: -3rem;
+    }
+
+    .swiper-container-android .swiper-slide, .swiper-wrapper {
+        margin: 0 auto!important;
+    }
+
+    .clients_review {
+        padding: 1rem 2rem;
+    }
+
+    .swiper-button-prev {
+        left: 20%!important;
+    }
+
+    .swiper-button-next {
+        right: 20%!important;
+    }
+
+    .swiper-container {
+        padding: 0rem 0 5rem!important;
+    }
+
+    .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+        bottom: 1.1rem!important;
+    }
+
+    .swiper-pagination-bullet {
+        width: 1rem!important;
+        height: 1rem!important;
+    }
+
+    .swiper-pagination-bullet-active::after {
+        width: 0.428rem;
+        height: 0.428rem;;
+        top: 0.214rem;
+        left: 0.214rem;;
+    }
+
+    .about_decoration_line_second {
+        bottom: 0.5rem;
+    }
+}
+
+
+@media screen and (min-width: 376px) and (max-width: 425px) {
+    html, body{
+        font-size: 12px;
+    }
+
+    header {
+        padding: 1.5rem;
+    }
+
+    .header_contacts_info_item__btn, .burger_menu_title {
+        display: none;
+    }
+
+    .header_contacts {
+        flex-direction: column-reverse;
+    }
+
+    .header_contacts_info {
+        padding: unset;
+    }
+
+    .header_logo {
+        margin: 1rem auto;
+        width: 7.125rem;
+        height: 7.8125rem;
+    }
+
+    .header_content h2 {
+        font-size: 2.2rem;
+    }
+
+    .header_content {
+        padding-top: 2rem;
+    }
+
+    .header_decoration_line {
+        bottom: 2.3125rem;
+    }
+
+    .header_count_form {
+        flex-wrap: wrap;
+    }
+
+    .header_count_form_input, .header_count_form__btn {
+        width: 80%;
+        margin: 1rem auto;
+
+    }
+
+    .question_item_checkbox {
+        width: 100%;
+    }
+
+    .styled_price_header {
+        margin: 0 2rem;
+    }
+
+    .price {
+        width: 100%;
+        padding-top: 6rem;
+    }
+
+    .apply_questions {
+        border: unset;
+        padding: 0 1rem
+    }
+
+    .current_question {
+        display: none;
+    }
+
+    .question_footer_content {
+        flex-direction: column;
+        right: 0;
+        bottom: -3rem;
+    }
+
+    .apply_questions_start {
+        height: 36rem;
+    }
+
+    .apply_questions_start__btn {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .question_item_text {
+        width: 65%;
+    }
+
+    .service_type__item {
+        width: 100%;
+    }
+
+    .advantages {
+        padding: 4rem 1rem;
+    }
+
+    .advantages_content__item {
+        width: 100%;
+    }
+
+    .about_numbers_container_row {
+        flex-direction: column;
+        margin:  0 auto;
+    }
+
+    .about_numbers_item {
+        margin:  0 auto;
+    }
+
+    .payment_info {
+        padding: 6rem 1rem;
+    }
+
+    .payment_info_text {
+        width: 90%;
+        font-size: 1rem;
+    }
+
+    .payment_info_content {
+        padding: 0;
+    }
+
+    .payment_info___type_item {
+        flex-wrap: wrap;
+    }
+
+    .payment_info_type, .payment_info__type_text {
+        width: 100%;
+    }
+
+    .payment_info__type_text {
+        position: static;
+    }
+
+    .online_apply {
+        padding: 6rem 1rem;
+    }
+
+    .form_item {
+        width: 100%;
+    }
+
+    .form_item:nth-of-type(1), .form_item:nth-of-type(2), .form_item:nth-of-type(3) {
+        padding-bottom: 1rem;
+    }
+
+    .online_apply_content {
+        padding: 2rem 1rem;
+        margin-top: 2rem;
+    }
+
+    .styled-select.slate {
+        background-position: 25rem 1.5625rem;
+    }
+
+    .online_apply_content_style {
+        width: 100%;
+    }
+
+    .online_apply p, .footer_apply_form__btn, .modal_window_second, .modal_window_first{
+        width: 90%;
+    }
+
+    .footer_apply_form__btn {
+        position: absolute;
+        bottom: 3rem;
+        left: 1rem;
+        right: 1rem;
+    }
+
+    footer {
+        padding: 3.375rem 1rem 10rem;
+    }
+
+    .footer_item, .footer_item:nth-of-type(3) {
+        width: 100%;
+        margin: 1rem auto 0;
+    }
+
+    .footer_item_text, .confidential_politics, .rights_reserved, .creator_logo {
+        display: none;
+    }
+
+    .footer_item_title {
+        font-size: 1.5rem;
+    }
+
+    .footer_item_info_links, .footer_contacts_item, .footer_apply_form__btn {
+        font-size: 1.4rem;
+        line-height: 2.2rem;
+    }
+
+    .solcial_link {
+        font-size: 2rem;
+    }
+
+    .footer_logo {
+        width: 7.125rem;
+        height: 7.8125rem;
+    }
+
+    .header_contacts_item__tel_comment {
+        display: none;
+    }
+
+    .header_menu_open .header_contacts {
+        padding: 1rem 2rem;
+    }
+
+    .header_menu_open .header_contacts_item__telephon, .header_menu_open .header_contacts_item__tel_comment {
+        position: absolute;
+        bottom: -30rem;
+        right: 3rem;
+    }
+
+    .header_menu_open .header_contacts_item__telephon {
+        font-size: 1.9rem;
+    }
+
+    .header_menu_open .header_contacts_item__tel_comment {
+        display: block;
+        font-size: 1.1rem;
+        margin: -1rem;
+    }
+
+    .header_menu_open_nav {
+        padding: 0;
+    }
+
+    .header_menu_open_image {
+        background-size: 300%;
+        background-position: -37.625rem 21%;    
+    }
+
+    .header_menu_open_nav_point {
+        font-size: 1.8rem;
+        line-height: unset;
+        margin: 1rem auto;
+    }
+
+    .header_menu_open_nav_decoration {
+        margin: 0 0.5rem;
+    }
+
+    .header_menu_open .header_contacts_info_item__btn {
+        width: 18.7rem;
+        height: 4.8rem;
+        font-size: 1.5rem;
+        display: block;
+        position: absolute;
+        bottom: -38rem;
+        right: -3rem;
+    }
+
+    .swiper-container-android .swiper-slide, .swiper-wrapper {
+        margin: 0 auto!important;
+    }
+
+    .clients_review {
+        padding: 1rem 2rem;
+    }
+
+    .swiper-button-prev {
+        left: 20%!important;
+    }
+
+    .swiper-button-next {
+        right: 20%!important;
+    }
+
+    .swiper-container {
+        padding: 0rem 0 5rem!important;
+    }
+
+    .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+        bottom: 1.1rem!important;
+    }
+
+    .swiper-pagination-bullet {
+        width: 1rem!important;
+        height: 1rem!important;
+    }
+
+    .swiper-pagination-bullet-active::after {
+        width: 0.5rem;
+        height: 0.5rem;
+        top: 0.2rem;
+        left: 0.2rem
+    }
+
+    .about_decoration_line_second {
+        bottom: 0.5rem;
+    }
+}
+
+@media screen and (min-width: 366px) and (max-width: 375px) {
+    html, body{
+        font-size: 11px;
+    }
+
+    .menu__icon span {
+        height: 0.2rem;
+    }
+
+    header {
+        padding: 1.5rem;
+    }
+
+    .header_contacts_info_item__btn, .burger_menu_title {
+        display: none;
+    }
+
+    .header_contacts {
+        flex-direction: column-reverse;
+    }
+
+    .header_contacts_info {
+        padding: unset;
+    }
+
+    .header_logo {
+        margin: 1rem auto;
+        width: 7.125rem;
+        height: 7.8125rem;
+    }
+
+    .header_content h2 {
+        font-size: 2.2rem;
+    }
+
+    .header_content {
+        padding-top: 2rem;
+    }
+
+    .header_decoration_line {
+        bottom: 2.3125rem;
+    }
+
+    .header_count_form {
+        flex-wrap: wrap;
+    }
+
+    .header_count_form_input, .header_count_form__btn {
+        width: 80%;
+        margin: 1rem auto;
+
+    }
+
+    .question_item_checkbox {
+        width: 100%;
+    }
+
+    .styled_price_header {
+        margin: 0 2rem;
+    }
+
+    .price {
+        width: 100%;
+        padding-top: 6rem;
+    }
+
+    .apply_questions {
+        border: unset;
+        padding: 0 1rem
+    }
+
+    .current_question {
+        display: none;
+    }
+
+    .question_footer_content {
+        flex-direction: column;
+        right: 0;
+        bottom: -3rem;
+    }
+
+    .apply_questions_start {
+        height: 36rem;
+    }
+
+    .apply_questions_start__btn {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .question_item_text {
+        width: 65%;
+    }
+
+    .service_type__item {
+        width: 100%;
+    }
+
+    .advantages {
+        padding: 4rem 1rem;
+    }
+
+    .advantages_content__item {
+        width: 100%;
+    }
+
+    .about_numbers_container_row {
+        flex-direction: column;
+        margin:  0 auto;
+    }
+
+    .about_numbers_item {
+        margin:  0 auto;
+    }
+
+    .payment_info {
+        padding: 6rem 1rem;
+    }
+
+    .payment_info_text {
+        width: 90%;
+        font-size: 1rem;
+    }
+
+    .payment_info_content {
+        padding: 0;
+    }
+
+    .payment_info___type_item {
+        flex-wrap: wrap;
+    }
+
+    .payment_info_type, .payment_info__type_text {
+        width: 100%;
+    }
+
+    .payment_info__type_text {
+        position: static;
+    }
+
+    .online_apply {
+        padding: 6rem 1rem;
+    }
+
+    .form_item {
+        width: 100%;
+    }
+
+    .form_item:nth-of-type(1), .form_item:nth-of-type(2), .form_item:nth-of-type(3) {
+        padding-bottom: 1rem;
+    }
+
+    .online_apply_content {
+        padding: 2rem 1rem;
+        margin-top: 2rem;
+    }
+
+    .styled-select.slate {
+        background-position: 25rem 1.5625rem;
+    }
+
+    .online_apply_content_style {
+        width: 100%;
+    }
+
+    .online_apply p, .footer_apply_form__btn, .modal_window_second, .modal_window_first{
+        width: 90%;
+    }
+
+    .footer_apply_form__btn {
+        position: absolute;
+        bottom: 3rem;
+        left: 1rem;
+        right: 1rem;
+    }
+
+    footer {
+        padding: 3.375rem 1rem 10rem;
+    }
+
+    .footer_item, .footer_item:nth-of-type(3) {
+        width: 100%;
+        margin: 1rem auto 0;
+    }
+
+    .footer_item_text, .confidential_politics, .rights_reserved, .creator_logo {
+        display: none;
+    }
+
+    .footer_item_title {
+        font-size: 1.5rem;
+    }
+
+    .footer_item_info_links, .footer_contacts_item, .footer_apply_form__btn {
+        font-size: 1.4rem;
+        line-height: 2.2rem;
+    }
+
+    .solcial_link {
+        font-size: 2rem;
+    }
+
+    .footer_logo {
+        width: 7.125rem;
+        height: 7.8125rem;
+    }
+
+    .header_contacts_item__tel_comment {
+        display: none;
+    }
+
+    .header_menu_open .header_contacts {
+        padding: 1rem 2rem;
+    }
+
+    .header_menu_open .header_contacts_item__telephon, .header_menu_open .header_contacts_item__tel_comment {
+        position: absolute;
+        bottom: -30rem;
+        right: 3rem;
+    }
+
+    .header_menu_open .header_contacts_item__telephon {
+        font-size: 1.9rem;
+    }
+
+    .header_menu_open .header_contacts_item__tel_comment {
+        display: block;
+        font-size: 1.1rem;
+        margin: -1rem;
+    }
+
+    .header_menu_open_nav {
+        padding: 0;
+    }
+
+    .header_menu_open_image {
+        background-size: 300%;
+        background-position: -37.625rem 21%;    
+    }
+
+    .header_menu_open_nav_point {
+        font-size: 1.8rem;
+        line-height: unset;
+        margin: 1rem auto;
+    }
+
+    .header_menu_open_nav_decoration {
+        margin: 0 0.5rem;
+    }
+
+    .header_menu_open .header_contacts_info_item__btn {
+        width: 18.7rem;
+        height: 4.8rem;
+        font-size: 1.5rem;
+        display: block;
+        position: absolute;
+        bottom: -38rem;
+        right: -3rem;
+    }
+
+    .swiper-container-android .swiper-slide, .swiper-wrapper {
+        margin: 0 auto!important;
+    }
+
+    .clients_review {
+        padding: 1rem 2rem;
+    }
+
+    .swiper-button-prev {
+        left: 20%!important;
+    }
+
+    .swiper-button-next {
+        right: 20%!important;
+    }
+
+    .swiper-container {
+        padding: 0rem 0 5rem!important;
+    }
+
+    .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+        bottom: 1.1rem!important;
+    }
+
+    .swiper-pagination-bullet {
+        width: 1rem!important;
+        height: 1rem!important;
+    }
+
+    .swiper-pagination-bullet-active::after {
+        width: 0.5rem;
+        height: 0.5rem;
+        top: 0.2rem;
+        left: 0.2rem
+    }
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 365px) {
+    html, body{
+        font-size: 10px;
+    }
+
+    .menu__icon span {
+        height: 0.2rem;
+    }
+
+    header {
+        padding: 1.5rem;
+    }
+
+    .header_contacts_info_item__btn, .burger_menu_title {
+        display: none;
+    }
+
+    .header_contacts {
+        flex-direction: column-reverse;
+    }
+
+    .header_contacts_info {
+        padding: unset;
+    }
+
+    .header_logo {
+        margin: 1rem auto;
+        width: 7.125rem;
+        height: 7.8125rem;
+    }
+
+    .header_content h2 {
+        font-size: 2.2rem;
+    }
+
+    .header_content {
+        padding-top: 2rem;
+    }
+
+    .header_decoration_line {
+        bottom: 2.3125rem;
+    }
+
+    .header_count_form {
+        flex-wrap: wrap;
+    }
+
+    .header_count_form_input, .header_count_form__btn {
+        width: 80%;
+        margin: 1rem auto;
+
+    }
+
+    .question_item_checkbox {
+        width: 100%;
+    }
+
+    .styled_price_header {
+        margin: 0 2rem;
+    }
+
+    .price {
+        width: 100%;
+        padding-top: 6rem;
+    }
+
+    .apply_questions {
+        border: unset;
+        padding: 0 1rem
+    }
+
+    .current_question {
+        display: none;
+    }
+
+    .question_footer_content {
+        flex-direction: column;
+        right: 0;
+        bottom: -3rem;
+    }
+
+    .apply_questions_start {
+        height: 36rem;
+    }
+
+    .apply_questions_start__btn {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .question_item_text {
+        width: 65%;
+    }
+
+    .service_type__item {
+        width: 100%;
+    }
+
+    .advantages {
+        padding: 4rem 1rem;
+    }
+
+    .advantages_content__item {
+        width: 100%;
+    }
+
+    .about_numbers_container_row {
+        flex-direction: column;
+        margin:  0 auto;
+    }
+
+    .about_numbers_item {
+        margin:  0 auto;
+    }
+
+    .payment_info {
+        padding: 6rem 1rem;
+    }
+
+    .payment_info_text {
+        width: 90%;
+        font-size: 1rem;
+    }
+
+    .payment_info_content {
+        padding: 0;
+    }
+
+    .payment_info___type_item {
+        flex-wrap: wrap;
+    }
+
+    .payment_info_type, .payment_info__type_text {
+        width: 100%;
+    }
+
+    .payment_info__type_text {
+        position: static;
+    }
+
+    .online_apply {
+        padding: 6rem 1rem;
+    }
+
+    .form_item {
+        width: 100%;
+    }
+
+    .form_item:nth-of-type(1), .form_item:nth-of-type(2), .form_item:nth-of-type(3) {
+        padding-bottom: 1rem;
+    }
+
+    .online_apply_content {
+        padding: 2rem 1rem;
+        margin-top: 2rem;
+    }
+
+    .styled-select.slate {
+        background-position: 25rem 1.5625rem;
+    }
+
+    .online_apply_content_style {
+        width: 100%;
+    }
+
+    .online_apply p, .footer_apply_form__btn, .modal_window_second, .modal_window_first{
+        width: 90%;
+    }
+
+    .footer_apply_form__btn {
+        position: absolute;
+        bottom: 3rem;
+        left: 1rem;
+        right: 1rem;
+    }
+
+    footer {
+        padding: 3.375rem 1rem 10rem;
+    }
+
+    .footer_item, .footer_item:nth-of-type(3) {
+        width: 100%;
+        margin: 1rem auto 0;
+    }
+
+    .footer_item_text, .confidential_politics, .rights_reserved, .creator_logo {
+        display: none;
+    }
+
+    .footer_item_title {
+        font-size: 1.5rem;
+    }
+
+    .footer_item_info_links, .footer_contacts_item, .footer_apply_form__btn {
+        font-size: 1.4rem;
+        line-height: 2.2rem;
+    }
+
+    .solcial_link {
+        font-size: 2rem;
+    }
+
+    .footer_logo {
+        width: 7.125rem;
+        height: 7.8125rem;
+    }
+
+    .header_contacts_item__tel_comment {
+        display: none;
+    }
+
+    .header_menu_open .header_contacts {
+        padding: 1rem 2rem;
+    }
+
+    .header_menu_open .header_contacts_item__telephon, .header_menu_open .header_contacts_item__tel_comment {
+        position: absolute;
+        bottom: -30rem;
+        right: 3rem;
+    }
+
+    .header_menu_open .header_contacts_item__telephon {
+        font-size: 1.9rem;
+    }
+
+    .header_menu_open .header_contacts_item__tel_comment {
+        display: block;
+        font-size: 1.1rem;
+        margin: -1rem;
+    }
+
+    .header_menu_open_nav {
+        padding: 0;
+    }
+
+    .header_menu_open_image {
+        background-size: 300%;
+        background-position: -37.625rem 21%;    
+    }
+
+    .header_menu_open_nav_point {
+        font-size: 1.8rem;
+        line-height: unset;
+        margin: 1rem auto;
+    }
+
+    .header_menu_open_nav_decoration {
+        margin: 0 0.5rem;
+    }
+
+    .header_menu_open .header_contacts_info_item__btn {
+        width: 18.7rem;
+        height: 4.8rem;
+        font-size: 1.5rem;
+        display: block;
+        position: absolute;
+        bottom: -38rem;
+        right: -3rem;
+    }
+
+    .swiper-container-android .swiper-slide, .swiper-wrapper {
+        margin: 0 auto!important;
+    }
+
+    .clients_review {
+        padding: 1rem 2rem;
+    }
+
+    .swiper-button-prev {
+        left: 20%!important;
+    }
+
+    .swiper-button-next {
+        right: 20%!important;
+    }
+
+    .swiper-container {
+        padding: 0rem 0 5rem!important;
+    }
+
+    .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+        bottom: 1rem!important;
+    }
+
+    .swiper-pagination-bullet {
+        width: 1rem!important;
+        height: 1rem!important;
+    }
+
+    .swiper-pagination-bullet-active::after {
+        width: 0.4rem;
+        height: 0.4rem;
+        top: 0.2rem;
+        left: 0.2rem
     }
 }

@@ -1,16 +1,29 @@
 var swiper = new Swiper('.swiper-container', {
   slidesPerView: 3,
-  spaceBetween: 10,
-  slidesPerGroup: 3,
+  spaceBetween: 40,
+  loop: true,
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
-  },
-  navigation: {
+  },  navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-});
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 0
+    },
+    480: {
+      slidesPerView: 1,
+      spaceBetween: 0
+    },
+    640: {
+      slidesPerView: 1,
+      spaceBetween: 0
+    }
+  }
+})
 
 var menu__icon = document.getElementsByClassName('menu__icon')[0];
 var menu = document.getElementsByClassName('header_menu_open')[0];
@@ -82,6 +95,10 @@ function quizNextStep() {
     question_item[0].classList.remove('invisible_item');
     quiz_textarea[0].value = "";
     n = 0;
+    quiz_current_number.innerHTML = 8;
+    for(var i = 1; i < quiz_progress.length; i++) {
+      quiz_progress[i].classList.remove('progrss_line_item__active');
+    }
   }
 }
 
@@ -199,6 +216,37 @@ function hoverText(e) {
     payment_info__type_text[0].classList.add('visible_item');
   }
 };
+
+
+var mobile_width = window.innerWidth;
+
+payment_info_column.addEventListener('click', hey, false);
+
+function hey(e) {
+  if(mobile_width <= 425) {
+    if (e.target.id === 'payment_info_type_fourth') {
+      for (var i = 0; i < payment_info__type_text.length; i++) {
+        payment_info__type_text[i].classList.remove('visible_item');
+      }
+      payment_info__type_text[3].classList.add('visible_item');
+    } else if (e.target.id === 'payment_info_type_third') {
+      for (var i = 0; i < payment_info__type_text.length; i++) {
+        payment_info__type_text[i].classList.remove('visible_item');
+      }
+      payment_info__type_text[2].classList.add('visible_item');
+    } else if (e.target.id === 'payment_info_type_second') {
+      for (var i = 0; i < payment_info__type_text.length; i++) {
+        payment_info__type_text[i].classList.remove('visible_item');
+      }
+      payment_info__type_text[1].classList.add('visible_item');
+    } else if (e.target.id === 'payment_info_type_first') {
+      for (var i = 0; i < payment_info__type_text.length; i++) {
+        payment_info__type_text[i].classList.remove('visible_item');
+      }
+      payment_info__type_text[0].classList.add('visible_item');
+    }
+  }
+}
 
 var clientWidth = document.documentElement.clientWidth;
 var about_numbers_container = document.getElementsByClassName('about_numbers_container')[0];
