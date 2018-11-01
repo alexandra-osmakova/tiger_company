@@ -98,6 +98,8 @@ function quizNextStep() {
     quiz_current_number.innerHTML = 8;
     for(var i = 1; i < quiz_progress.length; i++) {
       quiz_progress[i].classList.remove('progrss_line_item__active');
+      quiz_btn[i-1].disabled = true;
+      quiz_btn[i-1].classList.add('apply_questions_start__btn_disabled');
     }
   }
 }
@@ -307,4 +309,6 @@ function isPartiallyVisible(el) {
 
   return ((top + height >= 0) && (height + window.innerHeight >= bottom));
 }
+
+
 

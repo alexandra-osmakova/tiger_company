@@ -14,7 +14,7 @@ body {
 
 header {
     width: 100%;
-    background-image: url(../tiger.img/header_background.jpg);
+    background-image: url(../tiger.img/header_background1.jpg);
     background-size: cover;
     background-position: center;
     padding: 0 8.0625rem 9rem;
@@ -311,10 +311,12 @@ header {
     flex-wrap: wrap;
     padding: 3.625rem 2.9375rem 3.375rem ;
 }
- 
-.question_item textarea {
-    width: 100%;
-    margin: 2rem auto;
+
+.question_item .quiz_textarea {
+    width: 70%;
+    height: 3.5rem;
+    margin: 0;
+    padding: 0 1rem;
     outline: none;
     font-size: 0.875rem;
     line-height: 1.375rem;
@@ -1427,6 +1429,7 @@ header {
   }
 
   .solcial_link {
+      text-decoration: unset;
       display: block;
       width: auto;
       margin: 1.5rem auto;
