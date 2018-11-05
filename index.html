@@ -149,61 +149,59 @@
                         <div class="question_item_number">1</div>
                         <p class="question_item_text">Что вам нужно перевезти?</p>
                     </div>
-                    <input type="text" class="quiz_textarea" name="parcel_type" id="parcel_type">
-                    <div class="question_footer_content">
-                        <button class="btn apply_questions_start__btn apply_questions_start__btn_disabled" disabled>На
-                            следующий шаг</button>
-                    </div>
+                    <input type="text" class="quiz_textarea" name="parcel_type" id="parcel_type" placeholder="Например, “холодильник”, “переезд”, “трубы” и т.д. ">
+                    <button class="btn apply_questions_start__btn apply_questions_start__btn_disabled" disabled>На
+                        следующий шаг</button>
                 </div>
-                <div class="question_item invisible_item">
+                <div class="question_item invisible_item second_question_container">
                     <div class="question_item__text_container">
                         <div class="question_item_number">2</div>
                         <p class="question_item_text">Выберите вид автотранспорта для доставки груза</p>
                     </div>
                     <div class="apply_questions_checkbox_container">
-                        <label class="question_item_checkbox">
+                        <label class="question_item_checkbox second_question">
                             <input class="question_item_checkbox_input" type="radio" type="radio" name="answer" value="yes">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
                             <span class="question_item_checkbox_text">Догруз</span>
                         </label>
-                        <label class="question_item_checkbox">
+                        <label class="question_item_checkbox second_question">
                             <input class="question_item_checkbox_input" type="radio" type="radio" name="answer" value="no">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
                             <span class="question_item_checkbox_text">Газель</span>
                         </label>
-                        <label class="question_item_checkbox">
+                        <label class="question_item_checkbox second_question">
                             <input class="question_item_checkbox_input" type="radio" type="radio" name="answer" value="no">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
                             <span class="question_item_checkbox_text">3-тонник</span>
                         </label>
-                        <label class="question_item_checkbox">
+                        <label class="question_item_checkbox second_question">
                             <input class="question_item_checkbox_input" type="radio" type="radio" name="answer" value="no">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
                             <span class="question_item_checkbox_text">5-тонник</span>
                         </label>
-                        <label class="question_item_checkbox">
+                        <label class="question_item_checkbox second_question">
                             <input class="question_item_checkbox_input" type="radio" type="radio" name="answer" value="no">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
                             <span class="question_item_checkbox_text">10-тонник</span>
                         </label>
-                        <label class="question_item_checkbox">
+                        <label class="question_item_checkbox second_question">
                             <input class="question_item_checkbox_input" type="radio" type="radio" name="answer" value="no">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
                             <span class="question_item_checkbox_text">Фура</span>
                         </label>
-                        <label class="question_item_checkbox">
+                        <label class="question_item_checkbox second_question">
                             <input class="question_item_checkbox_input" type="radio" type="radio" name="answer" value="no">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
@@ -211,21 +209,24 @@
                             <span class="question_item_checkbox_text">Негабарит</span>
                         </label>
                     </div>
-                    <div class="question_footer_content">
-                        <button class="btn apply_questions_start__btn apply_questions_start__btn_disabled" id='lol'
-                            disabled>На
-                            следующий шаг</button>
-                        <label class="question_item_checkbox_mark_type">
-                            <input type="checkbox">
-
-                            <div class="question_item_checkbox_wrap_mark_type">
-                                <span class="icon-check"></span>
-                            </div>
-                            <span class="question_item_checkbox_text_mark_type">*Поставьте галочку, если для
-                                транспортировки
-                                груза необходим температурный режим </span>
-                        </label>
+                    <div class="car_info">
+                        <h3>«Газель»</h3>
+                        <p>«ГАЗель» — серия российских малотоннажных автомобилей, производимых на Горьковском
+                            автомобильном заводе с 20 июля 1994 года. Сборка автомобилей семейства </p>
                     </div>
+                    <label class="question_item_checkbox_mark_type">
+                        <input type="checkbox">
+
+                        <div class="question_item_checkbox_wrap_mark_type">
+                            <span class="icon-check"></span>
+                        </div>
+                        <span class="question_item_checkbox_text_mark_type">*Поставьте галочку, если для
+                            транспортировки
+                            груза необходим температурный режим </span>
+                    </label>
+                    <button class="btn apply_questions_start__btn apply_questions_start__btn_disabled" id='lol'
+                        disabled>На
+                        следующий шаг</button>
                 </div>
                 <div class="question_item invisible_item">
                     <div class="question_item__text_container">
@@ -297,10 +298,8 @@
                             <span class="question_item_checkbox_text">Другая</span>
                         </label>
                     </div>
-                    <div class="question_footer_content">
-                        <button class="btn apply_questions_start__btn apply_questions_start__btn_disabled" disabled>На
-                            следующий шаг</button>
-                    </div>
+                    <button class="btn apply_questions_start__btn apply_questions_start__btn_disabled" disabled>На
+                        следующий шаг</button>
                 </div>
                 <div class="question_item invisible_item">
                     <div class="question_item__text_container">
@@ -344,10 +343,8 @@
                             <span class="question_item_checkbox_text">Без разницы</span>
                         </label>
                     </div>
-                    <div class="question_footer_content">
-                        <button class="btn apply_questions_start__btn apply_questions_start__btn_disabled" disabled>На
-                            следующий шаг</button>
-                    </div>
+                    <button class="btn apply_questions_start__btn apply_questions_start__btn_disabled" disabled>На
+                        следующий шаг</button>
                 </div>
                 <div class="question_item invisible_item">
                     <div class="question_item__text_container">
@@ -355,20 +352,18 @@
                         <p class="question_item_text">Введите город отправки:</p>
                     </div>
                     <input type="text" class="quiz_textarea" name="parcel_from_quiz" id="parcel_from_quiz">
-                    <div class="question_footer_content">
-                        <button class="btn apply_questions_start__btn apply_questions_start__btn_disabled" id='lol'
-                            disabled>На
-                            следующий шаг</button>
-                        <label class="question_item_checkbox_mark_type">
-                            <input type="checkbox">
+                    <button class="btn apply_questions_start__btn apply_questions_start__btn_disabled" id='lol'
+                        disabled>На
+                        следующий шаг</button>
+                    <label class="question_item_checkbox_mark_type">
+                        <input type="checkbox">
 
-                            <div class="question_item_checkbox_wrap_mark_type">
-                                <span class="icon-check"></span>
-                            </div>
-                            <span class="question_item_checkbox_text_mark_type">*Поставьте галочку, если в городе более
-                                одной точки погрузки </span>
-                        </label>
-                    </div>
+                        <div class="question_item_checkbox_wrap_mark_type">
+                            <span class="icon-check"></span>
+                        </div>
+                        <span class="question_item_checkbox_text_mark_type">*Поставьте галочку, если в городе более
+                            одной точки погрузки </span>
+                    </label>
                 </div>
                 <div class="question_item invisible_item">
                     <div class="question_item__text_container">
@@ -376,20 +371,18 @@
                         <p class="question_item_text">Введите город доставки</p>
                     </div>
                     <input type="text" class="quiz_textarea" name="parcel_to_quiz" id="parcel_to_quiz">
-                    <div class="question_footer_content">
-                        <button class="btn apply_questions_start__btn apply_questions_start__btn_disabled" id='lol'
-                            disabled>На
-                            следующий шаг</button>
-                        <label class="question_item_checkbox_mark_type">
-                            <input type="checkbox">
+                    <button class="btn apply_questions_start__btn apply_questions_start__btn_disabled" id='lol'
+                        disabled>На
+                        следующий шаг</button>
+                    <label class="question_item_checkbox_mark_type">
+                        <input type="checkbox">
 
-                            <div class="question_item_checkbox_wrap_mark_type">
-                                <span class="icon-check"></span>
-                            </div>
-                            <span class="question_item_checkbox_text_mark_type">*Поставьте галочку, если в городе более
-                                1 точки выгрузки</span>
-                        </label>
-                    </div>
+                        <div class="question_item_checkbox_wrap_mark_type">
+                            <span class="icon-check"></span>
+                        </div>
+                        <span class="question_item_checkbox_text_mark_type">*Поставьте галочку, если в городе более
+                            1 точки выгрузки</span>
+                    </label>
                 </div>
                 <div class="question_item invisible_item">
                     <div class="question_item__text_container">
@@ -426,10 +419,8 @@
                             <span class="question_item_checkbox_text">В течение 30 дней</span>
                         </label>
                     </div>
-                    <div class="question_footer_content">
-                        <button class="btn apply_questions_start__btn apply_questions_start__btn_disabled" disabled>На
-                            следующий шаг</button>
-                    </div>
+                    <button class="btn apply_questions_start__btn apply_questions_start__btn_disabled" disabled>На
+                        следующий шаг</button>
                 </div>
                 <div class="question_item invisible_item">
                     <div class="question_item__text_container">
@@ -467,10 +458,8 @@
                             <span class="question_item_checkbox_text">ООО</span>
                         </label>
                     </div>
-                    <div class="question_footer_content">
-                        <button class="btn apply_questions_start__btn apply_questions_start__btn_disabled" onclick="modal_on_second()"
-                            disabled>Перейти к заказу</button>
-                    </div>
+                    <button class="btn apply_questions_start__btn apply_questions_start__btn_disabled" onclick="modal_on_second()"
+                        disabled>Перейти к заказу</button>
                 </div>
             </div>
             <div class="price_decoration_line">

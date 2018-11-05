@@ -14,7 +14,7 @@ body {
 
 header {
     width: 100%;
-    background-image: url(../tiger.img/header_background1.jpg);
+    background-image: url(../tiger.img/head_driver_.jpg);
     background-size: cover;
     background-position: center;
     padding: 0 8.0625rem 9rem;
@@ -327,19 +327,34 @@ header {
     border-radius: 0.3125rem;
 }
 
+.quiz_textarea::placeholder {
+    color: #b6b6b6;
+    font-family: "Roboto";
+}
+
+.car_info {
+    width: 40%;
+    background-color: #f6f6f6;
+    padding: 2.5625rem 2.625rem;
+    margin-top: 2rem;
+}
+
+.car_info p {
+    font-size: 0.8125rem;
+    line-height: 1.25rem;
+    color: #000000;
+}
+
+.car_info h3 {
+    font-size: 0.9375rem;
+    color: #000000;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1.875rem;
+}
 
 .question_item_checkbox_text_mark_type {
     margin-top: 1rem;
-}
-
-.question_footer_content {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: absolute;
-    bottom: -1rem;
-    right: 4rem;
 }
 
 .question_item_checkbox_mark_type {
@@ -444,7 +459,25 @@ header {
     text-align: center;
 }
 
+.second_question {
+    width: 33.3%;
+}
 
+.second_question_container .apply_questions_checkbox_container {
+    width: 60%;
+    padding-top: 0;
+    padding-left: 4rem;
+}
+
+.second_question_container .apply_questions_start__btn {
+    margin-top: 3rem;
+}
+
+.second_question_container .question_item_checkbox_mark_type {
+    position: absolute;
+    bottom: 5rem;
+    left: 7rem;
+}
 
 .question_item_checkbox_wrap {
     position: relative;
@@ -482,11 +515,14 @@ header {
   }
 
 .apply_questions_start__btn {
+    margin-left: 4rem;
     width: 15.625rem;
-    margin-left: 7.125rem;
-    margin-right: 2rem;
     height: 3.5rem;
     background-color: #ffdb4d;
+}
+
+#parcel_type {
+    margin-left: 4rem;
 }
 
 .apply_questions_start__btn_disabled {
@@ -549,63 +585,63 @@ header {
 }
 
 .service_type__item:nth-of-type(1) {
-    background-image: url(../tiger.img/service_img1.jpg);
+    background-image: url(../tiger.img/asphalt-cars-clouds-1307546.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: right;
+    background-position: center;
 }
 
 .service_type__item:nth-of-type(2) {
-    background-image: url(../tiger.img/service_img2.jpg);
+    background-image: url(../tiger.img/logistics-lorry-mountains-933981.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: left;
 }
 
 .service_type__item:nth-of-type(3) {
-    background-image: url(../tiger.img/service_img3.jpg);
+    background-image: url(../tiger.img/hey.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: 100% 15%;
 }
 
 .service_type__item:nth-of-type(4) {
-    background-image: url(../tiger.img/service_img4.jpg);
+    background-image: url(../tiger.img/shutterstock_1039216024-e1535033228887.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .service_type__item:nth-of-type(5) {
-    background-image: url(../tiger.img/service_img5.jpg);
+    background-image: url(../tiger.img/gallagher-delivers-on-their-promise.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 68%;
+    background-position: left;
 }
 
 .service_type__item:nth-of-type(6) {
-    background-image: url(../tiger.img/service_img6.jpg);
+    background-image: url(../tiger.img/Movers-And-Packers-Services-In-USA.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: right;
+    background-position: center;
 }
 
 .service_type__item:nth-of-type(7) {
-    background-image: url(../tiger.img/service_img1.jpg);
+    background-image: url(../tiger.img/ekspress_piegade.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: right;
+    background-position: left;
 }
 
 .service_type__item:nth-of-type(8) {
-    background-image: url(../tiger.img/service_img2.jpg);
+    background-image: url(../tiger.img/original_1e5853df4cfc9a6c.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .service_type__item:nth-of-type(9) {
-    background-image: url(../tiger.img/service_img3.jpg);
+    background-image: url(../tiger.img/kamaz_4308-n3_2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -2268,12 +2304,6 @@ header {
         display: none;
     }
 
-    .question_footer_content {
-        flex-direction: column;
-        right: 0;
-        bottom: -3rem;
-    }
-
     .apply_questions_start {
         height: 36rem;
     }
@@ -2564,12 +2594,6 @@ header {
 
     .current_question {
         display: none;
-    }
-
-    .question_footer_content {
-        flex-direction: column;
-        right: 0;
-        bottom: -3rem;
     }
 
     .apply_questions_start {
@@ -2867,11 +2891,6 @@ header {
         display: none;
     }
 
-    .question_footer_content {
-        flex-direction: column;
-        right: 0;
-        bottom: -3rem;
-    }
 
     .apply_questions_start {
         height: 36rem;
@@ -3163,12 +3182,6 @@ header {
 
     .current_question {
         display: none;
-    }
-
-    .question_footer_content {
-        flex-direction: column;
-        right: 0;
-        bottom: -3rem;
     }
 
     .apply_questions_start {
