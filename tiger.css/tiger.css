@@ -138,7 +138,7 @@ header {
 .header_count_form_input, .header_count_form__btn {
     outline: none;
     border: unset;
-    width: 13.4375rem;
+    width: 13.4375rem!important;
     height: 3.5rem;
     border-radius: 0.3125rem;
     background-color: #ffffff;
@@ -2005,7 +2005,7 @@ header {
     }
 
     .header_count_form_input, .header_count_form__btn {
-        width: 40%;
+        width: 40%!important;
         margin: 1rem auto;
     }
 
@@ -2111,7 +2111,7 @@ header {
     }
 
     .header_count_form_input, .header_count_form__btn {
-        width: 40%;
+        width: 40%!important;
         margin: 1rem auto;
 
     }
@@ -2399,7 +2399,7 @@ header {
     }
 
     .header_count_form_input, .header_count_form__btn {
-        width: 80%;
+        width: 80%!important;
         margin: 1rem auto;
 
     }
@@ -2723,7 +2723,7 @@ header {
     }
 
     .header_count_form_input, .header_count_form__btn {
-        width: 80%;
+        width: 80%!important;
         margin: 1rem auto;
 
     }
@@ -3055,7 +3055,7 @@ header {
     }
 
     .header_count_form_input, .header_count_form__btn {
-        width: 80%;
+        width: 80%!important;
         margin: 1rem auto;
 
     }
@@ -3381,7 +3381,7 @@ header {
     }
 
     .header_count_form_input, .header_count_form__btn {
-        width: 80%;
+        width: 80%!important;
         margin: 1rem auto;
 
     }
