@@ -1,33 +1,7 @@
-var swiper = new Swiper('.swiper-container', {
-  slidesPerView: 3,
-  spaceBetween: 40,
-  loop: true,
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  breakpoints: {
-    320: {
-      slidesPerView: 1,
-      spaceBetween: 0
-    },
-    480: {
-      slidesPerView: 1,
-      spaceBetween: 0
-    },
-    640: {
-      slidesPerView: 1,
-      spaceBetween: 0
-    }
-  }
-})
-
 var menu__icon = document.getElementsByClassName('menu__icon')[0];
 var menu = document.getElementsByClassName('header_menu_open')[0];
 var burger_title = document.getElementsByClassName('burger_menu_title')[0];
+var burger_menu_title = document.getElementsByClassName('burger_menu_title')[0];
 
 menu__icon.addEventListener('click', menu_open);
 
@@ -39,7 +13,7 @@ var header_burger_menu = document.getElementsByClassName("header_burger_menu")[0
 
 menu__icon.addEventListener('click', function () {
   header_burger_menu.classList.toggle('menu_state_open');
-  burger_title.classList.toggle('menu_state_open');
+  burger_title.classList.remove('menu_state_open');
 })
 
 var question_item_checkbox = document.getElementsByClassName('question_item_checkbox_input');
@@ -49,6 +23,9 @@ var quiz_progress = document.getElementsByClassName('progrss_line_item');
 var quiz_current_number = document.getElementsByClassName('apply_questions_span')[0];
 var question_item = document.getElementsByClassName('question_item');
 var quiz_textarea = document.getElementsByClassName('quiz_textarea');
+var apply_questions_text = document.getElementsByClassName('apply_questions_text');
+var progress_line = document.getElementsByClassName('progress_line')[0];
+var current_question = document.getElementsByClassName('current_question')[0];
 var n = 0;
 
 for (var i = 0; i < question_item_checkbox.length; i++) {
@@ -80,7 +57,7 @@ function quizStart() {
 }
 
 function quizNextStep() {
-  if (n <=6 ) {
+  if (n <=7 ) {
     question_item[n].classList.add('invisible_item');
     question_item[n + 1].classList.remove('invisible_item');
     quiz_step_mark[n].classList.remove('current_question_item__active');
@@ -88,7 +65,7 @@ function quizNextStep() {
     quiz_progress[n + 1].classList.add('progrss_line_item__active');
     quiz_current_number.innerHTML = Number(quiz_current_number.innerHTML) - 1;
     n++
-  } else if (n == 7) {
+  } else if (n == 8) {
     quiz_step_mark[7].classList.remove('current_question_item__active');
     quiz_step_mark[0].classList.add('current_question_item__active');
     question_item[7].classList.add('invisible_item');
@@ -126,7 +103,7 @@ function counter() {
     separator: ',',
     decimal: '.',
   };
-  var demo = new CountUp('second_item_to_count', 0, 10, 0, 2, options);
+  var demo = new CountUp('second_item_to_count', 0, 20, 0, 2, options);
   if (!demo.error) {
     demo.start();
   } else {
@@ -309,6 +286,3 @@ function isPartiallyVisible(el) {
 
   return ((top + height >= 0) && (height + window.innerHeight >= bottom));
 }
-
-
-
