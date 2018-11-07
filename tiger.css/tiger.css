@@ -199,7 +199,7 @@ header {
     width: 100%;
     background-color: rgba(207,207,207,0);
     border: 0.375rem solid #dfdfdf;
-    padding: 2.875rem 0;
+    padding: 2.875rem 0 0;
 }
 
 .apply_questions_text {
@@ -407,30 +407,55 @@ header {
 }
 
 .question_info {
+    position: relative;
     width: 40%;
     background-color: #f6f6f6;
-    padding: 2.5625rem 2.625rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
+    max-height: 18rem;
 }
 
-.question_info p {
+.question_info_item {
+    padding: 2.5625rem 2.625rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    -o-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.question_info_item p {
     font-size: 0.8125rem;
     line-height: 1.25rem;
     color: #000000;
+
+    -o-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
 
-.question_info h3 {
+.question_info_item h3 {
     font-size: 0.9375rem;
     color: #000000;
     font-weight: bold;
     margin-bottom: 1.875rem;
+
+    -o-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
 
 .question_item_checkbox_mark_type {
     user-select: none;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: flex-start;
     width: auto;
   }
 
@@ -528,6 +553,10 @@ header {
     text-align: center;
 }
 
+.first_question_container .apply_questions_start__btn, .fourth_question_container .apply_questions_start__btn, .fifth_question_container .apply_questions_start__btn, .sixth_question_container .apply_questions_start__btn, .seventh_question_container .apply_questions_start__btn, .eighth_question_container .apply_questions_start__btn{
+    margin-left: 4rem;
+}
+
 .fourth_question_container .apply_questions_checkbox_container{
     padding-top: 0;
     padding-left: 4rem;
@@ -538,6 +567,10 @@ header {
     margin-top: 2.1875rem;
     margin-left: 4rem;
     margin-bottom: 10rem;
+}
+
+.fifth_question_container, .sixth_question_container {
+    flex-direction: column;
 }
 
 .fifth_question_container .question_item_checkbox_mark_type, .sixth_question_container .question_item_checkbox_mark_type{ 
@@ -561,18 +594,21 @@ header {
     padding-left: 4rem;
 }
 
+.third_question_container .apply_questions_start__btn {
+    margin-top: 8.3125rem;
+}
+
 .second_question_container .apply_questions_start__btn, .seventh_question_container .apply_questions_start__btn {
-    margin-top: 3rem;
+    margin-top: 3.75rem;
 }
 
 .seventh_question_container .apply_questions_checkbox_container, .eighth_question_container .apply_questions_checkbox_container{
     padding-bottom: 7rem;
 }
 
-.second_question_container .question_item_checkbox_mark_type, .third_question_container .question_item_checkbox_mark_type {
-    position: absolute;
-    bottom: 5rem;
-    left: 7rem;
+.question_item__button_container {
+    width: 100%;
+    padding-top: 2.625rem;
 }
 
 .question_item_checkbox_wrap {
@@ -611,7 +647,6 @@ header {
   }
 
 .apply_questions_start__btn {
-    margin-left: 4rem;
     width: 15.625rem;
     height: 3.5rem;
     background-color: #ffdb4d;
@@ -1046,7 +1081,7 @@ header {
 
 .clients_review {
     width: 100%;
-    padding: 2rem 6.25rem 8rem;
+    padding: 8.0625rem 4rem;
 }
 
 .clients_review h2 {
@@ -1513,7 +1548,7 @@ header {
   }
 
   .drim_logo {
-    background-image: url(../tiger.img/Logo\ 4.png);
+    background-image: url(../tiger.img/Logo-4.png);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -1765,6 +1800,10 @@ header {
     padding: 2.5rem;
 }
 
+.modal_window_second a {
+    text-decoration: unset;
+}
+
 .modal_img_container {
     width: 4.6875rem;
     height: 4.6875rem;
@@ -1875,6 +1914,54 @@ header {
 
 .modal_agreement a {
     color: #8b8b8b;
+}
+
+.thanks_modal {
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ffffff;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+} 
+
+.thick_container {
+    width: 4.6875rem;
+    height: 4.6875rem;
+    border-radius: 50%;
+    border: 0.125rem solid #ffdb4d;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.thick_container svg {
+    width: 50%;
+}
+
+.thanks_modal h3 {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    color: #000000;
+    text-align: center;
+    display: block;
+    margin: 2.4375rem auto 3.9375rem;
+}
+
+.thanks_modal p {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+    color: #000000;
+    font-weight: 300;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
 }
 
 .close_btn {
@@ -2120,6 +2207,10 @@ header {
         width: 50%;
     }
 
+    .third_question_container .question_item_checkbox {
+        width: 33%;
+    }
+
     .question_item_text {
         display: block;
         width: 80%;
@@ -2312,7 +2403,7 @@ header {
     }
 
     .second_question_container .apply_questions_start__btn, .seventh_question_container .apply_questions_start__btn {
-        margin-top: 4rem;
+        margin-top: 2rem;
     }
 
     .second_question_container .question_item_checkbox_mark_type, .third_question_container .question_item_checkbox_mark_type {
@@ -2323,10 +2414,18 @@ header {
         padding-top: 1rem;
     }
 
+    .fourth_question_container .apply_questions_checkbox_container {
+        padding-bottom: 2rem;
+    }
+
     .fifth_question_container .quiz_textarea, .sixth_question_container .quiz_textarea {
         width: 100%;
         margin-left: 0;
         margin-bottom: 4rem;
+    }
+
+    .sixth_question_container .apply_questions_start__btn {
+        margin-top: 3rem;
     }
 
     .fifth_question_container .apply_questions_start__btn {
@@ -2334,7 +2433,7 @@ header {
     }
 
     .fifth_question_container .question_item_checkbox_mark_type, .sixth_question_container .question_item_checkbox_mark_type {
-        bottom: 10rem;
+        bottom: 13rem;
         left: 5rem;
     }
 
@@ -2676,6 +2775,23 @@ header {
     .clients_review {
         padding: 2rem 2rem 8rem; 
     }
+
+    .first_question_container .apply_questions_start__btn, .fourth_question_container .apply_questions_start__btn, .seventh_question_container .apply_questions_start__btn, .eighth_question_container .apply_questions_start__btn {
+        margin: 0 auto;
+    }
+
+    .fifth_question_container .question_item_checkbox_mark_type, .sixth_question_container .question_item_checkbox_mark_type {
+        bottom: 19rem;
+        left: 5rem;
+    }
+
+    .fifth_question_container .apply_questions_start__btn, .sixth_question_container .apply_questions_start__btn {
+        margin: 2rem auto 0;
+    }
+
+    .third_question_container .apply_questions_start__btn {
+        margin-top: 4.3125rem;
+    }
 }
 
 
@@ -3005,6 +3121,23 @@ header {
     .clients_review {
         padding: 2rem 2rem 8rem; 
     }
+
+    .first_question_container .apply_questions_start__btn, .fourth_question_container .apply_questions_start__btn, .seventh_question_container .apply_questions_start__btn, .eighth_question_container .apply_questions_start__btn {
+        margin: 0 auto;
+    }
+
+    .fifth_question_container .question_item_checkbox_mark_type, .sixth_question_container .question_item_checkbox_mark_type {
+        bottom: 19rem;
+        left: 5rem;
+    }
+
+    .fifth_question_container .apply_questions_start__btn, .sixth_question_container .apply_questions_start__btn {
+        margin: 2rem auto 0;
+    }
+
+    .third_question_container .apply_questions_start__btn {
+        margin-top: 4.3125rem;
+    }
 }
 
 @media screen and (min-width: 366px) and (max-width: 375px) {
@@ -3330,6 +3463,23 @@ header {
         text-align: center;
         padding-left: 0;
     }
+
+    .first_question_container .apply_questions_start__btn, .fourth_question_container .apply_questions_start__btn, .seventh_question_container .apply_questions_start__btn, .eighth_question_container .apply_questions_start__btn {
+        margin: 0 auto;
+    }
+
+    .fifth_question_container .question_item_checkbox_mark_type, .sixth_question_container .question_item_checkbox_mark_type {
+        bottom: 19rem;
+        left: 5rem;
+    }
+
+    .fifth_question_container .apply_questions_start__btn, .sixth_question_container .apply_questions_start__btn {
+        margin: 2rem auto 0;
+    }
+
+    .third_question_container .apply_questions_start__btn {
+        margin-top: 4.3125rem;
+    }
 }
 
 
@@ -3604,8 +3754,20 @@ header {
         display: none;
     }
 
+    .third_question_container .apply_questions_start__btn {
+        margin-top: 5.3125rem;
+    }
+
     .second_question_container .apply_questions_checkbox_container, .third_question_container .apply_questions_checkbox_container, .seventh_question_container .apply_questions_checkbox_container, .eighth_question_container .apply_questions_checkbox_container {
         width: 100%;
+    }
+
+    .first_question_container .apply_questions_start__btn, .fourth_question_container .apply_questions_start__btn, .seventh_question_container .apply_questions_start__btn, .eighth_question_container .apply_questions_start__btn {
+        margin: 0 auto;
+    }
+
+    .fifth_question_container .apply_questions_start__btn, .sixth_question_container .apply_questions_start__btn{
+        margin: 2rem auto 0;
     }
 
     .second_question_container .apply_questions_start__btn, .seventh_question_container .apply_questions_start__btn {
@@ -3627,7 +3789,7 @@ header {
     }
 
     .fifth_question_container .question_item_checkbox_mark_type, .sixth_question_container .question_item_checkbox_mark_type {
-        bottom: 14rem;
+        bottom: 19rem;
         left: 5rem;
     }
 
@@ -3646,5 +3808,9 @@ header {
     .styled_number_description {
         text-align: center;
         padding-left: 0;
+    }
+
+    .third_question_container .apply_questions_start__btn {
+        margin-top: 4.3125rem;
     }
 }

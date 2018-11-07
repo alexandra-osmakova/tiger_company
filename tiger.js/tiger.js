@@ -26,7 +26,12 @@ var quiz_textarea = document.getElementsByClassName('quiz_textarea');
 var apply_questions_text = document.getElementsByClassName('apply_questions_text');
 var progress_line = document.getElementsByClassName('progress_line')[0];
 var current_question = document.getElementsByClassName('current_question')[0];
+var question_info_item = document.getElementsByClassName('question_info_item');
 var n = 0;
+
+quiz_btn[1].addEventListener('click', function() {
+  question_info_item[7].classList.remove('invisible_item');
+})
 
 for (var i = 0; i < question_item_checkbox.length; i++) {
   question_item_checkbox[i].addEventListener('click', quizStart)
@@ -52,6 +57,12 @@ function quizStart() {
     if (question_item_checkbox[i].checked) {
       quiz_btn[n].disabled = false;
       quiz_btn[n].classList.remove('apply_questions_start__btn_disabled');
+      if(question_item_checkbox[i].classList.contains('checkbox_question_info_trigger')) {
+        for(var j = 0; j < question_info_item.length; j++) {
+          question_info_item[j].classList.add('invisible_item');
+        }
+        question_info_item[i].classList.remove('invisible_item');
+      }
     }
   }
 }
@@ -80,8 +91,6 @@ function quizNextStep() {
     }
   }
 }
-
-
 
 function counter() {
   var options = {
