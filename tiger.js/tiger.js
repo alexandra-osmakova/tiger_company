@@ -237,27 +237,6 @@ function hey(e) {
 }
 
 var clientWidth = document.documentElement.clientWidth;
-var about_numbers_container = document.getElementsByClassName('about_numbers_container')[0];
-
-// The checker
-const gambitGalleryIsInView = el => {
-	const scroll = window.scrollY || window.pageYOffset
-	const boundsTop = el.getBoundingClientRect().top + scroll
-	
-	const viewport = {
-		top: scroll,
-		bottom: scroll + window.innerHeight,
-	}
-	
-    const bounds = {
-		top: boundsTop,
-		bottom: boundsTop + el.clientHeight,
-	}
-	
-	return ( bounds.bottom >= viewport.top && bounds.bottom <= viewport.bottom ) 
-		|| ( bounds.top <= viewport.bottom && bounds.top >= viewport.top );
-}
-
 
 var aboutItem = document.getElementsByClassName('about_header_text')[0];
 var k = 0;
