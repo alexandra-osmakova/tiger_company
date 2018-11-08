@@ -2285,7 +2285,7 @@ header {
     }
 
     .styled-select.slate {
-        background-position: 28rem 1.5625rem;
+        background-position: 20.5rem 1.5625rem;
     }
 
     .online_apply_content_style {
@@ -2442,7 +2442,8 @@ header {
     }
 
     .finish_form__btn {
-        margin: 3rem auto 0;
+        margin-left: 0;
+        margin-top: 3rem;
     }
 
     .price {
@@ -2451,6 +2452,14 @@ header {
 
     .about_number_selected_second span {
         text-align: center;
+    }
+
+    .first_question_container .apply_questions_start__btn, .fifth_question_container .apply_questions_start__btn, .sixth_question_container .apply_questions_start__btn {
+        margin: 0;
+    }
+
+    .fifth_question_container .apply_questions_start__btn, .sixth_question_container .apply_questions_start__btn{
+        margin-top: 2rem;
     }
 }
 
@@ -2757,7 +2766,8 @@ header {
     }
 
     .finish_form__btn {
-        margin: 3rem auto 0;
+        margin-left: 0;
+        margin-top: 3rem;
     }
 
     .about_decoration_line_second {
@@ -2839,7 +2849,7 @@ header {
     }
 
     .header_count_form_input, .header_count_form__btn {
-        width: 80%!important;
+        width: 95%!important;
         margin: 1rem auto;
 
     }
@@ -2946,7 +2956,7 @@ header {
     }
 
     .styled-select.slate {
-        background-position: 25rem 1.5625rem;
+        background-position: 28rem 1.5625rem;
     }
 
     .online_apply_content_style {
@@ -3102,7 +3112,8 @@ header {
     }
 
     .finish_form__btn {
-        margin: 3rem auto 0;
+        margin-left: 0;
+        margin-top: 3rem;
     }
 
     .about_decoration_line_second {
@@ -3188,7 +3199,7 @@ header {
     }
 
     .header_count_form_input, .header_count_form__btn {
-        width: 80%!important;
+        width: 95%!important;
         margin: 1rem auto;
 
     }
@@ -3292,7 +3303,7 @@ header {
     }
 
     .styled-select.slate {
-        background-position: 25rem 1.5625rem;
+        background-position: 27rem 1.5625rem;
     }
 
     .online_apply_content_style {
@@ -3452,7 +3463,8 @@ header {
     }
 
     .finish_form__btn {
-        margin: 3rem auto 0;
+        margin-left: 0;
+        margin-top: 3rem;
     }
 
     .about_decoration_line_second {
@@ -3531,7 +3543,7 @@ header {
     }
 
     .header_count_form_input, .header_count_form__btn {
-        width: 80%!important;
+        width: 95%!important;
         margin: 1rem auto;
 
     }
@@ -3798,7 +3810,8 @@ header {
     }
 
     .finish_form__btn {
-        margin: 3rem auto 0;
+        margin-left: 0;
+        margin-top: 3rem;
     }
 
     .about_decoration_line_second {
