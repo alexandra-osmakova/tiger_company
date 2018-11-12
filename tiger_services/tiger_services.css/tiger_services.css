@@ -14,7 +14,7 @@ body {
 
 header {
     width: 100%;
-    background-image: url(../../tiger.img/asphalt-cars-clouds-1307546.jpg);
+    background-image: url(../../tiger.img/road.jpg);
     background-size: cover;
     background-position: center;
     padding: 0 8.0625rem 9rem;
@@ -1503,7 +1503,7 @@ header {
 }
 
 .all_service_type__item:nth-of-type(1) {
-    background-image: url(../../tiger.img/asphalt-cars-clouds-1307546.jpg);
+    background-image: url(../../tiger.img/road.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
