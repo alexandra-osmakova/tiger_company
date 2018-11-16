@@ -47,7 +47,16 @@ var payment_info_column = document.getElementsByClassName('payment_info_column')
 var payment_info__type_text = document.getElementsByClassName('payment_info__type_text');
 
 window.onload = function () {
-  payment_info__type_text[0].classList.add('visible_item')
+  payment_info__type_text[0].classList.add('visible_item');
+
+  if (mobile_width <= 800) {
+    console.log(1)
+    var item_animation_to_change = document.getElementsByClassName('advantages_content__item');
+    for (var i = 0; i < item_animation_to_change.length; i++) {
+      item_animation_to_change[i].dataset.aos = "fade-up";
+      console.log(item_animation_to_change[i].dataset.aos)
+    }
+  }
 }
 payment_info_column.addEventListener('mouseover', hoverText, false);
 
@@ -81,7 +90,7 @@ var mobile_width = window.innerWidth;
 payment_info_column.addEventListener('click', hey, false);
 
 function hey(e) {
-  if(mobile_width <= 425) {
+  if (mobile_width <= 425) {
     if (e.target.id === 'payment_info_type_fourth') {
       for (var i = 0; i < payment_info__type_text.length; i++) {
         payment_info__type_text[i].classList.remove('visible_item');
@@ -117,9 +126,13 @@ var apply_questions_text = document.getElementsByClassName('apply_questions_text
 var progress_line = document.getElementsByClassName('progress_line')[0];
 var current_question = document.getElementsByClassName('current_question')[0];
 var question_info_item = document.getElementsByClassName('question_info_item');
+var checkbox_mark_type = document.querySelectorAll('.question_item_checkbox_mark_type input');
+var apply_questions_actual_quantity = document.getElementsByClassName('apply_questions_actual_quantity')[0];
+var quiz_input_with_img = document.getElementsByClassName('checkbox_question_info_trigger');
+var new_input = document.getElementsByClassName('new_input_quiz')[0];
 var n = 0;
 
-quiz_btn[1].addEventListener('click', function() {
+quiz_btn[1].addEventListener('click', function () {
   question_info_item[7].classList.remove('invisible_item');
 })
 
@@ -131,14 +144,14 @@ for (var j = 0; j < quiz_btn.length; j++) {
   quiz_btn[j].addEventListener('click', quizNextStep)
 }
 
-for(var k = 0; k < quiz_textarea.length; k++) {
-  quiz_textarea[k].addEventListener('input',quizStart_texarea )
+for (var k = 0; k < quiz_textarea.length; k++) {
+  quiz_textarea[k].addEventListener('input', quizStart_texarea)
 }
 
 
 function quizStart_texarea() {
-      quiz_btn[n].disabled = false;
-      quiz_btn[n].classList.remove('apply_questions_start__btn_disabled');
+  quiz_btn[n].disabled = false;
+  quiz_btn[n].classList.remove('apply_questions_start__btn_disabled');
 }
 
 
@@ -147,39 +160,103 @@ function quizStart() {
     if (question_item_checkbox[i].checked) {
       quiz_btn[n].disabled = false;
       quiz_btn[n].classList.remove('apply_questions_start__btn_disabled');
-      if(question_item_checkbox[i].classList.contains('checkbox_question_info_trigger')) {
-        for(var j = 0; j < question_info_item.length; j++) {
-          question_info_item[j].classList.add('invisible_item');
-        }
-        question_info_item[i].classList.remove('invisible_item');
+      if (question_item_checkbox[i].classList.contains('checkbox_question_info_trigger')) {
+        quizTextToSee()
+      }
+      else if(question_item_checkbox[i].id == 'other') {
+        new_input.classList.remove('invisible_input')
       }
     }
   }
 }
 
+function quizTextToSee(i) {
+  for (var j = 0; j < question_info_item.length; j++) {
+    question_info_item[j].classList.add('invisible_item');
+  }
+  for(var i = 0; i < quiz_input_with_img.length; i++) {
+    if(quiz_input_with_img[i].checked) {
+      question_info_item[i].classList.remove('invisible_item');
+    }
+  }
+}
+
 function quizNextStep() {
-  if (n <=7 ) {
+  if (n <= 8) {
     question_item[n].classList.add('invisible_item');
     question_item[n + 1].classList.remove('invisible_item');
     quiz_step_mark[n].classList.remove('current_question_item__active');
     quiz_step_mark[n + 1].classList.add('current_question_item__active');
     quiz_progress[n + 1].classList.add('progrss_line_item__active');
     quiz_current_number.innerHTML = Number(quiz_current_number.innerHTML) - 1;
-    n++
-  } else if (n == 8) {
-    quiz_step_mark[7].classList.remove('current_question_item__active');
-    quiz_step_mark[0].classList.add('current_question_item__active');
-    question_item[7].classList.add('invisible_item');
-    question_item[0].classList.remove('invisible_item');
-    quiz_textarea[0].value = "";
-    n = 0;
-    quiz_current_number.innerHTML = 8;
-    for(var i = 1; i < quiz_progress.length; i++) {
-      quiz_progress[i].classList.remove('progrss_line_item__active');
-      quiz_btn[i-1].disabled = true;
-      quiz_btn[i-1].classList.add('apply_questions_start__btn_disabled');
+    n++;
+    if (n >= 5) {
+      apply_questions_actual_quantity.innerHTML = "вопроса";
+    }
+    if (n == 8) {
+      apply_questions_actual_quantity.innerHTML = "вопрос";
     }
   }
+}
+
+var apply_questions = document.getElementsByClassName('apply_questions')[0];
+
+apply_questions.addEventListener('click', quiz_back);
+
+
+function quiz_back(e) {
+  if (e.target.classList.contains('quiz_back_button_image')) {
+    if ((Number(e.target.id) > 0)) {
+      var newIndex = Number(e.target.id);
+      for (var i = 0; i < question_item.length; i++) {
+        question_item[i].classList.add('invisible_item');
+      }
+      question_item[newIndex - 1].classList.remove('invisible_item');
+      cleanUpQuiz(newIndex)
+    }
+  }
+}
+
+function cleanUpQuiz(index) {
+  n--;
+  new_input.classList.add('invisible_input');
+  quiz_current_number.innerHTML = Number(quiz_current_number.innerHTML) + 1;
+  quiz_progress[index].classList.remove('progrss_line_item__active');
+  quiz_step_mark[index].classList.remove('current_question_item__active');
+  quiz_step_mark[index - 1].classList.add('current_question_item__active');
+
+  if (index == 1) {
+    quiz_step_mark[index].classList.remove('current_question_item__active');
+    quiz_step_mark[index - 1].classList.add('current_question_item__active');
+  } else if (n == 4) {
+    apply_questions_actual_quantity.innerHTML = "вопросов";
+  }
+  for (var i = 0; i < question_item_checkbox.length; i++) {
+    question_item_checkbox[i].checked = false;
+  }
+
+  for (var j = 0; j < quiz_textarea.length; j++) {
+    quiz_textarea[j].value = '';
+  }
+
+  for (var k = 0; k < quiz_btn.length; k++) {
+    if (quiz_btn[k].classList.contains('apply_questions_start__btn_disabled') != true) {
+      quiz_btn[k].classList.add('apply_questions_start__btn_disabled');
+    }
+  }
+
+  for (var h = 0; h < checkbox_mark_type.length; h++) {
+    if (checkbox_mark_type[h].checked) {
+      checkbox_mark_type[h].checked = false;
+    }
+  }
+
+  for (var l = 0; l < question_info_item.length; l++) {
+    question_info_item[l].classList.add('invisible_item');
+  }
+
+  question_info_item[0].classList.remove('invisible_item');
+  question_info_item[7].classList.remove('invisible_item');
 }
 
 function counter() {
@@ -187,7 +264,7 @@ function counter() {
     useEasing: true,
     useGrouping: true,
     separator: ',',
-    decimal: '.',
+    decimal: '.'
   };
   var demo = new CountUp('first_item_to_count', 0, 6, 0, 2, options);
   if (!demo.error) {
@@ -201,6 +278,7 @@ function counter() {
     useGrouping: true,
     separator: ',',
     decimal: '.',
+    suffix: '+'
   };
   var demo = new CountUp('second_item_to_count', 0, 20, 0, 2, options);
   if (!demo.error) {
@@ -215,7 +293,7 @@ function counter() {
     separator: '',
     decimal: '.',
   };
-  var demo = new CountUp('third_item_to_count', 0, 11000, 0, 2, options);
+  var demo = new CountUp('third_item_to_count', 0, 11243, 0, 2, options);
   if (!demo.error) {
     demo.start();
   } else {
@@ -228,7 +306,7 @@ function counter() {
     separator: '',
     decimal: '.',
   };
-  var demo = new CountUp('fourth_item_to_count', 0, 250, 0, 2, options);
+  var demo = new CountUp('fourth_item_to_count', 0, 272, 0, 2, options);
   if (!demo.error) {
     demo.start();
   } else {
@@ -242,12 +320,12 @@ var aboutItem = document.getElementsByClassName('about_header_text')[0];
 var k = 0;
 
 var isScrolling = false;
- 
+
 window.addEventListener("scroll", throttleScroll, false);
 
 function throttleScroll(e) {
   if (isScrolling == false) {
-    window.requestAnimationFrame(function() {
+    window.requestAnimationFrame(function () {
       scrolling(e);
       isScrolling = false;
     });
@@ -262,7 +340,7 @@ function scrolling(e) {
   if (isPartiallyVisible(aboutItem) & k == 0) {
     counter();
     k++;
-  } 
+  }
 }
 
 function isPartiallyVisible(el) {
@@ -274,3 +352,43 @@ function isPartiallyVisible(el) {
 
   return ((top + height >= 0) && (height + window.innerHeight >= bottom));
 }
+
+AOS.init();
+
+window.addEventListener("scroll", overflow);
+
+function overflow() {
+  document.documentElement.classList.add('no_scroll');
+}
+
+var slider = tns({
+  container: '.my-slider',
+  items: 1,
+  rewind: true,
+  swipeAngle: false,
+  gutter: 30,
+  speed: 400,
+  mouseDrag: true,
+  controlsText: [" ", " "],
+  controlsPosition: 'bottom',
+  navPosition: 'bottom',
+  navAsThumbnails: true,
+  arrowKeys: true,
+  responsive: {
+    425: {
+      items: 1,
+      nav: false,
+      controls: false
+    },
+    768: {
+      items: 2,
+      nav: false,
+      controls: false
+    },
+    900: {
+      items: 4,
+      nav: true,
+      controls: true
+    }
+  },
+})

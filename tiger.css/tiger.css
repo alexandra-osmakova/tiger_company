@@ -78,6 +78,7 @@ header {
 .header_contacts_item__telephon {
     font-size: 1.25rem;
     color: #ffffff;
+    text-decoration: unset;
 }
 
 .header_contacts_item__tel_comment {
@@ -115,6 +116,7 @@ header {
     line-height: 4.5625rem;
     color: #ffffff;
     text-align: center;
+    margin-bottom: 1.5rem;
 }
 
 .header_content p {
@@ -125,7 +127,7 @@ header {
 
 .header_count {
     width: 100%;
-    padding: 5.5625rem 0;
+    padding: 1.5625rem 0rem 6.5625rem;
 }
 
 .header_count_form {
@@ -231,7 +233,7 @@ header {
 }
 
 .progrss_line_item {
-    width: 20%;
+    width: calc(100%/9);;
     height: 3.1875rem;
     background-color: #ffdb4d;
     visibility: hidden;
@@ -289,7 +291,7 @@ header {
     margin-left: 1.1875rem;
 }
 
-.current_question_item:nth-of-type(8)::after {
+.current_question_item:nth-of-type(9)::after {
     content: "";
     display: none;
 }
@@ -315,12 +317,26 @@ header {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    padding: 3.625rem 2.9375rem 3.375rem ;
+    padding: 3.625rem 2.9375rem 3.375rem ; 
 }
+
+
+.quiz_back_button_image{
+    position: absolute;
+    bottom: 1rem;
+    right: 3rem;
+    cursor: pointer;
+    width: 1.5rem;
+    height: 1.5rem;
+    transform:matrix(0.00,1.00,-1.00,0.00,0,0);
+        -ms-transform:matrix(0.00,1.00,-1.00,0.00,0,0);
+        -webkit-transform:matrix(0.00,1.00,-1.00,0.00,0,0);
+}
+
 
 .finish_wrap {
     position: absolute;
-    top:-15rem;
+    top:-4rem;
     left: 0;
     right: 0;
     bottom: 0;
@@ -434,16 +450,66 @@ header {
     transition: all 0.5s ease;
 }
 
-.question_info_item p {
-    font-size: 0.8125rem;
-    line-height: 1.25rem;
-    color: #000000;
+.question_info_item_img {
+    width: 100%;
+    height: 10rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 
     -o-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
+
+
+.second_question_img {
+    background-image: url(../tiger.img/2.png);
+}
+
+.third_question_img {
+    background-image: url(../tiger.img/3.png);
+}
+
+.fourth_question_img {
+    background-image: url(../tiger.img/4.png);
+}
+
+.fifth_question_img {
+    background-image: url(../tiger.img/5.png);
+}
+
+
+.sixth_question_img {
+    background-image: url(../tiger.img/6.png);
+}
+
+.seventh_question_img {
+    background-image: url(../tiger.img/7.png);
+}
+
+.first_question_img_parcel_cover {
+    background-image: url(../tiger.img/8.png);
+}
+
+.second_question_img_parcel_cover {
+    background-image: url(../tiger.img/9.png);
+}
+.third_question_img_parcel_cover {
+    background-image: url(../tiger.img/10\ 2.png);
+}
+.fourth_question_img_parcel_cover {
+    background-image: url(../tiger.img/11.png);
+}
+
+.fifth_question_img_parcel_cover {
+    background-image: url(../tiger.img/12.png);
+}
+
+.sixth_question_img_parcel_cover {
+    background-image: url(../tiger.img/13.png);
+}   
 
 .question_info_item h3 {
     font-size: 0.9375rem;
@@ -541,7 +607,7 @@ header {
 
 .apply_questions_checkbox_container {
     width: 100%;
-    padding: 2rem;
+    padding: 0rem 2rem 5rem;
     display: flex;
     flex-wrap: wrap;
 }
@@ -590,7 +656,7 @@ header {
 }
 
 
-.second_question, .third_question, .fourth_question {
+.second_question, .third_question, .fourth_question, .first_question {
     width: 33.3%;
 }
 
@@ -660,6 +726,44 @@ header {
 
 #parcel_type {
     margin-left: 4rem;
+}
+
+.new_input_container {
+    -o-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+
+    justify-content: flex-end;
+}
+
+.new_input_quiz {
+    width: 15rem;
+    height: 3.5rem;
+    margin: 2rem 0 0;
+    padding: 0 1rem;
+    outline: none;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    color: #000000;
+    font-family: "Roboto";
+    resize: none;
+    border: 1px solid #000000;
+    border-radius: 0.3125rem;
+
+    -o-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.invisible_input {
+    opacity: 0;
+}
+
+.new_input_quiz::placeholder {
+    color: #b6b6b6;
+    font-family: "Roboto";
 }
 
 .apply_questions_start__btn_disabled {
@@ -1068,7 +1172,7 @@ header {
 
 .styled_number_description {
     text-align: left;
-    padding-left:15rem;
+    padding-left:16rem;
 }
 
 .about_number_selected_first {
@@ -1097,9 +1201,98 @@ header {
     position: relative;
 }
 
+.additional_info {
+    width: 100%;
+    padding: 6rem 8.0625rem 0rem;
+    position: relative;
+}
+
+.additional_info h2 {
+    font-size: 1.875rem;
+    line-height: 2.5rem;
+    color: #000000;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 4.9375rem;
+}
+
+.additional_info h2::before {
+    content: "";
+    display: block;
+    width: 4.5rem;;
+    height: 0.1875rem;
+    margin: 1.5rem auto;
+    background-color: #ffdb4d;
+}
+
+.additional_info_content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.adadditional_info_content_image {
+    max-height: 24rem;
+    width: 30%;
+    background-image: url(../tiger.img/logistics-lorry-mountains-933981.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0px 9px 21px rgba(0,0,0,0.3);
+}
+
+.additional_info_content_text {
+    width: 70%;
+    padding-left: 10.125rem;
+    height: 21rem;
+}
+
+.text_wrap {
+    height: 21rem;
+    overflow-y: scroll;
+}
+
+.no_scroll {
+    overflow-x: hidden;
+}
+
+.additional_info_content_text h3 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+    color: #000000;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.additional_info_content_text p {
+    font-size: 1rem;
+    line-height: 1.375rem;
+    color: #000000;
+    margin: 1rem auto;
+}
+
+.additional_info_content_text ul {
+    list-style-type: disc;
+    margin-left: 1.2rem;
+}
+
+.additional_info_content_text li {
+    margin-bottom: 1rem;
+}
+
+.more_text_btn {
+    cursor: pointer;
+    font-size: 0.875rem;
+    line-height: 1.365rem;
+    color: #ffdb4d;
+    text-decoration: underline;
+    display: block;
+    margin-top: 1.6875rem;
+}
+
 .clients_review {
     width: 100%;
-    padding: 8.0625rem 4rem;
+    padding: 8.0625rem 4rem; 
 }
 
 .clients_review h2 {
@@ -1123,18 +1316,176 @@ header {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
 }
 
 .vk_review {
-    width: 23%;
+    height: 29.625rem;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    border: 1px solid #EDEEF0;
+    border-radius: 0.3125rem;
+    padding: 1rem;
 }
 
-.vk_review iframe, .vk_review div{
-    width: 100%!important;
+.vk_review__header {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 }
+
+.vk_review__header_img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-image: url(../tiger.img/vk_group_img.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 1rem;
+}
+
+.vk_review__header a {
+    text-decoration: none;
+    width: 70%;
+}
+
+.vk_review__header h3:hover {
+    text-decoration: underline;
+}
+
+.vk_review__header span:hover {
+    text-decoration: underline;
+}
+
+
+.vk_review__header h3 {
+    font-size: 0.75rem;
+    color: #2C73AB;
+}
+
+.vk_review__header span {
+    color: #bfbfbf;
+    font-size: 0.625rem;
+    width: 70%;
+    text-align: right;
+}
+
+.vk_review__content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.vk_review__content a {
+    text-decoration: none;
+}
+
+.vk_review__content a:hover span {
+    text-decoration: underline;
+}
+
+.vk_review__content p {
+    font-size: 0.75rem;
+    color: #000000;
+    display: block;
+    margin: 1rem 0;
+}
+
+.vk_review__content span {
+    color: #2C73AB;
+    font-size: 0.75rem;
+}
+
+.vk_review__content_img {
+    width: 90%;
+    height: 10rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 1rem auto;
+    cursor: pointer;
+}
+
+.vk_revew_image_scale {
+    z-index: 9999;
+    background-color: #ffffff;
+    box-shadow: 0 0.125rem 1rem 0 rgba(155, 155, 155, 0.50);
+    padding: 2rem;
+    width: 50%;
+    margin: 0 auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    -o-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+
+}
+
+.first_review_img {
+    background-image: url(../tiger.img/vk_review1.jpg);
+}
+
+.second_review_img {
+    background-image: url(../tiger.img/vk_review2.jpg);
+}
+
+.third_review_img {
+    background-image: url(../tiger.img/vk_review3.jpg);
+}
+
+.fourth_review_img {
+    background-image: url(../tiger.img/vk_review4.jpg);
+}
+
+.vk_review__content::after {
+    content: '';
+    display: block;
+    width: 90%;
+    height: 0.0625rem;
+    margin: 0 auto;
+    background-color: #EDEEF0;
+}
+
+.vk_review__footer {
+    width: 100%;
+    padding-top: 2rem;
+}
+
+.vk_review__footer_item {
+    cursor: pointer;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: 1rem;
+}
+
+.vk_review__footer_item_image path {
+    fill:#828a99;
+
+    -o-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.vk_review__footer_item:hover .vk_review__footer_item_image path {
+    fill:#676f7e;
+}
+
+.vk_review__footer_wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    position: absolute;
+    bottom: 1rem;
+}
+
 
 .payment_info {
     width: 100%;
@@ -1166,6 +1517,7 @@ header {
     font-size: 1.875rem;
     color: #000000;
     text-align: center;
+    margin-bottom: 2rem;
 }
 
 .payment_info_text {
@@ -1683,7 +2035,7 @@ header {
 
 .header_menu_open .header_contacts {
     width: 100%;
-    padding: 0 8.0625rem;
+    padding: 0 5.0625rem;
 }
 
 .header_menu_open .header_contacts_item__telephon, .header_menu_open .header_contacts_item__tel_comment  {
@@ -1703,7 +2055,7 @@ header {
 .header_menu_open_image {
     width: 50%;
     height: 100%;
-    background-image: url(../tiger.img/10.png);
+    background-image: url(../tiger.img/header_menu.png);
     background-size: contain;
     background-position: -15.625rem 30%;
     background-repeat: no-repeat;
@@ -2033,6 +2385,83 @@ header {
     transition: all 0.5s ease;
 }
 
+.tns-outer {
+    position: relative;
+}
+
+.tns-controls {
+    width: 100%;
+    position: absolute;
+    bottom: -2.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.tns-controls button {
+    width: 1.5rem;
+    height: 1.5rem;
+    border: unset;
+    outline: none;
+    background-image: url(../tiger.img/arrow_down.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.tns-controls button:nth-of-type(1) {
+    transform:matrix(0.00,1.00,-1.00,0.00,0,0);
+-ms-transform:matrix(0.00,1.00,-1.00,0.00,0,0);
+-webkit-transform:matrix(0.00,1.00,-1.00,0.00,0,0);
+    position: absolute;
+    right: 13.5rem;
+}
+
+.tns-controls button:nth-of-type(2) {
+    transform:matrix(-0.00,-1.00,1.00,-0.00,0,0);
+-ms-transform:matrix(-0.00,-1.00,1.00,-0.00,0,0);
+-webkit-transform:matrix(-0.00,-1.00,1.00,-0.00,0,0);
+    position: absolute;
+    right: 1rem;
+}
+
+.tns-nav {
+    position: absolute;
+    bottom: -3rem;
+    right: 3.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.tns-nav > [aria-controls] {
+    outline: none;
+    width: 0.5rem;
+    height: 0.5rem;
+    padding: 0;
+    margin: 0 0.375rem;
+    border-radius: 50%;
+    border: 0.0625rem solid #000000;
+}
+
+.tns-nav > .tns-nav-active {
+    transform: scale(1.7);
+    position: relative;
+}
+
+.tns-nav > .tns-nav-active::before {
+    content: '';
+    display: block;
+    background-color: #000000;
+    width: 0.25rem;
+    height: 0.25rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 0.0625rem;
+    left: 0.0625rem;
+}
+
 
 @media screen and (min-width: 2461px) and (max-width: 2560px) {
     html, body{
@@ -2098,11 +2527,19 @@ header {
     .second_question_container .question_item_checkbox_mark_type, .third_question_container .question_item_checkbox_mark_type {
         bottom: 6rem;
     }
+
+    .text_wrap {
+        height: 20rem;
+    }
+
+    .header_decoration_line {
+        bottom: 10.3125rem;
+    }
 }
 
 @media screen and (min-width: 1001px) and (max-width: 1210px) {
     html, body{
-        font-size: 15px;
+        font-size: 16px;
     }
 
     .header_decoration_line {
@@ -2142,23 +2579,6 @@ header {
         top: 0.255rem;
     }
 
-    .clients_review {
-        padding: 2rem 2rem 8rem;
-    }
-
-    .vk_review {
-        width: 45%;
-        margin: 1rem auto 0;
-    }
-
-    .vk_review iframe, .vk_review div{
-        width: 100%!important;
-    }
-
-    .clients_review {
-        padding: 2rem 2rem 8rem; 
-    }
-
     .price {
         width: 80%;
     }
@@ -2170,11 +2590,27 @@ header {
     .fifth_question_container .quiz_textarea, .sixth_question_container .quiz_textarea {
         width: 70%;
     }
+
+    .advantages {
+        padding: 8.0625rem 2rem;
+    }
+
+    .advantages_item_text {
+        padding-left: 0;
+    }
+
+    .payment_info_content {
+        padding: 0 5rem;
+    }
+
+    .online_apply {
+        padding: 6rem 6.125rem;
+    }
 }
 
 @media screen and (min-width: 601px) and (max-width: 1000px) {
     html, body{
-        font-size: 14px;
+        font-size: 13px;
     }
 
     header {
@@ -2303,7 +2739,7 @@ header {
     }
 
     .styled-select.slate {
-        background-position: 20.5rem 1.5625rem;
+        background-position: 16.5rem 1.5625rem;
     }
 
     .online_apply_content_style {
@@ -2378,24 +2814,8 @@ header {
         right: -3rem;
     }
 
-    .clients_review {
-        padding: 1rem 2rem;
-    }
-
     .about_decoration_line_second {
         bottom: 0.5rem;
-    }
-    .vk_review {
-        width: 45%;
-        margin: 1rem auto 0;
-    }
-
-    .vk_review iframe, .vk_review div{
-        width: 100%!important;
-    }
-
-    .clients_review {
-        padding: 2rem 2rem 8rem; 
     }
 
     .styled_number_description {
@@ -2478,6 +2898,10 @@ header {
 
     .fifth_question_container .apply_questions_start__btn, .sixth_question_container .apply_questions_start__btn{
         margin-top: 2rem;
+    }
+
+    .text_wrap {
+        height: 22rem;
     }
 }
 
@@ -2628,7 +3052,7 @@ header {
     }
 
     .styled-select.slate {
-        background-position: 25rem 1.5625rem;
+        background-position: 24rem 1.5625rem;
     }
 
     .online_apply_content_style {
@@ -2734,11 +3158,6 @@ header {
         bottom: 0.5rem;
     }
 
-    .vk_review {
-        width: 100%;
-        margin-top: 1rem;
-    }
-
     #parcel_type {
         margin-left: 0;
         width: 100%;
@@ -2796,13 +3215,6 @@ header {
         text-align: center;
         padding-left: 0;
     }
-    .vk_review iframe, .vk_review div{
-        width: 100%!important;
-    }
-
-    .clients_review {
-        padding: 2rem 2rem 8rem; 
-    }
 
     .first_question_container .apply_questions_start__btn, .fourth_question_container .apply_questions_start__btn, .seventh_question_container .apply_questions_start__btn, .eighth_question_container .apply_questions_start__btn {
         margin: 0 auto;
@@ -2819,6 +3231,27 @@ header {
 
     .third_question_container .apply_questions_start__btn {
         margin-top: 4.3125rem;
+    }
+
+    .additional_info {
+        padding: 6rem 1rem;
+    }
+
+    .additional_info_content_text {
+        padding-left: 4.125rem;
+    }
+
+    .advantages_content__item h3 {
+        width: 70%;
+    }
+
+    .activ_bullet div {
+        width: 0.3rem;
+        height: 0.3rem;
+    }
+
+    .finish_wrap {
+        top: 0;
     }
 }
 
@@ -2915,7 +3348,7 @@ header {
     }
 
     .advantages {
-        padding: 4rem 1rem;
+        padding: 5rem 1rem;
     }
 
     .advantages_content__item {
@@ -3080,11 +3513,6 @@ header {
         bottom: 0.5rem;
     }
 
-    .vk_review {
-        width: 100%;
-        margin-top: 1rem;
-    }
-
     #parcel_type {
         margin-left: 0;
         width: 100%;
@@ -3143,14 +3571,6 @@ header {
         padding-left: 0;
     }
 
-    .vk_review iframe, .vk_review div{
-        width: 100%!important;
-    }
-
-    .clients_review {
-        padding: 2rem 2rem 8rem; 
-    }
-
     .first_question_container .apply_questions_start__btn, .fourth_question_container .apply_questions_start__btn, .seventh_question_container .apply_questions_start__btn, .eighth_question_container .apply_questions_start__btn {
         margin: 0 auto;
     }
@@ -3166,6 +3586,26 @@ header {
 
     .third_question_container .apply_questions_start__btn {
         margin-top: 4.3125rem;
+    }
+
+    .additional_info {
+        padding: 6rem 1rem;
+    }
+
+    .additional_info_content_text {
+        padding-left: 4.125rem;
+    }
+
+    .advantages_content__item h3 {
+        width: 70%;
+    }
+
+    .vk_review__footer_wrap {
+        bottom: 2rem;
+    }
+
+    .finish_wrap {
+        top: 0;
     }
 }
 
@@ -3262,7 +3702,7 @@ header {
     }
 
     .advantages {
-        padding: 4rem 1rem;
+        padding: 5rem 1rem;
     }
 
     .advantages_content__item {
@@ -3320,16 +3760,16 @@ header {
         margin-top: 2rem;
     }
 
-    .styled-select.slate {
-        background-position: 27rem 1.5625rem;
-    }
-
     .online_apply_content_style {
         width: 100%;
     }
 
     .online_apply p, .footer_apply_form__btn, .modal_window_second, .modal_window_first{
         width: 90%;
+    }
+
+    .form_item .online_apply_content_style {
+        width: 100%;
     }
 
     .footer_apply_form__btn {
@@ -3423,19 +3863,6 @@ header {
         right: -3rem;
     }
 
-    .vk_review {
-        width: 100%;
-        margin-top: 1rem;
-    }
-
-    .vk_review iframe, .vk_review div{
-        width: 100%!important;
-    }
-
-    .clients_review {
-        padding: 2rem 2rem 8rem; 
-    }
-
     #parcel_type {
         margin-left: 0;
         width: 100%;
@@ -3509,6 +3936,30 @@ header {
 
     .third_question_container .apply_questions_start__btn {
         margin-top: 4.3125rem;
+    }
+
+    .additional_info {
+        padding: 6rem 1rem;
+    }
+
+    .additional_info_content_text {
+        padding-left: 4.125rem;
+    }
+
+    .advantages_content__item h3 {
+        width: 70%;
+    }
+
+    .styled-select.slate {
+        background-position: 27rem 1.5625rem;
+    }
+
+    .vk_review__footer_wrap {
+        bottom: 2rem;
+    }
+
+    .finish_wrap {
+        top: 0;
     }
 }
 
@@ -3766,11 +4217,6 @@ header {
         right: -3rem;
     }
 
-    .vk_review {
-        width: 100%;
-        margin-top: 1rem;
-    }
-
     #parcel_type {
         margin-left: 0;
         width: 100%;
@@ -3843,5 +4289,49 @@ header {
 
     .third_question_container .apply_questions_start__btn {
         margin-top: 4.3125rem;
+    }
+
+    .additional_info {
+        padding: 6rem 1rem;
+    }
+
+    .additional_info_content_text {
+        padding-left: 4.125rem;
+    }
+
+    .advantages_content__item h3 {
+        width: 70%;
+    }
+
+    .additional_info {
+        padding: 6rem 1rem;
+    }
+
+    .additional_info_content_text {
+        padding-left: 4.125rem;
+    }
+
+    .advantages_content__item h3 {
+        width: 70%;
+    }
+
+    .adadditional_info_content_image {
+        display: none;
+    }
+
+    .additional_info_content_text {
+        width: 100%;
+        padding: 0rem 1rem;
+    }
+    .text_wrap {
+        height: 24rem;
+    }
+
+    .vk_review__footer_wrap {
+        bottom: 2rem;
+    }
+
+    .finish_wrap {
+        top: 0;
     }
 }

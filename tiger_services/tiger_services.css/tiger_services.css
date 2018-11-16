@@ -310,7 +310,7 @@ header {
 
 .header_menu_open .header_contacts {
     width: 100%;
-    padding: 0 8.0625rem;
+    padding: 0 5.0625rem;
 }
 
 .header_menu_open .header_contacts_item__telephon, .header_menu_open .header_contacts_item__tel_comment  {
@@ -1132,7 +1132,7 @@ header {
 
 .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
     bottom: 1.125rem!important;
-    right: 3.875rem!important;
+    right: 3rem!important;
     width: auto!important;
     left: unset!important;
 }

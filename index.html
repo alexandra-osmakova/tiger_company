@@ -6,9 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-
-    <link href="https://cdn.jsdelivr.net/npm/suggestions-jquery@18.8.0/dist/css/suggestions.min.css" type="text/css"
-        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.8/tiny-slider.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./tiger.css/reset.css">
     <link rel="stylesheet" href="./tiger.css/tiger.css">
     <link rel="stylesheet" href="./tiger.css/style.css">
@@ -28,7 +27,7 @@
                 <div class="header_logo"></div>
                 <div class="header_contacts_info">
                     <div class="header_contacts_info_item">
-                        <span class="header_contacts_item__telephon">8 (800) 700-09-35</span>
+                        <a class = "header_contacts_item__telephon" href='tel:8 (800) 700-09-35'>8 (800) 700-09-35</a>
                         <span class="header_contacts_item__tel_comment">Звонок по России бесплатный</span>
                     </div>
                     <button class="btn header_contacts_info_item__btn" onclick="modal_on_second()">Заказать звонок</button>
@@ -63,7 +62,7 @@
             <div class="header_logo"></div>
             <div class="header_contacts_info">
                 <div class="header_contacts_info_item">
-                    <span class="header_contacts_item__telephon">8 (800) 700-09-35</span>
+                        <a class = "header_contacts_item__telephon" href='tel:8 (800) 700-09-35'>8 (800) 700-09-35</a>
                     <span class="header_contacts_item__tel_comment">Звонок по России бесплатный</span>
                 </div>
                 <button class="btn header_contacts_info_item__btn" onclick="modal_on_second()">Заказать звонок</button>
@@ -126,9 +125,11 @@
                     стоимость грузоперевозки</span>
                 за 60 секунд + получите гарантированную скидку</p>
             <div class="progress_line">
-                <p class="apply_questions_text">Осталось ответить на <span class="apply_questions_span">8</span>
-                    вопросов</p>
+                <p class="apply_questions_text">Осталось ответить на <span class="apply_questions_span">9</span>
+                    <span class="apply_questions_actual_quantity">вопросов</span>
+                </p>
                 <div class="progrss_line_item progrss_line_item__active"></div>
+                <div class="progrss_line_item"></div>
                 <div class="progrss_line_item"></div>
                 <div class="progrss_line_item"></div>
                 <div class="progrss_line_item"></div>
@@ -147,26 +148,18 @@
                 <div class="current_question_item"></div>
                 <div class="current_question_item"></div>
                 <div class="current_question_item"></div>
+                <div class="current_question_item"></div>
             </div>
             <div class="apply_questions_start">
-                <div class="question_item first_question_container">
-                    <div class="question_item__text_container ">
-                        <div class="question_item_number">1</div>
-                        <p class="question_item_text">Что вам нужно перевезти?</p>
-                    </div>
-                    <input type="text" class="quiz_textarea" name="parcel_type" id="parcel_type" placeholder="Например, “холодильник”, “переезд”, “трубы” и т.д. ">
-                    <button class="btn apply_questions_start__btn apply_questions_start__btn_disabled" disabled>На
-                        следующий шаг</button>
-                </div>
-                <div class="question_item second_question_container invisible_item">
+                <div class="question_item second_question_container">
                     <div class="question_item__text_container">
-                        <div class="question_item_number">2</div>
+                        <div class="question_item_number">1</div>
                         <p class="question_item_text">Выберите вид автотранспорта для доставки груза</p>
                     </div>
                     <div class="apply_questions_checkbox_container">
                         <label class="question_item_checkbox second_question">
                             <input class="question_item_checkbox_input checkbox_question_info_trigger" type="radio"
-                                type="radio" name="adding" value="Догруз">
+                                type="radio" name="answer" value="Догруз">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
@@ -174,7 +167,7 @@
                         </label>
                         <label class="question_item_checkbox second_question">
                             <input class="question_item_checkbox_input checkbox_question_info_trigger" type="radio"
-                                type="radio" name="gazel" value="Газель">
+                                type="radio" name="answer" value="Газель">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
@@ -182,7 +175,7 @@
                         </label>
                         <label class="question_item_checkbox second_question">
                             <input class="question_item_checkbox_input checkbox_question_info_trigger" type="radio"
-                                type="radio" name="3ton" value="3-тонник">
+                                type="radio" name="answer" value="3-тонник">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
@@ -190,7 +183,7 @@
                         </label>
                         <label class="question_item_checkbox second_question">
                             <input class="question_item_checkbox_input checkbox_question_info_trigger" type="radio"
-                                type="radio" name="5ton" value="5-тонник">
+                                type="radio" name="answer" value="5-тонник">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
@@ -198,7 +191,7 @@
                         </label>
                         <label class="question_item_checkbox second_question">
                             <input class="question_item_checkbox_input checkbox_question_info_trigger" type="radio"
-                                type="radio" name="10ton" value="10-тонник">
+                                type="radio" name="answer" value="10-тонник">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
@@ -206,7 +199,7 @@
                         </label>
                         <label class="question_item_checkbox second_question">
                             <input class="question_item_checkbox_input checkbox_question_info_trigger" type="radio"
-                                type="radio" name="fura" value="Фура">
+                                type="radio" name="answer" value="Фура">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
@@ -214,7 +207,7 @@
                         </label>
                         <label class="question_item_checkbox second_question">
                             <input class="question_item_checkbox_input checkbox_question_info_trigger" type="radio"
-                                type="radio" name="unusual_shape" value="Негабарит">
+                                type="radio" name="answer" value="Негабарит">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
@@ -222,7 +215,7 @@
                         </label>
                         <div class="question_item__button_container">
                             <label class="question_item_checkbox_mark_type">
-                                <input type="checkbox" name="cargohelp">
+                                <input type="checkbox" name="answer">
 
                                 <div class="question_item_checkbox_wrap_mark_type">
                                     <span class="icon-check"></span>
@@ -244,36 +237,118 @@
                         </div>
                         <div class="question_info_item invisible_item">
                             <h3>«Газель»</h3>
-                            <p>«ГАЗель» — серия российских малотоннажных автомобилей, производимых на Горьковском
-                                автомобильном заводе с 20 июля 1994 года. Сборка автомобилей семейства.</p>
+                            <div class="question_info_item_img second_question_img"></div>
                         </div>
                         <div class="question_info_item invisible_item">
                             <h3>3-тонник</h3>
-                            <p>3 тонник - обладает высокой проходимостью и увеличенным объемом кузова. Этот вид
-                                транспорта хорошо зарекомендовал себя в перевозках по межгороду и часто пользуется
-                                спросом.</p>
+                            <div class="question_info_item_img third_question_img"></div>
                         </div>
                         <div class="question_info_item invisible_item">
                             <h3>5-тонник</h3>
-                            <p>5 тонник - 5 тонные грузовики многофункциональны, они идеально подходят для перевозки
-                                грузов по России и СНГ, что делает их незаменимыми помощниками малого и среднего
-                                бизнеса.</p>
+                            <div class="question_info_item_img fourth_question_img"></div>
                         </div>
                         <div class="question_info_item invisible_item">
                             <h3>10-тонник</h3>
-                            <p>10 тонник - предназначение 10 тонника - доставка грузов на большие расстояния. Среди 10
-                                тонников выделяют MAN, Мерседес, МАЗ, КамАЗ и др.</p>
+                            <div class="question_info_item_img fifth_question_img"></div>
                         </div>
                         <div class="question_info_item invisible_item">
                             <h3>Фура</h3>
-                            <p>Фура - автомобиль грузоподъемностью до 20 тонн с длинным закрытым кузовом для различных
-                                перевозок на дальние расстояния.</p>
+                            <div class="question_info_item_img sixth_question_img"></div>
                         </div>
                         <div class="question_info_item invisible_item">
                             <h3>Негабарит</h3>
-                            <p>Негабарит - груз, который по своим размерам не отвечает стандарту, обычной норме. Для
-                                грузоперевозки негабаритного груза используются специальный вид транспорта.</p>
+                            <div class="question_info_item_img seventh_question_img"></div>
                         </div>
+                    </div>
+                </div>
+                <div class="question_item first_question_container invisible_item">
+                    <div class="question_item__text_container ">
+                        <div class="question_item_number">2</div>
+                        <p class="question_item_text">Что вам нужно перевезти?</p>
+                    </div>
+                    <div class="apply_questions_checkbox_container new_input_container">
+                        <label class="question_item_checkbox first_question">
+                            <input class="question_item_checkbox_input" type="radio"
+                                name="answer" value="other">
+                            <div class="question_item_checkbox_wrap">
+                                <div class="checkbox_mark"></div>
+                            </div>
+                            <span class="question_item_checkbox_text">Домашний переезд</span>
+                        </label>
+                        <label class="question_item_checkbox first_question">
+                            <input class="question_item_checkbox_input" type="radio"
+                                name="answer" value="other">
+                            <div class="question_item_checkbox_wrap">
+                                <div class="checkbox_mark"></div>
+                            </div>
+                            <span class="question_item_checkbox_text">Стройматериалы</span>
+                        </label>
+                        <label class="question_item_checkbox first_question">
+                            <input class="question_item_checkbox_input" type="radio"
+                                name="answer" value="other">
+                            <div class="question_item_checkbox_wrap">
+                                <div class="checkbox_mark"></div>
+                            </div>
+                            <span class="question_item_checkbox_text">Пиломатериалы</span>
+                        </label>
+                        <label class="question_item_checkbox first_question">
+                            <input class="question_item_checkbox_input" type="radio"
+                                name="answer" value="">
+                            <div class="question_item_checkbox_wrap">
+                                <div class="checkbox_mark"></div>
+                            </div>
+                            <span class="question_item_checkbox_text">Продукты питания</span>
+                        </label>
+                        <label class="question_item_checkbox first_question">
+                            <input class="question_item_checkbox_input" type="radio"
+                                name="answer" value="">
+                            <div class="question_item_checkbox_wrap">
+                                <div class="checkbox_mark"></div>
+                            </div>
+                            <span class="question_item_checkbox_text">Оборудование</span>
+                        </label>
+                        <label class="question_item_checkbox first_question">
+                            <input class="question_item_checkbox_input" type="radio"
+                                name="answer" value="">
+                            <div class="question_item_checkbox_wrap">
+                                <div class="checkbox_mark"></div>
+                            </div>
+                            <span class="question_item_checkbox_text">Металл</span>
+                        </label>
+                        <label class="question_item_checkbox first_question">
+                            <input class="question_item_checkbox_input" type="radio"
+                                name="answer" value="">
+                            <div class="question_item_checkbox_wrap">
+                                <div class="checkbox_mark"></div>
+                            </div>
+                            <span class="question_item_checkbox_text">ТНП</span>
+                        </label>
+                        <label class="question_item_checkbox first_question">
+                            <input class="question_item_checkbox_input" type="radio"
+                                name="answer" value="">
+                            <div class="question_item_checkbox_wrap">
+                                <div class="checkbox_mark"></div>
+                            </div>
+                            <span class="question_item_checkbox_text">Трубы</span>
+                        </label>
+                        <label class="question_item_checkbox first_question">
+                            <input id="other" class="question_item_checkbox_input" type="radio"
+                                name="answer" value="">
+                            <div class="question_item_checkbox_wrap">
+                                <div class="checkbox_mark"></div>
+                            </div>
+                            <span class="question_item_checkbox_text">Другая</span>
+                        </label>
+                        <input class="new_input_quiz invisible_input" type="text" placeholder="Другое">
+                    </div>
+                    <button class="btn apply_questions_start__btn apply_questions_start__btn_disabled" disabled>На
+                        следующий шаг</button>
+                    <div class="quiz_back_button">
+                        <svg id='1' class="quiz_back_button_image" viewBox="0 0 32 32">
+                            <g data-name="1">
+                                <path d="M16,1A11,11,0,0,0,5,12V22.59l-3.29-3.3L.29,20.71l5,5a1,1,0,0,0,1.42,0l5-5-1.42-1.42L7,22.59V12a9,9,0,0,1,18,0V30h2V12A11,11,0,0,0,16,1Z" />
+                            </g>
+                        </svg>
                     </div>
                 </div>
                 <div class="question_item third_question_container invisible_item">
@@ -284,7 +359,7 @@
                     <div class="apply_questions_checkbox_container">
                         <label class="question_item_checkbox third_question">
                             <input class="question_item_checkbox_input checkbox_question_info_trigger" type="radio"
-                                type="radio" name="box" value="box">
+                                type="radio" name="answer" value="box">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
@@ -292,7 +367,7 @@
                         </label>
                         <label class="question_item_checkbox third_question">
                             <input class="question_item_checkbox_input checkbox_question_info_trigger" type="radio"
-                                type="radio" name="palet" value="palet">
+                                type="radio" name="answer" value="palet">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
@@ -300,7 +375,7 @@
                         </label>
                         <label class="question_item_checkbox third_question">
                             <input class="question_item_checkbox_input checkbox_question_info_trigger" type="radio"
-                                type="radio" name="case" value="case">
+                                type="radio" name="answer" value="case">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
@@ -308,7 +383,7 @@
                         </label>
                         <label class="question_item_checkbox third_question">
                             <input class="question_item_checkbox_input checkbox_question_info_trigger" type="radio"
-                                type="radio" name="bag" value="bag">
+                                type="radio" name="answer" value="bag">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
@@ -316,7 +391,7 @@
                         </label>
                         <label class="question_item_checkbox third_question">
                             <input class="question_item_checkbox_input checkbox_question_info_trigger" type="radio"
-                                type="radio" name="big_bag" value="big_bag">
+                                type="radio" name="answer" value="big_bag">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
@@ -324,7 +399,7 @@
                         </label>
                         <label class="question_item_checkbox third_question">
                             <input class="question_item_checkbox_input checkbox_question_info_trigger" type="radio"
-                                type="radio" name="obreshetka" value="obreshetka">
+                                type="radio" name="answer" value="obreshetka">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
@@ -332,7 +407,7 @@
                         </label>
                         <label class="question_item_checkbox third_question">
                             <input class="question_item_checkbox_input checkbox_question_info_trigger" type="radio"
-                                type="radio" name="bunch" value="bunch">
+                                type="radio" name="answer" value="bunch">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
@@ -340,7 +415,7 @@
                         </label>
                         <label class="question_item_checkbox third_question">
                             <input class="question_item_checkbox_input checkbox_question_info_trigger" type="radio"
-                                type="radio" name="no" value="no">
+                                type="radio" name="answer" value="no">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
@@ -348,7 +423,7 @@
                         </label>
                         <label class="question_item_checkbox third_question">
                             <input class="question_item_checkbox_input checkbox_question_info_trigger" type="radio"
-                                type="radio" name="other" value="other">
+                                type="radio" name="answer" value="other">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
@@ -360,47 +435,47 @@
                     <div class="question_info">
                         <div class="question_info_item invisible_item">
                             <h3>Коробка</h3>
-                            <p>Коробка - обычная коробка из картона, чаще всего используется в домашних переездах.</p>
+                            <div class="question_info_item_img first_question_img_parcel_cover"></div>
                         </div>
                         <div class="question_info_item invisible_item">
                             <h3>Паллеты</h3>
-                            <p>Паллеты - надежный поддон для перевозки грузов, сделанный из дерева.</p>
+                            <div class="question_info_item_img second_question_img_parcel_cover"></div>
                         </div>
                         <div class="question_info_item invisible_item">
                             <h3>Ящики</h3>
-                            <p>Ящики - ящик представляет собой большой контейнер, часто из дерева, обычно используемый
-                                для грузоперевозок.</p>
+                            <div class="question_info_item_img third_question_img_parcel_cover"></div>
                         </div>
                         <div class="question_info_item invisible_item">
                             <h3>Мешки</h3>
-                            <p>Мешки - упаковка, сшитая из мягкого материала. Может использоваться для перевозки зерна,
-                                муки и т.п</p>
+                            <div class="question_info_item_img fourth_question_img_parcel_cover"></div>
                         </div>
                         <div class="question_info_item invisible_item">
                             <h3>Биг бэги</h3>
-                            <p>Биг бэги - контейнер из полипропиленовой ткани грузоподъемностью от 300 кг до 3000 кг.
-                                Удобен для домашних переездов.</p>
+                            <div class="question_info_item_img fifth_question_img_parcel_cover"></div>
                         </div>
                         <div class="question_info_item invisible_item">
                             <h3>Обрешетка</h3>
-                            <p>Обрешетка - решётчатая конструкция или сплошной настил, устанавливаемый поверх
-                                стропильных ног.</p>
+                            <div class="question_info_item_img sixth_question_img_parcel_cover"></div>
                         </div>
                         <div class="question_info_item invisible_item">
                             <h3>Связка</h3>
-                            <p>Связка - обычная связка веревкой или троссом.
-                            </p>
+                            <p>Связка - обычная связка веревкой или троссом.</p>
                         </div>
                         <div class="question_info_item invisible_item">
                             <h3>Нет</h3>
-                            <p>Нет - упаковка не используется.
-                            </p>
+                            <p>Нет - упаковка не используется.</p>
                         </div>
                         <div class="question_info_item invisible_item">
                             <h3>Другая</h3>
-                            <p>Другая - выберите этот пункт, если вашего вида упаковки нет в списке.
-                            </p>
+                            <p>Другая - выберите этот пункт, если вашего вида упаковки нет в списке.</p>
                         </div>
+                    </div>
+                    <div class="quiz_back_button">
+                        <svg id="2" class="quiz_back_button_image" viewBox="0 0 32 32">
+                            <g data-name="1">
+                                <path d="M16,1A11,11,0,0,0,5,12V22.59l-3.29-3.3L.29,20.71l5,5a1,1,0,0,0,1.42,0l5-5-1.42-1.42L7,22.59V12a9,9,0,0,1,18,0V30h2V12A11,11,0,0,0,16,1Z" />
+                            </g>
+                        </svg>
                     </div>
                 </div>
                 <div class="question_item invisible_item fourth_question_container">
@@ -410,39 +485,35 @@
                     </div>
                     <div class="apply_questions_checkbox_container">
                         <label class="question_item_checkbox fourth_question">
-                            <input class="question_item_checkbox_input" type="radio" type="radio" name="top_loading"
-                                value="top_loading">
+                            <input class="question_item_checkbox_input" type="radio" name="answer" value="top_loading">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
                             <span class="question_item_checkbox_text">Сверху</span>
                         </label>
                         <label class="question_item_checkbox fourth_question">
-                            <input class="question_item_checkbox_input" type="radio" type="radio" name="side_loading"
-                                value="side_loading">
+                            <input class="question_item_checkbox_input" type="radio" name="answer" value="side_loading">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
                             <span class="question_item_checkbox_text">Сбоку</span>
                         </label>
                         <label class="question_item_checkbox fourth_question">
-                            <input class="question_item_checkbox_input" type="radio" type="radio" name="back_loading"
-                                value="back_loading">
+                            <input class="question_item_checkbox_input" type="radio" name="answer" value="back_loading">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
                             <span class="question_item_checkbox_text">Сзади</span>
                         </label>
                         <label class="question_item_checkbox fourth_question">
-                            <input class="question_item_checkbox_input" type="radio" type="radio" name="combined" value="combined   ">
+                            <input class="question_item_checkbox_input" type="radio" name="answer" value="combined   ">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
                             <span class="question_item_checkbox_text">Комбинированный</span>
                         </label>
                         <label class="question_item_checkbox fourth_question">
-                            <input class="question_item_checkbox_input" type="radio" type="radio" name="no_matter"
-                                value="no_matter">
+                            <input class="question_item_checkbox_input" type="radio" name="answer" value="no_matter">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
@@ -451,13 +522,20 @@
                     </div>
                     <button class="btn apply_questions_start__btn apply_questions_start__btn_disabled" disabled>На
                         следующий шаг</button>
+                    <div class="quiz_back_button">
+                        <svg id="3" class="quiz_back_button_image" viewBox="0 0 32 32">
+                            <g data-name="1">
+                                <path d="M16,1A11,11,0,0,0,5,12V22.59l-3.29-3.3L.29,20.71l5,5a1,1,0,0,0,1.42,0l5-5-1.42-1.42L7,22.59V12a9,9,0,0,1,18,0V30h2V12A11,11,0,0,0,16,1Z" />
+                            </g>
+                        </svg>
+                    </div>
                 </div>
                 <div class="question_item fifth_question_container invisible_item">
                     <div class="question_item__text_container">
                         <div class="question_item_number">5</div>
                         <p class="question_item_text">Введите город отправки:</p>
                     </div>
-                    <input type="text" class="quiz_textarea" name="parcel_from_quiz" id="parcel_from_quiz" placeholder="Введите город отправки">
+                    <input type="text" class="quiz_textarea" name="answer" id="parcel_from_quiz" placeholder="Введите город отправки">
                     <button class="btn apply_questions_start__btn apply_questions_start__btn_disabled" id='lol'
                         disabled>На
                         следующий шаг</button>
@@ -470,13 +548,20 @@
                         <span class="question_item_checkbox_text_mark_type">*Поставьте галочку, если в городе более
                             одной точки погрузки </span>
                     </label>
+                    <div class="quiz_back_button">
+                        <svg id="4" class="quiz_back_button_image" viewBox="0 0 32 32">
+                            <g data-name="1">
+                                <path d="M16,1A11,11,0,0,0,5,12V22.59l-3.29-3.3L.29,20.71l5,5a1,1,0,0,0,1.42,0l5-5-1.42-1.42L7,22.59V12a9,9,0,0,1,18,0V30h2V12A11,11,0,0,0,16,1Z" />
+                            </g>
+                        </svg>
+                    </div>
                 </div>
                 <div class="question_item sixth_question_container invisible_item">
                     <div class="question_item__text_container">
                         <div class="question_item_number">6</div>
                         <p class="question_item_text">Введите город доставки</p>
                     </div>
-                    <input type="text" class="quiz_textarea" name="parcel_to_quiz" id="parcel_to_quiz">
+                    <input type="text" class="quiz_textarea" name="answer" id="parcel_to_quiz">
                     <button class="btn apply_questions_start__btn apply_questions_start__btn_disabled" id='lol'
                         disabled>На
                         следующий шаг</button>
@@ -489,6 +574,13 @@
                         <span class="question_item_checkbox_text_mark_type">*Поставьте галочку, если в городе более
                             1 точки выгрузки</span>
                     </label>
+                    <div class="quiz_back_button">
+                        <svg id="5" class="quiz_back_button_image" viewBox="0 0 32 32">
+                            <g data-name="1">
+                                <path d="M16,1A11,11,0,0,0,5,12V22.59l-3.29-3.3L.29,20.71l5,5a1,1,0,0,0,1.42,0l5-5-1.42-1.42L7,22.59V12a9,9,0,0,1,18,0V30h2V12A11,11,0,0,0,16,1Z" />
+                            </g>
+                        </svg>
+                    </div>
                 </div>
                 <div class="question_item seventh_question_container invisible_item">
                     <div class="question_item__text_container">
@@ -497,28 +589,28 @@
                     </div>
                     <div class="apply_questions_checkbox_container">
                         <label class="question_item_checkbox">
-                            <input class="question_item_checkbox_input" type="radio" type="radio" name="asap" value="asap">
+                            <input class="question_item_checkbox_input" type="radio" name="answer" value="asap">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
                             <span class="question_item_checkbox_text">Срочно</span>
                         </label>
                         <label class="question_item_checkbox">
-                            <input class="question_item_checkbox_input" type="radio" type="radio" name="one_day" value="one_day">
+                            <input class="question_item_checkbox_input" type="radio" name="answer" value="one_day">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
                             <span class="question_item_checkbox_text">В течение 1-2 дней</span>
                         </label>
                         <label class="question_item_checkbox">
-                            <input class="question_item_checkbox_input" type="radio" type="radio" name="in_week" value="in_week">
+                            <input class="question_item_checkbox_input" type="radio" name="answer" value="in_week">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
                             <span class="question_item_checkbox_text">В течение 7 дней </span>
                         </label>
                         <label class="question_item_checkbox">
-                            <input class="question_item_checkbox_input" type="radio" type="radio" name="in_month" value="in_month">
+                            <input class="question_item_checkbox_input" type="radio" name="answer" value="in_month">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
@@ -529,6 +621,13 @@
                         <button class="btn apply_questions_start__btn apply_questions_start__btn_disabled" disabled>На
                             следующий шаг</button>
                     </div>
+                    <div class="quiz_back_button">
+                        <svg id="6" class="quiz_back_button_image" viewBox="0 0 32 32">
+                            <g data-name="1">
+                                <path d="M16,1A11,11,0,0,0,5,12V22.59l-3.29-3.3L.29,20.71l5,5a1,1,0,0,0,1.42,0l5-5-1.42-1.42L7,22.59V12a9,9,0,0,1,18,0V30h2V12A11,11,0,0,0,16,1Z" />
+                            </g>
+                        </svg>
+                    </div>
                 </div>
                 <div class="question_item eighth_question_container invisible_item">
                     <div class="question_item__text_container">
@@ -538,29 +637,28 @@
                     </div>
                     <div class="apply_questions_checkbox_container">
                         <label class="question_item_checkbox">
-                            <input class="question_item_checkbox_input" type="radio" type="radio" name="person" value="person">
+                            <input class="question_item_checkbox_input" type="radio" name="answer" value="person">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
                             <span class="question_item_checkbox_text">Физ. Лицо</span>
                         </label>
                         <label class="question_item_checkbox">
-                            <input class="question_item_checkbox_input" type="radio" type="radio" name="company" value="company">
+                            <input class="question_item_checkbox_input" type="radio" name="answer" value="company">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
                             <span class="question_item_checkbox_text">Юр. Лицо</span>
                         </label>
                         <label class="question_item_checkbox">
-                            <input class="question_item_checkbox_input" type="radio" type="radio" name="businessman"
-                                value="businessman">
+                            <input class="question_item_checkbox_input" type="radio" name="answer" value="businessman">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
                             <span class="question_item_checkbox_text">ИП</span>
                         </label>
                         <label class="question_item_checkbox">
-                            <input class="question_item_checkbox_input" type="radio" type="radio" name="OOO" value="OOO">
+                            <input class="question_item_checkbox_input" type="radio" name="answer" value="OOO">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
@@ -569,6 +667,13 @@
                     </div>
                     <div class="button_wrap">
                         <button class="btn apply_questions_start__btn apply_questions_start__btn_disabled" disabled>Завершить</button>
+                    </div>
+                    <div class="quiz_back_button">
+                        <svg id="7" class="quiz_back_button_image" viewBox="0 0 32 32">
+                            <g data-name="1">
+                                <path d="M16,1A11,11,0,0,0,5,12V22.59l-3.29-3.3L.29,20.71l5,5a1,1,0,0,0,1.42,0l5-5-1.42-1.42L7,22.59V12a9,9,0,0,1,18,0V30h2V12A11,11,0,0,0,16,1Z" />
+                            </g>
+                        </svg>
                     </div>
                 </div>
                 <div class="question_item finish_container invisible_item">
@@ -740,30 +845,356 @@
     </section>
     <section class="clients_review">
         <h2>ЧТО О НАС ГОВОРЯТ</h2>
-        <div class="clients_review_content">
-            <div class="vk_review">
-                <div id="vk_post_-134747802_30" style="width: 250px; height: 403px; background: none;"><iframe name="fXD5a185"
-                        frameborder="0" src="https://vk.com/widget_post.php?app=0&amp;width=250px&amp;_ver=1&amp;owner_id=-134747802&amp;post_id=30&amp;hash=bbAkOqQE9aa3hAKzKgrWJZpWD0A&amp;url=file%3A%2F%2F%2FUsers%2Faleksandra.osmakova%2FDesktop%2Fprojects%2Ftiger_project%2Findex.html&amp;referrer=&amp;title=%D0%A2%D1%80%D0%B0%D0%BD%D1%81%D0%BF%D0%BE%D1%80%D1%82%D0%BD%D0%B0%D1%8F%20%D0%BA%D0%BE%D0%BC%D0%BF%D0%B0%D0%BD%D0%B8%D1%8F%20Tiger%20Logistic%20-%20%D0%93%D1%80%D1%83%D0%B7%D0%BE%D0%BF%D0%B5%D1%80%D0%B5%D0%B2%D0%BE%D0%B7%D0%BA%D0%B8%20%D0%BF%D0%BE%20%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B8%20%D0%B8%20%D0%A1%D0%9D%D0%93&amp;166ed651ecb"
-                        width="250" height="403" scrolling="no" id="vkwidget1" style="overflow: hidden; height: 423px;"></iframe></div>
-                <script type="text/javascript" src="https://vk.com/js/api/openapi.js?159"></script>
+        <div class="clients_review_content my-slider">
+            <div>
+                <div class="vk_review">
+                    <div class="vk_review__header">
+                        <div class="vk_review__header_img"></div>
+                        <a href="https://vk.com/club134747802">
+                            <h3>Грузоперевозки по России | ТАЙГЕР-ЛОГИСТИК</h3>
+                            <span>6 ноя в 11:15</span>
+                        </a>
+                    </div>
+                    <div class="vk_review__content">
+                        <p>Доставили мебель из Петелино (Московская область) в Березники!</p>
+                        <a href="https://vk.com/club134747802"><span>#грузоперевозки#отзыв <br>
+                                #тайгерлогистик#логистика</span></a>
+                        <div class="vk_review__content_img first_review_img"></div>
+                    </div>
+                    <div class="vk_review__footer">
+                        <div class="vk_review__footer_wrap">
+                            <div class="vk_review__footer_item">
+                                <a href="https://vk.com/club134747802?w=wall-134747802_30%2Fall">
+                                    <svg class="vk_review__footer_item_image">
+                                        <path xmlns="http://www.w3.org/2000/svg" d="M17,2.9A6.43,6.43,0,0,1,23.4,9.33c0,3.57-1.43,5.36-7.45,10l-2.78,2.16a1.9,1.9,0,0,1-2.33,0L8.05,19.37C2,14.69.6,12.9.6,9.33A6.43,6.43,0,0,1,7,2.9a6.46,6.46,0,0,1,5,2.54A6.46,6.46,0,0,1,17,2.9ZM7,4.7A4.63,4.63,0,0,0,2.4,9.33c0,2.82,1.15,4.26,6.76,8.63l2.78,2.16a.1.1,0,0,0,.12,0L14.84,18c5.61-4.36,6.76-5.8,6.76-8.63A4.63,4.63,0,0,0,17,4.7c-1.56,0-3,.88-4.23,2.73L12,8.5l-.74-1.07C10,5.58,8.58,4.7,7,4.7Z" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="vk_review__footer_item">
+                                <a href="https://vk.com/club134747802?w=wall-134747802_30%2Fall">
+                                    <svg class="vk_review__footer_item_image">
+                                        <path xmlns="http://www.w3.org/2000/svg" d="M7.84,22.53A2,2,0,0,1,7.1,21V18.9H5.5a3.26,3.26,0,0,1-3.4-3.4v-9A3.26,3.26,0,0,1,5.5,3.1h13a3.26,3.26,0,0,1,3.4,3.4v9a3.26,3.26,0,0,1-3.4,3.4H13.84l-3.72,3.26A1.69,1.69,0,0,1,7.84,22.53Zm4.93-5.09a1.4,1.4,0,0,1,.92-.35H18.5a1.47,1.47,0,0,0,1.6-1.6v-9a1.47,1.47,0,0,0-1.6-1.6H5.5A1.47,1.47,0,0,0,3.9,6.5v9a1.47,1.47,0,0,0,1.6,1.6H8c.7.2.7.2.9.9v2.83Z"
+                                            fill="#828a99" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="vk_review__footer_item">
+                                <a href="https://vk.com/club134747802?w=wall-134747802_30%2Fall">
+                                    <svg class="vk_review__footer_item_image">
+                                        <path xmlns="http://www.w3.org/2000/svg" d="M12.1,7.87V4.4a1.32,1.32,0,0,1,2.17-1L23.21,11a1.32,1.32,0,0,1,.15,1.86l-.15.15-8.94,7.6a1.32,1.32,0,0,1-2.17-1V16.16c-4.68.11-8,1.09-9.89,2.87a1.15,1.15,0,0,1-1.9-1.11C1.84,11.56,5.82,8.16,12.1,7.87Zm1.8-2.42v4.2H13c-5.3,0-8.72,2.25-10.39,6.86C5.06,15.06,8.53,14.35,13,14.35h.9v4.2L21.61,12Z"
+                                            fill="#828a99" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="vk_review">
-                <div id="vk_post_-134747802_28" style="width: 250px; height: 403px; background: none;"><iframe name="fXD16a31"
-                        frameborder="0" src="https://vk.com/widget_post.php?app=0&amp;width=250px&amp;_ver=1&amp;owner_id=-134747802&amp;post_id=28&amp;hash=Jjqb7RcNNfyRX_xzffZ8l9e3gGw&amp;url=file%3A%2F%2F%2FUsers%2Faleksandra.osmakova%2FDesktop%2Fprojects%2Ftiger_project%2Findex.html&amp;referrer=&amp;title=%D0%A2%D1%80%D0%B0%D0%BD%D1%81%D0%BF%D0%BE%D1%80%D1%82%D0%BD%D0%B0%D1%8F%20%D0%BA%D0%BE%D0%BC%D0%BF%D0%B0%D0%BD%D0%B8%D1%8F%20Tiger%20Logistic%20-%20%D0%93%D1%80%D1%83%D0%B7%D0%BE%D0%BF%D0%B5%D1%80%D0%B5%D0%B2%D0%BE%D0%B7%D0%BA%D0%B8%20%D0%BF%D0%BE%20%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B8%20%D0%B8%20%D0%A1%D0%9D%D0%93&amp;166ed651ecf"
-                        width="250" height="403" scrolling="no" id="vkwidget2" style="overflow: hidden; height: 403px;"></iframe></div>
-                <script type="text/javascript" src="https://vk.com/js/api/openapi.js?159"></script>
+            <div>
+                <div class="vk_review">
+                    <div class="vk_review__header">
+                        <div class="vk_review__header_img"></div>
+                        <a href="https://vk.com/club134747802">
+                            <h3>Грузоперевозки по России | ТАЙГЕР-ЛОГИСТИК</h3>
+                            <span>5 ноя в 19:51</span>
+                        </a>
+                    </div>
+                    <div class="vk_review__content">
+                        <p>Отзыв Анастасии
+                            Услуга: Переезд из Екатеринбурга в Белгородскую область - село Покровка</p>
+                        <div class="vk_review__content_img second_review_img"></div>
+                    </div>
+                    <div class="vk_review__footer">
+                        <div class="vk_review__footer_wrap">
+                            <div class="vk_review__footer_item">
+                                <a href="https://vk.com/club134747802?w=wall-134747802_28%2Fall">
+                                    <svg class="vk_review__footer_item_image">
+                                        <path xmlns="http://www.w3.org/2000/svg" d="M17,2.9A6.43,6.43,0,0,1,23.4,9.33c0,3.57-1.43,5.36-7.45,10l-2.78,2.16a1.9,1.9,0,0,1-2.33,0L8.05,19.37C2,14.69.6,12.9.6,9.33A6.43,6.43,0,0,1,7,2.9a6.46,6.46,0,0,1,5,2.54A6.46,6.46,0,0,1,17,2.9ZM7,4.7A4.63,4.63,0,0,0,2.4,9.33c0,2.82,1.15,4.26,6.76,8.63l2.78,2.16a.1.1,0,0,0,.12,0L14.84,18c5.61-4.36,6.76-5.8,6.76-8.63A4.63,4.63,0,0,0,17,4.7c-1.56,0-3,.88-4.23,2.73L12,8.5l-.74-1.07C10,5.58,8.58,4.7,7,4.7Z" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="vk_review__footer_item">
+                                <a href="https://vk.com/club134747802?w=wall-134747802_28%2Fall">
+                                    <svg class="vk_review__footer_item_image">
+                                        <path xmlns="http://www.w3.org/2000/svg" d="M7.84,22.53A2,2,0,0,1,7.1,21V18.9H5.5a3.26,3.26,0,0,1-3.4-3.4v-9A3.26,3.26,0,0,1,5.5,3.1h13a3.26,3.26,0,0,1,3.4,3.4v9a3.26,3.26,0,0,1-3.4,3.4H13.84l-3.72,3.26A1.69,1.69,0,0,1,7.84,22.53Zm4.93-5.09a1.4,1.4,0,0,1,.92-.35H18.5a1.47,1.47,0,0,0,1.6-1.6v-9a1.47,1.47,0,0,0-1.6-1.6H5.5A1.47,1.47,0,0,0,3.9,6.5v9a1.47,1.47,0,0,0,1.6,1.6H8c.7.2.7.2.9.9v2.83Z"
+                                            fill="#828a99" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="vk_review__footer_item">
+                                <a href="https://vk.com/club134747802?w=wall-134747802_28%2Fall">
+                                    <svg class="vk_review__footer_item_image">
+                                        <path xmlns="http://www.w3.org/2000/svg" d="M12.1,7.87V4.4a1.32,1.32,0,0,1,2.17-1L23.21,11a1.32,1.32,0,0,1,.15,1.86l-.15.15-8.94,7.6a1.32,1.32,0,0,1-2.17-1V16.16c-4.68.11-8,1.09-9.89,2.87a1.15,1.15,0,0,1-1.9-1.11C1.84,11.56,5.82,8.16,12.1,7.87Zm1.8-2.42v4.2H13c-5.3,0-8.72,2.25-10.39,6.86C5.06,15.06,8.53,14.35,13,14.35h.9v4.2L21.61,12Z"
+                                            fill="#828a99" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="vk_review">
-                <div id="vk_post_-134747802_24" style="width: 250px; height: 403px; background: none;"><iframe name="fXDe791d"
-                        frameborder="0" src="https://vk.com/widget_post.php?app=0&amp;width=250px&amp;_ver=1&amp;owner_id=-134747802&amp;post_id=24&amp;hash=4U7svNVhgNLaUaG_GuYyY9j7Q0U&amp;url=file%3A%2F%2F%2FUsers%2Faleksandra.osmakova%2FDesktop%2Fprojects%2Ftiger_project%2Findex.html&amp;referrer=&amp;title=%D0%A2%D1%80%D0%B0%D0%BD%D1%81%D0%BF%D0%BE%D1%80%D1%82%D0%BD%D0%B0%D1%8F%20%D0%BA%D0%BE%D0%BC%D0%BF%D0%B0%D0%BD%D0%B8%D1%8F%20Tiger%20Logistic%20-%20%D0%93%D1%80%D1%83%D0%B7%D0%BE%D0%BF%D0%B5%D1%80%D0%B5%D0%B2%D0%BE%D0%B7%D0%BA%D0%B8%20%D0%BF%D0%BE%20%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B8%20%D0%B8%20%D0%A1%D0%9D%D0%93&amp;166ed651ed1"
-                        width="250" height="403" scrolling="no" id="vkwidget3" style="overflow: hidden; height: 483px;"></iframe></div>
-                <script type="text/javascript" src="https://vk.com/js/api/openapi.js?159"></script>
+            <div>
+                <div class="vk_review">
+                    <div class="vk_review__header">
+                        <div class="vk_review__header_img"></div>
+                        <a href="https://vk.com/club134747802">
+                            <h3>Грузоперевозки по России | ТАЙГЕР-ЛОГИСТИК</h3>
+                            <span>10 мая в 11:10</span>
+                        </a>
+                    </div>
+                    <div class="vk_review__content">
+                        <p>С радостью принимаем Ваши звонки, отвечаем на вопросы и консультируем по переезду в другой
+                            город📦📦📦</p>
+                        <p>Звоните нам: 8800-700-09-35 <br> Звонок по России бесплатный</p>
+                        <a href="https://vk.com/club134747802"><span>#перееезд</span></a>
+                        <div class="vk_review__content_img third_review_img"></div>
+                    </div>
+                    <div class="vk_review__footer">
+                        <div class="vk_review__footer_wrap">
+                            <div class="vk_review__footer_item">
+                                <a href="https://vk.com/club134747802?z=photo-134747802_456239050%2Falbum-134747802_00%2Frev">
+                                    <svg class="vk_review__footer_item_image">
+                                        <path xmlns="http://www.w3.org/2000/svg" d="M17,2.9A6.43,6.43,0,0,1,23.4,9.33c0,3.57-1.43,5.36-7.45,10l-2.78,2.16a1.9,1.9,0,0,1-2.33,0L8.05,19.37C2,14.69.6,12.9.6,9.33A6.43,6.43,0,0,1,7,2.9a6.46,6.46,0,0,1,5,2.54A6.46,6.46,0,0,1,17,2.9ZM7,4.7A4.63,4.63,0,0,0,2.4,9.33c0,2.82,1.15,4.26,6.76,8.63l2.78,2.16a.1.1,0,0,0,.12,0L14.84,18c5.61-4.36,6.76-5.8,6.76-8.63A4.63,4.63,0,0,0,17,4.7c-1.56,0-3,.88-4.23,2.73L12,8.5l-.74-1.07C10,5.58,8.58,4.7,7,4.7Z" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="vk_review__footer_item">
+                                <a href="https://vk.com/club134747802?z=photo-134747802_456239050%2Falbum-134747802_00%2Frev">
+                                    <svg class="vk_review__footer_item_image">
+                                        <path xmlns="http://www.w3.org/2000/svg" d="M7.84,22.53A2,2,0,0,1,7.1,21V18.9H5.5a3.26,3.26,0,0,1-3.4-3.4v-9A3.26,3.26,0,0,1,5.5,3.1h13a3.26,3.26,0,0,1,3.4,3.4v9a3.26,3.26,0,0,1-3.4,3.4H13.84l-3.72,3.26A1.69,1.69,0,0,1,7.84,22.53Zm4.93-5.09a1.4,1.4,0,0,1,.92-.35H18.5a1.47,1.47,0,0,0,1.6-1.6v-9a1.47,1.47,0,0,0-1.6-1.6H5.5A1.47,1.47,0,0,0,3.9,6.5v9a1.47,1.47,0,0,0,1.6,1.6H8c.7.2.7.2.9.9v2.83Z"
+                                            fill="#828a99" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="vk_review__footer_item">
+                                <a href="https://vk.com/club134747802?z=photo-134747802_456239050%2Falbum-134747802_00%2Frev">
+                                    <svg class="vk_review__footer_item_image">
+                                        <path xmlns="http://www.w3.org/2000/svg" d="M12.1,7.87V4.4a1.32,1.32,0,0,1,2.17-1L23.21,11a1.32,1.32,0,0,1,.15,1.86l-.15.15-8.94,7.6a1.32,1.32,0,0,1-2.17-1V16.16c-4.68.11-8,1.09-9.89,2.87a1.15,1.15,0,0,1-1.9-1.11C1.84,11.56,5.82,8.16,12.1,7.87Zm1.8-2.42v4.2H13c-5.3,0-8.72,2.25-10.39,6.86C5.06,15.06,8.53,14.35,13,14.35h.9v4.2L21.61,12Z"
+                                            fill="#828a99" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="vk_review">
-                <div id="vk_post_-134747802_22" style="width: 250px; height: 403px; background: none;"><iframe name="fXD33cd4"
-                        frameborder="0" src="https://vk.com/widget_post.php?app=0&amp;width=250px&amp;_ver=1&amp;owner_id=-134747802&amp;post_id=22&amp;hash=zm-H49pqT90xSbf_lNOF2yVcFUE&amp;url=file%3A%2F%2F%2FUsers%2Faleksandra.osmakova%2FDesktop%2Fprojects%2Ftiger_project%2Findex.html&amp;referrer=&amp;title=%D0%A2%D1%80%D0%B0%D0%BD%D1%81%D0%BF%D0%BE%D1%80%D1%82%D0%BD%D0%B0%D1%8F%20%D0%BA%D0%BE%D0%BC%D0%BF%D0%B0%D0%BD%D0%B8%D1%8F%20Tiger%20Logistic%20-%20%D0%93%D1%80%D1%83%D0%B7%D0%BE%D0%BF%D0%B5%D1%80%D0%B5%D0%B2%D0%BE%D0%B7%D0%BA%D0%B8%20%D0%BF%D0%BE%20%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B8%20%D0%B8%20%D0%A1%D0%9D%D0%93&amp;166ed651ed2"
-                        width="250" height="403" scrolling="no" id="vkwidget4" style="overflow: hidden; height: 403px;"></iframe></div>
-                <script type="text/javascript" src="https://vk.com/js/api/openapi.js?159"></script>
+            <div>
+                <div class="vk_review">
+                    <div class="vk_review__header">
+                        <div class="vk_review__header_img"></div>
+                        <a href="https://vk.com/club134747802">
+                            <h3>Грузоперевозки по России | ТАЙГЕР-ЛОГИСТИК</h3>
+                            <span>3 мая в 16:06</span>
+                        </a>
+                    </div>
+                    <div class="vk_review__content">
+                        <p>Давайте знакомиться! <br> Это наша команда отдыхает на день логиста🚚🚚</p>
+                        <a href="https://vk.com/club134747802"><span>#переезд</span></a>
+                        <div class="vk_review__content_img fourth_review_img"></div>
+                    </div>
+                    <div class="vk_review__footer">
+                        <div class="vk_review__footer_wrap">
+                            <div class="vk_review__footer_item">
+                                <a href="https://vk.com/club134747802?z=photo-134747802_456239049%2Falbum-134747802_00%2Frev">
+                                    <svg class="vk_review__footer_item_image">
+                                        <path xmlns="http://www.w3.org/2000/svg" d="M17,2.9A6.43,6.43,0,0,1,23.4,9.33c0,3.57-1.43,5.36-7.45,10l-2.78,2.16a1.9,1.9,0,0,1-2.33,0L8.05,19.37C2,14.69.6,12.9.6,9.33A6.43,6.43,0,0,1,7,2.9a6.46,6.46,0,0,1,5,2.54A6.46,6.46,0,0,1,17,2.9ZM7,4.7A4.63,4.63,0,0,0,2.4,9.33c0,2.82,1.15,4.26,6.76,8.63l2.78,2.16a.1.1,0,0,0,.12,0L14.84,18c5.61-4.36,6.76-5.8,6.76-8.63A4.63,4.63,0,0,0,17,4.7c-1.56,0-3,.88-4.23,2.73L12,8.5l-.74-1.07C10,5.58,8.58,4.7,7,4.7Z" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="vk_review__footer_item">
+                                <a href="https://vk.com/club134747802?z=photo-134747802_456239049%2Falbum-134747802_00%2Frev">
+                                    <svg class="vk_review__footer_item_image">
+                                        <path xmlns="http://www.w3.org/2000/svg" d="M7.84,22.53A2,2,0,0,1,7.1,21V18.9H5.5a3.26,3.26,0,0,1-3.4-3.4v-9A3.26,3.26,0,0,1,5.5,3.1h13a3.26,3.26,0,0,1,3.4,3.4v9a3.26,3.26,0,0,1-3.4,3.4H13.84l-3.72,3.26A1.69,1.69,0,0,1,7.84,22.53Zm4.93-5.09a1.4,1.4,0,0,1,.92-.35H18.5a1.47,1.47,0,0,0,1.6-1.6v-9a1.47,1.47,0,0,0-1.6-1.6H5.5A1.47,1.47,0,0,0,3.9,6.5v9a1.47,1.47,0,0,0,1.6,1.6H8c.7.2.7.2.9.9v2.83Z"
+                                            fill="#828a99" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="vk_review__footer_item">
+                                <a href="https://vk.com/club134747802?z=photo-134747802_456239049%2Falbum-134747802_00%2Frev">
+                                    <svg class="vk_review__footer_item_image">
+                                        <path xmlns="http://www.w3.org/2000/svg" d="M12.1,7.87V4.4a1.32,1.32,0,0,1,2.17-1L23.21,11a1.32,1.32,0,0,1,.15,1.86l-.15.15-8.94,7.6a1.32,1.32,0,0,1-2.17-1V16.16c-4.68.11-8,1.09-9.89,2.87a1.15,1.15,0,0,1-1.9-1.11C1.84,11.56,5.82,8.16,12.1,7.87Zm1.8-2.42v4.2H13c-5.3,0-8.72,2.25-10.39,6.86C5.06,15.06,8.53,14.35,13,14.35h.9v4.2L21.61,12Z"
+                                            fill="#828a99" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="vk_review">
+                    <div class="vk_review__header">
+                        <div class="vk_review__header_img"></div>
+                        <a href="https://vk.com/club134747802">
+                            <h3>Грузоперевозки по России | ТАЙГЕР-ЛОГИСТИК</h3>
+                            <span>6 ноя в 11:15</span>
+                        </a>
+                    </div>
+                    <div class="vk_review__content">
+                        <p>Доставили мебель из Петелино (Московская область) в Березники!</p>
+                        <a href="https://vk.com/club134747802"><span>#грузоперевозки#отзыв <br>
+                                #тайгерлогистик#логистика</span></a>
+                        <div class="vk_review__content_img first_review_img"></div>
+                    </div>
+                    <div class="vk_review__footer">
+                        <div class="vk_review__footer_wrap">
+                            <div class="vk_review__footer_item">
+                                <a href="https://vk.com/club134747802?w=wall-134747802_30%2Fall">
+                                    <svg class="vk_review__footer_item_image">
+                                        <path xmlns="http://www.w3.org/2000/svg" d="M17,2.9A6.43,6.43,0,0,1,23.4,9.33c0,3.57-1.43,5.36-7.45,10l-2.78,2.16a1.9,1.9,0,0,1-2.33,0L8.05,19.37C2,14.69.6,12.9.6,9.33A6.43,6.43,0,0,1,7,2.9a6.46,6.46,0,0,1,5,2.54A6.46,6.46,0,0,1,17,2.9ZM7,4.7A4.63,4.63,0,0,0,2.4,9.33c0,2.82,1.15,4.26,6.76,8.63l2.78,2.16a.1.1,0,0,0,.12,0L14.84,18c5.61-4.36,6.76-5.8,6.76-8.63A4.63,4.63,0,0,0,17,4.7c-1.56,0-3,.88-4.23,2.73L12,8.5l-.74-1.07C10,5.58,8.58,4.7,7,4.7Z" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="vk_review__footer_item">
+                                <a href="https://vk.com/club134747802?w=wall-134747802_30%2Fall">
+                                    <svg class="vk_review__footer_item_image">
+                                        <path xmlns="http://www.w3.org/2000/svg" d="M7.84,22.53A2,2,0,0,1,7.1,21V18.9H5.5a3.26,3.26,0,0,1-3.4-3.4v-9A3.26,3.26,0,0,1,5.5,3.1h13a3.26,3.26,0,0,1,3.4,3.4v9a3.26,3.26,0,0,1-3.4,3.4H13.84l-3.72,3.26A1.69,1.69,0,0,1,7.84,22.53Zm4.93-5.09a1.4,1.4,0,0,1,.92-.35H18.5a1.47,1.47,0,0,0,1.6-1.6v-9a1.47,1.47,0,0,0-1.6-1.6H5.5A1.47,1.47,0,0,0,3.9,6.5v9a1.47,1.47,0,0,0,1.6,1.6H8c.7.2.7.2.9.9v2.83Z"
+                                            fill="#828a99" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="vk_review__footer_item">
+                                <a href="https://vk.com/club134747802?w=wall-134747802_30%2Fall">
+                                    <svg class="vk_review__footer_item_image">
+                                        <path xmlns="http://www.w3.org/2000/svg" d="M12.1,7.87V4.4a1.32,1.32,0,0,1,2.17-1L23.21,11a1.32,1.32,0,0,1,.15,1.86l-.15.15-8.94,7.6a1.32,1.32,0,0,1-2.17-1V16.16c-4.68.11-8,1.09-9.89,2.87a1.15,1.15,0,0,1-1.9-1.11C1.84,11.56,5.82,8.16,12.1,7.87Zm1.8-2.42v4.2H13c-5.3,0-8.72,2.25-10.39,6.86C5.06,15.06,8.53,14.35,13,14.35h.9v4.2L21.61,12Z"
+                                            fill="#828a99" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="vk_review">
+                    <div class="vk_review__header">
+                        <div class="vk_review__header_img"></div>
+                        <a href="https://vk.com/club134747802">
+                            <h3>Грузоперевозки по России | ТАЙГЕР-ЛОГИСТИК</h3>
+                            <span>5 ноя в 19:51</span>
+                        </a>
+                    </div>
+                    <div class="vk_review__content">
+                        <p>Отзыв Анастасии
+                            Услуга: Переезд из Екатеринбурга в Белгородскую область - село Покровка</p>
+                        <div class="vk_review__content_img second_review_img"></div>
+                    </div>
+                    <div class="vk_review__footer">
+                        <div class="vk_review__footer_wrap">
+                            <div class="vk_review__footer_item">
+                                <a href="https://vk.com/club134747802?w=wall-134747802_28%2Fall">
+                                    <svg class="vk_review__footer_item_image">
+                                        <path xmlns="http://www.w3.org/2000/svg" d="M17,2.9A6.43,6.43,0,0,1,23.4,9.33c0,3.57-1.43,5.36-7.45,10l-2.78,2.16a1.9,1.9,0,0,1-2.33,0L8.05,19.37C2,14.69.6,12.9.6,9.33A6.43,6.43,0,0,1,7,2.9a6.46,6.46,0,0,1,5,2.54A6.46,6.46,0,0,1,17,2.9ZM7,4.7A4.63,4.63,0,0,0,2.4,9.33c0,2.82,1.15,4.26,6.76,8.63l2.78,2.16a.1.1,0,0,0,.12,0L14.84,18c5.61-4.36,6.76-5.8,6.76-8.63A4.63,4.63,0,0,0,17,4.7c-1.56,0-3,.88-4.23,2.73L12,8.5l-.74-1.07C10,5.58,8.58,4.7,7,4.7Z" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="vk_review__footer_item">
+                                <a href="https://vk.com/club134747802?w=wall-134747802_28%2Fall">
+                                    <svg class="vk_review__footer_item_image">
+                                        <path xmlns="http://www.w3.org/2000/svg" d="M7.84,22.53A2,2,0,0,1,7.1,21V18.9H5.5a3.26,3.26,0,0,1-3.4-3.4v-9A3.26,3.26,0,0,1,5.5,3.1h13a3.26,3.26,0,0,1,3.4,3.4v9a3.26,3.26,0,0,1-3.4,3.4H13.84l-3.72,3.26A1.69,1.69,0,0,1,7.84,22.53Zm4.93-5.09a1.4,1.4,0,0,1,.92-.35H18.5a1.47,1.47,0,0,0,1.6-1.6v-9a1.47,1.47,0,0,0-1.6-1.6H5.5A1.47,1.47,0,0,0,3.9,6.5v9a1.47,1.47,0,0,0,1.6,1.6H8c.7.2.7.2.9.9v2.83Z"
+                                            fill="#828a99" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="vk_review__footer_item">
+                                <a href="https://vk.com/club134747802?w=wall-134747802_28%2Fall">
+                                    <svg class="vk_review__footer_item_image">
+                                        <path xmlns="http://www.w3.org/2000/svg" d="M12.1,7.87V4.4a1.32,1.32,0,0,1,2.17-1L23.21,11a1.32,1.32,0,0,1,.15,1.86l-.15.15-8.94,7.6a1.32,1.32,0,0,1-2.17-1V16.16c-4.68.11-8,1.09-9.89,2.87a1.15,1.15,0,0,1-1.9-1.11C1.84,11.56,5.82,8.16,12.1,7.87Zm1.8-2.42v4.2H13c-5.3,0-8.72,2.25-10.39,6.86C5.06,15.06,8.53,14.35,13,14.35h.9v4.2L21.61,12Z"
+                                            fill="#828a99" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="vk_review">
+                    <div class="vk_review__header">
+                        <div class="vk_review__header_img"></div>
+                        <a href="https://vk.com/club134747802">
+                            <h3>Грузоперевозки по России | ТАЙГЕР-ЛОГИСТИК</h3>
+                            <span>10 мая в 11:10</span>
+                        </a>
+                    </div>
+                    <div class="vk_review__content">
+                        <p>С радостью принимаем Ваши звонки, отвечаем на вопросы и консультируем по переезду в другой
+                            город📦📦📦</p>
+                        <p>Звоните нам: 8800-700-09-35 <br> Звонок по России бесплатный</p>
+                        <a href="https://vk.com/club134747802"><span>#перееезд</span></a>
+                        <div class="vk_review__content_img third_review_img"></div>
+                    </div>
+                    <div class="vk_review__footer">
+                        <div class="vk_review__footer_wrap">
+                            <div class="vk_review__footer_item">
+                                <a href="https://vk.com/club134747802?z=photo-134747802_456239050%2Falbum-134747802_00%2Frev">
+                                    <svg class="vk_review__footer_item_image">
+                                        <path xmlns="http://www.w3.org/2000/svg" d="M17,2.9A6.43,6.43,0,0,1,23.4,9.33c0,3.57-1.43,5.36-7.45,10l-2.78,2.16a1.9,1.9,0,0,1-2.33,0L8.05,19.37C2,14.69.6,12.9.6,9.33A6.43,6.43,0,0,1,7,2.9a6.46,6.46,0,0,1,5,2.54A6.46,6.46,0,0,1,17,2.9ZM7,4.7A4.63,4.63,0,0,0,2.4,9.33c0,2.82,1.15,4.26,6.76,8.63l2.78,2.16a.1.1,0,0,0,.12,0L14.84,18c5.61-4.36,6.76-5.8,6.76-8.63A4.63,4.63,0,0,0,17,4.7c-1.56,0-3,.88-4.23,2.73L12,8.5l-.74-1.07C10,5.58,8.58,4.7,7,4.7Z" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="vk_review__footer_item">
+                                <a href="https://vk.com/club134747802?z=photo-134747802_456239050%2Falbum-134747802_00%2Frev">
+                                    <svg class="vk_review__footer_item_image">
+                                        <path xmlns="http://www.w3.org/2000/svg" d="M7.84,22.53A2,2,0,0,1,7.1,21V18.9H5.5a3.26,3.26,0,0,1-3.4-3.4v-9A3.26,3.26,0,0,1,5.5,3.1h13a3.26,3.26,0,0,1,3.4,3.4v9a3.26,3.26,0,0,1-3.4,3.4H13.84l-3.72,3.26A1.69,1.69,0,0,1,7.84,22.53Zm4.93-5.09a1.4,1.4,0,0,1,.92-.35H18.5a1.47,1.47,0,0,0,1.6-1.6v-9a1.47,1.47,0,0,0-1.6-1.6H5.5A1.47,1.47,0,0,0,3.9,6.5v9a1.47,1.47,0,0,0,1.6,1.6H8c.7.2.7.2.9.9v2.83Z"
+                                            fill="#828a99" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="vk_review__footer_item">
+                                <a href="https://vk.com/club134747802?z=photo-134747802_456239050%2Falbum-134747802_00%2Frev">
+                                    <svg class="vk_review__footer_item_image">
+                                        <path xmlns="http://www.w3.org/2000/svg" d="M12.1,7.87V4.4a1.32,1.32,0,0,1,2.17-1L23.21,11a1.32,1.32,0,0,1,.15,1.86l-.15.15-8.94,7.6a1.32,1.32,0,0,1-2.17-1V16.16c-4.68.11-8,1.09-9.89,2.87a1.15,1.15,0,0,1-1.9-1.11C1.84,11.56,5.82,8.16,12.1,7.87Zm1.8-2.42v4.2H13c-5.3,0-8.72,2.25-10.39,6.86C5.06,15.06,8.53,14.35,13,14.35h.9v4.2L21.61,12Z"
+                                            fill="#828a99" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="vk_review">
+                    <div class="vk_review__header">
+                        <div class="vk_review__header_img"></div>
+                        <a href="https://vk.com/club134747802">
+                            <h3>Грузоперевозки по России | ТАЙГЕР-ЛОГИСТИК</h3>
+                            <span>3 мая в 16:06</span>
+                        </a>
+                    </div>
+                    <div class="vk_review__content">
+                        <p>Давайте знакомиться! <br> Это наша команда отдыхает на день логиста🚚🚚</p>
+                        <a href="https://vk.com/club134747802"><span>#переезд</span></a>
+                        <div class="vk_review__content_img fourth_review_img"></div>
+                    </div>
+                    <div class="vk_review__footer">
+                        <div class="vk_review__footer_wrap">
+                            <div class="vk_review__footer_item">
+                                <a href="https://vk.com/club134747802?z=photo-134747802_456239049%2Falbum-134747802_00%2Frev">
+                                    <svg class="vk_review__footer_item_image">
+                                        <path xmlns="http://www.w3.org/2000/svg" d="M17,2.9A6.43,6.43,0,0,1,23.4,9.33c0,3.57-1.43,5.36-7.45,10l-2.78,2.16a1.9,1.9,0,0,1-2.33,0L8.05,19.37C2,14.69.6,12.9.6,9.33A6.43,6.43,0,0,1,7,2.9a6.46,6.46,0,0,1,5,2.54A6.46,6.46,0,0,1,17,2.9ZM7,4.7A4.63,4.63,0,0,0,2.4,9.33c0,2.82,1.15,4.26,6.76,8.63l2.78,2.16a.1.1,0,0,0,.12,0L14.84,18c5.61-4.36,6.76-5.8,6.76-8.63A4.63,4.63,0,0,0,17,4.7c-1.56,0-3,.88-4.23,2.73L12,8.5l-.74-1.07C10,5.58,8.58,4.7,7,4.7Z" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="vk_review__footer_item">
+                                <a href="https://vk.com/club134747802?z=photo-134747802_456239049%2Falbum-134747802_00%2Frev">
+                                    <svg class="vk_review__footer_item_image">
+                                        <path xmlns="http://www.w3.org/2000/svg" d="M7.84,22.53A2,2,0,0,1,7.1,21V18.9H5.5a3.26,3.26,0,0,1-3.4-3.4v-9A3.26,3.26,0,0,1,5.5,3.1h13a3.26,3.26,0,0,1,3.4,3.4v9a3.26,3.26,0,0,1-3.4,3.4H13.84l-3.72,3.26A1.69,1.69,0,0,1,7.84,22.53Zm4.93-5.09a1.4,1.4,0,0,1,.92-.35H18.5a1.47,1.47,0,0,0,1.6-1.6v-9a1.47,1.47,0,0,0-1.6-1.6H5.5A1.47,1.47,0,0,0,3.9,6.5v9a1.47,1.47,0,0,0,1.6,1.6H8c.7.2.7.2.9.9v2.83Z"
+                                            fill="#828a99" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="vk_review__footer_item">
+                                <a href="https://vk.com/club134747802?z=photo-134747802_456239049%2Falbum-134747802_00%2Frev">
+                                    <svg class="vk_review__footer_item_image">
+                                        <path xmlns="http://www.w3.org/2000/svg" d="M12.1,7.87V4.4a1.32,1.32,0,0,1,2.17-1L23.21,11a1.32,1.32,0,0,1,.15,1.86l-.15.15-8.94,7.6a1.32,1.32,0,0,1-2.17-1V16.16c-4.68.11-8,1.09-9.89,2.87a1.15,1.15,0,0,1-1.9-1.11C1.84,11.56,5.82,8.16,12.1,7.87Zm1.8-2.42v4.2H13c-5.3,0-8.72,2.25-10.39,6.86C5.06,15.06,8.53,14.35,13,14.35h.9v4.2L21.61,12Z"
+                                            fill="#828a99" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -776,20 +1207,20 @@
                 <div class="about_numbers_container_row">
                     <div class="about_numbers_item">
                         <span id="first_item_to_count" class="about_number animated">6</span>
-                        <span class="about_number_description">лет работы</span>
+                        <span class="about_number_description">лет работы с 2013 года</span>
                     </div>
                     <div class="about_numbers_item">
                         <span id="second_item_to_count" class="about_number">20</span>
-                        <span class="about_number_description">лет работы</span>
+                        <span class="about_number_description">сотрудников</span>
                     </div>
                 </div>
                 <div class="about_numbers_container_row">
                     <div class="about_numbers_item about_number_selected_first">
-                        <span id="third_item_to_count" class="about_number">11000</span>
-                        <span class="about_number_description styled_number_description">заказов</span>
+                        <span id="third_item_to_count" class="about_number">11243</span>
+                        <span class="about_number_description styled_number_description">перевозок осуществлено</span>
                     </div>
                     <div class="about_numbers_item about_number_selected_second">
-                        <span id="fourth_item_to_count" class="about_number">250</span>
+                        <span id="fourth_item_to_count" class="about_number">272</span>
                         <span class="about_number_description">постоянных клиентов</span>
                     </div>
                 </div>
@@ -844,11 +1275,77 @@
 
         </div>
     </section>
+    <section class="additional_info">
+        <h2>ПОДРОБНЕЕ О ГРУЗОПЕРЕВОЗКАХ <br> ПО РОССИИ ОТДЕЛЬНЫМ ТРАНСПОРТОМ</h2>
+        <div class="additional_info_content">
+            <div class="adadditional_info_content_image"></div>
+            <div class="additional_info_content_text">
+                <div class="text_wrap">
+                    <h3>Профессиональные транспортные услуги</h3>
+                    <p>Транспортные услуги, оказываемые профессиональной компанией, — залог надежности и точности
+                        выполнения заказов разной сложности. Грузы будут перевезены в нужную точку по маршруту, который
+                        обсуждается заранее с заказчиком.</p>
+                    <p>Грузоперевозки +по России приобретают все большую и большую актуальность. Потребность в них
+                        растет, так как грузы могут быть самыми разными. Услугу заказывают люди, переезжающие на другое
+                        место или же желающие отвезти часть мебели на дачу. Также те, которые планируют строительство и
+                        закупили тонны песка, кирпича и других стройматериалов. При наличии собственного бизнеса,
+                        особенно, если речь идет о магазине или торговом центре, нужно периодически покупать и
+                        перевозить большое количество продуктов.</p>
+                    <p>Грузоперевозки были востребованы еще задолго до появления современного транспорта. Ведь
+                        купля-продажа никогда не прекращалась. В наше время эта услуга стала на более высокий уровень,
+                        так как обычная фура за один раз и за малый промежуток времени сможет перевезти много всего,
+                        что раньше перевозилось на небольших кораблях.</p>
+                    <p>Без грузоперевозок сложно себе представить современную жизнь. Города не имели бы столько
+                        удобств, возможностей, такого огромного завоза импортной одежды и продуктов. Пока человеческие
+                        потребности будут умножаться, нужда в перевозках будет оставаться все такой же острой. При
+                        заказе перевозочных услуг важно понимать, что не всем можно доверить ценные товары. Во
+                        избежание потерь и краж лучше всего обращаться в профессиональные компании, которые
+                        предоставляют гарантию на свои услуги.</p>
+                    <h3>Цена грузоперевозок по России</h3>
+                    <p>Грузоперевозки могут иметь различную стоимость, и на это влияет целый спектр причин. Все зависит
+                        от того, насколько стабильное положение на рынке услуги перевоза грузов. Если там все в
+                        порядке, то компании будут максимально стараться, чтобы угодить клиенту и переманить его на
+                        свою сторону. Также играет роль стоимость топлива для двигателей транспортных средств — от
+                        этого будет рассчитываться общая цена.</p>
+                    <p>Немаловажным фактором является то, насколько дорогие услуги ремонта и покупки запчастей в том
+                        или ином регионе. Ведь транспорт нуждается в регулярном техосмотре, ремонте и должном уходе.
+                        Если детали износились, пришли в негодность — на таком транспорте опасно не то, что отвозить
+                        груз, а и вообще ездить по дорогам. Учитываются затраты и на все расходные материалы как
+                        фильтры и прочее.</p>
+                    <p> Грузоперевозки +по России цена зависит от сложности и количества перевозимого товара. Если груз
+                        опасен для жизни, требует особого подхода хранения в кузове или же является слишком хрупким,
+                        ломким и нуждается во внимании и аккуратном подходе, то цена за такую перевозку будет
+                        достаточно высока. При обычных перевозках сыпучих стройматериалов, мягкой мебели, где не нужно
+                        слишком тщательно упаковывать товар и следить за его целостностью, стоимость окажется
+                        невысокой.</p>
+                    <h3>Грузоперевозки от компании</h3>
+                    <p> Грузоперевозки +по России транспортные компании — это возможность отдать свой товар в надежные
+                        руки и быть уверенным, что он дойдет до точки прибытия в своем полном количестве и
+                        своевременно. Наша компания делает все возможное, чтобы избежать казусных ситуаций, утери или
+                        порчи груза, а также неоправданных задержек во время доставки. Мы ценим каждого клиента и
+                        печемся о его благополучии.</p>
+                    <p>Все наши грузоперевозки отлажены и систематизированы. Наш автопарк
+                        содержит транспорт с разной мощностью и грузоподъемностью, чтобы можно было подобрать
+                        подходящий для того или иного количества товара. Всевозможные характеристики машин, их габариты
+                        вы сможете посмотреть на сайте и выбрать то, что вам подходит.</p>
+                    <h3>Наши преимущества:</h3>
+                    <ul>
+                        <li>Своевременный привоз грузовой машины на место погрузки товара.</li>
+                        <li>Быстрая и качественная доставка грузов в любой регион России.</li>
+                        <li>Возможность бесплатных консультаций по поводу стоимости перевозки, расчета длительности
+                            поездки, уточнения особенностей груза и прочих важных нюансов.</li>
+                        <li>Наличие нестандартной услуги: заказчик может находиться в кабине водителя на протяжении
+                            всей поездки и быть в курсе того, в каком состоянии находится его товар.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="advantages">
         <h2>НАШИ ПРЕИМУЩЕСТВА</h2>
         <p class="advantages_header_text">Предоставляем услуги погрузки и упаковки груза в каждом городе России</p>
         <div class="advantages_content">
-            <div class="advantages_content__item">
+            <div class="advantages_content__item" data-aos="fade-right">
                 <div class="advantages_content__item_header">
                     <div class="advantages_content__item_img_container">
                         <div class="advantages_content__item_img">
@@ -866,7 +1363,7 @@
                     грузоперевозок.
                 </p>
             </div>
-            <div class="advantages_content__item">
+            <div class="advantages_content__item" data-aos="fade-left">
                 <div class="advantages_content__item_header">
                     <div class="advantages_content__item_img_container">
                         <div class="advantages_content__item_img">
@@ -883,7 +1380,7 @@
                     Делаем страховку Вашего груза по ставке 0.1% от описанной стоимости груза.
                 </p>
             </div>
-            <div class="advantages_content__item">
+            <div class="advantages_content__item" data-aos="fade-right">
                 <div class="advantages_content__item_header">
                     <div class="advantages_content__item_img_container">
                         <div class="advantages_content__item_img">
@@ -900,7 +1397,7 @@
                 <p class="advantages_item_text">Вы можете отслеживать местоположение транспорта с вашим грузом, набрав
                     бесплатный номер горячей линии 8800-700-09-35 и сообщив диспетчеру номер вашего договора-заявки</p>
             </div>
-            <div class="advantages_content__item">
+            <div class="advantages_content__item" data-aos="fade-left">
                 <div class="advantages_content__item_header">
                     <div class="advantages_content__item_img_container">
                         <div class="advantages_content__item_img">
@@ -992,11 +1489,12 @@
                     </div>
                     <h3>Скорость работы</h3>
                 </div>
-                <p class="advantages_item_text">Среднее время подбора транспорта под запрос клиента – <b>55 минут</b>. Среднее
+                <p class="advantages_item_text">Среднее время подбора транспорта под запрос клиента – <b>55 минут</b>.
+                    Среднее
                     время согласования и подписания договора <b>16 минут</b>.
                     Среднее расстояние, проходимое автотранспортом за сутки – <b>800 км</b>.</p>
             </div>
-            <div class="advantages_content__item">
+            <div class="advantages_content__item" data-aos="fade-right">
                 <div class="advantages_content__item_header">
                     <div class="advantages_content__item_img_container">
                         <div class="advantages_content__item_img">
@@ -1012,12 +1510,12 @@
 
                         </div>
                     </div>
-                    <h3>Предоставление оригиналов  <br> отчетных документов</h3>
+                    <h3>Предоставление оригиналов <br> отчетных документов</h3>
                 </div>
                 <p class="advantages_item_text">Предоставляем полные пакет оригиналов отчетных документов.  Отправляем
                     почтой в течении 5 дней с момента выгрузки транспорта.</p>
             </div>
-            <div class="advantages_content__item">
+            <div class="advantages_content__item" data-aos="fade-left">
                 <div class="advantages_content__item_header">
                     <div class="advantages_content__item_img_container">
                         <div class="advantages_content__item_img">
@@ -1031,7 +1529,7 @@
                             </svg>
                         </div>
                     </div>
-                    <h3>Не платите за перевозку  <br> – закажите догруз!</h3>
+                    <h3>Не платите за перевозку <br> – закажите догруз!</h3>
                 </div>
                 <p class="advantages_item_text">Догруз - груз от 50 до 800 кг. Он может быть помещен в автомобиль,
                     идущий попутным маршрутом, при наличии свободного места в кузове. Стоимость при такой перевозке
@@ -1039,7 +1537,7 @@
                     нам не ехать с полупустым кузовом.
                 </p>
             </div>
-            <div class="advantages_content__item">
+            <div class="advantages_content__item" data-aos="fade-right">
                 <div class="advantages_content__item_header">
                     <div class="advantages_content__item_img_container">
                         <div class="advantages_content__item_img">
@@ -1055,7 +1553,7 @@
                     транспорта по низкой ставке осуществляется за 3-5 дней. Предупредите нас заранее, и мы предоставим
                     Вам попутный транспорт!</p>
             </div>
-            <div class="advantages_content__item">
+            <div class="advantages_content__item" data-aos="fade-left">
                 <div class="advantages_content__item_header">
                     <div class="advantages_content__item_img_container">
                         <div class="advantages_content__item_img">
@@ -1076,9 +1574,6 @@
     </section>
     <section class="payment_info">
         <h2>Информация об оплате</h2>
-        <p class="payment_info_text">Etiam vitae sodales turpis. Curabitur quis aliquet lacus. Suspendisse potenti.
-            Suspendisse ullamcorper
-            porttitor nunc in tempor. Vestibulum in imperdiet nisi. Nunc non dignissim enim.</p>
         <div class="payment_info_content">
             <h3>Подробнее о способах оплаты:</h3>
             <div class="payment_info_column">
@@ -1088,11 +1583,7 @@
                         <span class="payment_type_info_text">Безналичный расчет с НДС 18%</span>
                     </div>
                     <div id='payment_info_text_first' class="payment_info__type_text">
-                        <p>Оплата производится c НДС 18% на основании счета до выгрузки транспортного средства. По
-                            решению
-                            руководства компании возможна постоплата. Закрывающие документы мы отправим Вам курьером
-                            сразу
-                            по окончании перевозки.</p>
+                        <p>Оплата производится c НДС 18% на основании счета до выгрузки транспортного средства. При некоторых условиях возможна постоплата. Условия уточняйте у менеджера.</p>
                     </div>
                 </div>
                 <div class="payment_info___type_item">
@@ -1101,9 +1592,7 @@
                         <span class="payment_type_info_text">Безналичный расчет без НДС</span>
                     </div>
                     <div id='payment_info_text_second' class="payment_info__type_text">
-                        <p>Aliquam eleifend turpis et libero tempus porttitor sollicitudin sed dui. Ut molestie ante a
-                            libero pretium bibendum. Pellentesque nibh nibh, sodales sit amet ultrices eu, vulputate a
-                            purus.</p>
+                        <p>Оплата производится без НДС на основании счета до выгрузки транспортного средства. При некоторых условиях возможна постоплата. Условия уточняйте у менеджера.</p>
                     </div>
                 </div>
                 <div class="payment_info___type_item">
@@ -1112,9 +1601,7 @@
                         <span class="payment_type_info_text">Оплата наличными</span>
                     </div>
                     <div id='payment_info_text_third' class="payment_info__type_text">
-                        <p>Nulla quis neque imperdiet ex vehicula varius. Sed dolor odio, convallis vel porta at,
-                            cursus ut massa. Morbi maximus hendrerit justo, sed porttitor tellus hendrerit eu.
-                            Suspendisse pellentesque felis et purus semper, id feugiat orci tincidunt. </p>
+                        <p>Оплата производится наличными средствами на основании счета перед выгрузкой транспортного средства.</p>
                     </div>
                 </div>
                 <div class="payment_info___type_item">
@@ -1123,10 +1610,7 @@
                         <span class="payment_type_info_text">Online оплата</span>
                     </div>
                     <div id='payment_info_text_fourth' class="payment_info__type_text">
-                        <p>Morbi ullamcorper porttitor ligula ac ornare. Quisque molestie diam id risus sagittis
-                            auctor.
-                            Proin gravida elit at purus hendrerit, et luctus enim faucibus. Duis a ex et ante interdum
-                            euismod. Nunc accumsan diam nec fringilla scelerisque.</p>
+                        <p>Оплата online переводом на карту Сбербанка и других банков до выгрузки транспортного средства.</p>
                     </div>
                 </div>
             </div>
@@ -1238,7 +1722,7 @@
         <div class="footer_item">
             <p class="footer_item_text">Наша миссия заключается в сохранении эмоционального, материального благополучия
                 клиентов и развитии инфраструктуры за счёт быстрых и систематизированных грузоперевозок во всех
-                регионах России. Работая с 2010 года, мы успели провести более 11500 тысяч успешных грузоперевозок. Наш
+                регионах России. Работая с 2013 года, мы успели провести более 11500 тысяч успешных грузоперевозок. Наш
                 автотранспорт позволяет перевозить груз с любыми характеристиками и габаритами.</p>
             <a class="confidential_politics" href="">Политика конфиденциальности</a>
             <span class="rights_reserved">Все права защищены. © Тайгер Логистик 2018</span>
@@ -1328,7 +1812,8 @@
                 конфиденциальности</a></p>
     </section>
     <div id="modal_overlay"></div>
-    <script async custom-element="amp-vk" src="https://cdn.ampproject.org/v0/amp-vk-0.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.8/min/tiny-slider.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="./tiger.js/countUp.js-master/countUp.js"></script>
     <script src="./tiger.js/tiger.js"></script>
