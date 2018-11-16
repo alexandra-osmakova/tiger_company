@@ -1921,6 +1921,14 @@
                 console.log(suggestion);
             }
         });
+        $("form#empty").on("submit", function(e) {
+            return false;
+        });
+        $("button#form2").on("click", function(e) {
+            modal_on_second();
+            $("input#form2").attr("name", "form2");
+            $("input#form2").attr("value", "hh123");
+        });
     </script>
 </body>
 

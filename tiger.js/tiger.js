@@ -22,9 +22,6 @@ var modal_overlay = document.getElementById('modal_overlay');
 var close_modal_btn = document.getElementById('close_btn');
 var header_modal_btn = document.getElementsByClassName('promo_img_section__btn')[0];
 var service_types = document.getElementsByClassName('service_types')[0];
-var modal_name = document.getElementById('name');
-var modal_phone_number = document.getElementById('phone-number');
-var search_form = document.getElementById('search');
 
 
 
@@ -34,11 +31,6 @@ function modal_on_first() {
 }
 
 function modal_on_second() {
-  if(form != null) {
-    modal_name.setAttribute("form", form);
-    modal_phone_number.setAttribute("form", form);
-    search_form.setAttribute("value", "form#"+form);
-  }
   modal_window_second.classList.add('modal_visible');
   modal_overlay.classList.add('modal_overlay');
 }
