@@ -4,7 +4,15 @@
     $telephone = $_POST['phone-number'];
     $apply_task = $_POST['apply_task'];
 
-    $parcel_type = $_POST['parcel_type'];
+    $home_things = $_POST['home_things'];
+    $building_materials = $_POST['building_materials'];
+    $industrial_wood = $_POST['industrial_wood'];
+    $foodstuffs = $_POST['foodstuffs'];
+    $equipment = $_POST['equipment'];
+    $metal = $_POST['metal'];
+    $TNP = $_POST['TNP'];
+    $pipes = $_POST['pipes'];
+    $type_of_parcel_other = $_POST['type_of_parcel_other'];
 
     $cargo_help = $_POST['cargohelp'];
     $adding = $_POST['adding'];
@@ -47,47 +55,64 @@
     echo $modal_btn+'here';
 
     $email_body = $email_body = 
-        "User Telephon Number: $telephone.\n".
-        "Parcel type: $parcel_type.\n".
-        "User needs help: $cargo_help.\n".
-        "Dogruz: $adding.\n".
-        "Gazel: $gazel.\n".
-        "3-ton: $three_ton.\n".
-        "5-ton: $five_ton.\n".
-        "10-ton: $ten_ton.\n".
-        "Fura: $fura.\n".
-        "Ne gabarit: $unusual_shape.\n".
-        "Box: $box.\n".
-        "Palet: $palet.\n".
-        "Korobka: $case.\n".
-        "Bag: $bag.\n".
-        "Big_bag: $big_bag.\n".
-        "Obreshetka: $obreshetka.\n".
-        "Svyazka: $bunch.\n".
-        "Other: $other.\n".
-        "Bez obertki: $no_wrap.\n".
-        "Sverhu: $top_loading.\n".
-        "Sboku: $side_loading.\n".
-        "Szadi: $back_loading.\n".
-        "Combi: $combined.\n".
-        "Ne vazno: $no_matter.\n".
-        "Parcel from: $parcel_from_quiz.\n".
-        "Parcel to: $parcel_to_quiz.\n".
-        "Bistro: $asap.\n".
-        "1 day: $one_day.\n".
-        "1 week: $in_week.\n".
-        "1 month: $in_month.\n".
-        "Person: $person.\n".
-        "Company: $company.\n".
-        "Businessman: $businessman.\n".
-        "OOO: $OOO.\n".
+        "User Telephon Number => $telephone.\n".
+
+        "User needs help => $cargo_help.\n".
+
+        "Dogruz => $adding.\n".
+        "Gazel => $gazel.\n".
+        "3-ton => $three_ton.\n".
+        "5-ton => $five_ton.\n".
+        "10-ton => $ten_ton.\n".
+        "Fura => $fura.\n".
+        "Ne gabarit => $unusual_shape.\n".
+
+        "Box => $box.\n".
+        "Palet => $palet.\n".
+        "Korobka => $case.\n".
+        "Bag => $bag.\n".
+        "Big_bag => $big_bag.\n".
+        "Obreshetka => $obreshetka.\n".
+        "Svyazka => $bunch.\n".
+        "Other => $other.\n".
+        "Bez obertki => $no_wrap.\n".
+
+        "Sverhu => $top_loading.\n".
+        "Sboku => $side_loading.\n".
+        "Szadi => $back_loading.\n".
+        "Combi => $combined.\n".
+        "Ne vazno => $no_matter.\n".
+
+        "Parcel from => $parcel_from_quiz.\n".
+
+        "Parcel to => $parcel_to_quiz.\n".
+
+        "Bistro => $asap.\n".
+        "1 day => $one_day.\n".
+        "1 week => $in_week.\n".
+        "1 month => $in_month.\n".
+
+        "Person => $person.\n".
+        "Company => $company.\n".
+        "Businessman => $businessman.\n".
+        "OOO => $OOO.\n".
+
+        "home_things => $home_things.\n".
+        "building_materials => $building_materials.\n".
+        "home_thindustrial_woodings => $industrial_wood.\n".
+        "foodstuffs => $foodstuffs.\n".
+        "equipment => $equipment.\n".
+        "metal => $metal.\n".
+        "TNP => $TNP.\n".
+        "pipes => $pipes.\n".
+        "type_of_parcel_other => $type_of_parcel_other.\n".
 
 
     $email_subject = "New Form Submission";
 
     $to = "alexandra.osmakova@gmail.com";
 
-    $ok = mail($to, $email_subject, $email_body, $headers);
+    $ok = mail($to, $email_subject, $email_body);
 ?>
 
 <!DOCTYPE html>

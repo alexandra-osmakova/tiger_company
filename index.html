@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.8/tiny-slider.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./tiger.css/reset.css">
     <link rel="stylesheet" href="./tiger.css/tiger.css">
     <link rel="stylesheet" href="./tiger.css/style.css">
@@ -27,7 +27,7 @@
                 <div class="header_logo"></div>
                 <div class="header_contacts_info">
                     <div class="header_contacts_info_item">
-                        <a class = "header_contacts_item__telephon" href='tel:8 (800) 700-09-35'>8 (800) 700-09-35</a>
+                        <a class="header_contacts_item__telephon" href='tel:8 (800) 700-09-35'>8 (800) 700-09-35</a>
                         <span class="header_contacts_item__tel_comment">Звонок по России бесплатный</span>
                     </div>
                     <button class="btn header_contacts_info_item__btn" onclick="modal_on_second()">Заказать звонок</button>
@@ -62,7 +62,7 @@
             <div class="header_logo"></div>
             <div class="header_contacts_info">
                 <div class="header_contacts_info_item">
-                        <a class = "header_contacts_item__telephon" href='tel:8 (800) 700-09-35'>8 (800) 700-09-35</a>
+                    <a class="header_contacts_item__telephon" href='tel:8 (800) 700-09-35'>8 (800) 700-09-35</a>
                     <span class="header_contacts_item__tel_comment">Звонок по России бесплатный</span>
                 </div>
                 <button class="btn header_contacts_info_item__btn" onclick="modal_on_second()">Заказать звонок</button>
@@ -158,56 +158,56 @@
                     </div>
                     <div class="apply_questions_checkbox_container">
                         <label class="question_item_checkbox second_question">
-                            <input class="question_item_checkbox_input checkbox_question_info_trigger" type="radio"
-                                type="radio" name="answer" value="Догруз">
+                            <input class="question_item_checkbox_input checkbox_question_info_trigger" form="quiz_form"
+                                type="radio" name="transport" value="Догруз">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
                             <span class="question_item_checkbox_text">Догруз</span>
                         </label>
                         <label class="question_item_checkbox second_question">
-                            <input class="question_item_checkbox_input checkbox_question_info_trigger" type="radio"
-                                type="radio" name="answer" value="Газель">
+                            <input class="question_item_checkbox_input checkbox_question_info_trigger" form="quiz_form"
+                                type="radio" name="transport" value="Газель">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
                             <span class="question_item_checkbox_text">Газель</span>
                         </label>
                         <label class="question_item_checkbox second_question">
-                            <input class="question_item_checkbox_input checkbox_question_info_trigger" type="radio"
-                                type="radio" name="answer" value="3-тонник">
+                            <input class="question_item_checkbox_input checkbox_question_info_trigger" form="quiz_form"
+                                type="radio" name="transport" value="3-тонник">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
                             <span class="question_item_checkbox_text">3-тонник</span>
                         </label>
                         <label class="question_item_checkbox second_question">
-                            <input class="question_item_checkbox_input checkbox_question_info_trigger" type="radio"
-                                type="radio" name="answer" value="5-тонник">
+                            <input class="question_item_checkbox_input checkbox_question_info_trigger" form="quiz_form"
+                                type="radio" name="transport" value="5-тонник">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
                             <span class="question_item_checkbox_text">5-тонник</span>
                         </label>
                         <label class="question_item_checkbox second_question">
-                            <input class="question_item_checkbox_input checkbox_question_info_trigger" type="radio"
-                                type="radio" name="answer" value="10-тонник">
+                            <input class="question_item_checkbox_input checkbox_question_info_trigger" form="quiz_form"
+                                type="radio" name="transport" value="10-тонник">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
                             <span class="question_item_checkbox_text">10-тонник</span>
                         </label>
                         <label class="question_item_checkbox second_question">
-                            <input class="question_item_checkbox_input checkbox_question_info_trigger" type="radio"
-                                type="radio" name="answer" value="Фура">
+                            <input class="question_item_checkbox_input checkbox_question_info_trigger" form="quiz_form"
+                                type="radio" name="transport" value="Фура">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
                             <span class="question_item_checkbox_text">Фура</span>
                         </label>
                         <label class="question_item_checkbox second_question">
-                            <input class="question_item_checkbox_input checkbox_question_info_trigger" type="radio"
-                                type="radio" name="answer" value="Негабарит">
+                            <input class="question_item_checkbox_input checkbox_question_info_trigger" form="quiz_form"
+                                type="radio" name="transport" value="Негабарит">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
@@ -268,78 +268,69 @@
                     </div>
                     <div class="apply_questions_checkbox_container new_input_container">
                         <label class="question_item_checkbox first_question">
-                            <input class="question_item_checkbox_input" type="radio"
-                                name="answer" value="other">
+                            <input class="question_item_checkbox_input" type="radio" name="type_of_parcel" value="home_things">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
                             <span class="question_item_checkbox_text">Домашний переезд</span>
                         </label>
                         <label class="question_item_checkbox first_question">
-                            <input class="question_item_checkbox_input" type="radio"
-                                name="answer" value="other">
+                            <input class="question_item_checkbox_input" type="radio" name="type_of_parcel" value="building_materials">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
                             <span class="question_item_checkbox_text">Стройматериалы</span>
                         </label>
                         <label class="question_item_checkbox first_question">
-                            <input class="question_item_checkbox_input" type="radio"
-                                name="answer" value="other">
+                            <input class="question_item_checkbox_input" type="radio" name="type_of_parcel" value="industrial_wood">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
                             <span class="question_item_checkbox_text">Пиломатериалы</span>
                         </label>
                         <label class="question_item_checkbox first_question">
-                            <input class="question_item_checkbox_input" type="radio"
-                                name="answer" value="">
+                            <input class="question_item_checkbox_input" type="radio" name="type_of_parcel" value="foodstuffs">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
                             <span class="question_item_checkbox_text">Продукты питания</span>
                         </label>
                         <label class="question_item_checkbox first_question">
-                            <input class="question_item_checkbox_input" type="radio"
-                                name="answer" value="">
+                            <input class="question_item_checkbox_input" type="radio" name="type_of_parcel" value="equipment">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
                             <span class="question_item_checkbox_text">Оборудование</span>
                         </label>
                         <label class="question_item_checkbox first_question">
-                            <input class="question_item_checkbox_input" type="radio"
-                                name="answer" value="">
+                            <input class="question_item_checkbox_input" type="radio" name="type_of_parcel" value="metal">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
                             <span class="question_item_checkbox_text">Металл</span>
                         </label>
                         <label class="question_item_checkbox first_question">
-                            <input class="question_item_checkbox_input" type="radio"
-                                name="answer" value="">
+                            <input class="question_item_checkbox_input" type="radio" name="type_of_parcel" value="TNP">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
                             <span class="question_item_checkbox_text">ТНП</span>
                         </label>
                         <label class="question_item_checkbox first_question">
-                            <input class="question_item_checkbox_input" type="radio"
-                                name="answer" value="">
+                            <input class="question_item_checkbox_input" type="radio" name="type_of_parcel" value="pipes">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
                             <span class="question_item_checkbox_text">Трубы</span>
                         </label>
                         <label class="question_item_checkbox first_question">
-                            <input id="other" class="question_item_checkbox_input" type="radio"
-                                name="answer" value="">
+                            <input id="other" class="question_item_checkbox_input" type="radio" name="type_of_parcel" value="other">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
                             <span class="question_item_checkbox_text">Другая</span>
+                            <input class="new_input_quiz invisible_item" type="text" name="type_of_parcel_other" placeholder="Другое">
                         </label>
-                        <input class="new_input_quiz invisible_input" type="text" placeholder="Другое">
                     </div>
                     <button class="btn apply_questions_start__btn apply_questions_start__btn_disabled" disabled>На
                         следующий шаг</button>
@@ -358,72 +349,72 @@
                     </div>
                     <div class="apply_questions_checkbox_container">
                         <label class="question_item_checkbox third_question">
-                            <input class="question_item_checkbox_input checkbox_question_info_trigger" type="radio"
-                                type="radio" name="answer" value="box">
+                            <input class="question_item_checkbox_input checkbox_question_info_trigger" form="quiz_form"
+                                type="radio" name="package" value="box">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
                             <span class="question_item_checkbox_text">Коробки</span>
                         </label>
                         <label class="question_item_checkbox third_question">
-                            <input class="question_item_checkbox_input checkbox_question_info_trigger" type="radio"
-                                type="radio" name="answer" value="palet">
+                            <input class="question_item_checkbox_input checkbox_question_info_trigger" form="quiz_form"
+                                type="radio" name="package" value="palet">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
                             <span class="question_item_checkbox_text">Паллеты</span>
                         </label>
                         <label class="question_item_checkbox third_question">
-                            <input class="question_item_checkbox_input checkbox_question_info_trigger" type="radio"
-                                type="radio" name="answer" value="case">
+                            <input class="question_item_checkbox_input checkbox_question_info_trigger" form="quiz_form"
+                                type="radio" name="package" value="case">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
                             <span class="question_item_checkbox_text">Ящики</span>
                         </label>
                         <label class="question_item_checkbox third_question">
-                            <input class="question_item_checkbox_input checkbox_question_info_trigger" type="radio"
-                                type="radio" name="answer" value="bag">
+                            <input class="question_item_checkbox_input checkbox_question_info_trigger" form="quiz_form"
+                                type="radio" name="package" value="bag">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
                             <span class="question_item_checkbox_text">Мешки</span>
                         </label>
                         <label class="question_item_checkbox third_question">
-                            <input class="question_item_checkbox_input checkbox_question_info_trigger" type="radio"
-                                type="radio" name="answer" value="big_bag">
+                            <input class="question_item_checkbox_input checkbox_question_info_trigger" form="quiz_form"
+                                type="radio" name="package" value="big_bag">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
                             <span class="question_item_checkbox_text">Биг-бэги</span>
                         </label>
                         <label class="question_item_checkbox third_question">
-                            <input class="question_item_checkbox_input checkbox_question_info_trigger" type="radio"
-                                type="radio" name="answer" value="obreshetka">
+                            <input class="question_item_checkbox_input checkbox_question_info_trigger" form="quiz_form"
+                                type="radio" name="package" value="obreshetka">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
                             <span class="question_item_checkbox_text">Обрешетка</span>
                         </label>
                         <label class="question_item_checkbox third_question">
-                            <input class="question_item_checkbox_input checkbox_question_info_trigger" type="radio"
-                                type="radio" name="answer" value="bunch">
+                            <input class="question_item_checkbox_input checkbox_question_info_trigger" form="quiz_form"
+                                type="radio" name="package" value="bunch">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
                             <span class="question_item_checkbox_text">Связки</span>
                         </label>
                         <label class="question_item_checkbox third_question">
-                            <input class="question_item_checkbox_input checkbox_question_info_trigger" type="radio"
-                                type="radio" name="answer" value="no">
+                            <input class="question_item_checkbox_input checkbox_question_info_trigger" form="quiz_form"
+                                type="radio" name="package" value="no">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
                             <span class="question_item_checkbox_text">Нет</span>
                         </label>
                         <label class="question_item_checkbox third_question">
-                            <input class="question_item_checkbox_input checkbox_question_info_trigger" type="radio"
-                                type="radio" name="answer" value="other">
+                            <input class="question_item_checkbox_input checkbox_question_info_trigger" form="quiz_form"
+                                type="radio" name="package" value="other">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
@@ -485,35 +476,35 @@
                     </div>
                     <div class="apply_questions_checkbox_container">
                         <label class="question_item_checkbox fourth_question">
-                            <input class="question_item_checkbox_input" type="radio" name="answer" value="top_loading">
+                            <input class="question_item_checkbox_input" form="quiz_form" type="radio" name="type" value="top_loading">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
                             <span class="question_item_checkbox_text">Сверху</span>
                         </label>
                         <label class="question_item_checkbox fourth_question">
-                            <input class="question_item_checkbox_input" type="radio" name="answer" value="side_loading">
+                            <input class="question_item_checkbox_input" form="quiz_form" type="radio" name="type" value="side_loading">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
                             <span class="question_item_checkbox_text">Сбоку</span>
                         </label>
                         <label class="question_item_checkbox fourth_question">
-                            <input class="question_item_checkbox_input" type="radio" name="answer" value="back_loading">
+                            <input class="question_item_checkbox_input" form="quiz_form" type="radio" name="type" value="back_loading">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
                             <span class="question_item_checkbox_text">Сзади</span>
                         </label>
                         <label class="question_item_checkbox fourth_question">
-                            <input class="question_item_checkbox_input" type="radio" name="answer" value="combined   ">
+                            <input class="question_item_checkbox_input" form="quiz_form" type="radio" name="type" value="combined">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
                             <span class="question_item_checkbox_text">Комбинированный</span>
                         </label>
                         <label class="question_item_checkbox fourth_question">
-                            <input class="question_item_checkbox_input" type="radio" name="answer" value="no_matter">
+                            <input class="question_item_checkbox_input" form="quiz_form" type="radio" name="type" value="no_matter">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
@@ -533,14 +524,18 @@
                 <div class="question_item fifth_question_container invisible_item">
                     <div class="question_item__text_container">
                         <div class="question_item_number">5</div>
-                        <p class="question_item_text">Введите город отправки:</p>
+                        <div class="question_item_text_section">
+                            <p class="question_item_text">Введите город отправки:</p>
+                            <span>Если ваш город не найден, введите его самостоятельно</span>
+                        </div>
                     </div>
-                    <input type="text" class="quiz_textarea" name="answer" id="parcel_from_quiz" placeholder="Введите город отправки">
+                    <input type="text" class="quiz_textarea" form="quiz_form" name="parcel_from_quiz" id="parcel_from_quiz"
+                        placeholder="Введите город отправки">
                     <button class="btn apply_questions_start__btn apply_questions_start__btn_disabled" id='lol'
                         disabled>На
                         следующий шаг</button>
                     <label class="question_item_checkbox_mark_type">
-                        <input type="checkbox">
+                        <input type="checkbox" form="quiz_form">
 
                         <div class="question_item_checkbox_wrap_mark_type">
                             <span class="icon-check"></span>
@@ -559,14 +554,17 @@
                 <div class="question_item sixth_question_container invisible_item">
                     <div class="question_item__text_container">
                         <div class="question_item_number">6</div>
-                        <p class="question_item_text">Введите город доставки</p>
+                        <div class="question_item_text_section">
+                            <p class="question_item_text">Введите город доставки</p>
+                            <span>Если ваш город не найден, введите его самостоятельно</span>
+                        </div>
                     </div>
-                    <input type="text" class="quiz_textarea" name="answer" id="parcel_to_quiz">
+                    <input type="text" form="quiz_form" class="quiz_textarea" name="parcel_to_quiz" id="parcel_to_quiz">
                     <button class="btn apply_questions_start__btn apply_questions_start__btn_disabled" id='lol'
                         disabled>На
                         следующий шаг</button>
                     <label class="question_item_checkbox_mark_type">
-                        <input type="checkbox">
+                        <input type="checkbox" form="quiz_form">
 
                         <div class="question_item_checkbox_wrap_mark_type">
                             <span class="icon-check"></span>
@@ -589,28 +587,32 @@
                     </div>
                     <div class="apply_questions_checkbox_container">
                         <label class="question_item_checkbox">
-                            <input class="question_item_checkbox_input" type="radio" name="answer" value="asap">
+                            <input class="question_item_checkbox_input" form="quiz_form" type="radio" name="shipping"
+                                value="asap">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
                             <span class="question_item_checkbox_text">Срочно</span>
                         </label>
                         <label class="question_item_checkbox">
-                            <input class="question_item_checkbox_input" type="radio" name="answer" value="one_day">
+                            <input class="question_item_checkbox_input" form="quiz_form" type="radio" name="shipping"
+                                value="one_day">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
                             <span class="question_item_checkbox_text">В течение 1-2 дней</span>
                         </label>
                         <label class="question_item_checkbox">
-                            <input class="question_item_checkbox_input" type="radio" name="answer" value="in_week">
+                            <input class="question_item_checkbox_input" form="quiz_form" type="radio" name="shipping"
+                                value="in_week">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
                             <span class="question_item_checkbox_text">В течение 7 дней </span>
                         </label>
                         <label class="question_item_checkbox">
-                            <input class="question_item_checkbox_input" type="radio" name="answer" value="in_month">
+                            <input class="question_item_checkbox_input" form="quiz_form" type="radio" name="shipping"
+                                value="in_month">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
@@ -637,28 +639,32 @@
                     </div>
                     <div class="apply_questions_checkbox_container">
                         <label class="question_item_checkbox">
-                            <input class="question_item_checkbox_input" type="radio" name="answer" value="person">
+                            <input class="question_item_checkbox_input" form="quiz_form" type="radio" name="organisation"
+                                value="person">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
                             <span class="question_item_checkbox_text">Физ. Лицо</span>
                         </label>
                         <label class="question_item_checkbox">
-                            <input class="question_item_checkbox_input" type="radio" name="answer" value="company">
+                            <input class="question_item_checkbox_input" form="quiz_form" type="radio" name="organisation"
+                                value="company">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
                             <span class="question_item_checkbox_text">Юр. Лицо</span>
                         </label>
                         <label class="question_item_checkbox">
-                            <input class="question_item_checkbox_input" type="radio" name="answer" value="businessman">
+                            <input class="question_item_checkbox_input" form="quiz_form" type="radio" name="organisation"
+                                value="businessman">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
                             <span class="question_item_checkbox_text">ИП</span>
                         </label>
                         <label class="question_item_checkbox">
-                            <input class="question_item_checkbox_input" type="radio" name="answer" value="OOO">
+                            <input class="question_item_checkbox_input" form="quiz_form" type="radio" name="organisation"
+                                value="OOO">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
@@ -683,7 +689,7 @@
                             расчет стоимости перевозки. </h3>
                         <p>Введите Ваш номер телефона, и мы сообщим вам стоимость грузоперевозки прямо сейчас!
                         </p>
-                        <form class="finish_form" id="prompt-form" method="post" action="thanks_window_second.php">
+                        <form class="finish_form" id="quiz_form" method="post" action="thanks_window_second.php">
                             <input class="finish_form_input" name="from" type="text" placeholder="Введите свой номер телефона">
                             <input class="finish_form__btn btn" type="submit" name="quiz_btn" value="Узнать стоимость">
                         </form>
@@ -1345,7 +1351,7 @@
         <h2>НАШИ ПРЕИМУЩЕСТВА</h2>
         <p class="advantages_header_text">Предоставляем услуги погрузки и упаковки груза в каждом городе России</p>
         <div class="advantages_content">
-            <div class="advantages_content__item" data-aos="fade-right">
+            <div class="advantages_content__item wow fadeInLeft">
                 <div class="advantages_content__item_header">
                     <div class="advantages_content__item_img_container">
                         <div class="advantages_content__item_img">
@@ -1363,7 +1369,7 @@
                     грузоперевозок.
                 </p>
             </div>
-            <div class="advantages_content__item" data-aos="fade-left">
+            <div class="advantages_content__item wow fadeInRight">
                 <div class="advantages_content__item_header">
                     <div class="advantages_content__item_img_container">
                         <div class="advantages_content__item_img">
@@ -1380,7 +1386,7 @@
                     Делаем страховку Вашего груза по ставке 0.1% от описанной стоимости груза.
                 </p>
             </div>
-            <div class="advantages_content__item" data-aos="fade-right">
+            <div class="advantages_content__item wow fadeInLeft">
                 <div class="advantages_content__item_header">
                     <div class="advantages_content__item_img_container">
                         <div class="advantages_content__item_img">
@@ -1397,7 +1403,7 @@
                 <p class="advantages_item_text">Вы можете отслеживать местоположение транспорта с вашим грузом, набрав
                     бесплатный номер горячей линии 8800-700-09-35 и сообщив диспетчеру номер вашего договора-заявки</p>
             </div>
-            <div class="advantages_content__item" data-aos="fade-left">
+            <div class="advantages_content__item wow fadeInRight">
                 <div class="advantages_content__item_header">
                     <div class="advantages_content__item_img_container">
                         <div class="advantages_content__item_img">
@@ -1494,7 +1500,7 @@
                     время согласования и подписания договора <b>16 минут</b>.
                     Среднее расстояние, проходимое автотранспортом за сутки – <b>800 км</b>.</p>
             </div>
-            <div class="advantages_content__item" data-aos="fade-right">
+            <div class="advantages_content__item wow fadeInLeft">
                 <div class="advantages_content__item_header">
                     <div class="advantages_content__item_img_container">
                         <div class="advantages_content__item_img">
@@ -1515,7 +1521,7 @@
                 <p class="advantages_item_text">Предоставляем полные пакет оригиналов отчетных документов.  Отправляем
                     почтой в течении 5 дней с момента выгрузки транспорта.</p>
             </div>
-            <div class="advantages_content__item" data-aos="fade-left">
+            <div class="advantages_content__item wow fadeInRight">
                 <div class="advantages_content__item_header">
                     <div class="advantages_content__item_img_container">
                         <div class="advantages_content__item_img">
@@ -1537,7 +1543,7 @@
                     нам не ехать с полупустым кузовом.
                 </p>
             </div>
-            <div class="advantages_content__item" data-aos="fade-right">
+            <div class="advantages_content__item wow fadeInLeft">
                 <div class="advantages_content__item_header">
                     <div class="advantages_content__item_img_container">
                         <div class="advantages_content__item_img">
@@ -1553,7 +1559,7 @@
                     транспорта по низкой ставке осуществляется за 3-5 дней. Предупредите нас заранее, и мы предоставим
                     Вам попутный транспорт!</p>
             </div>
-            <div class="advantages_content__item" data-aos="fade-left">
+            <div class="advantages_content__item wow fadeInRight">
                 <div class="advantages_content__item_header">
                     <div class="advantages_content__item_img_container">
                         <div class="advantages_content__item_img">
@@ -1583,7 +1589,8 @@
                         <span class="payment_type_info_text">Безналичный расчет с НДС 18%</span>
                     </div>
                     <div id='payment_info_text_first' class="payment_info__type_text">
-                        <p>Оплата производится c НДС 18% на основании счета до выгрузки транспортного средства. При некоторых условиях возможна постоплата. Условия уточняйте у менеджера.</p>
+                        <p>Оплата производится c НДС 18% на основании счета до выгрузки транспортного средства. При
+                            некоторых условиях возможна постоплата. Условия уточняйте у менеджера.</p>
                     </div>
                 </div>
                 <div class="payment_info___type_item">
@@ -1592,7 +1599,8 @@
                         <span class="payment_type_info_text">Безналичный расчет без НДС</span>
                     </div>
                     <div id='payment_info_text_second' class="payment_info__type_text">
-                        <p>Оплата производится без НДС на основании счета до выгрузки транспортного средства. При некоторых условиях возможна постоплата. Условия уточняйте у менеджера.</p>
+                        <p>Оплата производится без НДС на основании счета до выгрузки транспортного средства. При
+                            некоторых условиях возможна постоплата. Условия уточняйте у менеджера.</p>
                     </div>
                 </div>
                 <div class="payment_info___type_item">
@@ -1601,7 +1609,8 @@
                         <span class="payment_type_info_text">Оплата наличными</span>
                     </div>
                     <div id='payment_info_text_third' class="payment_info__type_text">
-                        <p>Оплата производится наличными средствами на основании счета перед выгрузкой транспортного средства.</p>
+                        <p>Оплата производится наличными средствами на основании счета перед выгрузкой транспортного
+                            средства.</p>
                     </div>
                 </div>
                 <div class="payment_info___type_item">
@@ -1610,7 +1619,8 @@
                         <span class="payment_type_info_text">Online оплата</span>
                     </div>
                     <div id='payment_info_text_fourth' class="payment_info__type_text">
-                        <p>Оплата online переводом на карту Сбербанка и других банков до выгрузки транспортного средства.</p>
+                        <p>Оплата online переводом на карту Сбербанка и других банков до выгрузки транспортного
+                            средства.</p>
                     </div>
                 </div>
             </div>
@@ -1666,27 +1676,27 @@
         <h2><span class="apply_title_styled">ОНЛАЙН ЗАЯВКА</span> НА РАСЧЕТ <br> СТОИМОСТИ ДОСТАВКИ ГРУЗА</h2>
         <p>Предоставляем услуги погрузки и упаковки груза в каждом городе России.</p>
         <div class="online_apply_content">
-            <form class="online_apply_content_form" id="prompt-form" method="post" action="thanks_window.php">
+            <form class="online_apply_content_form" id="empty">
                 <div class="form_item">
                     <span class="form_input_span">Откуда</span>
-                    <input id="ADDRESS_FROM_FOOTER_services" name="ADDRESS_FROM_FOOTER_services" type="text" size="100"
-                        class="online_apply_content_style apply_count_form_input" placeholder="Из города">
+                    <input form="prompt-form" id="ADDRESS_FROM_FOOTER_services" name="ADDRESS_FROM_FOOTER_services"
+                        type="text" size="100" class="online_apply_content_style apply_count_form_input" placeholder="Из города">
                 </div>
                 <div class="form_item">
                     <span class="form_input_span">Куда</span>
-                    <input id="ADDRESS_TO_FOOTER" name="ADDRESS_TO_FOOTER" class="online_apply_content_style apply_count_form_input"
-                        name="to" type="text" placeholder="В город">
+                    <input form="prompt-form" id="ADDRESS_TO_FOOTER" name="ADDRESS_TO_FOOTER" class="online_apply_content_style apply_count_form_input"
+                        type="text" placeholder="В город">
                 </div>
                 <div class="form_item">
                     <span class="form_input_span">Масса груза, кг</span>
-                    <select class="online_apply_content_style online_apply_select styled-select slate">
+                    <select form="prompt-form" name="weight_footer" class="online_apply_content_style online_apply_select styled-select slate">
                         <option>до 2 тонн</option>
                         <option>до 5 тонн</option>
                         <option>до 10 тонн</option>
                         <option>до 20 тонн</option>
                     </select>
                     <label class="form_item_checkbox">
-                        <input type="checkbox">
+                        <input form="prompt-form" name="lifters" type="checkbox">
                         </input>
                         <div class="form_item_checkbox_wrap">
                             <span class="icon-check"></span>
@@ -1696,7 +1706,7 @@
                 </div>
                 <div class="form_item">
                     <span class="form_input_span">Тип авто</span>
-                    <select class="online_apply_content_style online_apply_select styled-select slate">
+                    <select form="prompt-form" name="vehicle" class="online_apply_content_style online_apply_select styled-select slate">
                         <option>Газель</option>
                         <option>Бычок</option>
                         <option>КамАЗ</option>
@@ -1705,11 +1715,12 @@
                 </div>
                 <div class="form_item">
                     <span class="form_input_span">Дата</span>
-                    <input type="date" class="data_picker online_apply_content_style apply_count_form_input"
+                    <input form="prompt-form" name="date" type="date" class="data_picker online_apply_content_style apply_count_form_input"
                         placeholder="Выбрать">
                 </div>
                 <div class="form_item">
-                    <button class="online_apply_content_style online_apply_form__btn" type="submit" onclick="modal_on_second()">Рассчитать
+                    <input type="hidden" form="prompt-form" id="form2">
+                    <button id="form2" class="online_apply_content_style online_apply_form__btn" type="button">Рассчитать
                         стоимость</button>
                 </div>
             </form>
@@ -1813,7 +1824,7 @@
     </section>
     <div id="modal_overlay"></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.8/min/tiny-slider.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="./tiger.js/countUp.js-master/countUp.js"></script>
     <script src="./tiger.js/tiger.js"></script>

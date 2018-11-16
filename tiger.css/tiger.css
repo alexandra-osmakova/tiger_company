@@ -578,6 +578,11 @@ header {
     align-items: center;
 }
 
+.question_item__text_container span {
+    font-size: 0.625rem;
+    color: #000000;
+}
+
 .question_item_number {
     display: flex;
     align-items: center;
@@ -617,6 +622,7 @@ header {
     display: flex;
     align-items: center;
     margin-top: 1rem;
+    position: relative;
 }
 
 .question_item_checkbox_text {
@@ -738,9 +744,9 @@ header {
 }
 
 .new_input_quiz {
+    position: absolute;
     width: 15rem;
     height: 3.5rem;
-    margin: 2rem 0 0;
     padding: 0 1rem;
     outline: none;
     font-size: 0.875rem;
@@ -755,10 +761,6 @@ header {
     -moz-transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
-}
-
-.invisible_input {
-    opacity: 0;
 }
 
 .new_input_quiz::placeholder {
@@ -2665,11 +2667,6 @@ header {
         width: 33%;
     }
 
-    .question_item_text {
-        display: block;
-        width: 80%;
-    }
-
     .styled_price_header {
         margin: 0 2rem;
     }
@@ -2903,6 +2900,10 @@ header {
     .text_wrap {
         height: 22rem;
     }
+
+    .new_input_quiz {
+        margin-top: 1rem;
+    }
 }
 
 @media screen and (min-width: 426px) and (max-width: 600px) {
@@ -2982,10 +2983,6 @@ header {
     .apply_questions_start__btn {
         width: 80%;
         margin: 0 auto;
-    }
-
-    .question_item_text {
-        width: 65%;
     }
 
     .service_type__item {
@@ -3253,6 +3250,10 @@ header {
     .finish_wrap {
         top: 0;
     }
+
+    .new_input_quiz {
+        margin-top: 1rem;
+    }
 }
 
 
@@ -3337,10 +3338,6 @@ header {
     .apply_questions_start__btn {
         width: 80%;
         margin: 0 auto;
-    }
-
-    .question_item_text {
-        width: 65%;
     }
 
     .service_type__item {
@@ -3607,6 +3604,10 @@ header {
     .finish_wrap {
         top: 0;
     }
+
+    .new_input_quiz {
+        margin-top: 1rem;
+    }
 }
 
 @media screen and (min-width: 366px) and (max-width: 375px) {
@@ -3691,10 +3692,6 @@ header {
     .apply_questions_start__btn {
         width: 80%;
         margin: 0 auto;
-    }
-
-    .question_item_text {
-        width: 65%;
     }
 
     .service_type__item {
@@ -3961,6 +3958,9 @@ header {
     .finish_wrap {
         top: 0;
     }
+    .new_input_quiz {
+        margin-top: 1rem;
+    }
 }
 
 
@@ -4021,7 +4021,7 @@ header {
         width: 100%;
     }
 
-    .styled_price_header {
+    .price h2 {
         margin: 0 2rem;
     }
 
@@ -4039,16 +4039,12 @@ header {
     }
 
     .apply_questions_start {
-        height: 36rem;
+        height: 45rem;
     }
 
     .apply_questions_start__btn {
         width: 80%;
         margin: 0 auto;
-    }
-
-    .question_item_text {
-        width: 65%;
     }
 
     .service_type__item {
@@ -4265,7 +4261,7 @@ header {
     }
 
     .fifth_question_container .question_item_checkbox_mark_type, .sixth_question_container .question_item_checkbox_mark_type {
-        bottom: 19rem;
+        bottom: 27rem;
         left: 5rem;
     }
 
@@ -4333,5 +4329,53 @@ header {
 
     .finish_wrap {
         top: 0;
+    }
+
+    .question_item_text {
+        width: 85%;
+    }
+
+    .new_input_quiz {
+        margin-top: 1rem;
+    }
+
+    .header_contacts_item__telephon, .header_content p, .header_count_form_input, .header_count_form__btn, .header_count_form_input::placeholder 
+    {
+        font-size: 1.5rem;
+    }
+
+    .header_content h2 {
+        line-height: 3.5625rem;
+    }
+
+    .header_count_form_input, .header_count_form__btn {
+        height: 4.5rem;
+    }
+
+    .progress_line p {
+        font-size: 1.3rem;
+        left: 20%;
+    }
+
+    .question_item_checkbox_text {
+        font-size: 1.5rem;
+        margin-top: 0.5rem;
+    }
+
+    .question_item_text {
+        font-weight: bold;
+    }
+
+    .question_item_checkbox_text_mark_type {
+        font-size: 1rem;
+    }
+
+    .btn ,.fifth_question_container .quiz_textarea, .sixth_question_container .quiz_textarea{
+        font-size: 1.2rem;
+    }
+
+    .finish_container h3 {
+        font-size: 1.2rem;
+        line-height: 1.8rem;
     }
 }

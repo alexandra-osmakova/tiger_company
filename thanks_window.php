@@ -1,16 +1,50 @@
 <?php 
     header('Refresh: 5; url=index.html', true, 301);
 
-    $user_name = $_POST['name'];
-    $telephone = $_POST['phone-number'];
+$to = "alexandra.osmakova@gmail.com";
 
-    $email_body = "User Name: $user_name.\n".
-    "User Telephon Number: $telephone.\n".
-    $email_subject = "New Form Submission";
+if(isset($_POST["form1"])) {
+    $location = $_POST["ADDRESS_FROM_HEADER"];
+    $destination = $_POST["ADDRESS_TO_HEADER"];
+    $weight = $_POST["weight"];
+    $name = $_POST["name"];
+    $phone_number = $_POST["phone-number"];
+    
+    $email_body = "---Расчёт стоимости за 60 секунд---\n".
+                "FROM: " . $location . "\nTO: " . $destination . "\nWEIGHT: " . $weight .
+                "\nCLIENT: " . $name . "\nCONTACT PHONE: " . $phone_number;
+    $email_subject = "Fast count";
 
-    $to = "alexandra.osmakova@gmail.com";
+    $ok = mail($to, $email_subject, $email_body);
+}
+if(isset($_POST["form2"])) {
+    $location = $_POST["ADDRESS_FROM_FOOTER"];
+    $destination = $_POST["ADDRESS_TO_FOOTER"];
+    $weight = $_POST["weight_footer"];
+    $lifters = $_POST["lifters"];
+    $vehicle = $_POST["vehicle"];
+    $date = $_POST["date"];
+    $name = $_POST["name"];
+    $phone_number = $_POST["phone-number"];
+    
+    $email_body = "---ОНЛАЙН ЗАЯВКА НА РАСЧЕТ СТОИМОСТИ ДОСТАВКИ ГРУЗА---\n".
+                "FROM: " . $location . "\nTO: " . $destination . "\nWEIGHT: " . $weight .
+                "\nLIFTERS: " . $lifters . "\nVEHICLE TYPE: " . $vehicle . "\nDATE: " . $date .
+                "\nCLIENT: " . $name . "\nCONTACT PHONE: " . $phone_number;
+    $email_subject = "ОНЛАЙН ЗАЯВКА НА РАСЧЕТ СТОИМОСТИ ДОСТАВКИ ГРУЗА";
 
-    $ok = mail($to, $email_subject, $email_body, $headers);
+    $ok = mail($to, $email_subject, $email_body);
+}
+if(isset($_POST["empty"])) {
+    $name = $_POST["name"];
+    $phone_number = $_POST["phone_number"];
+    
+    $email_body = "---ЗАЯВКА---\n".
+                "CLIENT: " . $name . "\nCONTACT PHONE: " . $phone_number;
+    $email_subject = "ЗАЯВКА";
+
+    $ok = mail($to, $email_subject, $email_body);
+}
 ?>
 
 <!DOCTYPE html>

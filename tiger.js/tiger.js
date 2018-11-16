@@ -22,6 +22,9 @@ var modal_overlay = document.getElementById('modal_overlay');
 var close_modal_btn = document.getElementById('close_btn');
 var header_modal_btn = document.getElementsByClassName('promo_img_section__btn')[0];
 var service_types = document.getElementsByClassName('service_types')[0];
+var modal_name = document.getElementById('name');
+var modal_phone_number = document.getElementById('phone-number');
+var search_form = document.getElementById('search');
 
 
 
@@ -31,6 +34,11 @@ function modal_on_first() {
 }
 
 function modal_on_second() {
+  if(form != null) {
+    modal_name.setAttribute("form", form);
+    modal_phone_number.setAttribute("form", form);
+    search_form.setAttribute("value", "form#"+form);
+  }
   modal_window_second.classList.add('modal_visible');
   modal_overlay.classList.add('modal_overlay');
 }
@@ -50,11 +58,9 @@ window.onload = function () {
   payment_info__type_text[0].classList.add('visible_item');
 
   if (mobile_width <= 800) {
-    console.log(1)
     var item_animation_to_change = document.getElementsByClassName('advantages_content__item');
     for (var i = 0; i < item_animation_to_change.length; i++) {
       item_animation_to_change[i].dataset.aos = "fade-up";
-      console.log(item_animation_to_change[i].dataset.aos)
     }
   }
 }
@@ -164,7 +170,7 @@ function quizStart() {
         quizTextToSee()
       }
       else if(question_item_checkbox[i].id == 'other') {
-        new_input.classList.remove('invisible_input')
+        new_input.classList.remove('invisible_item')
       }
     }
   }
@@ -219,7 +225,7 @@ function quiz_back(e) {
 
 function cleanUpQuiz(index) {
   n--;
-  new_input.classList.add('invisible_input');
+  new_input.classList.add('invisible_item');
   quiz_current_number.innerHTML = Number(quiz_current_number.innerHTML) + 1;
   quiz_progress[index].classList.remove('progrss_line_item__active');
   quiz_step_mark[index].classList.remove('current_question_item__active');
@@ -353,7 +359,7 @@ function isPartiallyVisible(el) {
   return ((top + height >= 0) && (height + window.innerHeight >= bottom));
 }
 
-AOS.init();
+new WOW().init();
 
 window.addEventListener("scroll", overflow);
 
@@ -376,19 +382,13 @@ var slider = tns({
   arrowKeys: true,
   responsive: {
     425: {
-      items: 1,
-      nav: false,
-      controls: false
+      items: 1,      
     },
     768: {
       items: 2,
-      nav: false,
-      controls: false
     },
     900: {
       items: 4,
-      nav: true,
-      controls: true
     }
   },
 })
