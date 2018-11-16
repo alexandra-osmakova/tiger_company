@@ -87,14 +87,14 @@
             <h2> ДОСТАВКА ГРУЗОВ <br> ПО ВСЕЙ РОССИИ И СНГ</h2>
             <p>Получите расчет стоимости грузоперевозки за 60 секунд</p>
             <div class="header_count">
-                <form class="header_count_form" id="prompt-form" method="post" action="thanks_window.php">
+                <form class="header_count_form" id="form1" method="post" action="thanks_window.php">
                     <input id='ADDRESS_FROM_HEADER' class="header_count_form_input" name="ADDRESS_FROM_HEADER" type="text"
                         placeholder="Город отправления">
                     <input id="ADDRESS_TO_HEADER" name="ADDRESS_TO_HEADER" class="header_count_form_input" type="text"
                         placeholder="Город доставки">
                     <input class="header_count_form_input" name="weight" type="text" placeholder="Масса груза, кг">
                     <input class="header_count_form_input" name="header_telephone" type="text" placeholder="Контактный телефон">
-                    <input class="header_count_form__btn" type="submit" value="Быстрый рассчет">
+                    <input class="header_count_form__btn" name="form1" type="submit" value="Быстрый рассчет">
                 </form>
             </div>
         </div>
@@ -219,7 +219,7 @@
                         </label>
                         <div class="question_item__button_container">
                             <label class="question_item_checkbox_mark_type">
-                                <input type="checkbox" name="answer">
+                                <input type="checkbox" name="answer" form="quiz_form">
 
                                 <div class="question_item_checkbox_wrap_mark_type">
                                     <span class="icon-check"></span>
@@ -272,68 +272,68 @@
                     </div>
                     <div class="apply_questions_checkbox_container new_input_container">
                         <label class="question_item_checkbox first_question">
-                            <input class="question_item_checkbox_input" type="radio" name="type_of_parcel" value="home_things">
+                            <input class="question_item_checkbox_input" type="radio" name="type_of_parcel" form="quiz_form" value="home_things">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
                             <span class="question_item_checkbox_text">Домашний переезд</span>
                         </label>
                         <label class="question_item_checkbox first_question">
-                            <input class="question_item_checkbox_input" type="radio" name="type_of_parcel" value="building_materials">
+                            <input class="question_item_checkbox_input" type="radio" name="type_of_parcel" form="quiz_form" value="building_materials">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
                             <span class="question_item_checkbox_text">Стройматериалы</span>
                         </label>
                         <label class="question_item_checkbox first_question">
-                            <input class="question_item_checkbox_input" type="radio" name="type_of_parcel" value="industrial_wood">
+                            <input class="question_item_checkbox_input" type="radio" name="type_of_parcel" form="quiz_form" value="industrial_wood">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
                             <span class="question_item_checkbox_text">Пиломатериалы</span>
                         </label>
                         <label class="question_item_checkbox first_question">
-                            <input class="question_item_checkbox_input" type="radio" name="type_of_parcel" value="foodstuffs">
+                            <input class="question_item_checkbox_input" type="radio" name="type_of_parcel" form="quiz_form" value="foodstuffs">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
                             <span class="question_item_checkbox_text">Продукты питания</span>
                         </label>
                         <label class="question_item_checkbox first_question">
-                            <input class="question_item_checkbox_input" type="radio" name="type_of_parcel" value="equipment">
+                            <input class="question_item_checkbox_input" type="radio" name="type_of_parcel" form="quiz_form" value="equipment">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
                             <span class="question_item_checkbox_text">Оборудование</span>
                         </label>
                         <label class="question_item_checkbox first_question">
-                            <input class="question_item_checkbox_input" type="radio" name="type_of_parcel" value="metal">
+                            <input class="question_item_checkbox_input" type="radio" name="type_of_parcel" form="quiz_form" value="metal">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
                             <span class="question_item_checkbox_text">Металл</span>
                         </label>
                         <label class="question_item_checkbox first_question">
-                            <input class="question_item_checkbox_input" type="radio" name="type_of_parcel" value="TNP">
+                            <input class="question_item_checkbox_input" type="radio" name="type_of_parcel" form="quiz_form" value="TNP">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
                             <span class="question_item_checkbox_text">ТНП</span>
                         </label>
                         <label class="question_item_checkbox first_question">
-                            <input class="question_item_checkbox_input" type="radio" name="type_of_parcel" value="pipes">
+                            <input class="question_item_checkbox_input" type="radio" name="type_of_parcel" form="quiz_form" value="pipes">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
                             <span class="question_item_checkbox_text">Трубы</span>
                         </label>
                         <label class="question_item_checkbox first_question">
-                            <input id="other" class="question_item_checkbox_input" type="radio" name="type_of_parcel" value="other">
+                            <input id="other" class="question_item_checkbox_input" type="radio" name="type_of_parcel" form="quiz_form" value="other">
                             <div class="question_item_checkbox_wrap">
                                 <div class="checkbox_mark"></div>
                             </div>
                             <span class="question_item_checkbox_text">Другая</span>
-                            <input class="new_input_quiz invisible_item" type="text" name="type_of_parcel_other" placeholder="Другое">
+                            <input class="new_input_quiz invisible_item" type="text" name="type_of_parcel_other" form="quiz_form" placeholder="Другое">
                         </label>
                     </div>
                     <button class="btn apply_questions_start__btn apply_questions_start__btn_disabled" disabled>На
@@ -539,7 +539,7 @@
                         disabled>На
                         следующий шаг</button>
                     <label class="question_item_checkbox_mark_type">
-                        <input type="checkbox" form="quiz_form">
+                        <input type="checkbox" name="more_than_one_dep" form="quiz_form">
 
                         <div class="question_item_checkbox_wrap_mark_type">
                             <span class="icon-check"></span>
@@ -568,7 +568,7 @@
                         disabled>На
                         следующий шаг</button>
                     <label class="question_item_checkbox_mark_type">
-                        <input type="checkbox" form="quiz_form">
+                        <input type="checkbox" name="more_than_one_destination" form="quiz_form">
 
                         <div class="question_item_checkbox_wrap_mark_type">
                             <span class="icon-check"></span>
@@ -1723,7 +1723,7 @@
                         placeholder="Выбрать">
                 </div>
                 <div class="form_item">
-                    <input type="hidden" form="prompt-form" id="form2">
+                    <input type="hidden" form="prompt-form" id="_form2" name="none">
                     <button id="form2" class="online_apply_content_style online_apply_form__btn" type="button">Рассчитать
                         стоимость</button>
                 </div>
@@ -1930,8 +1930,8 @@
         });
         $("button#form2").on("click", function(e) {
             modal_on_second();
-            $("input#form2").attr("name", "form2");
-            $("input#form2").attr("value", "hh123");
+            $("input#_form2").attr("name", "form2");
+            $("input#_form2").attr("value", "hh123");
         });
     </script>
 </body>

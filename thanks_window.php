@@ -1,14 +1,16 @@
 <?php 
     header('Refresh: 5; url=index.html', true, 301);
 
-$to = "alexandra.osmakova@gmail.com";
+$to = "mitolking@gmail.com";
+
+echo isset($_POST["form1"]);
 
 if(isset($_POST["form1"])) {
     $location = $_POST["ADDRESS_FROM_HEADER"];
     $destination = $_POST["ADDRESS_TO_HEADER"];
     $weight = $_POST["weight"];
     $name = $_POST["name"];
-    $phone_number = $_POST["phone-number"];
+    $phone_number = $_POST["header_telephone"];
     
     $email_body = "---Расчёт стоимости за 60 секунд---\n".
                 "FROM: " . $location . "\nTO: " . $destination . "\nWEIGHT: " . $weight .
@@ -18,7 +20,7 @@ if(isset($_POST["form1"])) {
     $ok = mail($to, $email_subject, $email_body);
 }
 if(isset($_POST["form2"])) {
-    $location = $_POST["ADDRESS_FROM_FOOTER"];
+    $location = $_POST["ADDRESS_FROM_FOOTER_services"];
     $destination = $_POST["ADDRESS_TO_FOOTER"];
     $weight = $_POST["weight_footer"];
     $lifters = $_POST["lifters"];
@@ -35,7 +37,7 @@ if(isset($_POST["form2"])) {
 
     $ok = mail($to, $email_subject, $email_body);
 }
-if(isset($_POST["empty"])) {
+if(isset($_POST["none"])) {
     $name = $_POST["name"];
     $phone_number = $_POST["phone_number"];
     

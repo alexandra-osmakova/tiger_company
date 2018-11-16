@@ -1,118 +1,48 @@
 <?php 
     header('Refresh: 5; url=index.html', true, 301);
 
-    $telephone = $_POST['phone-number'];
-    $apply_task = $_POST['apply_task'];
-
-    $home_things = $_POST['home_things'];
-    $building_materials = $_POST['building_materials'];
-    $industrial_wood = $_POST['industrial_wood'];
-    $foodstuffs = $_POST['foodstuffs'];
-    $equipment = $_POST['equipment'];
-    $metal = $_POST['metal'];
-    $TNP = $_POST['TNP'];
-    $pipes = $_POST['pipes'];
-    $type_of_parcel_other = $_POST['type_of_parcel_other'];
-
-    $cargo_help = $_POST['cargohelp'];
-    $adding = $_POST['adding'];
-    $gazel = $_POST['gazel'];
-    $three_ton = $_POST['3ton'];
-    $five_ton = $_POST['5ton'];
-    $ten_ton = $_POST['10ton'];
-    $fura = $_POST['fura'];
-    $unusual_shape = $_POST['unusual_shape'];
-
-    $box = $_POST['box'];
-    $palet = $_POST['palet'];
-    $case = $_POST['case'];
-    $bag = $_POST['bag'];
-    $big_bag = $_POST['big_bag'];
-    $obreshetka = $_POST['obreshetka'];
-    $bunch = $_POST['bunch'];
-    $other = $_POST['other'];
-    $no_wrap = $_POST['no'];
-
-    $top_loading = $_POST['top_loading'];
-    $side_loading = $_POST['side_loading'];
-    $back_loading = $_POST['back_loading'];
-    $combined = $_POST['combined'];
-    $no_matter = $_POST['no_matter'];
-
-    $parcel_from_quiz = $_POST['parcel_from_quiz'];
-    $parcel_to_quiz = $_POST['parcel_to_quiz'];
-
-    $asap = $_POST['asap'];
-    $one_day = $_POST['one_day'];
-    $in_week = $_POST['in_week'];
-    $in_month = $_POST['in_month'];
-
-    $person = $_POST['person'];
-    $company = $_POST['company'];
-    $businessman = $_POST['businessman'];
-    $OOO = $_POST['OOO'];
-
-    echo $modal_btn+'here';
-
-    $email_body = $email_body = 
-        "User Telephon Number => $telephone.\n".
-
-        "User needs help => $cargo_help.\n".
-
-        "Dogruz => $adding.\n".
-        "Gazel => $gazel.\n".
-        "3-ton => $three_ton.\n".
-        "5-ton => $five_ton.\n".
-        "10-ton => $ten_ton.\n".
-        "Fura => $fura.\n".
-        "Ne gabarit => $unusual_shape.\n".
-
-        "Box => $box.\n".
-        "Palet => $palet.\n".
-        "Korobka => $case.\n".
-        "Bag => $bag.\n".
-        "Big_bag => $big_bag.\n".
-        "Obreshetka => $obreshetka.\n".
-        "Svyazka => $bunch.\n".
-        "Other => $other.\n".
-        "Bez obertki => $no_wrap.\n".
-
-        "Sverhu => $top_loading.\n".
-        "Sboku => $side_loading.\n".
-        "Szadi => $back_loading.\n".
-        "Combi => $combined.\n".
-        "Ne vazno => $no_matter.\n".
-
-        "Parcel from => $parcel_from_quiz.\n".
-
-        "Parcel to => $parcel_to_quiz.\n".
-
-        "Bistro => $asap.\n".
-        "1 day => $one_day.\n".
-        "1 week => $in_week.\n".
-        "1 month => $in_month.\n".
-
-        "Person => $person.\n".
-        "Company => $company.\n".
-        "Businessman => $businessman.\n".
-        "OOO => $OOO.\n".
-
-        "home_things => $home_things.\n".
-        "building_materials => $building_materials.\n".
-        "home_thindustrial_woodings => $industrial_wood.\n".
-        "foodstuffs => $foodstuffs.\n".
-        "equipment => $equipment.\n".
-        "metal => $metal.\n".
-        "TNP => $TNP.\n".
-        "pipes => $pipes.\n".
-        "type_of_parcel_other => $type_of_parcel_other.\n".
+    $transport = $_POST["transport"];
+    $type_of_parcel = $_POST["type_of_parcel"];
+    $type_of_parcel_other = $_POST["type_of_parcel_other"];
+    $package = $_POST["package"];
+    $type = $_POST["type"];
+    $parcel_from_quiz = $_POST["parcel_from_quiz"];
+    $more_than_one_destination = $_POST["more_than_one_destination"];
+    $parcel_to_quiz = $_POST["parcel_to_quiz"];
+    $more_than_one_dep = $_POST["more_than_one_dep"];
+    $shipping = $_POST["shipping"];
+    $organisation = $_POST["organisation"];
+    $from = $_POST["from"];
+    $answer = $_POST["answer"];
 
 
-    $email_subject = "New Form Submission";
+    $email_body =
+        "User Telephone Number => $from.\n".
 
-    $to = "alexandra.osmakova@gmail.com";
+        "User needs help => $answer.\n".
 
-    $ok = mail($to, $email_subject, $email_body);
+        "Transport type =>  $transport.\n".
+
+        "Type of Parcel => $type_of_parcel $type_of_parcel_other.\n".
+
+        "Package => $package.\n".
+
+        "Where to locate => $type.\n".
+
+        "From => $parcel_from_quiz.\n".
+
+        "To => $parcel_to_quiz.\n".
+
+        "Speed => $shipping.\n".
+
+        "Type of organisation => $organisation.\n".
+
+
+        $email_subject = "New Form Submission";
+
+        $to = "mitolking@gmail.com";
+
+        $ok = mail($to, $email_subject, $email_body);
 ?>
 
 <!DOCTYPE html>
