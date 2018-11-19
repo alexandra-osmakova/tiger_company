@@ -30,26 +30,26 @@ header {
     background-position: center;
     background-size: cover;
 }
- 
+
 #video-bg > video {
     position: absolute;
     top: 0;
     left: 0;
-    min-width: 100%; 
+    min-width: 100%;
     min-height: 100%;
     width: auto;
-    height: auto; 
+    height: auto;
 }
- 
- @supports (object-fit: cover) {
-     #video-bg > video {
-         top: 0;
-         left: 0;
-         width: 100%;
-         height: 100%;
-         object-fit: cover;
-     }
- }
+
+@supports (object-fit: cover) {
+    #video-bg > video {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
 
 .header_decoration_line {
     width: 100%;
@@ -62,7 +62,7 @@ header {
 
 .header_wrap {
     position: absolute;
-    top: 0; 
+    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
@@ -346,7 +346,7 @@ header {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    padding: 3.625rem 2.9375rem 3.375rem ; 
+    padding: 3.625rem 2.9375rem 3.375rem ;
 }
 
 
@@ -358,8 +358,8 @@ header {
     width: 1.5rem;
     height: 1.5rem;
     transform:matrix(0.00,1.00,-1.00,0.00,0,0);
-        -ms-transform:matrix(0.00,1.00,-1.00,0.00,0,0);
-        -webkit-transform:matrix(0.00,1.00,-1.00,0.00,0,0);
+    -ms-transform:matrix(0.00,1.00,-1.00,0.00,0,0);
+    -webkit-transform:matrix(0.00,1.00,-1.00,0.00,0,0);
 }
 
 
@@ -397,7 +397,7 @@ header {
     width: 100%;
     font-size: 1.5rem;
     color: #000000;
-    font-weight: bold;  
+    font-weight: bold;
     line-height: 1.5rem;
 }
 
@@ -538,7 +538,7 @@ header {
 
 .sixth_question_img_parcel_cover {
     background-image: url(../tiger.img/13.png);
-}   
+}
 
 .question_info_item h3 {
     font-size: 0.9375rem;
@@ -558,17 +558,17 @@ header {
     align-items: center;
     justify-content: flex-start;
     width: auto;
-  }
+}
 
-  .question_item_checkbox_text_mark_type {
+.question_item_checkbox_text_mark_type {
     font-size: 0.75rem;
     color: #000000;
     display: block;
     margin-left: 0.8125rem;
     width: 20rem;
-  }
+}
 
-  .icon-check {
+.icon-check {
     font-size: 0.8rem;
     color: #000000;
     opacity: 0;
@@ -577,9 +577,9 @@ header {
     -moz-transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
-  }
+}
 
-  .question_item_checkbox_mark_type .question_item_checkbox_wrap_mark_type {
+.question_item_checkbox_mark_type .question_item_checkbox_wrap_mark_type {
     width: 1.0625rem;
     height: 1.0625rem;
     background-color: #ffffff;
@@ -587,15 +587,15 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  
-  .question_item_checkbox_mark_type input[type="checkbox"] {
+}
+
+.question_item_checkbox_mark_type input[type="checkbox"] {
     display: none;
-  }
-  
-  .question_item_checkbox_mark_type input:checked + .question_item_checkbox_wrap_mark_type .icon-check  {
-        opacity: 1;
-  }
+}
+
+.question_item_checkbox_mark_type input:checked + .question_item_checkbox_wrap_mark_type .icon-check  {
+    opacity: 1;
+}
 
 .invisible_item {
     display: none;
@@ -680,7 +680,7 @@ header {
     flex-direction: column;
 }
 
-.fifth_question_container .question_item_checkbox_mark_type, .sixth_question_container .question_item_checkbox_mark_type{ 
+.fifth_question_container .question_item_checkbox_mark_type, .sixth_question_container .question_item_checkbox_mark_type{
     position: absolute;
     bottom: 12rem;
     left: 7rem;
@@ -751,7 +751,7 @@ header {
 
 .question_item_checkbox input:checked + .question_item_checkbox_wrap .checkbox_mark{
     opacity: 1;
-  }
+}
 
 .apply_questions_start__btn {
     width: 15.625rem;
@@ -840,7 +840,7 @@ header {
     height: 0.1875rem;
     margin: 1.5rem auto;
     background-color: #ffdb4d;
-}   
+}
 
 .service_types {
     width: 100%;
@@ -1323,7 +1323,7 @@ header {
 
 .clients_review {
     width: 100%;
-    padding: 8.0625rem 4rem; 
+    padding: 8.0625rem 4rem;
 }
 
 .clients_review h2 {
@@ -1766,17 +1766,17 @@ header {
     user-select: none;
     display: flex;
     align-items: center;
-  }
+}
 
-  .form_item_checkbox_text {
+.form_item_checkbox_text {
     font-size: 0.9375rem;
     color: #000000;
     text-align: center;
     display: block;
     margin-left: 0.8125rem;
-  }
+}
 
-  .icon-check {
+.icon-check {
     font-size: 0.8rem;
     color: #000000;
     opacity: 0;
@@ -1785,9 +1785,9 @@ header {
     -moz-transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
-  }
+}
 
-  .form_item_checkbox .form_item_checkbox_wrap {
+.form_item_checkbox .form_item_checkbox_wrap {
     width: 1.0625rem;
     height: 1.0625rem;
     background-color: #ffffff;
@@ -1795,134 +1795,134 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  
-  .form_item_checkbox input[type="checkbox"] {
+}
+
+.form_item_checkbox input[type="checkbox"] {
     display: none;
-  }
-  
-  .form_item_checkbox input:checked + .form_item_checkbox_wrap .icon-check  {
-        opacity: 1;
-  }
+}
 
-  footer {
-      width: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      padding: 3.375rem 8.0625rem;
-      background-color: #f6f6f6;
-      position: relative;
-  }
+.form_item_checkbox input:checked + .form_item_checkbox_wrap .icon-check  {
+    opacity: 1;
+}
 
-  .footer_decoration_line {
-      width: 100%;
-      height: 2rem;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-  }
+footer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3.375rem 8.0625rem;
+    background-color: #f6f6f6;
+    position: relative;
+}
 
-  .logo_section {
-      width: 100%;
-  }
+.footer_decoration_line {
+    width: 100%;
+    height: 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
 
-  .footer_logo {
+.logo_section {
+    width: 100%;
+}
+
+.footer_logo {
     width: 5.125rem;
     height: 5.8125rem;
     background-image: url(../tiger.img/tiger_logo.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-  }
+}
 
-  .footer_item {
-      width: 25%;
-      margin: 0 auto;
-  }
+.footer_item {
+    width: 25%;
+    margin: 0 auto;
+}
 
-  .footer_item:nth-of-type(3) {
-      width: 15%;
-  }
+.footer_item:nth-of-type(3) {
+    width: 15%;
+}
 
-  .footer_item_text {
+.footer_item_text {
     font-size: 0.75rem;
     line-height: 1rem;
     color: #000000;
     font-weight: 300;
     margin: 0 auto 1rem;
-  }
+}
 
-  .confidential_politics {
-      font-size: 0.75rem;
-      line-height: 1rem;
-      color: #000000;
-      display: block;
-      width: 100%;
-      margin: 0.9375rem auto;
-  }
+.confidential_politics {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    color: #000000;
+    display: block;
+    width: 100%;
+    margin: 0.9375rem auto;
+}
 
-  .rights_reserved {
+.rights_reserved {
     font-size: 0.75rem;
     line-height: 1rem;
     color: #000000;
     font-weight: 300;
     display: block;
     width: 105%;
-  }
+}
 
-  .footer_item_title {
+.footer_item_title {
     font-size: 0.9375rem;
     padding-bottom: 0.5rem;
     color: #000000;
     border-bottom: 0.125rem solid #ffdb4d;
     width: 100%;
     text-transform: uppercase;
-  }
+}
 
 
-  .footer_item_info_links {
+.footer_item_info_links {
     font-size: 0.875rem;
     line-height: 1rem;
     color: #000000;
     font-weight: 300;
     padding-bottom: 0.6875rem;
     text-decoration: none;
-  }
+}
 
-  .footer_item_info_links:hover {
-      font-weight: bold;
-      text-decoration: underline;
-  }
+.footer_item_info_links:hover {
+    font-weight: bold;
+    text-decoration: underline;
+}
 
-  .footer_item ul {
-      margin-top: 1.8125rem;
-  }
+.footer_item ul {
+    margin-top: 1.8125rem;
+}
 
-  .social_link_container {
-      display: flex;
-      width: 50%;
-  }
+.social_link_container {
+    display: flex;
+    width: 50%;
+}
 
-  .solcial_link {
-      text-decoration: unset;
-      display: block;
-      width: auto;
-      margin: 1.5rem auto;
-      color: #000000;
-      font-size: 1rem;
+.solcial_link {
+    text-decoration: unset;
+    display: block;
+    width: auto;
+    margin: 1.5rem auto;
+    color: #000000;
+    font-size: 1rem;
 
-      -o-transition: all 0.5s ease;
-      -moz-transition: all 0.5s ease;
-      -webkit-transition: all 0.5s ease;
-      transition: all 0.5s ease;
-  }
+    -o-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
 
-  .solcial_link:hover {
+.solcial_link:hover {
     color: #ffdb4d;;
-  }
+}
 
-  .footer_apply_form__btn {
+.footer_apply_form__btn {
     background-color: #ffdb4d;
     border: unset;
     font-size: 0.9375rem;
@@ -1930,25 +1930,25 @@ header {
     text-align: center;
     box-shadow: 0rem 0.375rem 0.4375rem rgba(0,0,0,0.18);
     margin: 2.5875rem auto 0;
-  }
+}
 
-  .footer_contacts_item {
+.footer_contacts_item {
     font-size: 0.875rem;
     line-height: 1.375rem;
     color: #000000;
     display: block;
     width: 100%;
-  }
+}
 
-  .footer_contacts__content {
-      margin-top: 1.75rem;
-  }
+.footer_contacts__content {
+    margin-top: 1.75rem;
+}
 
-  .footer_contact_styled {
-      font-weight: bold;
-  }
+.footer_contact_styled {
+    font-weight: bold;
+}
 
-  .drim_logo {
+.drim_logo {
     background-image: url(../tiger.img/Logo-4.png);
     background-size: contain;
     background-position: center;
@@ -1956,15 +1956,15 @@ header {
     width: 4rem;
     height: 2rem;
     margin-top: 1rem;
-  }
+}
 
-   .creator_logo span {
+.creator_logo span {
     font-size: 0.75rem;
     line-height: 1rem;
     color: #000000;
-   }
+}
 
-   .header_burger_menu {
+.header_burger_menu {
     z-index: 1001;
 }
 
@@ -2062,7 +2062,7 @@ header {
     -moz-transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
-} 
+}
 
 .header_menu_open .header_contacts {
     width: 100%;
@@ -2090,7 +2090,7 @@ header {
     background-size: contain;
     background-position: -15.625rem 30%;
     background-repeat: no-repeat;
-} 
+}
 
 .header_menu_open_nav {
     width: 50%;
@@ -2101,7 +2101,7 @@ header {
     padding-right: 8.0625rem;
 }
 
-.header_menu_open_nav_point {
+.header_menu_open_nav_point a{
     font-size: 2.8125rem;
     line-height: 4.5625rem;
     color: #000000;
@@ -2110,6 +2110,7 @@ header {
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
+    text-decoration: none;
 
     -o-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
@@ -2132,7 +2133,7 @@ header {
 
 }
 
-.header_menu_open_nav_point:hover { 
+.header_menu_open_nav_point:hover {
     text-shadow: 0.0625rem 0 0 #000000;
     letter-spacing: 0.5px;   /* px used instead of rem  */
 }
@@ -2150,25 +2151,25 @@ header {
 .body_no_scroll {
     overflow-y: hidden;
 }
- 
- .styled-select.slate {
+
+.styled-select.slate {
     background: url(../tiger.img/arrow.svg);
     background-repeat: no-repeat;
     background-position: 13rem 1.5625rem;
- }
- 
- .styled-select.slate select {
+}
+
+.styled-select.slate select {
     border: 0.0625rem solid #ccc;
     font-size: 1rem;
     height: 2.125rem;
     width: 16.75rem;
- }
+}
 .data_picker::-webkit-calendar-picker-indicator {
     color: transparent;
     opacity: 1;
     background: url(../tiger.img/calendar.svg) no-repeat center;
     background-size: contain;
-  }
+}
 
 
 
@@ -2329,7 +2330,7 @@ header {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-} 
+}
 
 .thick_container {
     width: 4.6875rem;
@@ -2386,17 +2387,17 @@ header {
     height: 2rem;
     width: 0.125rem;
     background-color: #333;
-  }
-  .close_btn:before {
+}
+.close_btn:before {
     transform: rotate(45deg);
-  }
-  .close_btn:after {
+}
+.close_btn:after {
     transform: rotate(-45deg);
-  }
+}
 
-  .close_btn:hover {
+.close_btn:hover {
     opacity: 1;
-  }
+}
 
 .modal_overlay {
     z-index: 1000;
@@ -2442,18 +2443,18 @@ header {
 
 .tns-controls button:nth-of-type(1) {
     transform:matrix(0.00,1.00,-1.00,0.00,0,0);
--ms-transform:matrix(0.00,1.00,-1.00,0.00,0,0);
--webkit-transform:matrix(0.00,1.00,-1.00,0.00,0,0);
-position: absolute;
-left: 34%;
+    -ms-transform:matrix(0.00,1.00,-1.00,0.00,0,0);
+    -webkit-transform:matrix(0.00,1.00,-1.00,0.00,0,0);
+    position: absolute;
+    left: 34%;
 }
 
 .tns-controls button:nth-of-type(2) {
     transform:matrix(-0.00,-1.00,1.00,-0.00,0,0);
--ms-transform:matrix(-0.00,-1.00,1.00,-0.00,0,0);
--webkit-transform:matrix(-0.00,-1.00,1.00,-0.00,0,0);
-position: absolute;
-right: 43%
+    -ms-transform:matrix(-0.00,-1.00,1.00,-0.00,0,0);
+    -webkit-transform:matrix(-0.00,-1.00,1.00,-0.00,0,0);
+    position: absolute;
+    right: 43%
 }
 
 .tns-nav {
@@ -2495,9 +2496,15 @@ right: 43%
 
 input[type=text],
 input[type=submit]{
-  appearance: none;
-  -moz-appearance: none;
-  -webkit-appearance: none;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+@media screen and (min-width: 320px) and (max-width: 425px) {
+    video {
+        display: none;
+    }
 }
 
 
@@ -2522,7 +2529,7 @@ input[type=submit]{
         right: 35%;
     }
 }
- 
+
 @media screen and (min-width: 2171px) and (max-width: 2460px) {
     html, body{
         font-size: 28px;
@@ -2867,7 +2874,7 @@ input[type=submit]{
 
     .header_menu_open_image {
         background-size: 150%;
-        background-position: -19.625rem 21%;    
+        background-position: -19.625rem 21%;
     }
 
     .header_menu_open_nav_point {
@@ -3231,7 +3238,7 @@ input[type=submit]{
 
     .header_menu_open_image {
         background-size: 200%;
-        background-position: -23.625rem 21%;        
+        background-position: -23.625rem 21%;
     }
 
     .header_menu_open_nav_point {
@@ -3605,7 +3612,7 @@ input[type=submit]{
 
     .header_menu_open_image {
         background-size: 300%;
-        background-position: -37.625rem 21%;    
+        background-position: -37.625rem 21%;
     }
 
     .header_menu_open_nav_point {
@@ -3764,7 +3771,7 @@ input[type=submit]{
         font-size: 1rem;
     }
 
-    .btn ,.fifth_question_container .quiz_textarea, .sixth_question_container .quiz_textarea, .finish_form_input, .additional_info_content_text p, .additional_info_content_text li, .advantages_header_text, 
+    .btn ,.fifth_question_container .quiz_textarea, .sixth_question_container .quiz_textarea, .finish_form_input, .additional_info_content_text p, .additional_info_content_text li, .advantages_header_text,
     .advantages_item_text, .payment_info__type_text p{
         font-size: 1.2rem;
     }
@@ -4069,7 +4076,7 @@ input[type=submit]{
 
     .header_menu_open_image {
         background-size: 300%;
-        background-position: -37.625rem 21%;    
+        background-position: -37.625rem 21%;
     }
 
     .header_menu_open_nav_point {
@@ -4227,7 +4234,7 @@ input[type=submit]{
         font-size: 1rem;
     }
 
-    .btn ,.fifth_question_container .quiz_textarea, .sixth_question_container .quiz_textarea, .finish_form_input, .additional_info_content_text p, .additional_info_content_text li, .advantages_header_text, 
+    .btn ,.fifth_question_container .quiz_textarea, .sixth_question_container .quiz_textarea, .finish_form_input, .additional_info_content_text p, .additional_info_content_text li, .advantages_header_text,
     .advantages_item_text, .payment_info__type_text p{
         font-size: 1.2rem;
     }
@@ -4522,7 +4529,7 @@ input[type=submit]{
 
     .header_menu_open_image {
         background-size: 300%;
-        background-position: -37.625rem 21%;    
+        background-position: -37.625rem 21%;
     }
 
     .header_menu_open_nav_point {
@@ -4703,7 +4710,7 @@ input[type=submit]{
         font-size: 1rem;
     }
 
-    .btn ,.fifth_question_container .quiz_textarea, .sixth_question_container .quiz_textarea, .finish_form_input, .additional_info_content_text p, .additional_info_content_text li, .advantages_header_text, 
+    .btn ,.fifth_question_container .quiz_textarea, .sixth_question_container .quiz_textarea, .finish_form_input, .additional_info_content_text p, .additional_info_content_text li, .advantages_header_text,
     .advantages_item_text, .payment_info__type_text p{
         font-size: 1.2rem;
     }
