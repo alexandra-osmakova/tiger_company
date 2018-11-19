@@ -1756,22 +1756,22 @@
     <h2><span class="apply_title_styled">ОНЛАЙН ЗАЯВКА</span> НА РАСЧЕТ <br> СТОИМОСТИ ДОСТАВКИ ГРУЗА</h2>
     <p>Предоставляем услуги погрузки и упаковки груза в каждом городе России.</p>
     <div class="online_apply_content">
-        <form class="online_apply_content_form" id="empty">
+        <form class="online_apply_content_form" action="thanks_window.php" method="post">
             <div class="form_item">
                 <span class="form_input_span">Откуда</span>
-                <input form="prompt-form" id="ADDRESS_FROM_FOOTER_services" name="ADDRESS_FROM_FOOTER_services"
+                <input id="ADDRESS_FROM_FOOTER_services" name="ADDRESS_FROM_FOOTER_services"
                        type="text" size="100" class="online_apply_content_style apply_count_form_input"
                        placeholder="Из города">
             </div>
             <div class="form_item">
                 <span class="form_input_span">Куда</span>
-                <input form="prompt-form" id="ADDRESS_TO_FOOTER" name="ADDRESS_TO_FOOTER"
+                <input id="ADDRESS_TO_FOOTER" name="ADDRESS_TO_FOOTER"
                        class="online_apply_content_style apply_count_form_input"
                        type="text" placeholder="В город">
             </div>
             <div class="form_item">
                 <span class="form_input_span">Масса груза, кг</span>
-                <select form="prompt-form" name="weight_footer"
+                <select name="weight_footer"
                         class="online_apply_content_style online_apply_select styled-select slate">
                     <option>до 2 тонн</option>
                     <option>до 5 тонн</option>
@@ -1779,7 +1779,7 @@
                     <option>до 20 тонн</option>
                 </select>
                 <label class="form_item_checkbox">
-                    <input form="prompt-form" name="lifters" type="checkbox">
+                    <input name="lifters" type="checkbox">
                     </input>
                     <div class="form_item_checkbox_wrap">
                         <span class="icon-check"></span>
@@ -1789,7 +1789,7 @@
             </div>
             <div class="form_item">
                 <span class="form_input_span">Тип авто</span>
-                <select form="prompt-form" name="vehicle"
+                <select name="vehicle"
                         class="online_apply_content_style online_apply_select styled-select slate">
                     <option>Газель</option>
                     <option>Бычок</option>
@@ -1799,19 +1799,18 @@
             </div>
             <div class="form_item">
                 <span class="form_input_span">Дата</span>
-                <input form="prompt-form" name="date" type="date"
+                <input name="date" type="date"
                        class="data_picker online_apply_content_style apply_count_form_input"
                        placeholder="Выбрать">
             </div>
             <div class="form_item">
                 <span class="form_input_span">Номер телефона</span>
-                <input form="prompt-form" id="telephone_from_footer" name="telephone_from_footer"
+                <input id="telephone_from_footer" name="telephone_from_footer"
                        type="tel" class="online_apply_content_style apply_count_form_input"
                        placeholder="Ваш номер телефона">
             </div>
             <div class="form_item">
-                <input type="hidden" form="prompt-form" id="form2">
-                <button id="form2" class="online_apply_content_style online_apply_form__btn" type="submit">Рассчитать
+                <button name="form2" class="online_apply_content_style online_apply_form__btn" type="submit">Рассчитать
                     стоимость
                 </button>
             </div>
@@ -2017,14 +2016,6 @@
         onSelect: function (suggestion) {
             console.log(suggestion);
         }
-    });
-    $("form#empty").on("submit", function (e) {
-        return false;
-    });
-    $("button#form2").on("click", function (e) {
-        modal_on_second();
-        $("input#_form2").attr("name", "form2");
-        $("input#_form2").attr("value", "hh123");
     });
 </script>
 </body>

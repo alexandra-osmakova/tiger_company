@@ -40,9 +40,10 @@
 
         $email_subject = "New Form Submission";
 
-        $to = "mitolking@gmail.com";
+        $to = "autotransport24@yandex.ru";
 
         $ok = mail($to, $email_subject, $email_body);
+
 ?>
 
 <!DOCTYPE html>

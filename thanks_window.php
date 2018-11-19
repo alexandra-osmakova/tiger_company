@@ -1,20 +1,17 @@
 <?php 
     header('Refresh: 5; url=index.html', true, 301);
 
-$to = "mitolking@gmail.com";
-
-echo isset($_POST["form1"]);
+$to = "autotransport24@yandex.ru";
 
 if(isset($_POST["form1"])) {
     $location = $_POST["ADDRESS_FROM_HEADER"];
     $destination = $_POST["ADDRESS_TO_HEADER"];
     $weight = $_POST["weight"];
-    $name = $_POST["name"];
     $phone_number = $_POST["header_telephone"];
     
     $email_body = "---Расчёт стоимости за 60 секунд---\n".
                 "FROM: " . $location . "\nTO: " . $destination . "\nWEIGHT: " . $weight .
-                "\nCLIENT: " . $name . "\nCONTACT PHONE: " . $phone_number;
+                "\nCONTACT PHONE: " . $phone_number;
     $email_subject = "Fast count";
 
     $ok = mail($to, $email_subject, $email_body);
@@ -26,20 +23,19 @@ if(isset($_POST["form2"])) {
     $lifters = $_POST["lifters"];
     $vehicle = $_POST["vehicle"];
     $date = $_POST["date"];
-    $name = $_POST["name"];
-    $phone_number = $_POST["phone-number"];
+    $phone_number = $_POST["telephone_from_footer"];
     
     $email_body = "---ОНЛАЙН ЗАЯВКА НА РАСЧЕТ СТОИМОСТИ ДОСТАВКИ ГРУЗА---\n".
                 "FROM: " . $location . "\nTO: " . $destination . "\nWEIGHT: " . $weight .
-                "\nLIFTERS: " . $lifters . "\nVEHICLE TYPE: " . $vehicle . "\nDATE: " . $date .
-                "\nCLIENT: " . $name . "\nCONTACT PHONE: " . $phone_number;
+                "\nVEHICLE TYPE: " . $vehicle . "\nDATE: " . $date .
+                "\nCONTACT PHONE: " . $phone_number;
     $email_subject = "ОНЛАЙН ЗАЯВКА НА РАСЧЕТ СТОИМОСТИ ДОСТАВКИ ГРУЗА";
 
     $ok = mail($to, $email_subject, $email_body);
 }
-if(isset($_POST["none"])) {
+if(isset($_POST["modal_btn"])) {
     $name = $_POST["name"];
-    $phone_number = $_POST["phone_number"];
+    $phone_number = $_POST["phone-number"];
     
     $email_body = "---ЗАЯВКА---\n".
                 "CLIENT: " . $name . "\nCONTACT PHONE: " . $phone_number;
@@ -47,6 +43,8 @@ if(isset($_POST["none"])) {
 
     $ok = mail($to, $email_subject, $email_body);
 }
+
+echo $email_body;
 ?>
 
 <!DOCTYPE html>
