@@ -174,7 +174,7 @@ header {
     border-radius: 0.3125rem;
     background-color: #ffffff;
     font-size: 0.875rem;
-    color: #b6b6b6;
+    color: #000000;
     text-align: center;
     margin: 0 auto;
 }
@@ -1475,6 +1475,18 @@ header {
     background-image: url(../tiger.img/vk_review4.jpg);
 }
 
+.fifth_review_img {
+    background-image: url(../tiger.img/vk_review7.jpg);
+}
+
+.sixth_review_img {
+    background-image: url(../tiger.img/vk_review6.jpg);
+}
+
+.seventh_review_img {
+    background-image: url(../tiger.img/vk_review5.jpg);
+}
+
 .vk_review__content::after {
     content: '';
     display: block;
@@ -1732,7 +1744,7 @@ header {
     outline: none;
     border-radius: unset;
     font-size: 0.875rem;
-    color: #b6b6b6;
+    color: #000000;
     padding: 1rem;
     -webkit-appearance: none;
     -webkit-border-radius: 0rem;
@@ -1751,7 +1763,7 @@ header {
 
 .online_apply_content_style::placeholder {
     font-size: 0.875rem;
-    color: #b6b6b6;
+    color: #000000;
     font-family: 'Roboto';
 }
 
@@ -2454,7 +2466,7 @@ footer {
     -ms-transform:matrix(-0.00,-1.00,1.00,-0.00,0,0);
     -webkit-transform:matrix(-0.00,-1.00,1.00,-0.00,0,0);
     position: absolute;
-    right: 43%
+    right: 34%
 }
 
 .tns-nav {

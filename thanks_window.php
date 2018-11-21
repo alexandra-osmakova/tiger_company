@@ -17,7 +17,7 @@ if(isset($_POST["form1"])) {
     $ok = mail($to, $email_subject, $email_body);
 }
 if(isset($_POST["form2"])) {
-    $location = $_POST["ADDRESS_FROM_FOOTER_services"];
+    $location = $_POST["ADDRESS_FROM_FOOTER"];
     $destination = $_POST["ADDRESS_TO_FOOTER"];
     $weight = $_POST["weight_footer"];
     $lifters = $_POST["lifters"];
