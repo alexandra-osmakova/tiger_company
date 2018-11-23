@@ -151,7 +151,7 @@
                     <input id="ADDRESS_TO_HEADER" name="ADDRESS_TO_HEADER" class="header_count_form_input" type="text"
                         placeholder="Город доставки">
                     <input class="header_count_form_input" name="weight" type="text" placeholder="Масса груза, кг">
-                    <input class="header_count_form_input" name="header_telephone" type="text" placeholder="Контактный телефон">
+                    <input class="header_count_form_input" name="header_telephone" type="text" placeholder="Контактный телефон" required>
                     <input class="header_count_form__btn" name="form1" type="submit" value="Быстрый рассчет">
                 </form>
             </div>
@@ -765,7 +765,7 @@
                         <p>Введите Ваш номер телефона, и мы сообщим вам стоимость грузоперевозки прямо сейчас!
                         </p>
                         <form class="finish_form" id="quiz_form" method="post" action="thanks_window_second.php">
-                            <input class="finish_form_input" name="from" type="text" placeholder="Введите свой номер телефона">
+                            <input class="finish_form_input" name="from" type="text" placeholder="Введите свой номер телефона" required>
                             <input class="finish_form__btn btn" type="submit" name="quiz_btn" value="Узнать стоимость">
                         </form>
                     </div>
@@ -1751,7 +1751,7 @@
                 <div class="form_item">
                     <span class="form_input_span">Номер телефона</span>
                     <input id="telephone_from_footer" name="telephone_from_footer" type="tel" class="online_apply_content_style apply_count_form_input"
-                        placeholder="Ваш номер телефона">
+                        placeholder="Ваш номер телефона" required>
                 </div>
                 <div class="form_item">
                     <button name="form2" class="online_apply_content_style online_apply_form__btn" type="submit">Рассчитать
@@ -1853,7 +1853,7 @@
         <form id="prompt-form" method='post' action="thanks_window.php">
             <input class="modal_window_input" name="name" type="text" placeholder="Введите Ваше имя">
             <input class="modal_window_input" id="phone-number" name="phone-number" type="text" maxlength="14"
-                placeholder="Контактный телефон" />
+                placeholder="Контактный телефон" required/>
             <button class="modal_window_submit_btn" name="modal_btn" type="submit">Оставить заявку</button>
         </form>
         <p class="modal_agreement">Отправляя заявку, вы подтверждаете свое согласие с <a href="">политикой
