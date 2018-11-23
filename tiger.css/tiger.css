@@ -138,12 +138,6 @@ header {
     color: #ffffff;
 }
 
-.header_email svg {
-    width: 0.625rem;
-    height: 0.5rem;
-    margin-right: 0.625rem;
-}
-
 .btn {
     outline: none;
     border: unset;
@@ -2137,8 +2131,7 @@ footer {
 }
 
 .header_menu_open .header_contacts_item__telephon,
-.header_menu_open .header_contacts_item__tel_comment,
-.header_menu_open .header_email {
+.header_menu_open .header_contacts_item__tel_comment {
     color: #000000;
 }
 
@@ -2727,6 +2720,10 @@ input[type=submit] {
         font-size: 15px;
     }
 
+    .vk_review {
+        height: 34rem;
+    }
+
     .header_email {
         margin: 0;
     }
@@ -2816,6 +2813,22 @@ input[type=submit] {
     body {
         font-size: 13px;
     }
+
+    .header_phone_info svg {
+        display: none;
+    }
+
+    .vk_review {
+        height: 35.625rem;
+    }
+
+    .vk_review__content_img {
+        height: 19rem;
+    } 
+
+    .vk_review__content::after {
+        display: none;
+    } 
 
     header {
         padding: 1.5rem;
@@ -3167,6 +3180,18 @@ input[type=submit] {
     html,
     body {
         font-size: 14px;
+    }
+
+    .header_phone_info svg {
+        display: none;
+    }
+
+    .vk_review {
+        height: 35.625rem;
+    }
+
+    .vk_review__content_img {
+        height: 15rem;
     }
 
     .header_email {
@@ -3587,6 +3612,22 @@ input[type=submit] {
     body {
         font-size: 12px;
     }
+
+    .header_phone_info svg {
+        display: none;
+    }
+
+    .vk_review {
+        height: 38.625rem;
+    }
+
+    .vk_review__content_img {
+        height: 15rem;
+    }
+
+    .vk_review__content::after {
+        display: none;
+    } 
 
     .header_email {
         display: none;
@@ -4116,6 +4157,22 @@ input[type=submit] {
         font-size: 11px;
     }
 
+    .header_phone_info svg {
+        display: none;
+    }
+
+    .vk_review {
+        height: 38.625rem;
+    }
+
+    .vk_review__content_img {
+        height: 15rem;
+    }
+
+    .vk_review__content::after {
+        display: none;
+    }
+
     .header_email {
         display: none;
     }
@@ -4626,6 +4683,22 @@ input[type=submit] {
     html,
     body {
         font-size: 10px;
+    }
+
+    .header_phone_info svg {
+        display: none;
+    }
+
+    .vk_review {
+        height: 38.625rem;
+    }
+
+    .vk_review__content_img {
+        height: 15rem;
+    }
+
+    .vk_review__content::after {
+        display: none;
     }
 
     .header_email {

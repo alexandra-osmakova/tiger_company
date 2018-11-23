@@ -109,12 +109,6 @@ header {
     color: #ffffff;
 }
 
-.header_email svg {
-    width: 0.625rem;
-    height: 0.5rem;
-    margin-right: 0.625rem;
-}
-
 .btn {
     outline: none;
     border: unset;
@@ -312,8 +306,7 @@ header {
 }
 
 .header_menu_open .header_contacts_item__telephon,
-.header_menu_open .header_contacts_item__tel_comment,
-.header_menu_open .header_email {
+.header_menu_open .header_contacts_item__tel_comment{
     color: #000000;
 }
 

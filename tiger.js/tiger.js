@@ -379,7 +379,7 @@ var slider = tns({
         768: {
             items: 2,
         },
-        900: {
+        1001: {
             items: 4,
         }
     },
