@@ -18,6 +18,69 @@ header {
     position: relative;
 }
 
+.tiger_services_header {
+    background-image: url(../tiger.img/tiger_services_header.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.tiger_fura_header {
+    background-image: url(../tiger.img/logistics-lorry-mountains-933981.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.tiger_fridge_header {
+    background-image: url(../tiger.img/hey.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 30%;
+}
+
+.oneway_transport_header {
+    background-image: url(../tiger.img/shutterstock_1039216024-e1535033228887.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.tiger_relocation_header {
+    background-image: url(../tiger.img/Movers-And-Packers-Services-In-USA.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.tiger_dogruz_header {
+    background-image: url(../tiger.img/gallagher-delivers-on-their-promise.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.tiger_personal_stuff_header {
+    background-image: url(../tiger.img/ekspress_piegade.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.tiger_actual_things_header {
+    background-image: url(../tiger.img/original_1e5853df4cfc9a6c.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.tiger_kamaz_header {
+    background-image: url(../tiger.img/kamaz_4308-n3_2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
 #video-bg {
     position: absolute;
     top: 0;
@@ -168,6 +231,7 @@ header {
 }
 
 .header_content h2 {
+    text-transform: uppercase;
     font-size: 3.75rem;
     line-height: 4.5625rem;
     color: #ffffff;
@@ -2512,6 +2576,7 @@ footer {
 }
 
 .tns-controls button {
+    background-color: unset;
     width: 1.5rem;
     height: 1.5rem;
     border: unset;
@@ -2522,7 +2587,7 @@ footer {
     background-size: contain;
 }
 
-.tns-controls button:nth-of-type(1) {
+.clients_review .tns-controls button:nth-of-type(1) {
     transform: matrix(0.00, 1.00, -1.00, 0.00, 0, 0);
     -ms-transform: matrix(0.00, 1.00, -1.00, 0.00, 0, 0);
     -webkit-transform: matrix(0.00, 1.00, -1.00, 0.00, 0, 0);
@@ -2530,7 +2595,7 @@ footer {
     left: 34%;
 }
 
-.tns-controls button:nth-of-type(2) {
+.clients_review .tns-controls button:nth-of-type(2) {
     transform: matrix(-0.00, -1.00, 1.00, -0.00, 0, 0);
     -ms-transform: matrix(-0.00, -1.00, 1.00, -0.00, 0, 0);
     -webkit-transform: matrix(-0.00, -1.00, 1.00, -0.00, 0, 0);
@@ -2555,6 +2620,7 @@ footer {
     padding: 0;
     margin: 0 0.375rem;
     border-radius: 50%;
+    background-color: unset;
     border: 0.0625rem solid #000000;
 }
 
@@ -2580,6 +2646,239 @@ input[type=submit] {
     appearance: none;
     -moz-appearance: none;
     -webkit-appearance: none;
+}
+
+.blog {
+    width: 100%;
+    padding: 5rem 2.0625rem 9rem;
+    position: relative;
+    background-color: #f6f6f6;
+}
+
+.blog h2 {    
+    font-size: 1.875rem;
+    line-height: 2.5rem;
+    color: #000000;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 4.9375rem;
+}
+
+.blog h2::before {
+    content: "";
+    display: block;
+    width: 4.5rem;;
+    height: 0.1875rem;
+    margin: 1.5rem auto;
+    background-color: #ffdb4d;
+}
+
+.blog_content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.blog_content__images {
+    width: 65%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.blog_content__text {
+    width: 35%;
+    margin-left: -0.125rem;
+}
+
+.blog_content__images_item {
+    width: 33.3%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 2.5rem 2rem;
+    position: relative;
+    text-align: center;
+
+    -o-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.blog_content__images_item:nth-of-type(1) {
+    background-image: url(../tiger.img/tiger_services_page1.jpg);
+}
+.blog_content__images_item:nth-of-type(2) {
+    background-image: url(../tiger.img/tiger_services_page2.jpg);
+}
+.blog_content__images_item:nth-of-type(3) {
+    background-image: url(../tiger.img/tiger_services_page3.jpg);
+}
+.blog_content__images_item:nth-of-type(4) {
+    background-image: url(../tiger.img/tiger_services_header.jpg);
+}
+.blog_content__images_item:nth-of-type(5) {
+    background-image: url(../tiger.img/tiger_services_page5.jpg);
+}
+.blog_content__images_item:nth-of-type(6) {
+    background-image: url(../tiger.img/tiger_services_page6.png);
+}
+
+.blog_type__item_wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000000;
+    opacity: 0.4;
+
+    -o-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.blog_type__content {
+    position: absolute;
+    top: 5rem;
+    left: 2rem;
+    right: 2rem;
+}
+
+.blog_type__text {
+    font-size: 1rem;
+    color: #ffffff;
+    text-align: center;
+
+    -o-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.blog_type__content_hover {
+    opacity: 0;
+    position: relative;
+}
+
+.blog_type__text_hover {
+    font-size: 1.25rem;
+    color: #010000;
+    text-align: center;
+
+    -o-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.blog_type__btn {
+    margin: 2rem auto 0;
+    width: 10.4375rem;
+    height: 3rem;
+    background-color: #f5f5f5;
+    box-shadow: 0rem 0.375rem 1.125rem rgba(0,0,0,0.18);
+
+    -o-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.blog_content__images_item:hover {
+    transform: scale(1.1);
+    z-index: 10;
+}
+
+.blog_content__images_item:hover .blog_type__content_hover {
+    opacity: 1;
+}
+
+.blog_content__images_item:hover .blog_type__content {
+    opacity: 0;
+}
+
+.blog_content__images_item:hover .blog_type__item_wrap {
+    background-color: #ffdb4d;
+    opacity: 0.9;
+}
+
+.blog_content__text {
+    background: #ffdb4d;
+    padding: 2.0625rem 2.0625rem 3.5rem;
+}
+
+.blog_content__text span {
+    font-size: 1.125rem;
+    color: #000000;
+    display: block;
+    margin-bottom: 2.4375rem;
+}
+
+.blog_content__text ul {
+    list-style-type: disc;
+    padding-left: 1rem;
+}
+
+.blog_content__text li {
+    cursor: pointer;
+    font-size: 0.8125rem;
+    line-height: 1.5rem;
+    color: #000000;
+}
+
+.blog_decoration_line_first {
+    width: 100%;
+    height: 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;;
+}
+
+.blog_decoration_line_second {
+    width: 100%;
+    height: 2rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;;
+}
+
+.blog .tns-nav {
+    bottom: -2rem;
+}
+
+.blog .tns-controls {
+    bottom: -1.7rem;
+}
+
+.blog .tns-controls button:nth-of-type(1){
+    transform: matrix(0.00, 1.00, -1.00, 0.00, 0, 0);
+    -ms-transform: matrix(0.00, 1.00, -1.00, 0.00, 0, 0);
+    -webkit-transform: matrix(0.00, 1.00, -1.00, 0.00, 0, 0);
+    position: absolute;
+    left: 10%;
+}
+
+.blog .tns-controls button:nth-of-type(2){
+    transform: matrix(-0.00, -1.00, 1.00, -0.00, 0, 0);
+    -ms-transform: matrix(-0.00, -1.00, 1.00, -0.00, 0, 0);
+    -webkit-transform: matrix(-0.00, -1.00, 1.00, -0.00, 0, 0);
+    position: absolute;
+    right: 10%;
+}
+
+.blog .tns-controls button {
+    width: 1.5rem;
+    height: 1.5rem;
+    border: unset;
+    outline: none;
+    background-image: url(../tiger.img/arrow_down.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 @media screen and (min-width: 320px) and (max-width: 1000px) {
@@ -2849,6 +3148,19 @@ input[type=submit] {
     html,
     body {
         font-size: 13px;
+    }
+
+        
+    .blog {
+        padding: 5rem 0rem 9rem;
+    }
+
+    .blog_content__images, .blog_content__text {
+        width: 100%;
+    }
+
+    .blog_content__images_item {
+        width: 50%;
     }
 
     .header_email_info {
@@ -3229,6 +3541,19 @@ input[type=submit] {
     html,
     body {
         font-size: 14px;
+    }
+
+        
+    .blog {
+        padding: 5rem 0rem 9rem;
+    }
+
+    .blog_content__images, .blog_content__text {
+        width: 100%;
+    }
+
+    .blog_content__images_item {
+        width: 100%;
     }
 
     .header_contacts_item__tel_comment {
@@ -3783,6 +4108,18 @@ input[type=submit] {
     html,
     body {
         font-size: 12px;
+    }
+    
+    .blog {
+        padding: 5rem 0rem 9rem;
+    }
+
+    .blog_content__images, .blog_content__text {
+        width: 100%;
+    }
+
+    .blog_content__images_item {
+        width: 100%;
     }
 
     .header_contacts_item__tel_comment {
@@ -4463,6 +4800,19 @@ input[type=submit] {
         font-size: 11px;
     }
 
+        
+    .blog {
+        padding: 5rem 0rem 9rem;
+    }
+
+    .blog_content__images, .blog_content__text {
+        width: 100%;
+    }
+
+    .blog_content__images_item {
+        width: 100%;
+    }
+
     .header_contacts_item__tel_comment {
         display: none;
     }
@@ -5134,6 +5484,18 @@ input[type=submit] {
     .header_contacts_item__telephon svg {
         width: 1rem;
         height: 1rem;
+    }
+    
+    .blog {
+        padding: 5rem 0rem 9rem;
+    }
+
+    .blog_content__images, .blog_content__text {
+        width: 100%;
+    }
+
+    .blog_content__images_item {
+        width: 100%;
     }
 
     .vk_review {

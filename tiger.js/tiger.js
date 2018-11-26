@@ -399,6 +399,21 @@ var slider = tns({
     },
 })
 
+var slider = tns({
+    container: '.my-blog-slider',
+    items: 1,
+    rewind: true,
+    swipeAngle: false,
+    gutter: 30,
+    speed: 400,
+    mouseDrag: true,
+    controlsText: [" ", " "],
+    controlsPosition: 'bottom',
+    navPosition: 'bottom',
+    navAsThumbnails: true,
+    arrowKeys: true,
+})
+
 var scroll = new SmoothScroll('a[href*="#"]', {
     speed: 400
 });
