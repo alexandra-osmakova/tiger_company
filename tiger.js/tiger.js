@@ -257,6 +257,20 @@ function cleanUpQuiz(index) {
     question_info_item[7].classList.remove('invisible_item');
 }
 
+var invisible_header_btn = document.getElementsByClassName('invisible_header_btn')[0];
+var invisible_header_input = document.getElementsByClassName('invisible_header_input');
+var header_input_count = 0;
+
+invisible_header_btn.addEventListener('click', function() {
+    if(header_input_count < 3) {
+        invisible_header_input[header_input_count].classList.add('main_header_input');
+        header_input_count++;
+        if(header_input_count==3 ) {
+            invisible_header_btn.value = "Рассчитать стоимость"
+        }
+    }
+})
+
 function counter() {
     var options = {
         useEasing: true,

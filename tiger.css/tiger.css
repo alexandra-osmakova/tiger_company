@@ -55,9 +55,13 @@ header {
     width: 100%;
     height: 2rem;
     position: absolute;
-    bottom: 11.3125rem;
+    bottom: 7.3125rem;
     left: 0rem;
     right: 0rem;
+}
+
+.invisible_header_text, .invisible_header_btn {
+    display: none;
 }
 
 .header_wrap {
@@ -2144,6 +2148,10 @@ footer {
     margin-right: 5.1875rem;
 }
 
+.header_menu_open .header_email {
+    color: #000000;
+}
+
 .header_menu_open .header_logo {
     background-image: url(../tiger.img/company_logo_open_menu.png);
     margin-left: 0.375rem;
@@ -2720,6 +2728,35 @@ input[type=submit] {
         font-size: 15px;
     }
 
+    .haeder_email_info {
+        margin-left: 2rem;
+    }
+
+    .header_contacts_info_item__btn {
+        margin: 0 2.0625rem;
+    }
+
+    .header_menu_open .header_contacts_info_item__btn {
+        margin-right:4.0625rem;
+    }
+
+    .header_menu_open .header_email {
+        margin-left: 2rem;
+    }
+
+    .header_menu_open_nav {
+        padding-right: 5.0625rem;
+    }
+
+    .online_apply_content_style {
+        width: 100%;
+    }
+
+    .styled-select.slate {
+        background-position: 20rem 1.5625rem;
+    }
+
+
     .vk_review {
         height: 34rem;
     }
@@ -2729,7 +2766,7 @@ input[type=submit] {
     }
 
     .header_decoration_line {
-        bottom: 8.3125rem;
+        bottom: 7.3125rem;
     }
 
     .header_count_form_input,
@@ -2814,8 +2851,20 @@ input[type=submit] {
         font-size: 13px;
     }
 
-    .header_phone_info svg {
-        display: none;
+    .header_email_info {
+        position: absolute;
+        bottom: -29rem;
+        right: 1.5rem;
+    }
+
+    .header_email {
+        font-size: 1.4rem;
+    }
+
+    header_email_info {
+        position: absolute;
+        bottom: -31rem;
+        right: 1.5rem;
     }
 
     .vk_review {
@@ -2847,7 +2896,7 @@ input[type=submit] {
     .header_menu_open .header_contacts_item__telephon,
     .header_menu_open .header_contacts_item__tel_comment {
         position: absolute;
-        bottom: -27rem;
+        bottom: -25rem;
         right: 3rem;
     }
 
@@ -2857,7 +2906,7 @@ input[type=submit] {
 
     .header_menu_open_nav {
         padding: 0;
-        margin-top: -3rem;
+        margin-top: -5rem;
     }
 
     .header_contacts_info_item__btn,
@@ -3182,8 +3231,178 @@ input[type=submit] {
         font-size: 14px;
     }
 
-    .header_phone_info svg {
+    .header_contacts_item__tel_comment {
         display: none;
+    }
+
+    .header_menu_open .header_contacts {
+        padding: 1rem 2rem;
+    }
+
+    .header_menu_open .header_contacts_info_item__btn {
+        width: 18.7rem;
+        height: 4.8rem;
+        font-size: 1.5rem;
+        display: block;
+        position: absolute;
+        bottom: -30rem;
+        right: 1.5rem;
+        margin-right: 0;
+    }
+
+
+    .header_menu_open_nav_point a {
+        font-size: 2rem;
+    }
+
+    .header_menu_open .header_contacts_item__telephon {
+        font-size: 1.9rem;
+    }
+
+    .header_menu_open .header_phone_info {
+        position: absolute;
+        bottom: -20rem;
+        right: 1.5rem;    
+    }
+
+    .header_menu_open .header_email_info {
+        position: absolute;
+        bottom: -23rem;
+        right: 1.5rem;
+    }
+
+    .header_menu_open .header_contacts_item__tel_comment {
+        display: block;
+        font-size: 1.1rem;
+    }
+
+    .header_menu_open_nav {
+        padding: 0;
+    }
+
+    .header_menu_open_nav ul {
+        margin-top: -2.1875rem;
+    }
+
+    .header_menu_open_nav li {
+        margin: 1rem auto;
+    }
+
+    .header_menu_open_nav_point a {
+        line-height: 2.5625rem; 
+    }
+
+    .header_menu_open_image {
+        background-size: 300%;
+        background-position: -43.625rem 5%;
+    }
+
+    .header_email {
+        display: none;
+    }
+
+    .header_menu_open .header_email {
+        display: block;
+        font-size: 1.4rem;
+    }
+
+    .header_contacts_info_item__btn,
+    .burger_menu_title {
+        display: none;
+    }
+
+    .header_contacts {
+        flex-direction: column-reverse;
+    }
+
+    .header_contacts_info {
+        padding: unset;
+    }
+
+    .header_logo {
+        margin: 1rem auto 0;
+        width: 6.125rem;
+        height: 6.8125rem;
+    }
+
+    .header_count_form__btn {
+        display: none;
+    }
+
+    .visible_header_text {
+        display: none
+    }
+    .invisible_header_text {
+        display: block
+    }
+
+
+    .header_content h2 {
+        font-size: 2.2rem;
+    }
+
+    .header_content {
+        padding-top: 0.5rem;
+    }
+
+    .header_decoration_line {
+        bottom: 2.3125rem;
+    }
+
+    .header_count_form_input,
+    .header_count_form__btn {
+        width: 90% !important;
+        margin: 1rem auto;
+    }
+
+    .invisible_header_input {
+        position: absolute;
+        left: 1.5rem;
+
+        -o-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -webkit-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+    }
+
+    .invisible_header_input:nth-of-type(1) {
+        z-index: 5;
+    }
+
+    .invisible_header_input:nth-of-type(2) {
+        z-index: 4;
+    }
+
+    .invisible_header_input:nth-of-type(3) {
+        z-index: 3;
+    }
+
+    .invisible_header_input:nth-of-type(4) {
+        z-index: 2;
+    }
+
+    .header_count {
+        padding-bottom: 11.5625rem;
+    }
+
+    .main_header_input {
+        display: none;
+    }
+
+    .invisible_header_btn {
+        display: block;
+        margin-top: 6.5rem;
+
+        -o-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -webkit-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+    }
+    
+
+    .header_contacts_item__telephon svg {
+        width: 1rem;
+        height: 1rem;
     }
 
     .vk_review {
@@ -3200,24 +3419,6 @@ input[type=submit] {
 
     header {
         padding: 1.5rem;
-    }
-
-
-    .header_menu_open .header_contacts_info_item__btn {
-        width: 18.7rem;
-        height: 4.8rem;
-        font-size: 1.5rem;
-        display: block;
-        position: absolute;
-        bottom: -35rem;
-        right: -3rem;
-    }
-
-    .header_menu_open .header_contacts_item__telephon,
-    .header_menu_open .header_contacts_item__tel_comment {
-        position: absolute;
-        bottom: -27rem;
-        right: 3rem;
     }
 
     .header_menu_open_nav_point a {
@@ -3242,14 +3443,9 @@ input[type=submit] {
         padding: unset;
     }
 
-    .header_logo {
-        margin: 1rem auto;
-        width: 8.125rem;
-        height: 8.8125rem;
-    }
-
     .header_content h2 {
         font-size: 2.2rem;
+        line-height: unset;
     }
 
     .header_content {
@@ -3262,13 +3458,6 @@ input[type=submit] {
 
     .header_count_form {
         flex-wrap: wrap;
-    }
-
-    .header_count_form_input,
-    .header_count_form__btn {
-        width: 80% !important;
-        margin: 1rem auto;
-
     }
 
     .question_item_checkbox {
@@ -3435,25 +3624,8 @@ input[type=submit] {
         font-size: 1.9rem;
     }
 
-    .header_menu_open .header_contacts_item__tel_comment {
-        display: block;
-        font-size: 1.1rem;
-        margin: -1rem;
-    }
-
     .header_menu_open_nav {
         padding: 0;
-    }
-
-    .header_menu_open_image {
-        background-size: 200%;
-        background-position: -23.625rem 21%;
-    }
-
-    .header_menu_open_nav_point {
-        font-size: 1.8rem;
-        line-height: unset;
-        margin: 0 auto;
     }
 
     .header_menu_open_nav_decoration {
@@ -3613,8 +3785,183 @@ input[type=submit] {
         font-size: 12px;
     }
 
-    .header_phone_info svg {
+    .header_contacts_item__tel_comment {
         display: none;
+    }
+
+    .header_menu_open .header_contacts {
+        padding: 1rem 2rem;
+    }
+
+    .header_menu_open .header_contacts_info_item__btn {
+        width: 18.7rem;
+        height: 4.8rem;
+        font-size: 1.5rem;
+        display: block;
+        position: absolute;
+        bottom: -36rem;
+        right: 1.5rem;
+        margin-right: 0;
+    }
+
+
+    .header_menu_open_nav_point a {
+        font-size: 2rem;
+    }
+
+    .header_menu_open .header_contacts_item__telephon {
+        font-size: 1.9rem;
+    }
+
+    .header_menu_open .header_phone_info {
+        position: absolute;
+        bottom: -26rem;
+        right: 1.5rem;    
+    }
+
+    .header_menu_open .header_email_info {
+        position: absolute;
+        bottom: -29rem;
+        right: 1.5rem;
+    }
+
+    .header_menu_open .header_contacts_item__tel_comment {
+        display: block;
+        font-size: 1.1rem;
+        margin-left: 1.5rem;
+    }
+
+    .header_menu_open_image {
+        width: 40%;
+    }
+
+    .header_menu_open_nav {
+        padding: 0;
+        width: 60%;
+    }
+
+    .header_menu_open_nav ul {
+        margin-top: -2.1875rem;
+    }
+
+    .header_menu_open_nav li {
+        margin: 2rem auto;
+    }
+
+    .header_menu_open_nav_point a {
+        line-height: 2.5625rem; 
+    }
+
+    .header_menu_open_image {
+        background-size: 350%;
+        background-position: -35.625rem 5%;
+    }
+
+    .header_email {
+        display: none;
+    }
+
+    .header_menu_open .header_email {
+        display: block;
+        font-size: 1.4rem;
+    }
+
+    .header_contacts_info_item__btn,
+    .burger_menu_title {
+        display: none;
+    }
+
+    .header_contacts {
+        flex-direction: column-reverse;
+    }
+
+    .header_contacts_info {
+        padding: unset;
+    }
+
+    .header_logo {
+        margin: 1rem auto 0;
+        width: 6.125rem;
+        height: 6.8125rem;
+    }
+
+    .header_count_form__btn {
+        display: none;
+    }
+
+    .visible_header_text {
+        display: none
+    }
+    .invisible_header_text {
+        display: block
+    }
+
+
+    .header_content h2 {
+        font-size: 2.2rem;
+    }
+
+    .header_content {
+        padding-top: 0.5rem;
+    }
+
+    .header_decoration_line {
+        bottom: 2.3125rem;
+    }
+
+    .header_count_form_input,
+    .header_count_form__btn {
+        width: 90% !important;
+        margin: 1rem auto;
+    }
+
+    .invisible_header_input {
+        position: absolute;
+        left: 1.5rem;
+
+        -o-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -webkit-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+    }
+
+    .invisible_header_input:nth-of-type(1) {
+        z-index: 5;
+    }
+
+    .invisible_header_input:nth-of-type(2) {
+        z-index: 4;
+    }
+
+    .invisible_header_input:nth-of-type(3) {
+        z-index: 3;
+    }
+
+    .invisible_header_input:nth-of-type(4) {
+        z-index: 2;
+    }
+
+    .header_count {
+        padding-bottom: 11.5625rem;
+    }
+
+    .main_header_input {
+        display: none;
+    }
+
+    .invisible_header_btn {
+        display: block;
+        margin-top: 6.5rem;
+
+        -o-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -webkit-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+    }
+
+    .header_contacts_item__telephon svg {
+        width: 1rem;
+        height: 1rem;
     }
 
     .vk_review {
@@ -3635,23 +3982,6 @@ input[type=submit] {
 
     header {
         padding: 1.5rem;
-    }
-
-    .header_menu_open .header_contacts_info_item__btn {
-        width: 18.7rem;
-        height: 4.8rem;
-        font-size: 1.5rem;
-        display: block;
-        position: absolute;
-        bottom: -36rem;
-        right: -3rem;
-    }
-
-    .header_menu_open .header_contacts_item__telephon,
-    .header_menu_open .header_contacts_item__tel_comment {
-        position: absolute;
-        bottom: -28rem;
-        right: 3rem;
     }
 
     .header_menu_open_nav_point a {
@@ -3676,12 +4006,6 @@ input[type=submit] {
         padding: unset;
     }
 
-    .header_logo {
-        margin: 1rem auto;
-        width: 8.125rem;
-        height: 8.8125rem;
-    }
-
     .header_content h2 {
         font-size: 2.2rem;
     }
@@ -3696,13 +4020,6 @@ input[type=submit] {
 
     .header_count_form {
         flex-wrap: wrap;
-    }
-
-    .header_count_form_input,
-    .header_count_form__btn {
-        width: 95% !important;
-        margin: 1rem auto;
-
     }
 
     .question_item_checkbox {
@@ -3872,19 +4189,8 @@ input[type=submit] {
         font-size: 1.9rem;
     }
 
-    .header_menu_open .header_contacts_item__tel_comment {
-        display: block;
-        font-size: 1.1rem;
-        margin: -1rem;
-    }
-
     .header_menu_open_nav {
         padding: 0;
-    }
-
-    .header_menu_open_image {
-        background-size: 300%;
-        background-position: -37.625rem 21%;
     }
 
     .header_menu_open_nav_point {
@@ -4157,8 +4463,176 @@ input[type=submit] {
         font-size: 11px;
     }
 
-    .header_phone_info svg {
+    .header_contacts_item__tel_comment {
         display: none;
+    }
+
+    .header_menu_open .header_contacts {
+        padding: 1rem 2rem;
+    }
+
+    .header_menu_open .header_contacts_info_item__btn {
+        width: 18.7rem;
+        height: 4.8rem;
+        font-size: 1.5rem;
+        display: block;
+        position: absolute;
+        bottom: -36rem;
+        right: 1.5rem;
+        margin-right: 0;
+    }
+
+    .header_menu_open_nav_point a {
+        font-size: 2rem;
+    }
+
+    .header_menu_open .header_contacts_item__telephon {
+        font-size: 1.9rem;
+    }
+
+    .header_menu_open .header_email_info {
+        position: absolute;
+        bottom: -28rem;
+        right: 1.5rem;
+    }
+
+    .header_menu_open .header_contacts_item__tel_comment {
+        display: block;
+        font-size: 1.1rem;
+        margin-left: 1.5rem;
+    }
+
+    .header_menu_open_image {
+        width: 40%;
+    }
+
+    .header_menu_open_nav {
+        padding: 0;
+        width: 60%;
+    }
+
+    .header_menu_open_nav ul {
+        margin-top: -2.1875rem;
+    }
+
+    .header_menu_open_nav li {
+        margin: 2rem auto;
+    }
+
+    .header_menu_open_nav_point a {
+        line-height: 2.5625rem; 
+    }
+
+    .header_menu_open_image {
+        background-size: 360%;
+        background-position: -38.625rem 5%;
+    }
+
+    .header_email {
+        display: none;
+    }
+
+    .header_menu_open .header_email {
+        display: block;
+        font-size: 1.4rem;
+    }
+
+    .header_contacts_info_item__btn,
+    .burger_menu_title {
+        display: none;
+    }
+
+    .header_contacts {
+        flex-direction: column-reverse;
+    }
+
+    .header_contacts_info {
+        padding: unset;
+    }
+
+    .header_logo {
+        margin: 1rem auto 0;
+        width: 6.125rem;
+        height: 6.8125rem;
+    }
+
+    .header_count_form__btn {
+        display: none;
+    }
+
+    .visible_header_text {
+        display: none
+    }
+    .invisible_header_text {
+        display: block
+    }
+
+
+    .header_content h2 {
+        font-size: 2.2rem;
+    }
+
+    .header_content {
+        padding-top: 0.5rem;
+    }
+
+    .header_decoration_line {
+        bottom: 2.3125rem;
+    }
+
+    .header_count_form_input,
+    .header_count_form__btn {
+        width: 90% !important;
+        margin: 1rem auto;
+    }
+
+    .invisible_header_input {
+        position: absolute;
+        left: 1.5rem;
+
+        -o-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -webkit-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+    }
+
+    .invisible_header_input:nth-of-type(1) {
+        z-index: 5;
+    }
+
+    .invisible_header_input:nth-of-type(2) {
+        z-index: 4;
+    }
+
+    .invisible_header_input:nth-of-type(3) {
+        z-index: 3;
+    }
+
+    .invisible_header_input:nth-of-type(4) {
+        z-index: 2;
+    }
+
+    .header_count {
+        padding-bottom: 11.5625rem;
+    }
+
+    .main_header_input {
+        display: none;
+    }
+
+    .invisible_header_btn {
+        display: block;
+        margin-top: 6.5rem;
+
+        -o-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -webkit-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+    }
+
+    .header_contacts_item__telephon svg {
+        width: 1rem;
+        height: 1rem;
     }
 
     .vk_review {
@@ -4177,20 +4651,10 @@ input[type=submit] {
         display: none;
     }
 
-    .header_menu_open .header_contacts_info_item__btn {
-        width: 18.7rem;
-        height: 4.8rem;
-        font-size: 1.5rem;
-        display: block;
-        position: absolute;
-        bottom: -41rem;
-        right: -3rem;
-    }
-
     .header_menu_open .header_contacts_item__telephon,
     .header_menu_open .header_contacts_item__tel_comment {
         position: absolute;
-        bottom: -34rem;
+        bottom: -24rem;
         right: 3rem;
     }
 
@@ -4224,12 +4688,6 @@ input[type=submit] {
         padding: unset;
     }
 
-    .header_logo {
-        margin: 1rem auto;
-        width: 8.125rem;
-        height: 8.8125rem;
-    }
-
     .header_content h2 {
         font-size: 2.2rem;
     }
@@ -4244,13 +4702,6 @@ input[type=submit] {
 
     .header_count_form {
         flex-wrap: wrap;
-    }
-
-    .header_count_form_input,
-    .header_count_form__btn {
-        width: 95% !important;
-        margin: 1rem auto;
-
     }
 
     .question_item_checkbox {
@@ -4421,11 +4872,6 @@ input[type=submit] {
         display: block;
         font-size: 1.1rem;
         margin: -1rem;
-    }
-
-    .header_menu_open_image {
-        background-size: 300%;
-        background-position: -37.625rem 21%;
     }
 
     .header_menu_open_nav_point {
@@ -4685,8 +5131,9 @@ input[type=submit] {
         font-size: 10px;
     }
 
-    .header_phone_info svg {
-        display: none;
+    .header_contacts_item__telephon svg {
+        width: 1rem;
+        height: 1rem;
     }
 
     .vk_review {
@@ -4701,16 +5148,21 @@ input[type=submit] {
         display: none;
     }
 
-    .header_email {
-        display: none;
-    }
-
     .menu__icon span {
         height: 0.2rem;
     }
 
     header {
         padding: 1.5rem;
+    }
+
+    .header_email {
+        display: none;
+    }
+
+    .header_menu_open .header_email {
+        display: block;
+        font-size: 1.4rem;
     }
 
     .header_contacts_info_item__btn,
@@ -4727,17 +5179,29 @@ input[type=submit] {
     }
 
     .header_logo {
-        margin: 1rem auto;
-        width: 9.125rem;
-        height: 9.8125rem;
+        margin: 1rem auto 0;
+        width: 6.125rem;
+        height: 6.8125rem;
     }
+
+    .header_count_form__btn {
+        display: none;
+    }
+
+    .visible_header_text {
+        display: none
+    }
+    .invisible_header_text {
+        display: block
+    }
+
 
     .header_content h2 {
         font-size: 2.2rem;
     }
 
     .header_content {
-        padding-top: 2rem;
+        padding-top: 0.5rem;
     }
 
     .header_decoration_line {
@@ -4750,9 +5214,52 @@ input[type=submit] {
 
     .header_count_form_input,
     .header_count_form__btn {
-        width: 95% !important;
+        width: 90% !important;
         margin: 1rem auto;
+    }
 
+    .invisible_header_input {
+        position: absolute;
+        left: 1.5rem;
+
+        -o-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -webkit-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+    }
+
+    .invisible_header_input:nth-of-type(1) {
+        z-index: 5;
+    }
+
+    .invisible_header_input:nth-of-type(2) {
+        z-index: 4;
+    }
+
+    .invisible_header_input:nth-of-type(3) {
+        z-index: 3;
+    }
+
+    .invisible_header_input:nth-of-type(4) {
+        z-index: 2;
+    }
+
+    .header_count {
+        padding-bottom: 11.5625rem;
+    }
+
+    .main_header_input {
+        display: none;
+    }
+
+    .invisible_header_btn {
+        display: block;
+        margin-top: 6.5rem;
+
+        -o-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -webkit-transition: all 0.5s ease;
+        transition: all 0.5s ease;
     }
 
     .question_item_checkbox {
@@ -4924,16 +5431,11 @@ input[type=submit] {
         font-size: 1.5rem;
         display: block;
         position: absolute;
-        bottom: -45rem;
-        right: -3rem;
+        bottom: -39rem;
+        right: 1.5rem;
+        margin-right: 0;
     }
 
-    .header_menu_open .header_contacts_item__telephon,
-    .header_menu_open .header_contacts_item__tel_comment {
-        position: absolute;
-        bottom: -37rem;
-        right: 3rem;
-    }
 
     .header_menu_open_nav_point a {
         font-size: 2rem;
@@ -4943,19 +5445,48 @@ input[type=submit] {
         font-size: 1.9rem;
     }
 
+    .header_menu_open .header_phone_info {
+        position: absolute;
+        bottom: -29rem;
+        right: 1.5rem;    
+    }
+
+    .header_menu_open .header_email_info {
+        position: absolute;
+        bottom: -32rem;
+        right: 1.5rem;
+    }
+
     .header_menu_open .header_contacts_item__tel_comment {
         display: block;
         font-size: 1.1rem;
-        margin: -1rem;
+        margin-left: 1.5rem;
+    }
+
+    .header_menu_open_image {
+        width: 40%;
     }
 
     .header_menu_open_nav {
         padding: 0;
+        width: 60%;
+    }
+
+    .header_menu_open_nav ul {
+        margin-top: -2.1875rem;
+    }
+
+    .header_menu_open_nav li {
+        margin: 2rem auto;
+    }
+
+    .header_menu_open_nav_point a {
+        line-height: 2.5625rem; 
     }
 
     .header_menu_open_image {
-        background-size: 300%;
-        background-position: -37.625rem 21%;
+        background-size: 360%;
+        background-position: -38.625rem 5%;
     }
 
     .header_menu_open_nav_point {
