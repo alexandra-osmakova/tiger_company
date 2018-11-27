@@ -229,7 +229,7 @@
         <h2><span class="apply_title_styled">ОНЛАЙН ЗАЯВКА</span> НА РАСЧЕТ <br> СТОИМОСТИ ДОСТАВКИ ГРУЗА</h2>
         <p>Предоставляем услуги погрузки и упаковки груза в каждом городе России.</p>
         <div class="online_apply_content">
-            <form class="online_apply_content_form third_level_page_form" action="thanks_window.php" method="post">
+            <form class="online_apply_content_form" action="thanks_window.php" method="post">
                 <div class="form_item">
                     <span class="form_input_span">Откуда</span>
                     <input id="ADDRESS_FROM_FOOTER" name="ADDRESS_FROM_FOOTER" type="text" size="100" class="online_apply_content_style apply_count_form_input"
@@ -239,6 +239,42 @@
                     <span class="form_input_span">Куда</span>
                     <input id="ADDRESS_TO_FOOTER" name="ADDRESS_TO_FOOTER" class="online_apply_content_style apply_count_form_input"
                         type="text" placeholder="В город">
+                </div>
+                <div class="form_item">
+                    <span class="form_input_span">Масса груза, кг</span>
+                    <select name="weight_footer" class="online_apply_content_style online_apply_select styled-select slate">
+                        <option>до 2 тонн</option>
+                        <option>до 5 тонн</option>
+                        <option>до 10 тонн</option>
+                        <option>до 20 тонн</option>
+                    </select>
+                    <label class="form_item_checkbox">
+                        <input name="lifters" type="checkbox">
+                        </input>
+                        <div class="form_item_checkbox_wrap">
+                            <span class="icon-check"></span>
+                        </div>
+                        <span class="form_item_checkbox_text">Нужны грузчики</span>
+                    </label>
+                </div>
+                <div class="form_item">
+                    <span class="form_input_span">Тип авто</span>
+                    <select name="vehicle" class="online_apply_content_style online_apply_select styled-select slate">
+                        <option>Газель</option>
+                        <option>Бычок</option>
+                        <option>КамАЗ</option>
+                        <option>Фура</option>
+                    </select>
+                </div>
+                <div class="form_item">
+                    <span class="form_input_span">Дата</span>
+                    <input name="date" type="date" class="data_picker online_apply_content_style apply_count_form_input"
+                        placeholder="Выбрать">
+                </div>
+                <div class="form_item">
+                    <span class="form_input_span">Номер телефона</span>
+                    <input id="telephone_from_footer" name="telephone_from_footer" type="tel" class="online_apply_content_style apply_count_form_input"
+                        placeholder="Ваш номер телефона" required>
                 </div>
                 <div class="form_item">
                     <button name="form2" class="online_apply_content_style online_apply_form__btn" type="submit">Рассчитать
