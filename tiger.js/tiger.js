@@ -41,7 +41,54 @@ function close_modal() {
     modal_window_first.classList.remove('modal_visible');
 }
 
+function overflow() {
+    document.documentElement.classList.add('no_scroll');
+}
 
+var slider = tns({
+    container: '.my-slider',
+    items: 1,
+    rewind: true,
+    swipeAngle: false,
+    gutter: 30,
+    speed: 400,
+    mouseDrag: true,
+    controlsText: [" ", " "],
+    controlsPosition: 'bottom',
+    navPosition: 'bottom',
+    navAsThumbnails: true,
+    arrowKeys: true,
+    responsive: {
+        425: {
+            items: 1,
+        },
+        768: {
+            items: 2,
+        },
+        1001: {
+            items: 4,
+        }
+    },
+})
+
+var slider = tns({
+    container: '.my-blog-slider',
+    items: 1,
+    rewind: true,
+    swipeAngle: false,
+    gutter: 30,
+    speed: 400,
+    mouseDrag: true,
+    controlsText: [" ", " "],
+    controlsPosition: 'bottom',
+    navPosition: 'bottom',
+    navAsThumbnails: true,
+    arrowKeys: true,
+})
+
+var scroll = new SmoothScroll('a[href*="#"]', {
+    speed: 400
+});
 
 var payment_info_column = document.getElementsByClassName('payment_info_column')[0];
 var payment_info__type_text = document.getElementsByClassName('payment_info__type_text');
@@ -369,52 +416,4 @@ new WOW().init();
 
 window.addEventListener("scroll", overflow);
 
-function overflow() {
-    document.documentElement.classList.add('no_scroll');
-}
-
-var slider = tns({
-    container: '.my-slider',
-    items: 1,
-    rewind: true,
-    swipeAngle: false,
-    gutter: 30,
-    speed: 400,
-    mouseDrag: true,
-    controlsText: [" ", " "],
-    controlsPosition: 'bottom',
-    navPosition: 'bottom',
-    navAsThumbnails: true,
-    arrowKeys: true,
-    responsive: {
-        425: {
-            items: 1,
-        },
-        768: {
-            items: 2,
-        },
-        1001: {
-            items: 4,
-        }
-    },
-})
-
-var slider = tns({
-    container: '.my-blog-slider',
-    items: 1,
-    rewind: true,
-    swipeAngle: false,
-    gutter: 30,
-    speed: 400,
-    mouseDrag: true,
-    controlsText: [" ", " "],
-    controlsPosition: 'bottom',
-    navPosition: 'bottom',
-    navAsThumbnails: true,
-    arrowKeys: true,
-})
-
-var scroll = new SmoothScroll('a[href*="#"]', {
-    speed: 400
-});
 
