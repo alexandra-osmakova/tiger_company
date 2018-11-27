@@ -43,8 +43,6 @@ if(isset($_POST["modal_btn"])) {
 
     $ok = mail($to, $email_subject, $email_body);
 }
-
-echo $email_body;
 ?>
 
 <!DOCTYPE html>

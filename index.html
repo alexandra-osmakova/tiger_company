@@ -185,8 +185,8 @@
                     <input class="header_count_form_input invisible_header_input" name="weight" type="text" placeholder="Масса груза, кг">
                     <input class="header_count_form_input invisible_header_input" name="header_telephone" type="text" placeholder="Контактный телефон"
                         required>
-                    <input type="text" class="header_count_form__btn invisible_header_btn" value="Далее" readonly>
-                    <input class="header_count_form__btn" name="form1" type="submit" value="Быстрый рассчет">
+                    <input type="text" id="next" class="header_count_form__btn invisible_header_btn" value="Далее" readonly>
+                    <input class="header_count_form__btn" id="form1_btn" name="form1" type="submit" value="Быстрый рассчет">
                 </form>
             </div>
         </div>
@@ -1993,6 +1993,15 @@
             onSelect: function (suggestion) {
                 console.log(suggestion);
             }
+        });
+
+        let count = 0;
+
+        $("input#next").on("click", function (e) {
+            if($(e.currentTarget).val() === "Рассчитать стоимость" && count === 3) {
+                $("input#form1_btn").click();
+            }
+            count++;
         });
     </script>
 </body>
