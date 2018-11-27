@@ -1,3 +1,7 @@
+<?php
+require("../admin/database/db.php");
+$page = R::load("pages", $_GET["id"]);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,17 +12,17 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.8/tiny-slider.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./tiger.css/reset.css">
-    <link rel="stylesheet" href="./tiger.css/tiger.css">
-    <link rel="stylesheet" href="./tiger.css/style.css">
+    <link rel="stylesheet" href="../tiger.css/reset.css">
+    <link rel="stylesheet" href="../tiger.css/tiger.css">
+    <link rel="stylesheet" href="../tiger.css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/suggestions-jquery@18.8.0/dist/css/suggestions.min.css" type="text/css"
         rel="stylesheet" />
 
 
-    <title>Транспортная компания Tiger Logistic - Грузоперевозки по России и СНГ</title>
+    <title><?=$page->title?></title>
 
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
@@ -77,7 +81,7 @@
 </head>
 
 <body>
-    <header class="third_level_header">
+    <header class="third_level_header" style="background-image: url(<?=$page->img_first?>)">
         <div class="header_menu_open">
             <div class="header_contacts">
                 <div class="header_logo"></div>
@@ -138,7 +142,7 @@
         </div>
         <div class="header_wrap"></div>
         <div class="header_contacts">
-            <a href="./index.html">
+            <a href="../index.html">
                 <div class="header_logo"></div>
             </a>
             <div class="header_contacts_info">
@@ -171,12 +175,12 @@
             </div>
         </div>
         <div class="header_content">
-            <h2>Грузоперевозки Барнаул</h2>
+            <h2><?=$page->text_title?></h2>
             <p class="visible_header_text">Получите расчет стоимости грузоперевозки за 60 секунд</p>
             <p class="invisible_header_text">Ответьте на 4 вопроса <br> и получите расчет стоимости грузоперевозки за
                 60 секунд</p>
             <div class="header_count">
-                <form class="header_count_form" id="form1" method="post" action="thanks_window.php">
+                <form class="header_count_form" id="form1" method="post" action="../thanks_window.php">
                     <input id='ADDRESS_FROM_HEADER' class="header_count_form_input invisible_header_input" name="ADDRESS_FROM_HEADER"
                         type="text" placeholder="Город отправления">
                     <input id="ADDRESS_TO_HEADER" name="ADDRESS_TO_HEADER" class="header_count_form_input invisible_header_input"
@@ -209,27 +213,22 @@
         </div>
     </header>
     <section class="article">
-        <h2>Грузоперевозки барнаул</h2>
+        <h2><?=$page->text_title?></h2>
         <div class="article_content">
             <div class="article_content_text">
                 <div class="text_wrap">
-                    <p>
-                        Повседневная практика показывает, что постоянное информационно-пропагандистское обеспечение
-                        нашей
-                        деятельности обеспечивает широкому кругу (специалистов) участие в формировании соответствующий
-                        условий активизации. Таким образом укрепление и развитие структуры в значительной степени
-                        обуславливает создание систем массового участия. Значимость этих проблем настолько очевидна.</p>
+                    <p><?=$page->text?></p>
                 </div>
                 <button class="article__btn btn" onclick="modal_on_second()">Заказать грузоперевозку</button>
             </div>
-            <div class="article_content_image"></div>
+            <div class="article_content_image" style="background-image: url(<?=$page->img_second?>)"></div>
         </div>
     </section>
     <section class="online_apply">
         <h2><span class="apply_title_styled">ОНЛАЙН ЗАЯВКА</span> НА РАСЧЕТ <br> СТОИМОСТИ ДОСТАВКИ ГРУЗА</h2>
         <p>Предоставляем услуги погрузки и упаковки груза в каждом городе России.</p>
         <div class="online_apply_content">
-            <form class="online_apply_content_form" action="thanks_window.php" method="post">
+            <form class="online_apply_content_form" action="../thanks_window.php" method="post">
                 <div class="form_item">
                     <span class="form_input_span">Откуда</span>
                     <input id="ADDRESS_FROM_FOOTER" name="ADDRESS_FROM_FOOTER" type="text" size="100" class="online_apply_content_style apply_count_form_input"
@@ -622,7 +621,7 @@
         <p class="modal_text">Заполните контактную форму и мы с вами свяжемся</p>
         <div id="close_btn" class="close_btn" onclick="close_modal()">
         </div>
-        <form id="prompt-form" method="post" action="thanks_window.php">
+        <form id="prompt-form" method="post" action="../thanks_window.php">
             <input class="modal_window_input" name="name" type="text" placeholder="Введите Ваше имя">
             <input class="modal_window_input" id="phone-number" name="phone-number" type="text" maxlength="14"
                 placeholder="Контактный телефон">
@@ -636,8 +635,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.8/min/tiny-slider.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="./tiger.js/countUp.js-master/countUp.js"></script>
-    <script src="./tiger.js/tiger.js"></script>
+    <script src="../tiger.js/countUp.js-master/countUp.js"></script>
+    <script src="../tiger.js/tiger.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/suggestions-jquery@18.8.0/dist/js/jquery.suggestions.min.js"></script>
     <script type="text/javascript">
