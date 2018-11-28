@@ -1,6 +1,13 @@
 <?php
 require("../admin/database/db.php");
+require("../admin/templates/Block.php");
+
+use Templates\Block;
+
 $page = R::load("pages", $_GET["id"]);
+
+$tagged_pages = R::getAll("SELECT * FROM pages WHERE tag=:tag", ["tag" => $page->tag]);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -175,10 +182,9 @@ $page = R::load("pages", $_GET["id"]);
             </div>
         </div>
         <div class="header_content">
-            <h2><?=$page->text_title?></h2>
-            <p class="visible_header_text">Получите расчет стоимости грузоперевозки за 60 секунд</p>
-            <p class="invisible_header_text">Ответьте на 4 вопроса <br> и получите расчет стоимости грузоперевозки за
-                60 секунд</p>
+            <h2><?=$page->offer?></h2>
+            <p class="visible_header_text"><?=$page->content?></p>
+            <p class="invisible_header_text"><?=$page->content?></p>
             <div class="header_count">
                 <form class="header_count_form" id="form1" method="post" action="../thanks_window.php">
                     <input id='ADDRESS_FROM_HEADER' class="header_count_form_input invisible_header_input" name="ADDRESS_FROM_HEADER"
@@ -342,156 +348,16 @@ $page = R::load("pages", $_GET["id"]);
         </div>
         <div class="blog_content">
             <div class="blog_content__images">
-                <div class="blog_content__images_item">
-                    <div class="blog_type__item_wrap"></div>
-                    <div class="blog_type__content">
-                        <span class="blog_type__text">грузоперевозки Барнаул</span>
-                    </div>
-                    <div class="blog_type__content_hover">
-                        <span class="blog_type__text_hover">грузоперевозки Барнаул</span>
-                        <button class="blog_type__btn btn" onclick="modal_on_second()">Заказать</button>
-                    </div>
-                </div>
-                <div class="blog_content__images_item">
-                    <div class="blog_type__item_wrap"></div>
-                    <div class="blog_type__content">
-                        <span class="blog_type__text">грузоперевозки Новосибирск</span>
-                    </div>
-                    <div class="blog_type__content_hover">
-                        <span class="blog_type__text_hover">грузоперевозки Новосибирск</span>
-                        <button class="blog_type__btn btn" onclick="modal_on_second()">Заказать</button>
-                    </div>
-                </div>
-                <div class="blog_content__images_item">
-                    <div class="blog_type__item_wrap"></div>
-                    <div class="blog_type__content">
-                        <span class="blog_type__text">грузоперевозки цена за км</span>
-                    </div>
-                    <div class="blog_type__content_hover">
-                        <span class="blog_type__text_hover">грузоперевозки цена за км</span>
-                        <button class="blog_type__btn btn" onclick="modal_on_second()">Заказать</button>
-                    </div>
-                </div>
-                <div class="blog_content__images_item">
-                    <div class="blog_type__item_wrap"></div>
-                    <div class="blog_type__content">
-                        <span class="blog_type__text">грузоперевозки межгород недорого</span>
-                    </div>
-                    <div class="blog_type__content_hover">
-                        <span class="blog_type__text_hover">грузоперевозки межгород недорого</span>
-                        <button class="blog_type__btn btn" onclick="modal_on_second()">Заказать</button>
-                    </div>
-                </div>
-                <div class="blog_content__images_item">
-                    <div class="blog_type__item_wrap"></div>
-                    <div class="blog_type__content">
-                        <span class="blog_type__text">грузоперевозки Екатеринбург</span>
-                    </div>
-                    <div class="blog_type__content_hover">
-                        <span class="blog_type__text_hover">грузоперевозки Екатеринбург</span>
-                        <button class="blog_type__btn btn" onclick="modal_on_second()">Заказать</button>
-                    </div>
-                </div>
-                <div class="blog_content__images_item">
-                    <div class="blog_type__item_wrap"></div>
-                    <div class="blog_type__content">
-                        <span class="blog_type__text">грузоперевозки по России</span>
-                    </div>
-                    <div class="blog_type__content_hover">
-                        <span class="blog_type__text_hover">грузоперевозки по России</span>
-                        <button class="blog_type__btn btn" onclick="modal_on_second()">Заказать</button>
-                    </div>
-                </div>
+                <?
+                    for ($i = 5; $i >= 0; $i--) {
+                        echo Block::generate_tagged_block($tagged_pages[$i]["offer"], $tagged_pages[$i]["img_first"]);
+                    }
+                ?>
             </div>
             <div class="blog_content__text">
                 <span>А также:</span>
                 <div class="my-blog-slider">
-                    <div>
-                        <ul>
-                            <li>грузоперевозки межгород цена</li>
-                            <li>грузоперевозки межгород цена за км</li>
-                            <li>грузоперевозки межгород недорого</li>
-                            <li>грузоперевозки газель межгород цены</li>
-                            <li>грузоперевозки газель межгород цена за км</li>
-                            <li>грузоперевозки межгород Барнаул</li>
-                            <li>грузоперевозки межгород Новосибирск</li>
-                            <li>грузоперевозки межгород Екатеринбург</li>
-                            <li>грузоперевозки межгород Тюмень</li>
-                            <li>грузоперевозки межгород Воронеж</li>
-                            <li>грузоперевозки межгород стоимость</li>
-                            <li>грузоперевозки межгород Казань</li>
-                            <li>грузоперевозки межгород Киров</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <ul>
-                            <li>грузоперевозки межгород цена</li>
-                            <li>грузоперевозки межгород цена за км</li>
-                            <li>грузоперевозки межгород недорого</li>
-                            <li>грузоперевозки газель межгород цены</li>
-                            <li>грузоперевозки газель межгород цена за км</li>
-                            <li>грузоперевозки межгород Барнаул</li>
-                            <li>грузоперевозки межгород Новосибирск</li>
-                            <li>грузоперевозки межгород Екатеринбург</li>
-                            <li>грузоперевозки межгород Тюмень</li>
-                            <li>грузоперевозки межгород Воронеж</li>
-                            <li>грузоперевозки межгород стоимость</li>
-                            <li>грузоперевозки межгород Казань</li>
-                            <li>грузоперевозки межгород Киров</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <ul>
-                            <li>грузоперевозки межгород цена</li>
-                            <li>грузоперевозки межгород цена за км</li>
-                            <li>грузоперевозки межгород недорого</li>
-                            <li>грузоперевозки газель межгород цены</li>
-                            <li>грузоперевозки газель межгород цена за км</li>
-                            <li>грузоперевозки межгород Барнаул</li>
-                            <li>грузоперевозки межгород Новосибирск</li>
-                            <li>грузоперевозки межгород Екатеринбург</li>
-                            <li>грузоперевозки межгород Тюмень</li>
-                            <li>грузоперевозки межгород Воронеж</li>
-                            <li>грузоперевозки межгород стоимость</li>
-                            <li>грузоперевозки межгород Казань</li>
-                            <li>грузоперевозки межгород Киров</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <ul>
-                            <li>грузоперевозки межгород цена</li>
-                            <li>грузоперевозки межгород цена за км</li>
-                            <li>грузоперевозки межгород недорого</li>
-                            <li>грузоперевозки газель межгород цены</li>
-                            <li>грузоперевозки газель межгород цена за км</li>
-                            <li>грузоперевозки межгород Барнаул</li>
-                            <li>грузоперевозки межгород Новосибирск</li>
-                            <li>грузоперевозки межгород Екатеринбург</li>
-                            <li>грузоперевозки межгород Тюмень</li>
-                            <li>грузоперевозки межгород Воронеж</li>
-                            <li>грузоперевозки межгород стоимость</li>
-                            <li>грузоперевозки межгород Казань</li>
-                            <li>грузоперевозки межгород Киров</li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <ul>
-                            <li>грузоперевозки межгород цена</li>
-                            <li>грузоперевозки межгород цена за км</li>
-                            <li>грузоперевозки межгород недорого</li>
-                            <li>грузоперевозки газель межгород цены</li>
-                            <li>грузоперевозки газель межгород цена за км</li>
-                            <li>грузоперевозки межгород Барнаул</li>
-                            <li>грузоперевозки межгород Новосибирск</li>
-                            <li>грузоперевозки межгород Екатеринбург</li>
-                            <li>грузоперевозки межгород Тюмень</li>
-                            <li>грузоперевозки межгород Воронеж</li>
-                            <li>грузоперевозки межгород стоимость</li>
-                            <li>грузоперевозки межгород Казань</li>
-                            <li>грузоперевозки межгород Киров</li>
-                        </ul>
-                    </div>
+                    <?=Block::generate_slider_blocks($tagged_pages)?>
                 </div>
             </div>
         </div>

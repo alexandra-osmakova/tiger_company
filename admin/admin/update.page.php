@@ -1,19 +1,37 @@
 <?php
 
 session_start();
+
 require("../database/db.php");
+
+$uploaddir = '../../tiger.img/';
 
 if (isset($_SESSION["user"]) && $_SESSION["user"] === "admin") {
 
     $page = R::load("pages", $_GET["id"]);
 
     if (isset($_POST["update"])) {
+        if ($_FILES['img_first']["name"] !== "") {
+            $file_path_first = $uploaddir . $_FILES['img_first']['name'];
+            move_uploaded_file($_FILES['img_first']['tmp_name'], $file_path_first);
+            $url_first = "../tiger.img/" . $_FILES['img_first']['name'];
+
+            $page->img_first = $url_first;
+        }
+        if ($_FILES['img_second']["name"] !== "") {
+            $file_path_second = $uploaddir . $_FILES['img_second']['name'];
+            move_uploaded_file($_FILES['img_second']['tmp_name'], $file_path_second);
+            $url_second = "../tiger.img/" . $_FILES['img_second']['name'];
+
+            $page->img_second = $url_second;
+        }
+
         $page->title = $_POST["title"];
         $page->offer = $_POST["offer"];
-        $page->img = $_POST["img"];
         $page->text_title = $_POST["text_title"];
         $page->content = $_POST["content"];
         $page->tag = $_POST["tag"];
+        $page->text = $_POST["text"];
         $page->description = $_POST["description"];
 
         R::store($page);
@@ -29,22 +47,78 @@ if (isset($_SESSION["user"]) && $_SESSION["user"] === "admin") {
 
     </head>
 <body>
-<div style="display: table-caption;margin-right: auto;margin-left: auto;">
-    <form action="update.page.php?id=<?= $page->id ?>" method="post">
-        <input type="text" name="title" value="<?= $page->title ?>">
-        <input type="text" name="offer" value="<?= $page->offer ?>">
-        <input type="file" accept=".jpg, .jpeg, .png" name="img" value="<?= $page->img ?>">
-        <input type="text" name="text_title" value="<?= $page->text_title ?>">
-        <input type="text" name="content" value="<?= $page->content ?>">
-        <input type="text" name="tag" value="<?= $page->tag ?>">
-        <input type="text" name="description" value="<?= $page->description ?>">
-        <input type="submit" name="update" value="Submit">
-    </form>
-</div>
+<section id="admin">
+    <div class="content">
+        <div class="wrapper centered active">
+            <form action="update.page.php?id=<?= $page->id ?>" method="post" enctype="multipart/form-data">
+                <h1>Редактировать страницу: <?= $page->id ?></h1>
+                <a href="index.php" class="button-standart">Назад</a>
+
+                <label for="title">Тег title</label>
+                <input type="text" id="title" name="title" value="<?= $page->title ?>">
+
+                <label for="description">Метатег description</label>
+                <input type="text" id="description" name="description" value="<?= $page->description ?>">
+
+                <label for="offer">Оффер страницы</label>
+                <input type="text" id="offer" name="offer" value="<?= $page->offer ?>">
+
+                <label for="content">CTA страницы</label>
+                <input type="text" id="content" name="content" value="<?= $page->content ?>">
+
+                <label for="text_title">Заоголовок текста</label>
+                <input type="text" id="text_title" name="text_title" value="<?= $page->text_title ?>">
+
+                <label for="text">Текст</label>
+                <div id="toolbar"></div>
+                <textarea name="text" id="text" class="editor"><?= $page->text ?></textarea>
+
+                <div class="files">
+                    <div class="file">
+                        <label for="img_first">Обложка первого блока</label>
+                        <div class="file-upload">
+                            <label>
+                                <input type="file" accept="image/*" id="img_first" name="img_first">
+                                <span>Выберите файл</span>
+                            </label>
+                        </div>
+                        <input type="text" id="filename_first" class="filename" disabled>
+                    </div>
+
+                    <div class="file">
+                        <label for="img_second">Картинка для текста</label>
+                        <div class="file-upload">
+                            <label>
+                                <input type="file" accept="image/*" id="img_second" name="img_second">
+                                <span>Выберите файл</span>
+                            </label>
+                        </div>
+                        <input type="text" id="filename_second" class="filename" disabled>
+                    </div>
+                </div>
+
+                <label for="tag">Тег страницы</label>
+                <select name="tag" id="tag">
+                    <option value="g_rus" selected>Грузоперевозки по России</option>
+                    <option value="g_fur">Грузоперевозки фурами</option>
+                    <option value="g_ref">Грузоперевозки рефрижератором</option>
+                    <option value="pg">Попутные грузоперевозки</option>
+                    <option value="dsg">Доставка сборных грузов</option>
+                    <option value="pm">Переезды межгород</option>
+                    <option value="plv">Перевозка личных вещей</option>
+                    <option value="pkvg">Перевозка конкретных видов груза</option>
+                    <option value="g_kamaz">Грузоперевозки КамАЗом</option>
+                </select>
+
+                <input type="submit" name="update" value="Сохранить">
+            </form>
+        </div>
+</section>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
 
-<script>tinymce.init({
+<script>
+    tinymce.init({
         selector: 'textarea',
         theme: 'modern',
         width: 600,
@@ -57,14 +131,6 @@ if (isset($_SESSION["user"]) && $_SESSION["user"] === "admin") {
         content_css: '../css/admin.css',
         toolbar: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | print preview media fullpage | forecolor backcolor emoticons'
     });
-
-    var hide = function (item) {
-        $(item).css("display", "none");
-    };
-
-    var show = function (item) {
-        $(item).css("display", "block");
-    };
 
     $("span").on("click", function (e) {
         $("span").attr("class", "");
@@ -93,6 +159,14 @@ if (isset($_SESSION["user"]) && $_SESSION["user"] === "admin") {
             }
         });
     });
+
+    let options = $("select").find("option");
+
+    for (let i = 0; i < 9; i++) {
+        if ($(options[i]).val() === "<?=$page->tag?>") {
+            options[i].selected = true;
+        }
+    }
 </script>
 <? } else {
     echo "<h1 style='color: RED;'>ACCESS DENIED</h1>";

@@ -5,6 +5,16 @@
     padding: 0;
 }
 
+.button-standart {
+    background: #FFE070;
+    width: 154px;
+    height: 25px;
+    text-align: center;
+    padding-top: 4px;
+    text-decoration: none;
+    color: black;
+}
+
 .form-container {
     width: 440px;
     height: 400px;

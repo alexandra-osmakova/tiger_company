@@ -104,7 +104,15 @@ if (isset($_SESSION["user"])) {
 
                     <label for="tag">Тег страницы</label>
                     <select name="tag" id="tag">
-                        <option value=""></option>
+                        <option value="g_rus" selected>Грузоперевозки по России</option>
+                        <option value="g_fur">Грузоперевозки фурами</option>
+                        <option value="g_ref">Грузоперевозки рефрижератором</option>
+                        <option value="pg">Попутные грузоперевозки</option>
+                        <option value="dsg">Доставка сборных грузов</option>
+                        <option value="pm">Переезды межгород</option>
+                        <option value="plv">Перевозка личных вещей</option>
+                        <option value="pkvg">Перевозка конкретных видов груза</option>
+                        <option value="g_kamaz">Грузоперевозки КамАЗом</option>
                     </select>
 
                     <input type="submit" name="add_page" value="Создать страницу">
@@ -134,28 +142,7 @@ if (isset($_SESSION["user"])) {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
 
-    <script>tinymce.init({
-            selector: 'textarea',
-            theme: 'modern',
-            width: 600,
-            height: 300,
-            plugins: [
-                'advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker',
-                'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
-                'save table contextmenu directionality emoticons template paste textcolor'
-            ],
-            content_css: '../css/admin.css',
-            toolbar: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | print preview media fullpage | forecolor backcolor emoticons'
-        });
-
-        var hide = function (item) {
-            $(item).css("display", "none");
-        };
-
-        var show = function (item) {
-            $(item).css("display", "block");
-        };
-
+    <script>
         $("span").on("click", function (e) {
             $("span").attr("class", "");
             $(e.currentTarget).attr("class", "active");
@@ -182,6 +169,20 @@ if (isset($_SESSION["user"])) {
                     $("#filename_second").val(filename);
                 }
             });
+        });
+
+        tinymce.init({
+            selector: 'textarea',
+            theme: 'modern',
+            width: 600,
+            height: 300,
+            plugins: [
+                'advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker',
+                'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
+                'save table contextmenu directionality emoticons template paste textcolor'
+            ],
+            content_css: '../css/admin.css',
+            toolbar: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | print preview media fullpage | forecolor backcolor emoticons'
         });
     </script>
     </body>
