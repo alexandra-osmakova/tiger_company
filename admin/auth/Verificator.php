@@ -3,7 +3,7 @@
 namespace Util;
 
 class Verificator {
-    public static function verify(string $login, string $pwd) : bool{
+    public static function verify($login, $pwd) {
         if($login === "admin" && $pwd === "admin") {
             return 1;
         }else {

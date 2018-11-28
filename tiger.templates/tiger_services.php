@@ -5,6 +5,8 @@ require("../admin/templates/Block.php");
 use Templates\Block;
 
 $page = R::getAll("SELECT * FROM pages WHERE tag=:tag", ["tag" => $_GET["tag"]]);
+
+$img_url = "../tiger.img/services_" . $_GET["tag"] . ".jpg";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +27,7 @@ $page = R::getAll("SELECT * FROM pages WHERE tag=:tag", ["tag" => $_GET["tag"]])
     <link href="https://cdn.jsdelivr.net/npm/suggestions-jquery@18.8.0/dist/css/suggestions.min.css" type="text/css"
           rel="stylesheet"/>
 
-    <title>Транспортная компания Tiger Logistic - <?= $_GET["tag"] ?></title>
+    <title>Транспортная компания Tiger Logistic - <?=Block::get_offer($_GET["tag"])?></title>
 
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
@@ -80,7 +82,7 @@ $page = R::getAll("SELECT * FROM pages WHERE tag=:tag", ["tag" => $_GET["tag"]])
 </head>
 
 <body>
-<header class="tiger_services_header">
+<header class="tiger_services_header" style="background-image: url(<?=$img_url?>)">
     <div class="header_menu_open">
         <div class="header_contacts">
             <div class="header_logo"></div>

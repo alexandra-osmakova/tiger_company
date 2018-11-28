@@ -19,63 +19,63 @@ header {
 }
 
 .tiger_services_header {
-    background-image: url(../tiger.img/tiger_services_header.jpg);
+    background-image: url(../tiger.img/services_g_rus.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .tiger_fura_header {
-    background-image: url(../tiger.img/logistics-lorry-mountains-933981.jpg);
+    background-image: url(../tiger.img/services_g_fur.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .tiger_fridge_header {
-    background-image: url(../tiger.img/hey.jpg);
+    background-image: url(../tiger.img/services_g_ref.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 30%;
 }
 
 .oneway_transport_header {
-    background-image: url(../tiger.img/shutterstock_1039216024-e1535033228887.jpg);
+    background-image: url(../tiger.img/services_pg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .tiger_relocation_header {
-    background-image: url(../tiger.img/Movers-And-Packers-Services-In-USA.jpg);
+    background-image: url(../tiger.img/services_pm.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .tiger_dogruz_header {
-    background-image: url(../tiger.img/gallagher-delivers-on-their-promise.jpg);
+    background-image: url(../tiger.img/services_dsg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .tiger_personal_stuff_header {
-    background-image: url(../tiger.img/ekspress_piegade.jpg);
+    background-image: url(../tiger.img/services_plv.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .tiger_actual_things_header {
-    background-image: url(../tiger.img/original_1e5853df4cfc9a6c.jpg);
+    background-image: url(../tiger.img/services_pkvg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .tiger_kamaz_header {
-    background-image: url(../tiger.img/kamaz_4308-n3_2.jpg);
+    background-image: url(../tiger.img/services_g_kamaz.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -989,56 +989,56 @@ header {
 }
 
 .service_type__item:nth-of-type(2) {
-    background-image: url(../tiger.img/logistics-lorry-mountains-933981.jpg);
+    background-image: url(../tiger.img/services_g_fur.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: left;
 }
 
 .service_type__item:nth-of-type(3) {
-    background-image: url(../tiger.img/hey.jpg);
+    background-image: url(../tiger.img/services_g_ref.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 100% 15%;
 }
 
 .service_type__item:nth-of-type(4) {
-    background-image: url(../tiger.img/shutterstock_1039216024-e1535033228887.jpg);
+    background-image: url(../tiger.img/services_pg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .service_type__item:nth-of-type(5) {
-    background-image: url(../tiger.img/gallagher-delivers-on-their-promise.jpg);
+    background-image: url(../tiger.img/services_dsg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: left;
 }
 
 .service_type__item:nth-of-type(6) {
-    background-image: url(../tiger.img/Movers-And-Packers-Services-In-USA.jpg);
+    background-image: url(../tiger.img/services_pm.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .service_type__item:nth-of-type(7) {
-    background-image: url(../tiger.img/ekspress_piegade.jpg);
+    background-image: url(../tiger.img/services_plv.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: left;
 }
 
 .service_type__item:nth-of-type(8) {
-    background-image: url(../tiger.img/original_1e5853df4cfc9a6c.jpg);
+    background-image: url(../tiger.img/services_pkvg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .service_type__item:nth-of-type(9) {
-    background-image: url(../tiger.img/kamaz_4308-n3_2.jpg);
+    background-image: url(../tiger.img/services_g_kamaz.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -1399,7 +1399,7 @@ header {
 .adadditional_info_content_image {
     max-height: 24rem;
     width: 30%;
-    background-image: url(../tiger.img/logistics-lorry-mountains-933981.jpg);
+    background-image: url(../tiger.img/services_g_fur.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -2737,7 +2737,7 @@ input[type=submit] {
     background-image: url(../tiger.img/tiger_services_page3.jpg);
 }
 .blog_content__images_item:nth-of-type(4) {
-    background-image: url(../tiger.img/tiger_services_header.jpg);
+    background-image: url(../tiger.img/services_g_rus.jpg);
 }
 .blog_content__images_item:nth-of-type(5) {
     background-image: url(../tiger.img/tiger_services_page5.jpg);
