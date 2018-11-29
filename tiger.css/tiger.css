@@ -18,13 +18,6 @@ header {
     position: relative;
 }
 
-.tiger_services_header {
-    background-image: url(../tiger.img/tiger_services_header.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
 .tiger_fura_header {
     background-image: url(../tiger.img/logistics-lorry-mountains-933981.jpg);
     background-size: cover;
@@ -37,13 +30,6 @@ header {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 30%;
-}
-
-.oneway_transport_header {
-    background-image: url(../tiger.img/shutterstock_1039216024-e1535033228887.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .tiger_relocation_header {
@@ -72,13 +58,6 @@ header {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-}
-
-.tiger_kamaz_header {
-    background-image: url(../tiger.img/kamaz_4308-n3_2.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: bottom;
 }
 
 .third_level_header {
@@ -2972,6 +2951,27 @@ input[type=submit] {
 
     #video-bg {
         background-image: url(../tiger.img/main_header_background.jpg);
+    }
+
+    .tiger_services_header #video-bg {
+        background-image: url(../tiger.img/tiger_services_header.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .tiger_kamaz_header #video-bg {
+        background-image: url(../tiger.img/kamaz_4308-n3_2.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: bottom;
+    }
+
+    .oneway_transport_header #video-bg  {
+        background-image: url(../tiger.img/shutterstock_1039216024-e1535033228887.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
     }
 }
 
