@@ -1987,6 +1987,15 @@ $img_url = "../tiger.img/services_" . $_GET["tag"] . ".jpg";
             console.log(suggestion);
         }
     });
+
+    let count = 0;
+
+    $("input#next").on("click", function (e) {
+        if($(e.currentTarget).val() === "Рассчитать стоимость" && count === 3) {
+            $("input#form1_btn").click();
+        }
+        count++;
+    });
 </script>
 </body>
 
