@@ -312,9 +312,8 @@ var invisible_header_counter_item = document.getElementsByClassName('invisible_h
 invisible_header_btn.addEventListener('click', function() {
     headerCounter()
     if(header_input_count < 3) {
-        invisible_header_input[header_input_count].classList.toggle('animated_transform');
-        invisible_header_input[header_input_count].classList.add('main_header_input');
-        console.log(invisible_header_input[header_input_count].classList)
+        invisible_header_input[header_input_count].classList.add('animated_elem');
+        invisible_header_input[header_input_count].classList.add('animated_transform');
         header_input_count++;
         if(header_input_count==3 ) {
             invisible_header_btn.value = "Рассчитать стоимость"
