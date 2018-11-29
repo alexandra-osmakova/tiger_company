@@ -186,6 +186,11 @@ $tagged_pages = R::getAll("SELECT * FROM pages WHERE tag=:tag", ["tag" => $page-
             <p class="visible_header_text"><?=$page->content?></p>
             <p class="invisible_header_text"><?=$page->content?></p>
             <div class="header_count">
+
+                <div class="invisible_header_counter">
+                    <span class="invisible_header_counter_item">1</span>/4
+                </div>
+
                 <form class="header_count_form" id="form1" method="post" action="../thanks_window.php">
                     <input id='ADDRESS_FROM_HEADER' class="header_count_form_input invisible_header_input" name="ADDRESS_FROM_HEADER"
                         type="text" placeholder="Город отправления">
@@ -369,9 +374,9 @@ $tagged_pages = R::getAll("SELECT * FROM pages WHERE tag=:tag", ["tag" => $page-
             <h3>Подробнее о способах оплаты:</h3>
             <div class="payment_info_column">
                 <div class="payment_info___type_item">
-                    <div class="payment_info_type" id='payment_info_type_first'>
+                    <div class="payment_info_type">
                         <div class="payment_info__number">1</div>
-                        <span class="payment_type_info_text">Безналичный расчет с НДС 18%</span>
+                        <span class="payment_type_info_text" id='payment_info_type_first'>Безналичный расчет с НДС 18%</span>
                     </div>
                     <div id='payment_info_text_first' class="payment_info__type_text">
                         <p>Оплата производится c НДС 18% на основании счета до выгрузки транспортного средства. При
@@ -379,9 +384,9 @@ $tagged_pages = R::getAll("SELECT * FROM pages WHERE tag=:tag", ["tag" => $page-
                     </div>
                 </div>
                 <div class="payment_info___type_item">
-                    <div class="payment_info_type" id='payment_info_type_second'>
+                    <div class="payment_info_type">
                         <div class="payment_info__number">2</div>
-                        <span class="payment_type_info_text">Безналичный расчет без НДС</span>
+                        <span class="payment_type_info_text" id='payment_info_type_second'>Безналичный расчет без НДС</span>
                     </div>
                     <div id='payment_info_text_second' class="payment_info__type_text">
                         <p>Оплата производится без НДС на основании счета до выгрузки транспортного средства. При
@@ -389,9 +394,9 @@ $tagged_pages = R::getAll("SELECT * FROM pages WHERE tag=:tag", ["tag" => $page-
                     </div>
                 </div>
                 <div class="payment_info___type_item">
-                    <div class="payment_info_type" id='payment_info_type_third'>
+                    <div class="payment_info_type">
                         <div class="payment_info__number">3</div>
-                        <span class="payment_type_info_text">Оплата наличными</span>
+                        <span class="payment_type_info_text" id='payment_info_type_third'>Оплата наличными</span>
                     </div>
                     <div id='payment_info_text_third' class="payment_info__type_text">
                         <p>Оплата производится наличными средствами на основании счета перед выгрузкой транспортного
@@ -399,9 +404,9 @@ $tagged_pages = R::getAll("SELECT * FROM pages WHERE tag=:tag", ["tag" => $page-
                     </div>
                 </div>
                 <div class="payment_info___type_item">
-                    <div class="payment_info_type" id='payment_info_type_fourth'>
+                    <div class="payment_info_type">
                         <div class="payment_info__number">4</div>
-                        <span class="payment_type_info_text">Online оплата</span>
+                        <span class="payment_type_info_text" id='payment_info_type_fourth'>Online оплата</span>
                     </div>
                     <div id='payment_info_text_fourth' class="payment_info__type_text">
                         <p>Оплата online переводом на карту Сбербанка и других банков до выгрузки транспортного
