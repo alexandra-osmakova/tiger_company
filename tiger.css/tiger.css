@@ -22,11 +22,11 @@ header {
     background-image: url(../tiger.img/logistics-lorry-mountains-933981.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: 50% 85%;
 }
 
 .tiger_fridge_header {
-    background-image: url(../tiger.img/hey.jpg);
+    background-image: url(../tiger.img/MAN-18.240-1.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 30%;
@@ -109,9 +109,35 @@ header {
     right: 0rem;
 }
 
+.invisible_header_counter {
+    display: none;
+    width: 90%;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+.invisible_header_counter_item {
+    font-size: 2rem;
+    color: #ffdb4d;
+}
+
 .invisible_header_text, .invisible_header_btn {
     display: none;
 }
+
+.animated_elem {
+    -webkit-transition: left 2s ease;  
+    -moz-transition: left 2s ease;  
+    -o-transition: left 2s ease;  
+    -ms-transition: left 2s ease;  
+    transition: left 2s ease;
+}
+
+.animated_transform {
+    left: -20%!important;
+}
+
 
 .header_wrap {
     position: absolute;
@@ -2991,11 +3017,11 @@ input[type=submit] {
         width: 60%;
     }
 
-    .tns-controls button:nth-of-type(1) {
+    .clients_review .tns-controls button:nth-of-type(1){
         left: 35%;
     }
 
-    .tns-controls button:nth-of-type(2) {
+    .clients_review .tns-controls button:nth-of-type(2) {
         right: 35%;
     }
 }
@@ -3016,11 +3042,11 @@ input[type=submit] {
         width: 60%;
     }
 
-    .tns-controls button:nth-of-type(1) {
+    .clients_review .tns-controls button:nth-of-type(1){
         left: 35%;
     }
 
-    .tns-controls button:nth-of-type(2) {
+    .clients_review .tns-controls button:nth-of-type(2) {
         right: 35%;
     }
 }
@@ -3041,11 +3067,11 @@ input[type=submit] {
         width: 60%;
     }
 
-    .tns-controls button:nth-of-type(1) {
+    .clients_review .tns-controls button:nth-of-type(1){
         left: 35%;
     }
 
-    .tns-controls button:nth-of-type(2) {
+    .clients_review .tns-controls button:nth-of-type(2) {
         right: 35%;
     }
 }
@@ -3061,11 +3087,11 @@ input[type=submit] {
         bottom: 10.3125rem;
     }
 
-    .tns-controls button:nth-of-type(1) {
+    .clients_review .tns-controls button:nth-of-type(1) {
         left: 35%;
     }
 
-    .tns-controls button:nth-of-type(2) {
+    .clients_review .tns-controls button:nth-of-type(2){
         right: 35%;
     }
 }
@@ -3095,11 +3121,11 @@ input[type=submit] {
         bottom: 10.3125rem;
     }
 
-    .tns-controls button:nth-of-type(1) {
+    .clients_review .tns-controls button:nth-of-type(1){
         left: 35%;
     }
 
-    .tns-controls button:nth-of-type(2) {
+    .clients_review .tns-controls button:nth-of-type(2) {
         right: 35%;
     }
 }
@@ -3218,11 +3244,11 @@ input[type=submit] {
         padding: 6rem 6.125rem;
     }
 
-    .tns-controls button:nth-of-type(1) {
+    .clients_review .tns-controls button:nth-of-type(1){
         left: 25%;
     }
 
-    .tns-controls button:nth-of-type(2) {
+    .clients_review .tns-controls button:nth-of-type(2){
         right: 25%;
     }
 }
@@ -3617,11 +3643,11 @@ input[type=submit] {
         padding-left: 6.125rem;
     }
 
-    .tns-controls button:nth-of-type(1) {
+    .clients_review .tns-controls button:nth-of-type(1){
         left: 25%;
     }
 
-    .tns-controls button:nth-of-type(2) {
+    .clients_review .tns-controls button:nth-of-type(2) {
         right: 25%;
     }
 
@@ -3809,11 +3835,6 @@ input[type=submit] {
     .invisible_header_input {
         position: absolute;
         left: 1.5rem;
-
-        -o-transition: all 0.5s ease;
-        -moz-transition: all 0.5s ease;
-        -webkit-transition: all 0.5s ease;
-        transition: all 0.5s ease;
     }
 
     .invisible_header_input:nth-of-type(1) {
@@ -4204,11 +4225,11 @@ input[type=submit] {
         margin-top: 1rem;
     }
 
-    .tns-controls button:nth-of-type(1) {
+    .clients_review .tns-controls button:nth-of-type(1){
         left: 6%;
     }
 
-    .tns-controls button:nth-of-type(2) {
+    .clients_review .tns-controls button:nth-of-type(2) {
         right: 6%;
     }
 
@@ -4411,11 +4432,6 @@ input[type=submit] {
     .invisible_header_input {
         position: absolute;
         left: 1.5rem;
-
-        -o-transition: all 0.5s ease;
-        -moz-transition: all 0.5s ease;
-        -webkit-transition: all 0.5s ease;
-        transition: all 0.5s ease;
     }
 
     .invisible_header_input:nth-of-type(1) {
@@ -4905,23 +4921,15 @@ input[type=submit] {
         margin-left: 1.5rem;
     }
 
-    .tns-controls button:nth-of-type(1) {
-        left: 16%;
-    }
-
-    .tns-controls button:nth-of-type(2) {
-        right: 16%;
-    }
-
     .adadditional_info_content_image {
         display: none;
     }
 
-    .tns-controls button:nth-of-type(1) {
+    .clients_review .tns-controls button:nth-of-type(1) {
         left: 6%;
     }
 
-    .tns-controls button:nth-of-type(2) {
+    .clients_review .tns-controls button:nth-of-type(2){
         right: 6%;
     }
 
@@ -5124,11 +5132,6 @@ input[type=submit] {
     .invisible_header_input {
         position: absolute;
         left: 1.5rem;
-
-        -o-transition: all 0.5s ease;
-        -moz-transition: all 0.5s ease;
-        -webkit-transition: all 0.5s ease;
-        transition: all 0.5s ease;
     }
 
     .invisible_header_input:nth-of-type(1) {
@@ -5628,11 +5631,11 @@ input[type=submit] {
         margin-left: 1.5rem;
     }
 
-    .tns-controls button:nth-of-type(1) {
+    .clients_review .tns-controls button:nth-of-type(1){
         left: 6%;
     }
 
-    .tns-controls button:nth-of-type(2) {
+    .clients_review .tns-controls button:nth-of-type(2) {
         right: 6%;
     }
 
@@ -5664,6 +5667,10 @@ input[type=submit] {
     html,
     body {
         font-size: 10px;
+    }
+
+    .invisible_header_counter {
+        display: block;
     }
 
     .article {
@@ -5798,11 +5805,6 @@ input[type=submit] {
     .invisible_header_input {
         position: absolute;
         left: 1.5rem;
-
-        -o-transition: all 0.5s ease;
-        -moz-transition: all 0.5s ease;
-        -webkit-transition: all 0.5s ease;
-        transition: all 0.5s ease;
     }
 
     .invisible_header_input:nth-of-type(1) {
@@ -6307,11 +6309,11 @@ input[type=submit] {
         margin-left: 1.5rem;
     }
 
-    .tns-controls button:nth-of-type(1) {
+    .clients_review .tns-controls button:nth-of-type(1){
         left: 6%;
     }
 
-    .tns-controls button:nth-of-type(2) {
+    .clients_review .tns-controls button:nth-of-type(2) {
         right: 6%;
     }
 
