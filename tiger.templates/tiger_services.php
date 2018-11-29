@@ -22,8 +22,8 @@ $img_url = "../tiger.img/services_" . $_GET["tag"] . ".jpg";
     <link rel="stylesheet" href="../tiger.css/tiger.css">
     <link rel="stylesheet" href="../tiger.css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
-    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../favicon.png" type="image/png">
+    <link rel="icon" href="../favicon.png" type="image/png">
     <link href="https://cdn.jsdelivr.net/npm/suggestions-jquery@18.8.0/dist/css/suggestions.min.css" type="text/css"
           rel="stylesheet"/>
 
@@ -99,7 +99,7 @@ $img_url = "../tiger.img/services_" . $_GET["tag"] . ".jpg";
                         <span class="header_contacts_item__tel_comment">Звонок по России бесплатный</span>
                     </div>
                     <div class="header_email_info">
-                        <span class="header_email">autotrasport24@yandex.ru</span>
+                        <span class="header_email">autotransport24@yandex.ru</span>
                     </div>
                 </div>
                 <button class="btn header_contacts_info_item__btn" onclick="modal_on_second()">Заказать звонок</button>
@@ -160,7 +160,7 @@ $img_url = "../tiger.img/services_" . $_GET["tag"] . ".jpg";
                     <span class="header_contacts_item__tel_comment">Звонок по России бесплатный</span>
                 </div>
                 <div class="haeder_email_info">
-                    <span class="header_email">autotrasport24@yandex.ru</span>
+                    <span class="header_email">autotransport24@yandex.ru</span>
                 </div>
             </div>
             <button class="btn header_contacts_info_item__btn" onclick="modal_on_second()">Заказать звонок</button>
@@ -194,8 +194,8 @@ $img_url = "../tiger.img/services_" . $_GET["tag"] . ".jpg";
                        placeholder="Масса груза, кг">
                 <input class="header_count_form_input invisible_header_input" name="header_telephone" type="text"
                        placeholder="Контактный телефон" required>
-                <input type="text" class="header_count_form__btn invisible_header_btn" value="Далее" readonly>
-                <input class="header_count_form__btn" name="form1" type="submit" value="Быстрый рассчет">
+                <input type="text" id="next" class="header_count_form__btn invisible_header_btn" value="Далее" readonly>
+                <input class="header_count_form__btn" id="form1_btn" name="form1" type="submit" value="Быстрый рассчет">
             </form>
         </div>
     </div>
@@ -894,7 +894,7 @@ $img_url = "../tiger.img/services_" . $_GET["tag"] . ".jpg";
         </div>
     </div>
 </section>
-<section class="blog">
+<section class="blog" style="display:none;">
     <h2>НАШИ УСЛУГИ <br>
         грузоперевозок по россии <br>
         отдельным транспортом</h2>
@@ -1993,8 +1993,10 @@ $img_url = "../tiger.img/services_" . $_GET["tag"] . ".jpg";
     $("input#next").on("click", function (e) {
         if($(e.currentTarget).val() === "Рассчитать стоимость" && count === 3) {
             $("input#form1_btn").click();
+            console.log("YES");
         }
         count++;
+        console.log(count);
     });
 </script>
 </body>
