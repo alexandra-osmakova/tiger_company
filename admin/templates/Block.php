@@ -94,7 +94,7 @@ class Block
             case "g_rus"    :
             case "g_kamaz"  :
             case "pg"       :
-                return "<div id=\"video-bg\" style=\"background-image: url('../tiger.img/main_header_background.jpg')\">
+                return "<div id=\"video-bg\" style=\"background-image: url('$img_url');\">
                             <video loop muted autoplay>
                                 <source src=\"../tiger.video/2.webm\" type=\"video/webm\">
                             </video>

@@ -2980,7 +2980,7 @@ input[type=submit] {
     }
 
     .tiger_services_header #video-bg {
-        background-image: url(../tiger.img/tiger_services_header.jpg);
+        background-image: url(../tiger.img/main_header_background.jpg)!important;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;

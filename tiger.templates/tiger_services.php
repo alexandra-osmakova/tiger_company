@@ -895,7 +895,7 @@ $img_url = "../tiger.img/services_" . $_GET["tag"] . ".jpg";
         </div>
     </div>
 </section>
-<section class="blog">
+<section class="blog" style="display: none">
     <h2>НАШИ УСЛУГИ <br>
         грузоперевозок по россии <br>
         отдельным транспортом</h2>
