@@ -1,3 +1,14 @@
+<?php
+require("../admin/database/db.php");
+require("../admin/templates/Block.php");
+
+use Templates\Block;
+
+$page = R::load("pages", $_GET["id"]);
+
+$tagged_pages = R::getAll("SELECT * FROM pages WHERE tag=:tag", ["tag" => $page->tag]);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,17 +19,17 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.8/tiny-slider.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./tiger.css/reset.css">
-    <link rel="stylesheet" href="./tiger.css/tiger.css">
-    <link rel="stylesheet" href="./tiger.css/style.css">
+    <link rel="stylesheet" href="../tiger.css/reset.css">
+    <link rel="stylesheet" href="../tiger.css/tiger.css">
+    <link rel="stylesheet" href="../tiger.css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/suggestions-jquery@18.8.0/dist/css/suggestions.min.css" type="text/css"
         rel="stylesheet" />
 
 
-    <title>Транспортная компания Tiger Logistic - Грузоперевозки по России и СНГ</title>
+    <title><?=$page->title?></title>
 
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
@@ -77,7 +88,7 @@
 </head>
 
 <body>
-    <header class="third_level_header">
+    <header class="third_level_header" style="background-image: url(<?=$page->img_first?>)">
         <div class="header_menu_open">
             <div class="header_contacts">
                 <div class="header_logo"></div>
@@ -138,7 +149,7 @@
         </div>
         <div class="header_wrap"></div>
         <div class="header_contacts">
-            <a href="./index.html">
+            <a href="../index.html">
                 <div class="header_logo"></div>
             </a>
             <div class="header_contacts_info">
@@ -171,15 +182,23 @@
             </div>
         </div>
         <div class="header_content">
-            <h2>Грузоперевозки Барнаул</h2>
-            <p class="visible_header_text">Получите расчет стоимости грузоперевозки за 60 секунд</p>
-            <p class="invisible_header_text">Ответьте на 4 вопроса <br> и получите расчет стоимости грузоперевозки за
-                60 секунд</p>
+            <h2><?=$page->offer?></h2>
+            <p class="visible_header_text"><?=$page->content?></p>
+            <p class="invisible_header_text"><?=$page->content?></p>
             <div class="header_count">
+<<<<<<< HEAD:tiger.templates/tiger_trucking__third_level_page.php
+
+                <div class="invisible_header_counter">
+                    <span class="invisible_header_counter_item">1</span>/4
+                </div>
+
+                <form class="header_count_form" id="form1" method="post" action="../thanks_window.php">
+=======
                 <div class="invisible_header_counter">
                     <span class="invisible_header_counter_item">1</span>/4
                 </div>
                 <form class="header_count_form" id="form1" method="post" action="thanks_window.php">
+>>>>>>> master:tiger_trucking__third_level_page.html
                     <input id='ADDRESS_FROM_HEADER' class="header_count_form_input invisible_header_input" name="ADDRESS_FROM_HEADER"
                         type="text" placeholder="Город отправления">
                     <input id="ADDRESS_TO_HEADER" name="ADDRESS_TO_HEADER" class="header_count_form_input invisible_header_input"
@@ -212,27 +231,22 @@
         </div>
     </header>
     <section class="article">
-        <h2>Грузоперевозки барнаул</h2>
+        <h2><?=$page->text_title?></h2>
         <div class="article_content">
             <div class="article_content_text">
                 <div class="text_wrap">
-                    <p>
-                        Повседневная практика показывает, что постоянное информационно-пропагандистское обеспечение
-                        нашей
-                        деятельности обеспечивает широкому кругу (специалистов) участие в формировании соответствующий
-                        условий активизации. Таким образом укрепление и развитие структуры в значительной степени
-                        обуславливает создание систем массового участия. Значимость этих проблем настолько очевидна.</p>
+                    <p><?=$page->text?></p>
                 </div>
                 <button class="article__btn btn" onclick="modal_on_second()">Заказать грузоперевозку</button>
             </div>
-            <div class="article_content_image"></div>
+            <div class="article_content_image" style="background-image: url(<?=$page->img_second?>)"></div>
         </div>
     </section>
     <section class="online_apply">
         <h2><span class="apply_title_styled">ОНЛАЙН ЗАЯВКА</span> НА РАСЧЕТ <br> СТОИМОСТИ ДОСТАВКИ ГРУЗА</h2>
         <p>Предоставляем услуги погрузки и упаковки груза в каждом городе России.</p>
         <div class="online_apply_content">
-            <form class="online_apply_content_form" action="thanks_window.php" method="post">
+            <form class="online_apply_content_form" action="../thanks_window.php" method="post">
                 <div class="form_item">
                     <span class="form_input_span">Откуда</span>
                     <input id="ADDRESS_FROM_FOOTER" name="ADDRESS_FROM_FOOTER" type="text" size="100" class="online_apply_content_style apply_count_form_input"
@@ -346,156 +360,16 @@
         </div>
         <div class="blog_content">
             <div class="blog_content__images">
-                <div class="blog_content__images_item">
-                    <div class="blog_type__item_wrap"></div>
-                    <div class="blog_type__content">
-                        <span class="blog_type__text">грузоперевозки Барнаул</span>
-                    </div>
-                    <div class="blog_type__content_hover">
-                        <span class="blog_type__text_hover">грузоперевозки Барнаул</span>
-                        <button class="blog_type__btn btn" onclick="modal_on_second()">Заказать</button>
-                    </div>
-                </div>
-                <div class="blog_content__images_item">
-                    <div class="blog_type__item_wrap"></div>
-                    <div class="blog_type__content">
-                        <span class="blog_type__text">грузоперевозки Новосибирск</span>
-                    </div>
-                    <div class="blog_type__content_hover">
-                        <span class="blog_type__text_hover">грузоперевозки Новосибирск</span>
-                        <button class="blog_type__btn btn" onclick="modal_on_second()">Заказать</button>
-                    </div>
-                </div>
-                <div class="blog_content__images_item">
-                    <div class="blog_type__item_wrap"></div>
-                    <div class="blog_type__content">
-                        <span class="blog_type__text">грузоперевозки цена за км</span>
-                    </div>
-                    <div class="blog_type__content_hover">
-                        <span class="blog_type__text_hover">грузоперевозки цена за км</span>
-                        <button class="blog_type__btn btn" onclick="modal_on_second()">Заказать</button>
-                    </div>
-                </div>
-                <div class="blog_content__images_item">
-                    <div class="blog_type__item_wrap"></div>
-                    <div class="blog_type__content">
-                        <span class="blog_type__text">грузоперевозки межгород недорого</span>
-                    </div>
-                    <div class="blog_type__content_hover">
-                        <span class="blog_type__text_hover">грузоперевозки межгород недорого</span>
-                        <button class="blog_type__btn btn" onclick="modal_on_second()">Заказать</button>
-                    </div>
-                </div>
-                <div class="blog_content__images_item">
-                    <div class="blog_type__item_wrap"></div>
-                    <div class="blog_type__content">
-                        <span class="blog_type__text">грузоперевозки Екатеринбург</span>
-                    </div>
-                    <div class="blog_type__content_hover">
-                        <span class="blog_type__text_hover">грузоперевозки Екатеринбург</span>
-                        <button class="blog_type__btn btn" onclick="modal_on_second()">Заказать</button>
-                    </div>
-                </div>
-                <div class="blog_content__images_item">
-                    <div class="blog_type__item_wrap"></div>
-                    <div class="blog_type__content">
-                        <span class="blog_type__text">грузоперевозки по России</span>
-                    </div>
-                    <div class="blog_type__content_hover">
-                        <span class="blog_type__text_hover">грузоперевозки по России</span>
-                        <button class="blog_type__btn btn" onclick="modal_on_second()">Заказать</button>
-                    </div>
-                </div>
+                <?
+                    for ($i = 5; $i >= 0; $i--) {
+                        echo Block::generate_tagged_block($tagged_pages[$i]["offer"], $tagged_pages[$i]["img_first"]);
+                    }
+                ?>
             </div>
             <div class="blog_content__text">
                 <span>А также:</span>
                 <div class="my-blog-slider">
-                    <div>
-                        <ul>
-                            <li>грузоперевозки межгород цена</li>
-                            <li>грузоперевозки межгород цена за км</li>
-                            <li>грузоперевозки межгород недорого</li>
-                            <li>грузоперевозки газель межгород цены</li>
-                            <li>грузоперевозки газель межгород цена за км</li>
-                            <li>грузоперевозки межгород Барнаул</li>
-                            <li>грузоперевозки межгород Новосибирск</li>
-                            <li>грузоперевозки межгород Екатеринбург</li>
-                            <li>грузоперевозки межгород Тюмень</li>
-                            <li>грузоперевозки межгород Воронеж</li>
-                            <li>грузоперевозки межгород стоимость</li>
-                            <li>грузоперевозки межгород Казань</li>
-                            <li>грузоперевозки межгород Киров</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <ul>
-                            <li>грузоперевозки межгород цена</li>
-                            <li>грузоперевозки межгород цена за км</li>
-                            <li>грузоперевозки межгород недорого</li>
-                            <li>грузоперевозки газель межгород цены</li>
-                            <li>грузоперевозки газель межгород цена за км</li>
-                            <li>грузоперевозки межгород Барнаул</li>
-                            <li>грузоперевозки межгород Новосибирск</li>
-                            <li>грузоперевозки межгород Екатеринбург</li>
-                            <li>грузоперевозки межгород Тюмень</li>
-                            <li>грузоперевозки межгород Воронеж</li>
-                            <li>грузоперевозки межгород стоимость</li>
-                            <li>грузоперевозки межгород Казань</li>
-                            <li>грузоперевозки межгород Киров</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <ul>
-                            <li>грузоперевозки межгород цена</li>
-                            <li>грузоперевозки межгород цена за км</li>
-                            <li>грузоперевозки межгород недорого</li>
-                            <li>грузоперевозки газель межгород цены</li>
-                            <li>грузоперевозки газель межгород цена за км</li>
-                            <li>грузоперевозки межгород Барнаул</li>
-                            <li>грузоперевозки межгород Новосибирск</li>
-                            <li>грузоперевозки межгород Екатеринбург</li>
-                            <li>грузоперевозки межгород Тюмень</li>
-                            <li>грузоперевозки межгород Воронеж</li>
-                            <li>грузоперевозки межгород стоимость</li>
-                            <li>грузоперевозки межгород Казань</li>
-                            <li>грузоперевозки межгород Киров</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <ul>
-                            <li>грузоперевозки межгород цена</li>
-                            <li>грузоперевозки межгород цена за км</li>
-                            <li>грузоперевозки межгород недорого</li>
-                            <li>грузоперевозки газель межгород цены</li>
-                            <li>грузоперевозки газель межгород цена за км</li>
-                            <li>грузоперевозки межгород Барнаул</li>
-                            <li>грузоперевозки межгород Новосибирск</li>
-                            <li>грузоперевозки межгород Екатеринбург</li>
-                            <li>грузоперевозки межгород Тюмень</li>
-                            <li>грузоперевозки межгород Воронеж</li>
-                            <li>грузоперевозки межгород стоимость</li>
-                            <li>грузоперевозки межгород Казань</li>
-                            <li>грузоперевозки межгород Киров</li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <ul>
-                            <li>грузоперевозки межгород цена</li>
-                            <li>грузоперевозки межгород цена за км</li>
-                            <li>грузоперевозки межгород недорого</li>
-                            <li>грузоперевозки газель межгород цены</li>
-                            <li>грузоперевозки газель межгород цена за км</li>
-                            <li>грузоперевозки межгород Барнаул</li>
-                            <li>грузоперевозки межгород Новосибирск</li>
-                            <li>грузоперевозки межгород Екатеринбург</li>
-                            <li>грузоперевозки межгород Тюмень</li>
-                            <li>грузоперевозки межгород Воронеж</li>
-                            <li>грузоперевозки межгород стоимость</li>
-                            <li>грузоперевозки межгород Казань</li>
-                            <li>грузоперевозки межгород Киров</li>
-                        </ul>
-                    </div>
+                    <?=Block::generate_slider_blocks($tagged_pages)?>
                 </div>
             </div>
         </div>
@@ -625,7 +499,7 @@
         <p class="modal_text">Заполните контактную форму и мы с вами свяжемся</p>
         <div id="close_btn" class="close_btn" onclick="close_modal()">
         </div>
-        <form id="prompt-form" method="post" action="thanks_window.php">
+        <form id="prompt-form" method="post" action="../thanks_window.php">
             <input class="modal_window_input" name="name" type="text" placeholder="Введите Ваше имя">
             <input class="modal_window_input" id="phone-number" name="phone-number" type="text" maxlength="14"
                 placeholder="Контактный телефон">
@@ -639,8 +513,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.8/min/tiny-slider.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="./tiger.js/countUp.js-master/countUp.js"></script>
-    <script src="./tiger.js/tiger.js"></script>
+    <script src="../tiger.js/countUp.js-master/countUp.js"></script>
+    <script src="../tiger.js/tiger.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/suggestions-jquery@18.8.0/dist/js/jquery.suggestions.min.js"></script>
     <script type="text/javascript">

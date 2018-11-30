@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&subset=cyrillic');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.button-standart {
+    background: #FFE070;
+    width: 154px;
+    height: 25px;
+    text-align: center;
+    padding-top: 4px;
+    text-decoration: none;
+    color: black;
+}
+
+.form-container {
+    width: 440px;
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    position: fixed;
+    background: #515151;
+    margin-left: -220px;
+    margin-top: -200px;
+    box-shadow: darkgrey 0 10px 20px 0;
+}
+
+form {
+    margin: 0 auto;
+    padding: 0;
+    width: 13.8em;
+    height: 9.44em;
+    display: grid;
+    grid-gap: 20px;
+}
+
+.logo {
+    width: 8.9em;
+    height: 7.3em;
+    background: url("../img/tiger_logo.png");
+    margin-top: 45px;
+    margin-bottom: 20px;
+}
+
+.centered {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input, select {
+    width: 220px;
+    height: 37px;
+    outline: 0;
+    border: none;
+    background-color: #C4C4C4;
+}
+
+input[type="submit"] {
+    background-color: #FFE070;
+}
+
+#admin {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-family: Roboto;
+}
+
+
+
+#admin .side-menu {
+    height: 100vh;
+    width: 16vw;
+    background: #515151;
+    position: fixed;
+}
+
+#admin .content {
+    width: 100%;
+}
+
+#admin .menu-items{
+    display: grid;
+    width: 152px;
+    grid-gap: 15px;
+    font-size: 18px;
+}
+
+#admin .menu-items > a, span {
+    text-decoration: none;
+    width: 152px;
+    color: white;
+}
+
+#admin .menu-items > a:hover, span:hover {
+    color: #FFE070;
+    cursor: pointer;
+}
+
+#admin .menu-items > span.active {
+    color: #969696;
+}
+
+#admin .content{
+    margin-left: 16vw;
+}
+
+#admin .wrapper {
+    position: absolute;
+    width: 80vw;
+    height: 100vh;
+}
+
+#admin .pages {
+    position: absolute;
+    width: 80vw;
+    height: 100vh;
+}
+
+#admin .hidden {
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+#admin .active {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+#admin form {
+    margin-top: 78px;
+    width: 500px;
+    grid-gap: 0;
+}
+
+#admin form > h1 {
+    margin-bottom: 15px;
+}
+
+#admin form label {
+    margin: 23px 0 0;
+    font-size: 20px;
+}
+
+#admin form > input, select {
+    width: 411px;
+}
+
+#admin form > input[type="submit"] {
+    margin-top: 35px;
+    margin-bottom: 67px;
+    width: 325px;
+    height: 49px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#admin form > input[type="submit"]:hover {
+    background: #b8a352;;
+}
+#admin form .files {
+    margin-top: 23px;
+    display: flex;
+}
+
+#admin form .files label {
+    margin: 5px 0 0;
+}
+
+#admin form .files .file:first-child {
+    margin-right: 53px;
+}
+
+#admin .file-upload {
+    position: relative; /* Даем возможность делать позиционирование, внутри данного элемента */
+    overflow: hidden; /* Все что выходит за пределы - скрываем */
+    width: 237px; /* Задаем ширину кнопки выбора файла */
+    height: 28px; /* Задаем высоту кнопки выбора файла */
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 8px 4px;
+    color: black;
+    text-align: center;
+}
+
+#admin .file-upload:hover {
+    background: #FFE070;
+    cursor: pointer;
+}
+
+#admin .file-upload input[type="file"]{
+    display: none; /* Обязательно скрываем настоящий Input File */
+}
+
+#admin .file-upload label {
+    /* Растягиваем label на всю возможную площадь блока .file-upload */
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+#admin .file-upload span {
+    line-height: 36px; /* Делаем вертикальное выравнивание текста, который написан на кнопке */
+    color: black;
+}
+
+#admin .filename {
+    background: #fff;
+    border: 0;
+}
+
+#admin .generated_block {
+    width: 710px;
+    height: 38px;
+    background: #E8E8E8;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    padding-top: 20px;
+    margin-bottom: 15px;
+}
+
+#admin .generated_block a{
+    text-decoration: none;
+}
+
+#admin .th {
+    width: 710px;
+    display: flex;
+}
+
+#admin .th h3 {
+    width: 33.3333%;
+}
+
+#admin .pages .wrap {
+    width: 710px;
+    margin-top: 80px;
+}

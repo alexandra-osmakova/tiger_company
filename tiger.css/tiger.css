@@ -331,7 +331,7 @@ header {
     content: "";
     display: block;
     width: 4.5rem;
-    ;
+;
     height: 0.1875rem;
     margin: 1.5rem auto;
     background-color: #ffdb4d;
@@ -368,7 +368,7 @@ header {
 
 .progrss_line_item {
     width: calc(100%/9);
-    ;
+;
     height: 3.1875rem;
     background-color: #ffdb4d;
     visibility: hidden;
@@ -400,7 +400,7 @@ header {
 .current_question_item {
     width: 0.625rem;
     height: 0.625rem;
-    ;
+;
     border-radius: 100%;
     background-color: rgba(226, 226, 226, 0);
     border: 0.0625rem solid #ffdb4d;
@@ -727,7 +727,7 @@ header {
     justify-content: center;
     width: 3.0625rem;
     height: 3.0625rem;
-    ;
+;
     border-radius: 100%;
     background-color: rgba(212, 201, 228, 0);
     border: 0.1875rem solid #ffdb4d;
@@ -942,7 +942,7 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    ;
+;
 }
 
 .services_decoration_line_second {
@@ -952,7 +952,7 @@ header {
     bottom: 0;
     left: 0;
     right: 0;
-    ;
+;
 }
 
 
@@ -966,7 +966,7 @@ header {
     content: "";
     display: block;
     width: 4.5rem;
-    ;
+;
     height: 0.1875rem;
     margin: 1.5rem auto;
     background-color: #ffdb4d;
@@ -994,56 +994,56 @@ header {
 }
 
 .service_type__item:nth-of-type(2) {
-    background-image: url(../tiger.img/logistics-lorry-mountains-933981.jpg);
+    background-image: url(../tiger.img/services_g_fur.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: left;
 }
 
 .service_type__item:nth-of-type(3) {
-    background-image: url(../tiger.img/hey.jpg);
+    background-image: url(../tiger.img/services_g_ref.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 100% 15%;
 }
 
 .service_type__item:nth-of-type(4) {
-    background-image: url(../tiger.img/shutterstock_1039216024-e1535033228887.jpg);
+    background-image: url(../tiger.img/services_pg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .service_type__item:nth-of-type(5) {
-    background-image: url(../tiger.img/gallagher-delivers-on-their-promise.jpg);
+    background-image: url(../tiger.img/services_dsg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: left;
 }
 
 .service_type__item:nth-of-type(6) {
-    background-image: url(../tiger.img/Movers-And-Packers-Services-In-USA.jpg);
+    background-image: url(../tiger.img/services_pm.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .service_type__item:nth-of-type(7) {
-    background-image: url(../tiger.img/ekspress_piegade.jpg);
+    background-image: url(../tiger.img/services_plv.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: left;
 }
 
 .service_type__item:nth-of-type(8) {
-    background-image: url(../tiger.img/original_1e5853df4cfc9a6c.jpg);
+    background-image: url(../tiger.img/services_pkvg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .service_type__item:nth-of-type(9) {
-    background-image: url(../tiger.img/kamaz_4308-n3_2.jpg);
+    background-image: url(../tiger.img/services_g_kamaz.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -1144,7 +1144,7 @@ header {
     content: "";
     display: block;
     width: 4.5rem;
-    ;
+;
     height: 0.1875rem;
     margin: 1.5rem auto;
     background-color: #ffdb4d;
@@ -1279,7 +1279,7 @@ header {
     content: "";
     display: block;
     width: 4.5rem;
-    ;
+;
     height: 0.1875rem;
     margin: 1.5rem auto;
     background-color: #ffdb4d;
@@ -1331,7 +1331,7 @@ header {
 
 .about_number_description {
     font-size: 1.1875rem;
-    ;
+;
     color: #ffdb4d;
     text-align: center;
     display: block;
@@ -1389,7 +1389,7 @@ header {
     content: "";
     display: block;
     width: 4.5rem;
-    ;
+;
     height: 0.1875rem;
     margin: 1.5rem auto;
     background-color: #ffdb4d;
@@ -1473,7 +1473,7 @@ header {
     content: "";
     display: block;
     width: 4.5rem;
-    ;
+;
     height: 0.1875rem;
     margin: 1.5rem auto;
     background-color: #ffdb4d;
@@ -1837,7 +1837,7 @@ header {
     content: "";
     display: block;
     width: 4.5rem;
-    ;
+;
     height: 0.1875rem;
     margin: 1.5rem auto;
     background-color: #ffdb4d;
@@ -2075,7 +2075,7 @@ footer {
 
 .solcial_link:hover {
     color: #ffdb4d;
-    ;
+;
 }
 
 .footer_apply_form__btn {
@@ -2423,7 +2423,7 @@ footer {
     content: "";
     display: block;
     width: 4.5rem;
-    ;
+;
     height: 0.1875rem;
     margin: 1.5rem auto;
     background-color: #ffdb4d;
@@ -2682,7 +2682,7 @@ input[type=submit] {
     background-color: #f6f6f6;
 }
 
-.blog h2 {    
+.blog h2 {
     font-size: 1.875rem;
     line-height: 2.5rem;
     color: #000000;
@@ -3276,12 +3276,12 @@ input[type=submit] {
     .article_content_image {
         width: 100%;
         margin-bottom: 2rem;
-    }    
+    }
 
     .article_content {
         flex-direction: column-reverse;
     }
-        
+
     .blog {
         padding: 5rem 0rem 9rem;
     }
@@ -3316,11 +3316,11 @@ input[type=submit] {
 
     .vk_review__content_img {
         height: 19rem;
-    } 
+    }
 
     .vk_review__content::after {
         display: none;
-    } 
+    }
 
     header {
         padding: 1.5rem;
@@ -3690,7 +3690,7 @@ input[type=submit] {
     .article_content_image {
         width: 100%;
         margin-bottom: 2rem;
-    }    
+    }
 
     .article_content {
         flex-direction: column-reverse;
@@ -3739,7 +3739,7 @@ input[type=submit] {
     .header_menu_open .header_phone_info {
         position: absolute;
         bottom: -20rem;
-        right: 1.5rem;    
+        right: 1.5rem;
     }
 
     .header_menu_open .header_email_info {
@@ -3766,7 +3766,7 @@ input[type=submit] {
     }
 
     .header_menu_open_nav_point a {
-        line-height: 2.5625rem; 
+        line-height: 2.5625rem;
     }
 
     .header_menu_open_image {
@@ -3866,7 +3866,7 @@ input[type=submit] {
         -webkit-transition: all 0.5s ease;
         transition: all 0.5s ease;
     }
-    
+
 
     .header_contacts_item__telephon svg {
         width: 1rem;
@@ -4282,7 +4282,7 @@ input[type=submit] {
     .blog_content__text ul {
         padding-left: 2rem;
     }
-    
+
     .blog {
         padding: 5rem 0rem 9rem;
     }
@@ -4326,7 +4326,7 @@ input[type=submit] {
     .header_menu_open .header_phone_info {
         position: absolute;
         bottom: -26rem;
-        right: 1.5rem;    
+        right: 1.5rem;
     }
 
     .header_menu_open .header_email_info {
@@ -4359,7 +4359,7 @@ input[type=submit] {
     }
 
     .header_menu_open_nav_point a {
-        line-height: 2.5625rem; 
+        line-height: 2.5625rem;
     }
 
     .header_menu_open_image {
@@ -4475,7 +4475,7 @@ input[type=submit] {
 
     .vk_review__content::after {
         display: none;
-    } 
+    }
 
     .header_email {
         display: none;
@@ -4985,7 +4985,7 @@ input[type=submit] {
     .blog_content__text ul {
         padding-left: 2rem;
     }
-        
+
     .blog {
         padding: 5rem 0rem 9rem;
     }
@@ -5055,7 +5055,7 @@ input[type=submit] {
     }
 
     .header_menu_open_nav_point a {
-        line-height: 2.5625rem; 
+        line-height: 2.5625rem;
     }
 
     .header_menu_open_image {
@@ -5695,7 +5695,7 @@ input[type=submit] {
         width: 1rem;
         height: 1rem;
     }
-    
+
     .blog {
         padding: 5rem 0rem 9rem;
     }
@@ -6011,7 +6011,7 @@ input[type=submit] {
     .header_menu_open .header_phone_info {
         position: absolute;
         bottom: -29rem;
-        right: 1.5rem;    
+        right: 1.5rem;
     }
 
     .header_menu_open .header_email_info {
@@ -6044,7 +6044,7 @@ input[type=submit] {
     }
 
     .header_menu_open_nav_point a {
-        line-height: 2.5625rem; 
+        line-height: 2.5625rem;
     }
 
     .header_menu_open_image {
