@@ -186,12 +186,19 @@ $tagged_pages = R::getAll("SELECT * FROM pages WHERE tag=:tag", ["tag" => $page-
             <p class="visible_header_text"><?=$page->content?></p>
             <p class="invisible_header_text"><?=$page->content?></p>
             <div class="header_count">
+<<<<<<< HEAD:tiger.templates/tiger_trucking__third_level_page.php
 
                 <div class="invisible_header_counter">
                     <span class="invisible_header_counter_item">1</span>/4
                 </div>
 
                 <form class="header_count_form" id="form1" method="post" action="../thanks_window.php">
+=======
+                <div class="invisible_header_counter">
+                    <span class="invisible_header_counter_item">1</span>/4
+                </div>
+                <form class="header_count_form" id="form1" method="post" action="thanks_window.php">
+>>>>>>> master:tiger_trucking__third_level_page.html
                     <input id='ADDRESS_FROM_HEADER' class="header_count_form_input invisible_header_input" name="ADDRESS_FROM_HEADER"
                         type="text" placeholder="Город отправления">
                     <input id="ADDRESS_TO_HEADER" name="ADDRESS_TO_HEADER" class="header_count_form_input invisible_header_input"
