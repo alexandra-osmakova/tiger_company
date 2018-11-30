@@ -1999,7 +1999,14 @@
             }
         });
 
-        f
+        let count = 0;
+
+        $("input#next").on("click", function (e) {
+            if($(e.currentTarget).val() === "Рассчитать стоимость" && count === 3) {
+                $("input#form1_btn").click();
+            }
+            count++;
+        });
     </script>
 </body>
 
