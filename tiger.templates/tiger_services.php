@@ -193,7 +193,7 @@ $img_url = "../tiger.img/services_" . $_GET["tag"] . ".jpg";
                 <span class="invisible_header_counter_item">1</span>/4
             </div>
 
-            <form class="header_count_form" id="form1" method="post" action="thanks_window.php">
+            <form class="header_count_form" id="form1" method="post" action="../thanks_window.php">
                 <input id='ADDRESS_FROM_HEADER' class="header_count_form_input invisible_header_input" name="ADDRESS_FROM_HEADER"
                        type="text" placeholder="Город отправления">
                 <input id="ADDRESS_TO_HEADER" name="ADDRESS_TO_HEADER" class="header_count_form_input invisible_header_input"
@@ -201,8 +201,8 @@ $img_url = "../tiger.img/services_" . $_GET["tag"] . ".jpg";
                 <input class="header_count_form_input invisible_header_input" name="weight" type="text" placeholder="Масса груза, кг">
                 <input class="header_count_form_input invisible_header_input" name="header_telephone" type="text"
                        placeholder="Контактный телефон" required>
-                <input type="text" class="header_count_form__btn invisible_header_btn" value="Далее" readonly>
-                <input class="header_count_form__btn" name="form1" type="submit" value="Быстрый рассчет">
+                <input type="text" id="next" class="header_count_form__btn invisible_header_btn" value="Далее" readonly>
+                <input class="header_count_form__btn" id="form1_btn" name="form1" type="submit" value="Быстрый рассчет">
             </form>
         </div>
     </div>
@@ -814,7 +814,7 @@ $img_url = "../tiger.img/services_" . $_GET["tag"] . ".jpg";
                         расчет стоимости перевозки. </h3>
                     <p>Введите Ваш номер телефона, и мы сообщим вам стоимость грузоперевозки прямо сейчас!
                     </p>
-                    <form class="finish_form" id="quiz_form" method="post" action="thanks_window_second.php">
+                    <form class="finish_form" id="quiz_form" method="post" action="../thanks_window_second.php">
                         <input class="finish_form_input" name="from" type="text" placeholder="Введите свой номер телефона"
                                required>
                         <input class="finish_form__btn btn" type="submit" name="quiz_btn" value="Узнать стоимость">
@@ -1676,7 +1676,7 @@ $img_url = "../tiger.img/services_" . $_GET["tag"] . ".jpg";
     <h2><span class="apply_title_styled">ОНЛАЙН ЗАЯВКА</span> НА РАСЧЕТ <br> СТОИМОСТИ ДОСТАВКИ ГРУЗА</h2>
     <p>Предоставляем услуги погрузки и упаковки груза в каждом городе России.</p>
     <div class="online_apply_content">
-        <form class="online_apply_content_form" action="thanks_window.php" method="post">
+        <form class="online_apply_content_form" action="../thanks_window.php" method="post">
             <div class="form_item">
                 <span class="form_input_span">Откуда</span>
                 <input id="ADDRESS_FROM_FOOTER" name="ADDRESS_FROM_FOOTER" type="text" size="100" class="online_apply_content_style apply_count_form_input"
@@ -1819,7 +1819,7 @@ $img_url = "../tiger.img/services_" . $_GET["tag"] . ".jpg";
     <p class="modal_text">Заполните контактную форму и мы с вами свяжемся</p>
     <div id="close_btn" class="close_btn" onclick="close_modal()">
     </div>
-    <form id="prompt-form" method='post' action="thanks_window.php">
+    <form id="prompt-form" method='post' action="../thanks_window.php">
         <input class="modal_window_input" name="name" type="text" placeholder="Введите Ваше имя">
         <input class="modal_window_input" id="phone-number" name="phone-number" type="text" maxlength="14"
                placeholder="Контактный телефон" required />
@@ -1927,6 +1927,15 @@ $img_url = "../tiger.img/services_" . $_GET["tag"] . ".jpg";
         onSelect: function (suggestion) {
             console.log(suggestion);
         }
+    });
+
+    let count = 0;
+
+    $("input#next").on("click", function (e) {
+        if($(e.currentTarget).val() === "Рассчитать стоимость" && count === 3) {
+            $("input#form1_btn").click();
+        }
+        count++;
     });
 </script>
 </body>
