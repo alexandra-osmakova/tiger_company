@@ -88,4 +88,27 @@ class Block
                 return null;
         }
     }
+
+    public static function get_special_settings($tag, $img_url) {
+        switch ($tag) {
+            case "g_rus"    :
+            case "g_kamaz"  :
+            case "pg"       :
+                return "<div id=\"video-bg\" style=\"background-image: url('../tiger.img/main_header_background.jpg')\">
+                            <video loop muted autoplay>
+                                <source src=\"../tiger.video/2.webm\" type=\"video/webm\">
+                            </video>
+                        </div>";
+                break;
+            case "g_ref"    :
+                return "<div id=\"video-bg\" style=\"background-image: url('$img_url'); background-position: center 27%;\"></div>";
+                break;
+            case "g_fur"    :
+                return "<div id=\"video-bg\" style=\"background-image: url('$img_url'); background-position: center bottom;\"></div>";
+                break;
+            default         :
+                return "<div id=\"video-bg\" style=\"background-image: url('$img_url')\"></div>";
+                break;
+            }
+    }
 }

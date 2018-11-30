@@ -145,11 +145,9 @@ $img_url = "../tiger.img/services_" . $_GET["tag"] . ".jpg";
             </ul>
         </nav>
     </div>
-    <div id="video-bg" style="background-image: url('<?=$img_url?>')">
-        <video loop muted autoplay>
-            <source src="../tiger.video/2.webm" type="video/webm">
-        </video>
-    </div>
+
+    <?=Block::get_special_settings($_GET["tag"], $img_url)?>
+
     <div class="header_wrap"></div>
     <div class="header_contacts">
         <a href="../index.html">
@@ -832,7 +830,7 @@ $img_url = "../tiger.img/services_" . $_GET["tag"] . ".jpg";
 <section class="additional_info">
     <h2>ПОДРОБНЕЕ О ГРУЗОПЕРЕВОЗКАХ <br> ПО РОССИИ ОТДЕЛЬНЫМ ТРАНСПОРТОМ</h2>
     <div class="additional_info_content">
-        <div class="adadditional_info_content_image" style="background-image: url('<?=$img_ufrl?>')"></div>
+        <div class="adadditional_info_content_image" style="background-image: url('<?=$img_url?>')"></div>
         <div class="additional_info_content_text">
             <div class="text_wrap">
                 <h3>Профессиональные транспортные услуги</h3>
