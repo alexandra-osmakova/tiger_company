@@ -2002,10 +2002,12 @@
         let count = 0;
 
         $("input#next").on("click", function (e) {
-            if($(e.currentTarget).val() === "Рассчитать стоимость" && count === 3) {
+            if ($(e.currentTarget).val() === "Рассчитать стоимость" && count === 3) {
                 $("input#form1_btn").click();
             }
-            count++;
+
+            if(count === 3 && $(e.currentTarget.previousElementSibling).val() === ""){}
+            else count++;
         });
     </script>
 </body>

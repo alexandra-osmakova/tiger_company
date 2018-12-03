@@ -24,7 +24,6 @@ var header_modal_btn = document.getElementsByClassName('promo_img_section__btn')
 var service_types = document.getElementsByClassName('service_types')[0];
 
 
-
 function modal_on_first() {
     modal_window_first.classList.add('modal_visible');
     modal_overlay.classList.add('modal_overlay');
@@ -177,131 +176,133 @@ var quiz_input_with_img = document.getElementsByClassName('checkbox_question_inf
 var new_input = document.getElementsByClassName('new_input_quiz')[0];
 var n = 0;
 
-quiz_btn[1].addEventListener('click', function () {
-    question_info_item[7].classList.remove('invisible_item');
-})
+if (!quiz_btn === undefined) {
+    quiz_btn[1].addEventListener('click', function () {
+        question_info_item[7].classList.remove('invisible_item');
+    })
 
-for (var i = 0; i < question_item_checkbox.length; i++) {
-    question_item_checkbox[i].addEventListener('click', quizStart)
-}
-
-for (var j = 0; j < quiz_btn.length; j++) {
-    quiz_btn[j].addEventListener('click', quizNextStep)
-}
-
-for (var k = 0; k < quiz_textarea.length; k++) {
-    quiz_textarea[k].addEventListener('input', quizStart_texarea)
-}
-
-
-function quizStart_texarea() {
-    quiz_btn[n].disabled = false;
-    quiz_btn[n].classList.remove('apply_questions_start__btn_disabled');
-}
-
-
-function quizStart() {
     for (var i = 0; i < question_item_checkbox.length; i++) {
-        if (question_item_checkbox[i].checked) {
-            quiz_btn[n].disabled = false;
-            quiz_btn[n].classList.remove('apply_questions_start__btn_disabled');
-            if (question_item_checkbox[i].classList.contains('checkbox_question_info_trigger')) {
-                quizTextToSee()
+        question_item_checkbox[i].addEventListener('click', quizStart)
+    }
+
+    for (var j = 0; j < quiz_btn.length; j++) {
+        quiz_btn[j].addEventListener('click', quizNextStep)
+    }
+
+    for (var k = 0; k < quiz_textarea.length; k++) {
+        quiz_textarea[k].addEventListener('input', quizStart_texarea)
+    }
+
+
+    function quizStart_texarea() {
+        quiz_btn[n].disabled = false;
+        quiz_btn[n].classList.remove('apply_questions_start__btn_disabled');
+    }
+
+
+    function quizStart() {
+        for (var i = 0; i < question_item_checkbox.length; i++) {
+            if (question_item_checkbox[i].checked) {
+                quiz_btn[n].disabled = false;
+                quiz_btn[n].classList.remove('apply_questions_start__btn_disabled');
+                if (question_item_checkbox[i].classList.contains('checkbox_question_info_trigger')) {
+                    quizTextToSee()
+                }
+                else if (question_item_checkbox[i].id == 'other') {
+                    new_input.classList.remove('invisible_item')
+                }
             }
-            else if(question_item_checkbox[i].id == 'other') {
-                new_input.classList.remove('invisible_item')
+        }
+    }
+
+    function quizTextToSee(i) {
+        for (var j = 0; j < question_info_item.length; j++) {
+            question_info_item[j].classList.add('invisible_item');
+        }
+        for (var i = 0; i < quiz_input_with_img.length; i++) {
+            if (quiz_input_with_img[i].checked) {
+                question_info_item[i].classList.remove('invisible_item');
             }
         }
     }
-}
 
-function quizTextToSee(i) {
-    for (var j = 0; j < question_info_item.length; j++) {
-        question_info_item[j].classList.add('invisible_item');
-    }
-    for(var i = 0; i < quiz_input_with_img.length; i++) {
-        if(quiz_input_with_img[i].checked) {
-            question_info_item[i].classList.remove('invisible_item');
-        }
-    }
-}
-
-function quizNextStep() {
-    if (n <= 8) {
-        question_item[n].classList.add('invisible_item');
-        question_item[n + 1].classList.remove('invisible_item');
-        quiz_step_mark[n].classList.remove('current_question_item__active');
-        quiz_step_mark[n + 1].classList.add('current_question_item__active');
-        quiz_progress[n + 1].classList.add('progrss_line_item__active');
-        quiz_current_number.innerHTML = Number(quiz_current_number.innerHTML) - 1;
-        n++;
-        if (n >= 5) {
-            apply_questions_actual_quantity.innerHTML = "вопроса";
-        }
-        if (n == 8) {
-            apply_questions_actual_quantity.innerHTML = "вопрос";
-        }
-    }
-}
-
-var apply_questions = document.getElementsByClassName('apply_questions')[0];
-
-apply_questions.addEventListener('click', quiz_back);
-
-
-function quiz_back(e) {
-    if (e.target.classList.contains('quiz_back_button_image')) {
-        if ((Number(e.target.id) > 0)) {
-            var newIndex = Number(e.target.id);
-            for (var i = 0; i < question_item.length; i++) {
-                question_item[i].classList.add('invisible_item');
+    function quizNextStep() {
+        if (n <= 8) {
+            question_item[n].classList.add('invisible_item');
+            question_item[n + 1].classList.remove('invisible_item');
+            quiz_step_mark[n].classList.remove('current_question_item__active');
+            quiz_step_mark[n + 1].classList.add('current_question_item__active');
+            quiz_progress[n + 1].classList.add('progrss_line_item__active');
+            quiz_current_number.innerHTML = Number(quiz_current_number.innerHTML) - 1;
+            n++;
+            if (n >= 5) {
+                apply_questions_actual_quantity.innerHTML = "вопроса";
             }
-            question_item[newIndex - 1].classList.remove('invisible_item');
-            cleanUpQuiz(newIndex)
+            if (n == 8) {
+                apply_questions_actual_quantity.innerHTML = "вопрос";
+            }
         }
     }
-}
 
-function cleanUpQuiz(index) {
-    n--;
-    new_input.classList.add('invisible_item');
-    quiz_current_number.innerHTML = Number(quiz_current_number.innerHTML) + 1;
-    quiz_progress[index].classList.remove('progrss_line_item__active');
-    quiz_step_mark[index].classList.remove('current_question_item__active');
-    quiz_step_mark[index - 1].classList.add('current_question_item__active');
+    var apply_questions = document.getElementsByClassName('apply_questions')[0];
 
-    if (index == 1) {
+    apply_questions.addEventListener('click', quiz_back);
+
+
+    function quiz_back(e) {
+        if (e.target.classList.contains('quiz_back_button_image')) {
+            if ((Number(e.target.id) > 0)) {
+                var newIndex = Number(e.target.id);
+                for (var i = 0; i < question_item.length; i++) {
+                    question_item[i].classList.add('invisible_item');
+                }
+                question_item[newIndex - 1].classList.remove('invisible_item');
+                cleanUpQuiz(newIndex)
+            }
+        }
+    }
+
+    function cleanUpQuiz(index) {
+        n--;
+        new_input.classList.add('invisible_item');
+        quiz_current_number.innerHTML = Number(quiz_current_number.innerHTML) + 1;
+        quiz_progress[index].classList.remove('progrss_line_item__active');
         quiz_step_mark[index].classList.remove('current_question_item__active');
         quiz_step_mark[index - 1].classList.add('current_question_item__active');
-    } else if (n == 4) {
-        apply_questions_actual_quantity.innerHTML = "вопросов";
-    }
-    for (var i = 0; i < question_item_checkbox.length; i++) {
-        question_item_checkbox[i].checked = false;
-    }
 
-    for (var j = 0; j < quiz_textarea.length; j++) {
-        quiz_textarea[j].value = '';
-    }
-
-    for (var k = 0; k < quiz_btn.length; k++) {
-        if (quiz_btn[k].classList.contains('apply_questions_start__btn_disabled') != true) {
-            quiz_btn[k].classList.add('apply_questions_start__btn_disabled');
+        if (index == 1) {
+            quiz_step_mark[index].classList.remove('current_question_item__active');
+            quiz_step_mark[index - 1].classList.add('current_question_item__active');
+        } else if (n == 4) {
+            apply_questions_actual_quantity.innerHTML = "вопросов";
         }
-    }
-
-    for (var h = 0; h < checkbox_mark_type.length; h++) {
-        if (checkbox_mark_type[h].checked) {
-            checkbox_mark_type[h].checked = false;
+        for (var i = 0; i < question_item_checkbox.length; i++) {
+            question_item_checkbox[i].checked = false;
         }
-    }
 
-    for (var l = 0; l < question_info_item.length; l++) {
-        question_info_item[l].classList.add('invisible_item');
-    }
+        for (var j = 0; j < quiz_textarea.length; j++) {
+            quiz_textarea[j].value = '';
+        }
 
-    question_info_item[0].classList.remove('invisible_item');
-    question_info_item[7].classList.remove('invisible_item');
+        for (var k = 0; k < quiz_btn.length; k++) {
+            if (quiz_btn[k].classList.contains('apply_questions_start__btn_disabled') != true) {
+                quiz_btn[k].classList.add('apply_questions_start__btn_disabled');
+            }
+        }
+
+        for (var h = 0; h < checkbox_mark_type.length; h++) {
+            if (checkbox_mark_type[h].checked) {
+                checkbox_mark_type[h].checked = false;
+            }
+        }
+
+        for (var l = 0; l < question_info_item.length; l++) {
+            question_info_item[l].classList.add('invisible_item');
+        }
+
+        question_info_item[0].classList.remove('invisible_item');
+        question_info_item[7].classList.remove('invisible_item');
+    }
 }
 
 var invisible_header_btn = document.getElementsByClassName('invisible_header_btn')[0];
@@ -309,23 +310,23 @@ var invisible_header_input = document.getElementsByClassName('invisible_header_i
 var header_input_count = 0;
 var invisible_header_counter_item = document.getElementsByClassName('invisible_header_counter_item')[0];
 
-invisible_header_btn.addEventListener('click', function() {
+invisible_header_btn.addEventListener('click', function () {
     headerCounter()
-    if(header_input_count < 3) {
+    if (header_input_count < 3) {
         invisible_header_input[header_input_count].classList.add('animated_elem');
         invisible_header_input[header_input_count].classList.add('animated_transform');
         header_input_count++;
-        if(header_input_count==3 ) {
+        if (header_input_count == 3) {
             invisible_header_btn.value = "Рассчитать стоимость"
         }
     }
 })
 
 function headerCounter() {
-    if(Number(invisible_header_counter_item.innerHTML)!=4) {
+    if (Number(invisible_header_counter_item.innerHTML) != 4) {
         invisible_header_counter_item.innerHTML = Number(invisible_header_counter_item.innerHTML) + 1;
     }
-    else if (Number(invisible_header_counter_item.innerHTML)==4) {
+    else if (Number(invisible_header_counter_item.innerHTML) == 4) {
         invisible_header_counter_item.innerHTML = 1;
     }
 }
@@ -393,7 +394,7 @@ var k = 0;
 var isScrolling = false;
 
 window.addEventListener("scroll", throttleScroll, false);
-
+if(!aboutItem === undefined) {
 function throttleScroll(e) {
     if (isScrolling == false) {
         window.requestAnimationFrame(function () {
@@ -402,26 +403,28 @@ function throttleScroll(e) {
         });
     }
     isScrolling = true;
-}
+}}
 
 document.addEventListener("DOMContentLoaded", scrolling, false);
 
-function scrolling(e) {
+if (!aboutItem === undefined) {
+    function scrolling(e) {
 
-    if (isPartiallyVisible(aboutItem) & k == 0) {
-        counter();
-        k++;
+        if (isPartiallyVisible(aboutItem) & k == 0) {
+            counter();
+            k++;
+        }
     }
-}
 
-function isPartiallyVisible(el) {
-    var elementBoundary = el.getBoundingClientRect();
+    function isPartiallyVisible(el) {
+        var elementBoundary = el.getBoundingClientRect();
 
-    var top = elementBoundary.top;
-    var bottom = elementBoundary.bottom;
-    var height = elementBoundary.height;
+        var top = elementBoundary.top;
+        var bottom = elementBoundary.bottom;
+        var height = elementBoundary.height;
 
-    return ((top + height >= 0) && (height + window.innerHeight >= bottom));
+        return ((top + height >= 0) && (height + window.innerHeight >= bottom));
+    }
 }
 
 new WOW().init();

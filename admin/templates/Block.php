@@ -9,7 +9,7 @@ class Block
 
         $result = "<div class='generated_block'>
                     <div style='width: 33.3333%;margin-left: 10px;'>
-                        <a href='../../tiger.templates/tiger_trucking__third_level_page.php?id=$page->id'>" . $page->title . "</a>
+                        <a href='../../$page->tag/$page->id'>" . $page->title . "</a>
                     </div>
                     
                     <div style='width: 33.3333%;'>02.12.2018 15:12</div>
@@ -50,7 +50,7 @@ class Block
             }
             $count++;
 
-            $result .= "<li><a href='../tiger.templates/tiger_trucking__third_level_page.php?id=" . $page["id"] . "'>" . $page["offer"] . "</a></li>";
+            $result .= "<li><a href=../" . $page["tag"] . "/" . $page{"id"} . ">" . $page["offer"] . "</a></li>";
 
             if ($count === 13) {
                 $result .= "</ul></div>";

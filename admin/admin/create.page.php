@@ -2,7 +2,7 @@
 
 session_start();
 
-header('Refresh: 5; url=index.php', true, 301);
+header('Refresh: 3; url=index.php', true, 301);
 
 require "../database/db.php";
 

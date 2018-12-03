@@ -4,7 +4,7 @@ require("../admin/templates/Block.php");
 
 use Templates\Block;
 
-
+$_GET["id"] = explode("/", $_GET["id"])[1];
 
 $page = R::load("pages", $_GET["id"]);
 
@@ -26,7 +26,7 @@ $tagged_pages = R::getAll("SELECT * FROM pages WHERE tag=:tag", ["tag" => $page-
     <link rel="stylesheet" href="../tiger.css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="shortcut icon" href="../favicon.png" type="image/x-icon">
-    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/suggestions-jquery@18.8.0/dist/css/suggestions.min.css" type="text/css"
           rel="stylesheet"/>
 
@@ -148,7 +148,7 @@ $tagged_pages = R::getAll("SELECT * FROM pages WHERE tag=:tag", ["tag" => $page-
     </div>
     <div class="header_wrap"></div>
     <div class="header_contacts">
-        <a href="../index.html">
+        <a href="../">
             <div class="header_logo"></div>
         </a>
         <div class="header_contacts_info">
@@ -618,13 +618,14 @@ $tagged_pages = R::getAll("SELECT * FROM pages WHERE tag=:tag", ["tag" => $page-
     let count = 0;
 
     $("input#next").on("click", function (e) {
-        if($(e.currentTarget).val() === "Рассчитать стоимость" && count === 3) {
+        if ($(e.currentTarget).val() === "Рассчитать стоимость" && count === 3) {
             $("input#form1_btn").click();
         }
-        count++;
+
+        if(count === 3 && $(e.currentTarget.previousElementSibling).val() === ""){}
+        else count++;
     });
 </script>
-
 </body>
 
 </html>
