@@ -7,6 +7,7 @@ use Templates\Block;
 $page = R::getAll("SELECT * FROM pages WHERE tag=:tag", ["tag" => $_GET["tag"]]);
 
 $img_url = "../tiger.img/services_" . $_GET["tag"] . ".jpg";
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,7 +24,7 @@ $img_url = "../tiger.img/services_" . $_GET["tag"] . ".jpg";
     <link rel="stylesheet" href="../tiger.css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
-    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/suggestions-jquery@18.8.0/dist/css/suggestions.min.css" type="text/css"
           rel="stylesheet" />
 
@@ -102,7 +103,7 @@ $img_url = "../tiger.img/services_" . $_GET["tag"] . ".jpg";
                         <span class="header_contacts_item__tel_comment">Звонок по России бесплатный</span>
                     </div>
                     <div class="header_email_info">
-                        <span class="header_email">autotrasport24@yandex.ru</span>
+                        <span class="header_email">autotransport24@yandex.ru</span>
                     </div>
                 </div>
                 <button class="btn header_contacts_info_item__btn" onclick="modal_on_second()">Заказать звонок</button>
@@ -165,7 +166,7 @@ $img_url = "../tiger.img/services_" . $_GET["tag"] . ".jpg";
                     <span class="header_contacts_item__tel_comment">Звонок по России бесплатный</span>
                 </div>
                 <div class="haeder_email_info">
-                    <span class="header_email">autotrasport24@yandex.ru</span>
+                    <span class="header_email">autotransport24@yandex.ru</span>
                 </div>
             </div>
             <button class="btn header_contacts_info_item__btn" onclick="modal_on_second()">Заказать звонок</button>

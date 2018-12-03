@@ -75,15 +75,15 @@ if (isset($_SESSION["user"])) {
 
                     <label for="tag">Тег страницы</label>
                     <select name="tag" id="tag">
-                        <option value="g_rus" selected>Грузоперевозки по России</option>
-                        <option value="g_fur">Грузоперевозки фурами</option>
-                        <option value="g_ref">Грузоперевозки рефрижератором</option>
-                        <option value="pg">Попутные грузоперевозки</option>
-                        <option value="dsg">Доставка сборных грузов</option>
-                        <option value="pm">Переезды межгород</option>
-                        <option value="plv">Перевозка личных вещей</option>
-                        <option value="pkvg">Перевозка конкретных видов груза</option>
-                        <option value="g_kamaz">Грузоперевозки КамАЗом</option>
+                        <option value="gruzoperevozki-po-rossii" selected>Грузоперевозки по России</option>
+                        <option value="gruzoperevozki-furami">Грузоперевозки фурами</option>
+                        <option value="gruzoperevozki-refrizheratorom">Грузоперевозки рефрижератором</option>
+                        <option value="poputnye-gruzoperevozki">Попутные грузоперевозки</option>
+                        <option value="dostavka-sbornyh-gruzov">Доставка сборных грузов</option>
+                        <option value="pereezd-mezhgorod">Переезды межгород</option>
+                        <option value="perevozka-lichnykh-vechey">Перевозка личных вещей</option>
+                        <option value="perevozka-konkretnyh-vidov-gruza">Перевозка конкретных видов груза</option>
+                        <option value="gruzoperevozki-kamazom">Грузоперевозки КамАЗом</option>
                     </select>
 
                     <input type="submit" name="add_page" value="Создать страницу">
