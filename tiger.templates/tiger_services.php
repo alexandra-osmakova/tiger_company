@@ -134,9 +134,9 @@ $img_url = "../tiger.img/services_" . $_GET["tag"] . ".jpg";
                     </a>
                 </li>
                 <li class="header_menu_open_nav_point">
-                    <a data-scroll id="to_payment_info" href="#payment_info">
+                    <a data-scroll id="to_payment_info" href="../posts">
                         <div class="header_menu_open_nav_decoration"></div>
-                        Информация <br> об оплате
+                        Статьи
                     </a>
                 </li>
             </ul>

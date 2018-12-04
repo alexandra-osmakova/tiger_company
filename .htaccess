@@ -13,4 +13,4 @@ RewriteRule ^(?!admin)([a-z]+-[a-z]+[-a-z]*)/$ tiger.templates/tiger_services.ph
 
 RewriteRule ^(?!admin)([a-z]+-[a-z]+[-a-z]*)/[0-9]+$ tiger.templates/tiger_trucking__third_level_page.php?id=$0 [QSA,L]
 
-#RewriteRule ^\/$ index.html
+RewriteRule ^posts$ tiger.templates/posts.php [QSA,L]

@@ -33,6 +33,7 @@ if (isset($_SESSION["user"]) && $_SESSION["user"] === "admin") {
         $page->tag = $_POST["tag"];
         $page->text = $_POST["text"];
         $page->description = $_POST["description"];
+        $page->date = date("Y-m-d H:i:s");
 
         R::store($page);
     }

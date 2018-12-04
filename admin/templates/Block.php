@@ -12,7 +12,7 @@ class Block
                         <a href='../../$page->tag/$page->id'>" . $page->title . "</a>
                     </div>
                     
-                    <div style='width: 33.3333%;'>02.12.2018 15:12</div>
+                    <div style='width: 33.3333%;'>$page->date</div>
                     
                     <div style='width: 33.3333%;'>
                         <a href='../admin/update.page.php?id=$page->id'>Редактировать</a>/<a href='../admin/delete.page.php?id=$page->id'>Удалить</a>
@@ -89,7 +89,8 @@ class Block
         }
     }
 
-    public static function get_special_settings($tag, $img_url) {
+    public static function get_special_settings($tag, $img_url)
+    {
         switch ($tag) {
             case "gruzoperevozki-po-rossii"    :
             case "gruzoperevozki-kamazom"  :
@@ -109,6 +110,28 @@ class Block
             default         :
                 return "<div id=\"video-bg\" style=\"background-image: url('$img_url')\"></div>";
                 break;
-            }
+        }
+    }
+
+    public static function generate_all_blocks($pages)
+    {
+        $result = "";
+
+        foreach ($pages as $page) {
+            $page->img_first = str_replace("../", "", $page->img_first);
+            $page->text = strip_tags($page->text);
+            $page->text = (strlen($page->text) >= 200) ? mb_substr($page->text, 0, 200) . "..." : $page->text;
+
+            $result .= "<a href=\"$page->tag/$page->id\">
+                            <div class=\"block\">
+                                <h1>$page->title</h1>
+                                <h6>$page->date</h6>
+                                <div class=\"inner_img\" style=\"background: url('$page->img_first')\"></div>
+                                <p>$page->text</p>
+                            </div>
+                        </a>";
+        }
+
+        return $result;
     }
 }
