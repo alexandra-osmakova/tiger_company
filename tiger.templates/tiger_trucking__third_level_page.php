@@ -180,7 +180,6 @@ $tagged_pages = R::getAll("SELECT * FROM pages WHERE tag=:tag", ["tag" => $page-
                 <span class="burger_menu_title">Меню</span>
             </div>
         </div>
-<<<<<<< HEAD
         <div class="header_content">
             <h2><?=$page->offer?></h2>
             <p class="visible_header_text"><?=$page->content?></p>
@@ -200,7 +199,6 @@ $tagged_pages = R::getAll("SELECT * FROM pages WHERE tag=:tag", ["tag" => $page-
                     <button class="header_count_form__btn invisible_header_btn">Далее</button>
                     <input class="header_count_form__btn" name="form1" type="submit" value="Быстрый рассчет">
                 </form>
-=======
     </div>
     <div class="header_content">
         <h2><?= $page->offer ?></h2>
@@ -210,7 +208,6 @@ $tagged_pages = R::getAll("SELECT * FROM pages WHERE tag=:tag", ["tag" => $page-
 
             <div class="invisible_header_counter">
                 <span class="invisible_header_counter_item">1</span>/4
->>>>>>> 4b48a96ab609db7b7c8bf4c5d78ef564219c1fcf
             </div>
 
             <form class="header_count_form" id="form1" method="post" action="../thanks_window.php">

@@ -3674,6 +3674,10 @@ input[type=submit] {
         font-size: 14px;
     }
 
+    .invisible_header_counter {
+        display: block;
+    }
+
     .article {
         padding: 2rem;
     }
@@ -3834,7 +3838,7 @@ input[type=submit] {
 
     .invisible_header_input {
         position: absolute;
-        left: 1.5rem;
+        left: 5%;
     }
 
     .invisible_header_input:nth-of-type(1) {
@@ -4251,6 +4255,10 @@ input[type=submit] {
     html,
     body {
         font-size: 12px;
+    }
+
+    .invisible_header_counter {
+        display: block;
     }
 
     .article {
@@ -4954,6 +4962,10 @@ input[type=submit] {
     html,
     body {
         font-size: 11px;
+    }
+
+    .invisible_header_counter {
+        display: block;
     }
 
     .article {

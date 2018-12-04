@@ -24,6 +24,7 @@ var header_modal_btn = document.getElementsByClassName('promo_img_section__btn')
 var service_types = document.getElementsByClassName('service_types')[0];
 
 
+
 function modal_on_first() {
     modal_window_first.classList.add('modal_visible');
     modal_overlay.classList.add('modal_overlay');
@@ -176,28 +177,27 @@ var quiz_input_with_img = document.getElementsByClassName('checkbox_question_inf
 var new_input = document.getElementsByClassName('new_input_quiz')[0];
 var n = 0;
 
-if (!quiz_btn === undefined) {
-    quiz_btn[1].addEventListener('click', function () {
-        question_info_item[7].classList.remove('invisible_item');
-    })
+quiz_btn[1].addEventListener('click', function () {
+    question_info_item[7].classList.remove('invisible_item');
+})
 
-    for (var i = 0; i < question_item_checkbox.length; i++) {
-        question_item_checkbox[i].addEventListener('click', quizStart)
-    }
+for (var i = 0; i < question_item_checkbox.length; i++) {
+    question_item_checkbox[i].addEventListener('click', quizStart)
+}
 
-    for (var j = 0; j < quiz_btn.length; j++) {
-        quiz_btn[j].addEventListener('click', quizNextStep)
-    }
+for (var j = 0; j < quiz_btn.length; j++) {
+    quiz_btn[j].addEventListener('click', quizNextStep)
+}
 
-    for (var k = 0; k < quiz_textarea.length; k++) {
-        quiz_textarea[k].addEventListener('input', quizStart_texarea)
-    }
+for (var k = 0; k < quiz_textarea.length; k++) {
+    quiz_textarea[k].addEventListener('input', quizStart_texarea)
+}
 
 
-    function quizStart_texarea() {
-        quiz_btn[n].disabled = false;
-        quiz_btn[n].classList.remove('apply_questions_start__btn_disabled');
-    }
+function quizStart_texarea() {
+    quiz_btn[n].disabled = false;
+    quiz_btn[n].classList.remove('apply_questions_start__btn_disabled');
+}
 
 
 function quizStart() {
@@ -212,6 +212,7 @@ function quizStart() {
             }
         }
     }
+}
 
 function quizTextToSee(i) {
     for (var j = 0; j < question_info_item.length; j++) {
@@ -222,84 +223,84 @@ function quizTextToSee(i) {
             question_info_item[i].classList.remove('invisible_item');
         }
     }
+}
 
-    function quizNextStep() {
-        if (n <= 8) {
-            question_item[n].classList.add('invisible_item');
-            question_item[n + 1].classList.remove('invisible_item');
-            quiz_step_mark[n].classList.remove('current_question_item__active');
-            quiz_step_mark[n + 1].classList.add('current_question_item__active');
-            quiz_progress[n + 1].classList.add('progrss_line_item__active');
-            quiz_current_number.innerHTML = Number(quiz_current_number.innerHTML) - 1;
-            n++;
-            if (n >= 5) {
-                apply_questions_actual_quantity.innerHTML = "вопроса";
-            }
-            if (n == 8) {
-                apply_questions_actual_quantity.innerHTML = "вопрос";
-            }
+function quizNextStep() {
+    if (n <= 8) {
+        question_item[n].classList.add('invisible_item');
+        question_item[n + 1].classList.remove('invisible_item');
+        quiz_step_mark[n].classList.remove('current_question_item__active');
+        quiz_step_mark[n + 1].classList.add('current_question_item__active');
+        quiz_progress[n + 1].classList.add('progrss_line_item__active');
+        quiz_current_number.innerHTML = Number(quiz_current_number.innerHTML) - 1;
+        n++;
+        if (n >= 5) {
+            apply_questions_actual_quantity.innerHTML = "вопроса";
+        }
+        if (n == 8) {
+            apply_questions_actual_quantity.innerHTML = "вопрос";
         }
     }
+}
 
-    var apply_questions = document.getElementsByClassName('apply_questions')[0];
+var apply_questions = document.getElementsByClassName('apply_questions')[0];
 
-    apply_questions.addEventListener('click', quiz_back);
+apply_questions.addEventListener('click', quiz_back);
 
 
-    function quiz_back(e) {
-        if (e.target.classList.contains('quiz_back_button_image')) {
-            if ((Number(e.target.id) > 0)) {
-                var newIndex = Number(e.target.id);
-                for (var i = 0; i < question_item.length; i++) {
-                    question_item[i].classList.add('invisible_item');
-                }
-                question_item[newIndex - 1].classList.remove('invisible_item');
-                cleanUpQuiz(newIndex)
+function quiz_back(e) {
+    if (e.target.classList.contains('quiz_back_button_image')) {
+        if ((Number(e.target.id) > 0)) {
+            var newIndex = Number(e.target.id);
+            for (var i = 0; i < question_item.length; i++) {
+                question_item[i].classList.add('invisible_item');
             }
+            question_item[newIndex - 1].classList.remove('invisible_item');
+            cleanUpQuiz(newIndex)
         }
     }
+}
 
-    function cleanUpQuiz(index) {
-        n--;
-        new_input.classList.add('invisible_item');
-        quiz_current_number.innerHTML = Number(quiz_current_number.innerHTML) + 1;
-        quiz_progress[index].classList.remove('progrss_line_item__active');
+function cleanUpQuiz(index) {
+    n--;
+    new_input.classList.add('invisible_item');
+    quiz_current_number.innerHTML = Number(quiz_current_number.innerHTML) + 1;
+    quiz_progress[index].classList.remove('progrss_line_item__active');
+    quiz_step_mark[index].classList.remove('current_question_item__active');
+    quiz_step_mark[index - 1].classList.add('current_question_item__active');
+
+    if (index == 1) {
         quiz_step_mark[index].classList.remove('current_question_item__active');
         quiz_step_mark[index - 1].classList.add('current_question_item__active');
-
-        if (index == 1) {
-            quiz_step_mark[index].classList.remove('current_question_item__active');
-            quiz_step_mark[index - 1].classList.add('current_question_item__active');
-        } else if (n == 4) {
-            apply_questions_actual_quantity.innerHTML = "вопросов";
-        }
-        for (var i = 0; i < question_item_checkbox.length; i++) {
-            question_item_checkbox[i].checked = false;
-        }
-
-        for (var j = 0; j < quiz_textarea.length; j++) {
-            quiz_textarea[j].value = '';
-        }
-
-        for (var k = 0; k < quiz_btn.length; k++) {
-            if (quiz_btn[k].classList.contains('apply_questions_start__btn_disabled') != true) {
-                quiz_btn[k].classList.add('apply_questions_start__btn_disabled');
-            }
-        }
-
-        for (var h = 0; h < checkbox_mark_type.length; h++) {
-            if (checkbox_mark_type[h].checked) {
-                checkbox_mark_type[h].checked = false;
-            }
-        }
-
-        for (var l = 0; l < question_info_item.length; l++) {
-            question_info_item[l].classList.add('invisible_item');
-        }
-
-        question_info_item[0].classList.remove('invisible_item');
-        question_info_item[7].classList.remove('invisible_item');
+    } else if (n == 4) {
+        apply_questions_actual_quantity.innerHTML = "вопросов";
     }
+    for (var i = 0; i < question_item_checkbox.length; i++) {
+        question_item_checkbox[i].checked = false;
+    }
+
+    for (var j = 0; j < quiz_textarea.length; j++) {
+        quiz_textarea[j].value = '';
+    }
+
+    for (var k = 0; k < quiz_btn.length; k++) {
+        if (quiz_btn[k].classList.contains('apply_questions_start__btn_disabled') != true) {
+            quiz_btn[k].classList.add('apply_questions_start__btn_disabled');
+        }
+    }
+
+    for (var h = 0; h < checkbox_mark_type.length; h++) {
+        if (checkbox_mark_type[h].checked) {
+            checkbox_mark_type[h].checked = false;
+        }
+    }
+
+    for (var l = 0; l < question_info_item.length; l++) {
+        question_info_item[l].classList.add('invisible_item');
+    }
+
+    question_info_item[0].classList.remove('invisible_item');
+    question_info_item[7].classList.remove('invisible_item');
 }
 
 var invisible_header_btn = document.getElementsByClassName('invisible_header_btn')[0];
@@ -392,7 +393,7 @@ var k = 0;
 var isScrolling = false;
 
 window.addEventListener("scroll", throttleScroll, false);
-if(!aboutItem === undefined) {
+
 function throttleScroll(e) {
     if (isScrolling == false) {
         window.requestAnimationFrame(function () {
@@ -401,28 +402,26 @@ function throttleScroll(e) {
         });
     }
     isScrolling = true;
-}}
+}
 
 document.addEventListener("DOMContentLoaded", scrolling, false);
 
-if (!aboutItem === undefined) {
-    function scrolling(e) {
+function scrolling(e) {
 
-        if (isPartiallyVisible(aboutItem) & k == 0) {
-            counter();
-            k++;
-        }
+    if (isPartiallyVisible(aboutItem) & k == 0) {
+        counter();
+        k++;
     }
+}
 
-    function isPartiallyVisible(el) {
-        var elementBoundary = el.getBoundingClientRect();
+function isPartiallyVisible(el) {
+    var elementBoundary = el.getBoundingClientRect();
 
-        var top = elementBoundary.top;
-        var bottom = elementBoundary.bottom;
-        var height = elementBoundary.height;
+    var top = elementBoundary.top;
+    var bottom = elementBoundary.bottom;
+    var height = elementBoundary.height;
 
-        return ((top + height >= 0) && (height + window.innerHeight >= bottom));
-    }
+    return ((top + height >= 0) && (height + window.innerHeight >= bottom));
 }
 
 new WOW().init();

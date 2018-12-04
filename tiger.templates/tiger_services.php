@@ -191,7 +191,6 @@ $img_url = "../tiger.img/services_" . $_GET["tag"] . ".jpg";
                 <span class="invisible_header_counter_item">1</span>/4
             </div>
 
-<<<<<<< HEAD
             <form class="header_count_form" id="form1" method="post" action="thanks_window.php">
                 <input id='ADDRESS_FROM_HEADER' class="header_count_form_input invisible_header_input" name="ADDRESS_FROM_HEADER"
                        type="text" placeholder="Город отправления" required>
@@ -202,21 +201,6 @@ $img_url = "../tiger.img/services_" . $_GET["tag"] . ".jpg";
                        placeholder="Контактный телефон" required>
                 <button class="header_count_form__btn invisible_header_btn">Далее</button>
                 <input class="header_count_form__btn" name="form1" type="submit" value="Быстрый рассчет">
-=======
-            <form class="header_count_form" id="form1" method="post" action="../thanks_window.php">
-                <input id='ADDRESS_FROM_HEADER' class="header_count_form_input invisible_header_input"
-                       name="ADDRESS_FROM_HEADER"
-                       type="text" placeholder="Город отправления">
-                <input id="ADDRESS_TO_HEADER" name="ADDRESS_TO_HEADER"
-                       class="header_count_form_input invisible_header_input"
-                       type="text" placeholder="Город доставки">
-                <input class="header_count_form_input invisible_header_input" name="weight" type="text"
-                       placeholder="Масса груза, кг">
-                <input class="header_count_form_input invisible_header_input" name="header_telephone" type="text"
-                       placeholder="Контактный телефон" required>
-                <input type="text" id="next" class="header_count_form__btn invisible_header_btn" value="Далее" readonly>
-                <input class="header_count_form__btn" id="form1_btn" name="form1" type="submit" value="Быстрый рассчет">
->>>>>>> 4b48a96ab609db7b7c8bf4c5d78ef564219c1fcf
             </form>
         </div>
     </div>
