@@ -26,6 +26,7 @@ if (isset($_SESSION["user"]) && $_SESSION["user"] === "admin") {
             $page->img_second = $url_second;
         }
 
+        $page->url = $_POST["url"];
         $page->title = $_POST["title"];
         $page->offer = $_POST["offer"];
         $page->text_title = $_POST["text_title"];
@@ -54,6 +55,9 @@ if (isset($_SESSION["user"]) && $_SESSION["user"] === "admin") {
             <form action="update.page.php?id=<?= $page->id ?>" method="post" enctype="multipart/form-data">
                 <h1>Редактировать страницу: <?= $page->id ?></h1>
                 <a href="index.php" class="button-standart">Назад</a>
+
+                <label for="url">ЧПУ</label>
+                <input type="text" id="url" name="url" value="<?= $page->url ?>">
 
                 <label for="title">Тег title</label>
                 <input type="text" id="title" name="title" value="<?= $page->title ?>">

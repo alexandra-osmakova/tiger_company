@@ -9,7 +9,7 @@ class Block
 
         $result = "<div class='generated_block'>
                     <div style='width: 33.3333%;margin-left: 10px;'>
-                        <a href='../../$page->tag/$page->id'>" . $page->title . "</a>
+                        <a href='../../$page->tag/$page->url'>" . $page->title . "</a>
                     </div>
                     
                     <div style='width: 33.3333%;'>$page->date</div>
@@ -50,7 +50,7 @@ class Block
             }
             $count++;
 
-            $result .= "<li><a href=../" . $page["tag"] . "/" . $page{"id"} . ">" . $page["offer"] . "</a></li>";
+            $result .= "<li><a href=../" . $page["tag"] . "/" . $page{"url"} . ">" . $page["offer"] . "</a></li>";
 
             if ($count === 13) {
                 $result .= "</ul></div>";
@@ -122,7 +122,7 @@ class Block
             $page->text = strip_tags($page->text);
             $page->text = (strlen($page->text) >= 200) ? mb_substr($page->text, 0, 200) . "..." : $page->text;
 
-            $result .= "<a href=\"$page->tag/$page->id\">
+            $result .= "<a href=\"$page->tag/$page->url\">
                             <div class=\"block\">
                                 <h1>$page->title</h1>
                                 <h6>$page->date</h6>

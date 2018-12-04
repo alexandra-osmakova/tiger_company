@@ -22,6 +22,7 @@ if (isset($_SESSION["user"]) && $_SESSION["user"] === "admin") {
         $url_first = "../tiger.img/" . $_FILES['img_first']['name'];
         $url_second = "../tiger.img/" . $_FILES['img_second']['name'];
 
+        $page->url = $_POST["url"];
         $page->title = $_POST["title"];
         $page->offer = $_POST["offer"];
         $page->img_first = $url_first;

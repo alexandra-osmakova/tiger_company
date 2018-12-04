@@ -30,6 +30,9 @@ if (isset($_SESSION["user"])) {
                 <form action="create.page.php" method="post" enctype="multipart/form-data">
                     <h1>Добавить страницу</h1>
 
+                    <label for="url">ЧПУ</label>
+                    <input type="text" id="url" name="url" placeholder="ЧПУ...">
+
                     <label for="title">Тег title</label>
                     <input type="text" id="title" name="title" placeholder="Title...">
 

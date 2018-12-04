@@ -4,9 +4,9 @@ require("../admin/templates/Block.php");
 
 use Templates\Block;
 
-$_GET["id"] = explode("/", $_GET["id"])[1];
+$_GET["url"] = explode("/", $_GET["url"])[1];
 
-$page = R::load("pages", $_GET["id"]);
+$page = R::findOne("pages", "WHERE url=:url", ["url" => $_GET["url"]]);
 
 $tagged_pages = R::getAll("SELECT * FROM pages WHERE tag=:tag", ["tag" => $page->tag]);
 
