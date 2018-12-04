@@ -34,12 +34,16 @@ if (isset($_SESSION["user"]) && $_SESSION["user"] === "admin") {
         $page->description = $_POST["description"];
         $page->date = date("Y-m-d H:i:s");
 
-        R::store($page);
-
-        echo "<div><h1 style='color: green'>Успешно</h1></div>";
-
+        try {
+            R::store($page);
+            echo "<div><h1 style='color: green'>Успешно</h1></div>";
+        }catch (Exception $e) {
+            if($e->getLine() === 768) {
+                echo "<h1 style='color:red'>Такое ЧПУ уже существует<h1>";
+            }
+        }
     } else {
-        echo "<div><h1 style='color: green'>Что-то пошло не так</h1>></div>";
+        echo "<div><h1 style='color: red'>Что-то пошло не так</h1>></div>";
     }
 }else {
     echo "<h1>YOU DON'T HAVE ACCESS TO THIS PAGE</h1>";
