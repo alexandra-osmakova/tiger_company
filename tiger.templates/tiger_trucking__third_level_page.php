@@ -205,6 +205,7 @@ $tagged_pages = R::getAll("SELECT * FROM pages WHERE tag=:tag", ["tag" => $page-
                 <button id="next" class="header_count_form__btn invisible_header_btn">Далее</button>
                 <input class="header_count_form__btn" id="form1_btn" name="form1" type="submit" value="Быстрый рассчет">
             </form>
+            <div class="policy">*оставляя заявку, вы соглашаетесь с <a href="">политикой конфиденциальности сайта</a></div>
         </div>
     </div>
     <div class="header_decoration_line">
@@ -298,6 +299,7 @@ $tagged_pages = R::getAll("SELECT * FROM pages WHERE tag=:tag", ["tag" => $page-
                 </button>
             </div>
         </form>
+        <div class="policy">*оставляя заявку, вы соглашаетесь с <a href="">политикой конфиденциальности сайта</a></div>
     </div>
 </section>
 <section class="blog">

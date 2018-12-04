@@ -6395,6 +6395,97 @@ input[type=submit] {
     #all_articles .articles > a p {
         font-size: 12px;
     }
+}
 
+.policy {
+    width: 53%;
+    float: right;
+    color: white;
+    margin-top: 12px;
+}
 
+.policy a {
+    color: #ffdb4d;
+}
+
+.question_item.finish_container .policy {
+    position: absolute;
+    color: black;
+    font-size: 13px;
+}
+
+.online_apply_content .policy {
+    color: black;
+    width: 72%;
+    float: unset;
+    margin: 2% auto 0 auto;
+}
+
+@media screen and (max-width: 768px) and (min-width: 100px) {
+    .service_type__item:nth-of-type(1) {
+        background-size: cover;
+        background: url(../tiger.img/s_1.jpg) no-repeat center;
+    }
+
+    .service_type__item:nth-of-type(2) {
+        background-size: cover;
+        background: url(../tiger.img/s_2.jpg) no-repeat center;
+    }
+
+    .service_type__item:nth-of-type(3) {
+        background-size: cover;
+        background: url(../tiger.img/s_3.jpg) no-repeat center;
+    }
+
+    .service_type__item:nth-of-type(4) {
+        background-size: cover;
+        background: url(../tiger.img/s_4.jpg) no-repeat center;
+    }
+
+    .service_type__item:nth-of-type(5) {
+        background-size: cover;
+        background: url(../tiger.img/s_5.jpg) no-repeat center;
+    }
+
+    .service_type__item:nth-of-type(6) {
+        background-size: cover;
+        background: url(../tiger.img/s_6.jpg) no-repeat center;
+    }
+
+    .service_type__item:nth-of-type(7) {
+        background-size: cover;
+        background: url(../tiger.img/s_7.jpg) no-repeat center;
+    }
+
+    .service_type__item:nth-of-type(8) {
+        background-size: cover;
+        background: url(../tiger.img/s_8.jpg) no-repeat center;
+    }
+
+    .service_type__item:nth-of-type(9) {
+        background-size: cover;
+        background: url(../tiger.img/s_9.jpg) no-repeat center;
+    }
+}
+
+@media screen and (max-width: 1210px) and (min-width: 100px) {
+    .policy {
+        width: 277px;
+        float: unset;
+        text-align: center;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 1210px) and (min-width: 767px) {
+    .question_item.finish_container .policy {
+        margin-top: 1%;
+        width: 59%;
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 100px) {
+    .question_item.finish_container .policy {
+        width: 74%;
+    }
 }
