@@ -207,8 +207,7 @@ function quizStart() {
             quiz_btn[n].classList.remove('apply_questions_start__btn_disabled');
             if (question_item_checkbox[i].classList.contains('checkbox_question_info_trigger')) {
                 quizTextToSee()
-            }
-            else if(question_item_checkbox[i].id == 'other') {
+            } else if (question_item_checkbox[i].id == 'other') {
                 new_input.classList.remove('invisible_item')
             }
         }
@@ -219,8 +218,8 @@ function quizTextToSee(i) {
     for (var j = 0; j < question_info_item.length; j++) {
         question_info_item[j].classList.add('invisible_item');
     }
-    for(var i = 0; i < quiz_input_with_img.length; i++) {
-        if(quiz_input_with_img[i].checked) {
+    for (var i = 0; i < quiz_input_with_img.length; i++) {
+        if (quiz_input_with_img[i].checked) {
             question_info_item[i].classList.remove('invisible_item');
         }
     }
@@ -309,23 +308,24 @@ var invisible_header_input = document.getElementsByClassName('invisible_header_i
 var header_input_count = 0;
 var invisible_header_counter_item = document.getElementsByClassName('invisible_header_counter_item')[0];
 
-invisible_header_btn.addEventListener('click', function() {
-    headerCounter()
-    if(header_input_count < 3) {
-        invisible_header_input[header_input_count].classList.add('animated_elem');
-        invisible_header_input[header_input_count].classList.add('animated_transform');
-        header_input_count++;
-        if(header_input_count==3 ) {
-            invisible_header_btn.value = "Рассчитать стоимость"
+invisible_header_btn.addEventListener('click', function () {
+    if (header_input_count < 3) {
+        if (invisible_header_input[header_input_count].value.length > 0) {
+            headerCounter()
+            invisible_header_input[header_input_count].classList.add('animated_elem');
+            invisible_header_input[header_input_count].classList.add('animated_transform');
+            header_input_count++
+            console.log(header_input_count);
+        } if (header_input_count == 3) {
+            invisible_header_btn.innerHTML = "Рассчитать стоимость"
         }
     }
 })
 
 function headerCounter() {
-    if(Number(invisible_header_counter_item.innerHTML)!=4) {
+    if (Number(invisible_header_counter_item.innerHTML) != 4) {
         invisible_header_counter_item.innerHTML = Number(invisible_header_counter_item.innerHTML) + 1;
-    }
-    else if (Number(invisible_header_counter_item.innerHTML)==4) {
+    } else if (Number(invisible_header_counter_item.innerHTML) == 4) {
         invisible_header_counter_item.innerHTML = 1;
     }
 }
@@ -427,4 +427,3 @@ function isPartiallyVisible(el) {
 new WOW().init();
 
 window.addEventListener("scroll", overflow);
-
