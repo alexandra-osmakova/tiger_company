@@ -83,14 +83,14 @@ input[type="submit"] {
 
 #admin .menu-items{
     display: grid;
-    width: 152px;
+    width: 168px;
     grid-gap: 15px;
     font-size: 18px;
 }
 
 #admin .menu-items > a, span {
     text-decoration: none;
-    width: 152px;
+    width: 168px;
     color: white;
 }
 

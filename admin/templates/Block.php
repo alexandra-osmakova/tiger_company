@@ -9,7 +9,7 @@ class Block
 
         $result = "<div class='generated_block'>
                     <div style='width: 33.3333%;margin-left: 10px;'>
-                        <a href='../../tiger.templates/tiger_trucking__third_level_page.php?id=$page->id'>" . $page->title . "</a>
+                        <a href='../../$page->tag/$page->id'>" . $page->title . "</a>
                     </div>
                     
                     <div style='width: 33.3333%;'>02.12.2018 15:12</div>
@@ -50,7 +50,7 @@ class Block
             }
             $count++;
 
-            $result .= "<li><a href='../tiger.templates/tiger_trucking__third_level_page.php?id=" . $page["id"] . "'>" . $page["offer"] . "</a></li>";
+            $result .= "<li><a href=../" . $page["tag"] . "/" . $page{"id"} . ">" . $page["offer"] . "</a></li>";
 
             if ($count === 13) {
                 $result .= "</ul></div>";
@@ -64,28 +64,51 @@ class Block
     public static function get_offer($tag)
     {
         switch ($tag) {
-            case "g_rus":
+            case "gruzoperevozki-po-rossii":
                 return "Грузоперевозки по России отдельным транспортом от 1.5 до 20
                         тонн";
-            case "g_fur":
+            case "gruzoperevozki-furami":
                 return "Грузоперевозки фурами";
-            case "g_ref":
+            case "gruzoperevozki-refrizheratorom":
                 return "Грузоперевозки рефрижераторами (с заданным температурным
                         режимом)";
-            case "pg"   :
+            case "poputnye-gruzoperevozki"   :
                 return "Попутные грузоперевозки";
-            case "dsg"  :
+            case "dostavka-sbornyh-gruzov"  :
                 return "Доставка сборных грузов по России от 50 до 800 кг (догрузом)";
-            case "pm"   :
+            case "pereezd-mezhgorod"   :
                 return "Переезды межгород";
-            case "plv"  :
+            case "perevozka-lichnykh-vechey"  :
                 return "Перевозка личных вещей от 50 кг";
-            case "pkvg" :
+            case "perevozka-konkretnyh-vidov-gruza" :
                 return "Перевозка конкретных видов груза";
-            case "g_kamaz":
+            case "gruzoperevozki-kamazom":
                 return "Грузоперевозки КамАЗом от 5 до 10 тонн";
             default:
                 return null;
         }
+    }
+
+    public static function get_special_settings($tag, $img_url) {
+        switch ($tag) {
+            case "gruzoperevozki-po-rossii"    :
+            case "gruzoperevozki-kamazom"  :
+            case "poputnye-gruzoperevozki"       :
+                return "<div id=\"video-bg\" style=\"background-image: url('$img_url');\">
+                            <video loop muted autoplay>
+                                <source src=\"../tiger.video/2.webm\" type=\"video/webm\">
+                            </video>
+                        </div>";
+                break;
+            case "gruzoperevozki-refrizheratorom"    :
+                return "<div id=\"video-bg\" style=\"background-image: url('$img_url'); background-position: center 27%;\"></div>";
+                break;
+            case "gruzoperevozki-furami"    :
+                return "<div id=\"video-bg\" style=\"background-image: url('$img_url'); background-position: center bottom;\"></div>";
+                break;
+            default         :
+                return "<div id=\"video-bg\" style=\"background-image: url('$img_url')\"></div>";
+                break;
+            }
     }
 }

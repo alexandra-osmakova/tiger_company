@@ -1,0 +1,16 @@
+AddDefaultCharset UTF-8
+
+Options -Indexes
+
+RewriteEngine on
+
+DirectoryIndex index.html
+
+RewriteCond %{REQUEST_FILENAME} !-s
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule ^(?!admin)([a-z]+-[a-z]+[-a-z]*)/$ tiger.templates/tiger_services.php?tag=$1 [QSA,L]
+
+RewriteRule ^(?!admin)([a-z]+-[a-z]+[-a-z]*)/[0-9]+$ tiger.templates/tiger_trucking__third_level_page.php?id=$0 [QSA,L]
+
+#RewriteRule ^\/$ index.html

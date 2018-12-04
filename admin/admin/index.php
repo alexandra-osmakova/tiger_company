@@ -5,35 +5,6 @@ require("../templates/Block.php");
 
 use Templates\Block;
 
-$page = R::dispense("pages");
-
-$uploaddir = '../../tiger.img/';
-
-
-if (isset($_POST["add_page"])) {
-
-    $file_path_first = $uploaddir . $_FILES['img_first']['name'];
-    $file_path_second = $uploaddir . $_FILES['img_second']['name'];
-
-    move_uploaded_file($_FILES['img_first']['tmp_name'], $file_path_first);
-    move_uploaded_file($_FILES['img_second']['tmp_name'], $file_path_second);
-
-    $url_first = "../tiger.img/" . $_FILES['img_first']['name'];
-    $url_second = "../tiger.img/" . $_FILES['img_second']['name'];
-
-    $page->title = $_POST["title"];
-    $page->offer = $_POST["offer"];
-    $page->img_first = $url_first;
-    $page->img_second = $url_second;
-    $page->text_title = $_POST["text_title"];
-    $page->content = $_POST["content"];
-    $page->tag = $_POST["tag"];
-    $page->text = $_POST["text"];
-    $page->description = $_POST["description"];
-
-    R::store($page);
-}
-
 if (isset($_SESSION["user"])) {
     ?>
     <!DOCTYPE html>
@@ -49,14 +20,14 @@ if (isset($_SESSION["user"])) {
         <div class="side-menu">
             <div class="logo centered"></div>
             <div class="menu-items centered">
-                <span id="wrapper" class="active">Добавить ссылку</span>
+                <span id="wrapper" class="active">Добавить страницу</span>
                 <span id="pages">Все страницы</span>
                 <a href="../index.php">Выйти</a>
             </div>
         </div>
         <div class="content">
             <div class="wrapper centered active">
-                <form action="index.php" method="post" enctype="multipart/form-data">
+                <form action="create.page.php" method="post" enctype="multipart/form-data">
                     <h1>Добавить страницу</h1>
 
                     <label for="title">Тег title</label>
@@ -104,15 +75,15 @@ if (isset($_SESSION["user"])) {
 
                     <label for="tag">Тег страницы</label>
                     <select name="tag" id="tag">
-                        <option value="g_rus" selected>Грузоперевозки по России</option>
-                        <option value="g_fur">Грузоперевозки фурами</option>
-                        <option value="g_ref">Грузоперевозки рефрижератором</option>
-                        <option value="pg">Попутные грузоперевозки</option>
-                        <option value="dsg">Доставка сборных грузов</option>
-                        <option value="pm">Переезды межгород</option>
-                        <option value="plv">Перевозка личных вещей</option>
-                        <option value="pkvg">Перевозка конкретных видов груза</option>
-                        <option value="g_kamaz">Грузоперевозки КамАЗом</option>
+                        <option value="gruzoperevozki-po-rossii" selected>Грузоперевозки по России</option>
+                        <option value="gruzoperevozki-furami">Грузоперевозки фурами</option>
+                        <option value="gruzoperevozki-refrizheratorom">Грузоперевозки рефрижератором</option>
+                        <option value="poputnye-gruzoperevozki">Попутные грузоперевозки</option>
+                        <option value="dostavka-sbornyh-gruzov">Доставка сборных грузов</option>
+                        <option value="pereezd-mezhgorod">Переезды межгород</option>
+                        <option value="perevozka-lichnykh-vechey">Перевозка личных вещей</option>
+                        <option value="perevozka-konkretnyh-vidov-gruza">Перевозка конкретных видов груза</option>
+                        <option value="gruzoperevozki-kamazom">Грузоперевозки КамАЗом</option>
                     </select>
 
                     <input type="submit" name="add_page" value="Создать страницу">

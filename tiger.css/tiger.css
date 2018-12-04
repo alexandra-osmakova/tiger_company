@@ -994,56 +994,56 @@ header {
 }
 
 .service_type__item:nth-of-type(2) {
-    background-image: url(../tiger.img/services_g_fur.jpg);
+    background-image: url(../tiger.img/services_gruzoperevozki-furami.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: left;
 }
 
 .service_type__item:nth-of-type(3) {
-    background-image: url(../tiger.img/services_g_ref.jpg);
+    background-image: url(../tiger.img/services_gruzoperevozki-refrizheratorom.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 100% 15%;
 }
 
 .service_type__item:nth-of-type(4) {
-    background-image: url(../tiger.img/services_pg.jpg);
+    background-image: url(../tiger.img/services_poputnye-gruzoperevozki.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .service_type__item:nth-of-type(5) {
-    background-image: url(../tiger.img/services_dsg.jpg);
+    background-image: url(../tiger.img/services_dostavka-sbornyh-gruzov.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: left;
 }
 
 .service_type__item:nth-of-type(6) {
-    background-image: url(../tiger.img/services_pm.jpg);
+    background-image: url(../tiger.img/services_pereezd-mezhgorod.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .service_type__item:nth-of-type(7) {
-    background-image: url(../tiger.img/services_plv.jpg);
+    background-image: url(../tiger.img/services_perevozka-lichnykh-vechey.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: left;
 }
 
 .service_type__item:nth-of-type(8) {
-    background-image: url(../tiger.img/services_pkvg.jpg);
+    background-image: url(../tiger.img/services_perevozka-konkretnyh-vidov-gruza.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .service_type__item:nth-of-type(9) {
-    background-image: url(../tiger.img/services_g_kamaz.jpg);
+    background-image: url(../tiger.img/services_gruzoperevozki-kamazom.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -2980,7 +2980,7 @@ input[type=submit] {
     }
 
     .tiger_services_header #video-bg {
-        background-image: url(../tiger.img/tiger_services_header.jpg);
+        background-image: url(../tiger.img/main_header_background.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
