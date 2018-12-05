@@ -15,6 +15,24 @@
     color: black;
 }
 
+.buttons {
+    width: 210px;
+    display: grid;
+    grid-gap: 24px;
+    font-size: 23px;
+    margin-top: -20px;
+    font-family: 'Roboto';
+}
+
+.buttons .button-standart {
+    width: 210px;
+    height: 60px;
+}
+
+.buttons .button-standart:last-child {
+    height: 34px;
+}
+
 .form-container {
     width: 440px;
     height: 400px;

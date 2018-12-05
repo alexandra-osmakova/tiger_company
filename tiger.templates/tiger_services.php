@@ -7,6 +7,8 @@ use Templates\Block;
 $page = R::getAll("SELECT * FROM pages WHERE tag=:tag", ["tag" => $_GET["tag"]]);
 
 $img_url = "../tiger.img/services_" . $_GET["tag"] . ".jpg";
+
+$tag = R::findOne("tags", "WHERE tag=:tag", array("tag" => $_GET["tag"]));
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,7 +29,7 @@ $img_url = "../tiger.img/services_" . $_GET["tag"] . ".jpg";
     <link href="https://cdn.jsdelivr.net/npm/suggestions-jquery@18.8.0/dist/css/suggestions.min.css" type="text/css"
           rel="stylesheet"/>
 
-    <title>Транспортная компания Tiger Logistic - <?= Block::get_offer($_GET["tag"]) ?></title>
+    <title>Транспортная компания Tiger Logistic - <?= $tag->offer ?></title>
 
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
@@ -143,7 +145,7 @@ $img_url = "../tiger.img/services_" . $_GET["tag"] . ".jpg";
         </nav>
     </div>
 
-    <?= Block::get_special_settings($_GET["tag"], $img_url) ?>
+    <?= Block::get_special_settings($tag->tag, $img_url) ?>
 
     <div class="header_wrap"></div>
     <div class="header_contacts">
@@ -181,8 +183,8 @@ $img_url = "../tiger.img/services_" . $_GET["tag"] . ".jpg";
         </div>
     </div>
     <div class="header_content">
-        <h2><?= Block::get_offer($_GET["tag"]) ?></h2>
-        <p class="visible_header_text">Получите расчет стоимости грузоперевозки за 60 секунд</p>
+        <h2><?= $tag->offer ?></h2>
+        <p class="visible_header_text"><?= $tag->cta ?></p>
         <p class="invisible_header_text">Ответьте на 4 вопроса <br> и получите расчет стоимости грузоперевозки за
             60 секунд</p>
         <div class="header_count">
@@ -205,7 +207,7 @@ $img_url = "../tiger.img/services_" . $_GET["tag"] . ".jpg";
                 <button id="next" class="header_count_form__btn invisible_header_btn">Далее</button>
                 <input class="header_count_form__btn" id="form1_btn" name="form1" type="submit" value="Быстрый рассчет">
             </form>
-            <div class="policy">*оставляя заявку, вы соглашаетесь с <a href="">политикой конфиденциальности сайта</a></div>
+            <div class="policy">*оставляя заявку, вы соглашаетесь с <a href="../politikaconf.pdf" target="_blank">политикой конфиденциальности сайта</a></div>
         </div>
     </div>
     <div class="header_decoration_line">
@@ -828,7 +830,7 @@ $img_url = "../tiger.img/services_" . $_GET["tag"] . ".jpg";
                         <input class="finish_form__btn btn" type="submit" name="quiz_btn" value="Узнать стоимость">
                     </form>
                 </div>
-                <div class="policy">*оставляя заявку, вы соглашаетесь с <a href="">политикой конфиденциальности сайта</a></div>
+                <div class="policy">*оставляя заявку, вы соглашаетесь с <a href="../politikaconf.pdf" target="_blank">политикой конфиденциальности сайта</a></div>
             </div>
         </div>
         <div class="price_decoration_line">
@@ -986,7 +988,7 @@ $img_url = "../tiger.img/services_" . $_GET["tag"] . ".jpg";
             <div class="vk_review">
                 <div class="vk_review__header">
                     <div class="vk_review__header_img"></div>
-                    <a href="https://vk.com/club134747802">
+                    <a href="https://vk.com/club134747802" target="_blank">
                         <h3>Грузоперевозки по России | ТАЙГЕР-ЛОГИСТИК</h3>
                         <span>10 мая в 11:10</span>
                     </a>
@@ -995,13 +997,13 @@ $img_url = "../tiger.img/services_" . $_GET["tag"] . ".jpg";
                     <p>С радостью принимаем Ваши звонки, отвечаем на вопросы и консультируем по переезду в другой
                         город📦📦📦</p>
                     <p>Звоните нам: 8800-700-09-35 <br> Звонок по России бесплатный</p>
-                    <a href="https://vk.com/club134747802"><span>#перееезд</span></a>
+                    <a href="https://vk.com/club134747802" target="_blank"><span>#перееезд</span></a>
                     <div class="vk_review__content_img third_review_img"></div>
                 </div>
                 <div class="vk_review__footer">
                     <div class="vk_review__footer_wrap">
                         <div class="vk_review__footer_item">
-                            <a href="https://vk.com/club134747802?z=photo-134747802_456239050%2Falbum-134747802_00%2Frev">
+                            <a href="https://vk.com/club134747802?z=photo-134747802_456239050%2Falbum-134747802_00%2Frev" target="_blank">
                                 <svg class="vk_review__footer_item_image">
                                     <path xmlns="http://www.w3.org/2000/svg"
                                           d="M17,2.9A6.43,6.43,0,0,1,23.4,9.33c0,3.57-1.43,5.36-7.45,10l-2.78,2.16a1.9,1.9,0,0,1-2.33,0L8.05,19.37C2,14.69.6,12.9.6,9.33A6.43,6.43,0,0,1,7,2.9a6.46,6.46,0,0,1,5,2.54A6.46,6.46,0,0,1,17,2.9ZM7,4.7A4.63,4.63,0,0,0,2.4,9.33c0,2.82,1.15,4.26,6.76,8.63l2.78,2.16a.1.1,0,0,0,.12,0L14.84,18c5.61-4.36,6.76-5.8,6.76-8.63A4.63,4.63,0,0,0,17,4.7c-1.56,0-3,.88-4.23,2.73L12,8.5l-.74-1.07C10,5.58,8.58,4.7,7,4.7Z"/>
@@ -1009,7 +1011,7 @@ $img_url = "../tiger.img/services_" . $_GET["tag"] . ".jpg";
                             </a>
                         </div>
                         <div class="vk_review__footer_item">
-                            <a href="https://vk.com/club134747802?z=photo-134747802_456239050%2Falbum-134747802_00%2Frev">
+                            <a href="https://vk.com/club134747802?z=photo-134747802_456239050%2Falbum-134747802_00%2Frev" target="_blank">
                                 <svg class="vk_review__footer_item_image">
                                     <path xmlns="http://www.w3.org/2000/svg"
                                           d="M7.84,22.53A2,2,0,0,1,7.1,21V18.9H5.5a3.26,3.26,0,0,1-3.4-3.4v-9A3.26,3.26,0,0,1,5.5,3.1h13a3.26,3.26,0,0,1,3.4,3.4v9a3.26,3.26,0,0,1-3.4,3.4H13.84l-3.72,3.26A1.69,1.69,0,0,1,7.84,22.53Zm4.93-5.09a1.4,1.4,0,0,1,.92-.35H18.5a1.47,1.47,0,0,0,1.6-1.6v-9a1.47,1.47,0,0,0-1.6-1.6H5.5A1.47,1.47,0,0,0,3.9,6.5v9a1.47,1.47,0,0,0,1.6,1.6H8c.7.2.7.2.9.9v2.83Z"
@@ -1018,7 +1020,7 @@ $img_url = "../tiger.img/services_" . $_GET["tag"] . ".jpg";
                             </a>
                         </div>
                         <div class="vk_review__footer_item">
-                            <a href="https://vk.com/club134747802?z=photo-134747802_456239050%2Falbum-134747802_00%2Frev">
+                            <a href="https://vk.com/club134747802?z=photo-134747802_456239050%2Falbum-134747802_00%2Frev" target="_blank">
                                 <svg class="vk_review__footer_item_image">
                                     <path xmlns="http://www.w3.org/2000/svg"
                                           d="M12.1,7.87V4.4a1.32,1.32,0,0,1,2.17-1L23.21,11a1.32,1.32,0,0,1,.15,1.86l-.15.15-8.94,7.6a1.32,1.32,0,0,1-2.17-1V16.16c-4.68.11-8,1.09-9.89,2.87a1.15,1.15,0,0,1-1.9-1.11C1.84,11.56,5.82,8.16,12.1,7.87Zm1.8-2.42v4.2H13c-5.3,0-8.72,2.25-10.39,6.86C5.06,15.06,8.53,14.35,13,14.35h.9v4.2L21.61,12Z"
@@ -1034,21 +1036,21 @@ $img_url = "../tiger.img/services_" . $_GET["tag"] . ".jpg";
             <div class="vk_review">
                 <div class="vk_review__header">
                     <div class="vk_review__header_img"></div>
-                    <a href="https://vk.com/club134747802">
+                    <a href="https://vk.com/club134747802" target="_blank">
                         <h3>Грузоперевозки по России | ТАЙГЕР-ЛОГИСТИК</h3>
                         <span>6 ноя в 11:15</span>
                     </a>
                 </div>
                 <div class="vk_review__content">
                     <p>Доставили мебель из Петелино (Московская область) в Березники!</p>
-                    <a href="https://vk.com/club134747802"><span>#грузоперевозки#отзыв <br>
+                    <a href="https://vk.com/club134747802" target="_blank"><span>#грузоперевозки#отзыв <br>
                                 #тайгерлогистик#логистика</span></a>
                     <div class="vk_review__content_img first_review_img"></div>
                 </div>
                 <div class="vk_review__footer">
                     <div class="vk_review__footer_wrap">
                         <div class="vk_review__footer_item">
-                            <a href="https://vk.com/club134747802?w=wall-134747802_30%2Fall">
+                            <a href="https://vk.com/club134747802?w=wall-134747802_30%2Fall" target="_blank">
                                 <svg class="vk_review__footer_item_image">
                                     <path xmlns="http://www.w3.org/2000/svg"
                                           d="M17,2.9A6.43,6.43,0,0,1,23.4,9.33c0,3.57-1.43,5.36-7.45,10l-2.78,2.16a1.9,1.9,0,0,1-2.33,0L8.05,19.37C2,14.69.6,12.9.6,9.33A6.43,6.43,0,0,1,7,2.9a6.46,6.46,0,0,1,5,2.54A6.46,6.46,0,0,1,17,2.9ZM7,4.7A4.63,4.63,0,0,0,2.4,9.33c0,2.82,1.15,4.26,6.76,8.63l2.78,2.16a.1.1,0,0,0,.12,0L14.84,18c5.61-4.36,6.76-5.8,6.76-8.63A4.63,4.63,0,0,0,17,4.7c-1.56,0-3,.88-4.23,2.73L12,8.5l-.74-1.07C10,5.58,8.58,4.7,7,4.7Z"/>
@@ -1056,7 +1058,7 @@ $img_url = "../tiger.img/services_" . $_GET["tag"] . ".jpg";
                             </a>
                         </div>
                         <div class="vk_review__footer_item">
-                            <a href="https://vk.com/club134747802?w=wall-134747802_30%2Fall">
+                            <a href="https://vk.com/club134747802?w=wall-134747802_30%2Fall" target="_blank">
                                 <svg class="vk_review__footer_item_image">
                                     <path xmlns="http://www.w3.org/2000/svg"
                                           d="M7.84,22.53A2,2,0,0,1,7.1,21V18.9H5.5a3.26,3.26,0,0,1-3.4-3.4v-9A3.26,3.26,0,0,1,5.5,3.1h13a3.26,3.26,0,0,1,3.4,3.4v9a3.26,3.26,0,0,1-3.4,3.4H13.84l-3.72,3.26A1.69,1.69,0,0,1,7.84,22.53Zm4.93-5.09a1.4,1.4,0,0,1,.92-.35H18.5a1.47,1.47,0,0,0,1.6-1.6v-9a1.47,1.47,0,0,0-1.6-1.6H5.5A1.47,1.47,0,0,0,3.9,6.5v9a1.47,1.47,0,0,0,1.6,1.6H8c.7.2.7.2.9.9v2.83Z"
@@ -1065,7 +1067,7 @@ $img_url = "../tiger.img/services_" . $_GET["tag"] . ".jpg";
                             </a>
                         </div>
                         <div class="vk_review__footer_item">
-                            <a href="https://vk.com/club134747802?w=wall-134747802_30%2Fall">
+                            <a href="https://vk.com/club134747802?w=wall-134747802_30%2Fall" target="_blank">
                                 <svg class="vk_review__footer_item_image">
                                     <path xmlns="http://www.w3.org/2000/svg"
                                           d="M12.1,7.87V4.4a1.32,1.32,0,0,1,2.17-1L23.21,11a1.32,1.32,0,0,1,.15,1.86l-.15.15-8.94,7.6a1.32,1.32,0,0,1-2.17-1V16.16c-4.68.11-8,1.09-9.89,2.87a1.15,1.15,0,0,1-1.9-1.11C1.84,11.56,5.82,8.16,12.1,7.87Zm1.8-2.42v4.2H13c-5.3,0-8.72,2.25-10.39,6.86C5.06,15.06,8.53,14.35,13,14.35h.9v4.2L21.61,12Z"
@@ -1081,7 +1083,7 @@ $img_url = "../tiger.img/services_" . $_GET["tag"] . ".jpg";
             <div class="vk_review">
                 <div class="vk_review__header">
                     <div class="vk_review__header_img"></div>
-                    <a href="https://vk.com/club134747802">
+                    <a href="https://vk.com/club134747802" target="_blank">
                         <h3>Грузоперевозки по России | ТАЙГЕР-ЛОГИСТИК</h3>
                         <span>5 ноя в 19:51</span>
                     </a>
@@ -1094,7 +1096,7 @@ $img_url = "../tiger.img/services_" . $_GET["tag"] . ".jpg";
                 <div class="vk_review__footer">
                     <div class="vk_review__footer_wrap">
                         <div class="vk_review__footer_item">
-                            <a href="https://vk.com/club134747802?w=wall-134747802_28%2Fall">
+                            <a href="https://vk.com/club134747802?w=wall-134747802_28%2Fall" target="_blank">
                                 <svg class="vk_review__footer_item_image">
                                     <path xmlns="http://www.w3.org/2000/svg"
                                           d="M17,2.9A6.43,6.43,0,0,1,23.4,9.33c0,3.57-1.43,5.36-7.45,10l-2.78,2.16a1.9,1.9,0,0,1-2.33,0L8.05,19.37C2,14.69.6,12.9.6,9.33A6.43,6.43,0,0,1,7,2.9a6.46,6.46,0,0,1,5,2.54A6.46,6.46,0,0,1,17,2.9ZM7,4.7A4.63,4.63,0,0,0,2.4,9.33c0,2.82,1.15,4.26,6.76,8.63l2.78,2.16a.1.1,0,0,0,.12,0L14.84,18c5.61-4.36,6.76-5.8,6.76-8.63A4.63,4.63,0,0,0,17,4.7c-1.56,0-3,.88-4.23,2.73L12,8.5l-.74-1.07C10,5.58,8.58,4.7,7,4.7Z"/>
@@ -1102,7 +1104,7 @@ $img_url = "../tiger.img/services_" . $_GET["tag"] . ".jpg";
                             </a>
                         </div>
                         <div class="vk_review__footer_item">
-                            <a href="https://vk.com/club134747802?w=wall-134747802_28%2Fall">
+                            <a href="https://vk.com/club134747802?w=wall-134747802_28%2Fall" target="_blank">
                                 <svg class="vk_review__footer_item_image">
                                     <path xmlns="http://www.w3.org/2000/svg"
                                           d="M7.84,22.53A2,2,0,0,1,7.1,21V18.9H5.5a3.26,3.26,0,0,1-3.4-3.4v-9A3.26,3.26,0,0,1,5.5,3.1h13a3.26,3.26,0,0,1,3.4,3.4v9a3.26,3.26,0,0,1-3.4,3.4H13.84l-3.72,3.26A1.69,1.69,0,0,1,7.84,22.53Zm4.93-5.09a1.4,1.4,0,0,1,.92-.35H18.5a1.47,1.47,0,0,0,1.6-1.6v-9a1.47,1.47,0,0,0-1.6-1.6H5.5A1.47,1.47,0,0,0,3.9,6.5v9a1.47,1.47,0,0,0,1.6,1.6H8c.7.2.7.2.9.9v2.83Z"
@@ -1111,7 +1113,7 @@ $img_url = "../tiger.img/services_" . $_GET["tag"] . ".jpg";
                             </a>
                         </div>
                         <div class="vk_review__footer_item">
-                            <a href="https://vk.com/club134747802?w=wall-134747802_28%2Fall">
+                            <a href="https://vk.com/club134747802?w=wall-134747802_28%2Fall" target="_blank">
                                 <svg class="vk_review__footer_item_image">
                                     <path xmlns="http://www.w3.org/2000/svg"
                                           d="M12.1,7.87V4.4a1.32,1.32,0,0,1,2.17-1L23.21,11a1.32,1.32,0,0,1,.15,1.86l-.15.15-8.94,7.6a1.32,1.32,0,0,1-2.17-1V16.16c-4.68.11-8,1.09-9.89,2.87a1.15,1.15,0,0,1-1.9-1.11C1.84,11.56,5.82,8.16,12.1,7.87Zm1.8-2.42v4.2H13c-5.3,0-8.72,2.25-10.39,6.86C5.06,15.06,8.53,14.35,13,14.35h.9v4.2L21.61,12Z"
@@ -1127,20 +1129,20 @@ $img_url = "../tiger.img/services_" . $_GET["tag"] . ".jpg";
             <div class="vk_review">
                 <div class="vk_review__header">
                     <div class="vk_review__header_img"></div>
-                    <a href="https://vk.com/club134747802">
+                    <a href="https://vk.com/club134747802" target="_blank">
                         <h3>Грузоперевозки по России | ТАЙГЕР-ЛОГИСТИК</h3>
                         <span>3 мая в 16:06</span>
                     </a>
                 </div>
                 <div class="vk_review__content">
                     <p>Давайте знакомиться! <br> Это наша команда отдыхает на день логиста🚚🚚</p>
-                    <a href="https://vk.com/club134747802"><span>#переезд</span></a>
+                    <a href="https://vk.com/club134747802" target="_blank"><span>#переезд</span></a>
                     <div class="vk_review__content_img fourth_review_img"></div>
                 </div>
                 <div class="vk_review__footer">
                     <div class="vk_review__footer_wrap">
                         <div class="vk_review__footer_item">
-                            <a href="https://vk.com/club134747802?z=photo-134747802_456239049%2Falbum-134747802_00%2Frev">
+                            <a href="https://vk.com/club134747802?z=photo-134747802_456239049%2Falbum-134747802_00%2Frev" target="_blank">
                                 <svg class="vk_review__footer_item_image">
                                     <path xmlns="http://www.w3.org/2000/svg"
                                           d="M17,2.9A6.43,6.43,0,0,1,23.4,9.33c0,3.57-1.43,5.36-7.45,10l-2.78,2.16a1.9,1.9,0,0,1-2.33,0L8.05,19.37C2,14.69.6,12.9.6,9.33A6.43,6.43,0,0,1,7,2.9a6.46,6.46,0,0,1,5,2.54A6.46,6.46,0,0,1,17,2.9ZM7,4.7A4.63,4.63,0,0,0,2.4,9.33c0,2.82,1.15,4.26,6.76,8.63l2.78,2.16a.1.1,0,0,0,.12,0L14.84,18c5.61-4.36,6.76-5.8,6.76-8.63A4.63,4.63,0,0,0,17,4.7c-1.56,0-3,.88-4.23,2.73L12,8.5l-.74-1.07C10,5.58,8.58,4.7,7,4.7Z"/>
@@ -1148,7 +1150,7 @@ $img_url = "../tiger.img/services_" . $_GET["tag"] . ".jpg";
                             </a>
                         </div>
                         <div class="vk_review__footer_item">
-                            <a href="https://vk.com/club134747802?z=photo-134747802_456239049%2Falbum-134747802_00%2Frev">
+                            <a href="https://vk.com/club134747802?z=photo-134747802_456239049%2Falbum-134747802_00%2Frev" target="_blank">
                                 <svg class="vk_review__footer_item_image">
                                     <path xmlns="http://www.w3.org/2000/svg"
                                           d="M7.84,22.53A2,2,0,0,1,7.1,21V18.9H5.5a3.26,3.26,0,0,1-3.4-3.4v-9A3.26,3.26,0,0,1,5.5,3.1h13a3.26,3.26,0,0,1,3.4,3.4v9a3.26,3.26,0,0,1-3.4,3.4H13.84l-3.72,3.26A1.69,1.69,0,0,1,7.84,22.53Zm4.93-5.09a1.4,1.4,0,0,1,.92-.35H18.5a1.47,1.47,0,0,0,1.6-1.6v-9a1.47,1.47,0,0,0-1.6-1.6H5.5A1.47,1.47,0,0,0,3.9,6.5v9a1.47,1.47,0,0,0,1.6,1.6H8c.7.2.7.2.9.9v2.83Z"
@@ -1157,7 +1159,7 @@ $img_url = "../tiger.img/services_" . $_GET["tag"] . ".jpg";
                             </a>
                         </div>
                         <div class="vk_review__footer_item">
-                            <a href="https://vk.com/club134747802?z=photo-134747802_456239049%2Falbum-134747802_00%2Frev">
+                            <a href="https://vk.com/club134747802?z=photo-134747802_456239049%2Falbum-134747802_00%2Frev" target="_blank">
                                 <svg class="vk_review__footer_item_image">
                                     <path xmlns="http://www.w3.org/2000/svg"
                                           d="M12.1,7.87V4.4a1.32,1.32,0,0,1,2.17-1L23.21,11a1.32,1.32,0,0,1,.15,1.86l-.15.15-8.94,7.6a1.32,1.32,0,0,1-2.17-1V16.16c-4.68.11-8,1.09-9.89,2.87a1.15,1.15,0,0,1-1.9-1.11C1.84,11.56,5.82,8.16,12.1,7.87Zm1.8-2.42v4.2H13c-5.3,0-8.72,2.25-10.39,6.86C5.06,15.06,8.53,14.35,13,14.35h.9v4.2L21.61,12Z"
@@ -1173,7 +1175,7 @@ $img_url = "../tiger.img/services_" . $_GET["tag"] . ".jpg";
             <div class="vk_review">
                 <div class="vk_review__header">
                     <div class="vk_review__header_img"></div>
-                    <a href="https://vk.com/club134747802">
+                    <a href="https://vk.com/club134747802" target="_blank">
                         <h3>Грузоперевозки по России | ТАЙГЕР-ЛОГИСТИК</h3>
                         <span>6 ноя в 20:55</span>
                     </a>
@@ -1185,7 +1187,7 @@ $img_url = "../tiger.img/services_" . $_GET["tag"] . ".jpg";
                 <div class="vk_review__footer">
                     <div class="vk_review__footer_wrap">
                         <div class="vk_review__footer_item">
-                            <a href="https://vk.com/club134747802?w=wall-134747802_31%2Fall">
+                            <a href="https://vk.com/club134747802?w=wall-134747802_31%2Fall" target="_blank">
                                 <svg class="vk_review__footer_item_image">
                                     <path xmlns="http://www.w3.org/2000/svg"
                                           d="M17,2.9A6.43,6.43,0,0,1,23.4,9.33c0,3.57-1.43,5.36-7.45,10l-2.78,2.16a1.9,1.9,0,0,1-2.33,0L8.05,19.37C2,14.69.6,12.9.6,9.33A6.43,6.43,0,0,1,7,2.9a6.46,6.46,0,0,1,5,2.54A6.46,6.46,0,0,1,17,2.9ZM7,4.7A4.63,4.63,0,0,0,2.4,9.33c0,2.82,1.15,4.26,6.76,8.63l2.78,2.16a.1.1,0,0,0,.12,0L14.84,18c5.61-4.36,6.76-5.8,6.76-8.63A4.63,4.63,0,0,0,17,4.7c-1.56,0-3,.88-4.23,2.73L12,8.5l-.74-1.07C10,5.58,8.58,4.7,7,4.7Z"/>
@@ -1193,7 +1195,7 @@ $img_url = "../tiger.img/services_" . $_GET["tag"] . ".jpg";
                             </a>
                         </div>
                         <div class="vk_review__footer_item">
-                            <a href="https://vk.com/club134747802?w=wall-134747802_31%2Fall">
+                            <a href="https://vk.com/club134747802?w=wall-134747802_31%2Fall" target="_blank">
                                 <svg class="vk_review__footer_item_image">
                                     <path xmlns="http://www.w3.org/2000/svg"
                                           d="M7.84,22.53A2,2,0,0,1,7.1,21V18.9H5.5a3.26,3.26,0,0,1-3.4-3.4v-9A3.26,3.26,0,0,1,5.5,3.1h13a3.26,3.26,0,0,1,3.4,3.4v9a3.26,3.26,0,0,1-3.4,3.4H13.84l-3.72,3.26A1.69,1.69,0,0,1,7.84,22.53Zm4.93-5.09a1.4,1.4,0,0,1,.92-.35H18.5a1.47,1.47,0,0,0,1.6-1.6v-9a1.47,1.47,0,0,0-1.6-1.6H5.5A1.47,1.47,0,0,0,3.9,6.5v9a1.47,1.47,0,0,0,1.6,1.6H8c.7.2.7.2.9.9v2.83Z"
@@ -1202,7 +1204,7 @@ $img_url = "../tiger.img/services_" . $_GET["tag"] . ".jpg";
                             </a>
                         </div>
                         <div class="vk_review__footer_item">
-                            <a href="https://vk.com/club134747802?w=wall-134747802_31%2Fall">
+                            <a href="https://vk.com/club134747802?w=wall-134747802_31%2Fall" target="_blank">
                                 <svg class="vk_review__footer_item_image">
                                     <path xmlns="http://www.w3.org/2000/svg"
                                           d="M12.1,7.87V4.4a1.32,1.32,0,0,1,2.17-1L23.21,11a1.32,1.32,0,0,1,.15,1.86l-.15.15-8.94,7.6a1.32,1.32,0,0,1-2.17-1V16.16c-4.68.11-8,1.09-9.89,2.87a1.15,1.15,0,0,1-1.9-1.11C1.84,11.56,5.82,8.16,12.1,7.87Zm1.8-2.42v4.2H13c-5.3,0-8.72,2.25-10.39,6.86C5.06,15.06,8.53,14.35,13,14.35h.9v4.2L21.61,12Z"
@@ -1218,7 +1220,7 @@ $img_url = "../tiger.img/services_" . $_GET["tag"] . ".jpg";
             <div class="vk_review">
                 <div class="vk_review__header">
                     <div class="vk_review__header_img"></div>
-                    <a href="https://vk.com/club134747802">
+                    <a href="https://vk.com/club134747802" target="_blank">
                         <h3>Грузоперевозки по России | ТАЙГЕР-ЛОГИСТИК</h3>
                         <span>16 ноя в 17:07</span>
                     </a>
@@ -1230,7 +1232,7 @@ $img_url = "../tiger.img/services_" . $_GET["tag"] . ".jpg";
                 <div class="vk_review__footer">
                     <div class="vk_review__footer_wrap">
                         <div class="vk_review__footer_item">
-                            <a href="https://vk.com/club134747802?w=wall-134747802_32%2Fall">
+                            <a href="https://vk.com/club134747802?w=wall-134747802_32%2Fall" target="_blank">
                                 <svg class="vk_review__footer_item_image">
                                     <path xmlns="http://www.w3.org/2000/svg"
                                           d="M17,2.9A6.43,6.43,0,0,1,23.4,9.33c0,3.57-1.43,5.36-7.45,10l-2.78,2.16a1.9,1.9,0,0,1-2.33,0L8.05,19.37C2,14.69.6,12.9.6,9.33A6.43,6.43,0,0,1,7,2.9a6.46,6.46,0,0,1,5,2.54A6.46,6.46,0,0,1,17,2.9ZM7,4.7A4.63,4.63,0,0,0,2.4,9.33c0,2.82,1.15,4.26,6.76,8.63l2.78,2.16a.1.1,0,0,0,.12,0L14.84,18c5.61-4.36,6.76-5.8,6.76-8.63A4.63,4.63,0,0,0,17,4.7c-1.56,0-3,.88-4.23,2.73L12,8.5l-.74-1.07C10,5.58,8.58,4.7,7,4.7Z"/>
@@ -1238,7 +1240,7 @@ $img_url = "../tiger.img/services_" . $_GET["tag"] . ".jpg";
                             </a>
                         </div>
                         <div class="vk_review__footer_item">
-                            <a href="https://vk.com/club134747802?w=wall-134747802_32%2Fall">
+                            <a href="https://vk.com/club134747802?w=wall-134747802_32%2Fall" target="_blank">
                                 <svg class="vk_review__footer_item_image">
                                     <path xmlns="http://www.w3.org/2000/svg"
                                           d="M7.84,22.53A2,2,0,0,1,7.1,21V18.9H5.5a3.26,3.26,0,0,1-3.4-3.4v-9A3.26,3.26,0,0,1,5.5,3.1h13a3.26,3.26,0,0,1,3.4,3.4v9a3.26,3.26,0,0,1-3.4,3.4H13.84l-3.72,3.26A1.69,1.69,0,0,1,7.84,22.53Zm4.93-5.09a1.4,1.4,0,0,1,.92-.35H18.5a1.47,1.47,0,0,0,1.6-1.6v-9a1.47,1.47,0,0,0-1.6-1.6H5.5A1.47,1.47,0,0,0,3.9,6.5v9a1.47,1.47,0,0,0,1.6,1.6H8c.7.2.7.2.9.9v2.83Z"
@@ -1247,7 +1249,7 @@ $img_url = "../tiger.img/services_" . $_GET["tag"] . ".jpg";
                             </a>
                         </div>
                         <div class="vk_review__footer_item">
-                            <a href="https://vk.com/club134747802?w=wall-134747802_32%2Fall">
+                            <a href="https://vk.com/club134747802?w=wall-134747802_32%2Fall" target="_blank">
                                 <svg class="vk_review__footer_item_image">
                                     <path xmlns="http://www.w3.org/2000/svg"
                                           d="M12.1,7.87V4.4a1.32,1.32,0,0,1,2.17-1L23.21,11a1.32,1.32,0,0,1,.15,1.86l-.15.15-8.94,7.6a1.32,1.32,0,0,1-2.17-1V16.16c-4.68.11-8,1.09-9.89,2.87a1.15,1.15,0,0,1-1.9-1.11C1.84,11.56,5.82,8.16,12.1,7.87Zm1.8-2.42v4.2H13c-5.3,0-8.72,2.25-10.39,6.86C5.06,15.06,8.53,14.35,13,14.35h.9v4.2L21.61,12Z"
@@ -1263,7 +1265,7 @@ $img_url = "../tiger.img/services_" . $_GET["tag"] . ".jpg";
             <div class="vk_review">
                 <div class="vk_review__header">
                     <div class="vk_review__header_img"></div>
-                    <a href="https://vk.com/club134747802">
+                    <a href="https://vk.com/club134747802" target="_blank">
                         <h3>Грузоперевозки по России | ТАЙГЕР-ЛОГИСТИК</h3>
                         <span>16 ноя в 17:16</span>
                     </a>
@@ -1275,7 +1277,7 @@ $img_url = "../tiger.img/services_" . $_GET["tag"] . ".jpg";
                 <div class="vk_review__footer">
                     <div class="vk_review__footer_wrap">
                         <div class="vk_review__footer_item">
-                            <a href="https://vk.com/club134747802?w=wall-134747802_33%2Fall">
+                            <a href="https://vk.com/club134747802?w=wall-134747802_33%2Fall" target="_blank">
                                 <svg class="vk_review__footer_item_image">
                                     <path xmlns="http://www.w3.org/2000/svg"
                                           d="M17,2.9A6.43,6.43,0,0,1,23.4,9.33c0,3.57-1.43,5.36-7.45,10l-2.78,2.16a1.9,1.9,0,0,1-2.33,0L8.05,19.37C2,14.69.6,12.9.6,9.33A6.43,6.43,0,0,1,7,2.9a6.46,6.46,0,0,1,5,2.54A6.46,6.46,0,0,1,17,2.9ZM7,4.7A4.63,4.63,0,0,0,2.4,9.33c0,2.82,1.15,4.26,6.76,8.63l2.78,2.16a.1.1,0,0,0,.12,0L14.84,18c5.61-4.36,6.76-5.8,6.76-8.63A4.63,4.63,0,0,0,17,4.7c-1.56,0-3,.88-4.23,2.73L12,8.5l-.74-1.07C10,5.58,8.58,4.7,7,4.7Z"/>
@@ -1283,7 +1285,7 @@ $img_url = "../tiger.img/services_" . $_GET["tag"] . ".jpg";
                             </a>
                         </div>
                         <div class="vk_review__footer_item">
-                            <a href="https://vk.com/club134747802?w=wall-134747802_33%2Fall">
+                            <a href="https://vk.com/club134747802?w=wall-134747802_33%2Fall" target="_blank">
                                 <svg class="vk_review__footer_item_image">
                                     <path xmlns="http://www.w3.org/2000/svg"
                                           d="M7.84,22.53A2,2,0,0,1,7.1,21V18.9H5.5a3.26,3.26,0,0,1-3.4-3.4v-9A3.26,3.26,0,0,1,5.5,3.1h13a3.26,3.26,0,0,1,3.4,3.4v9a3.26,3.26,0,0,1-3.4,3.4H13.84l-3.72,3.26A1.69,1.69,0,0,1,7.84,22.53Zm4.93-5.09a1.4,1.4,0,0,1,.92-.35H18.5a1.47,1.47,0,0,0,1.6-1.6v-9a1.47,1.47,0,0,0-1.6-1.6H5.5A1.47,1.47,0,0,0,3.9,6.5v9a1.47,1.47,0,0,0,1.6,1.6H8c.7.2.7.2.9.9v2.83Z"
@@ -1292,7 +1294,7 @@ $img_url = "../tiger.img/services_" . $_GET["tag"] . ".jpg";
                             </a>
                         </div>
                         <div class="vk_review__footer_item">
-                            <a href="https://vk.com/club134747802?w=wall-134747802_33%2Fall">
+                            <a href="https://vk.com/club134747802?w=wall-134747802_33%2Fall" target="_blank">
                                 <svg class="vk_review__footer_item_image">
                                     <path xmlns="http://www.w3.org/2000/svg"
                                           d="M12.1,7.87V4.4a1.32,1.32,0,0,1,2.17-1L23.21,11a1.32,1.32,0,0,1,.15,1.86l-.15.15-8.94,7.6a1.32,1.32,0,0,1-2.17-1V16.16c-4.68.11-8,1.09-9.89,2.87a1.15,1.15,0,0,1-1.9-1.11C1.84,11.56,5.82,8.16,12.1,7.87Zm1.8-2.42v4.2H13c-5.3,0-8.72,2.25-10.39,6.86C5.06,15.06,8.53,14.35,13,14.35h.9v4.2L21.61,12Z"
@@ -1795,7 +1797,7 @@ $img_url = "../tiger.img/services_" . $_GET["tag"] . ".jpg";
                 </button>
             </div>
         </form>
-        <div class="policy">*оставляя заявку, вы соглашаетесь с <a href="">политикой конфиденциальности сайта</a></div>
+        <div class="policy">*оставляя заявку, вы соглашаетесь с <a href="../politikaconf.pdf" target="_blank">политикой конфиденциальности сайта</a></div>
     </div>
 </section>
 <footer>
@@ -1807,7 +1809,7 @@ $img_url = "../tiger.img/services_" . $_GET["tag"] . ".jpg";
             клиентов и развитии инфраструктуры за счёт быстрых и систематизированных грузоперевозок во всех
             регионах России. Работая с 2013 года, мы успели провести более 11500 тысяч успешных грузоперевозок. Наш
             автотранспорт позволяет перевозить груз с любыми характеристиками и габаритами.</p>
-        <a class="confidential_politics" href="">Политика конфиденциальности</a>
+        <a class="confidential_politics" href="../politikaconf.pdf" target="_blank">Политика конфиденциальности</a>
         <span class="rights_reserved">Все права защищены. © Тайгер Логистик 2018</span>
         <div class="creator_logo">
             <div class="drim_logo"></div>
@@ -1828,7 +1830,7 @@ $img_url = "../tiger.img/services_" . $_GET["tag"] . ".jpg";
     <div class="footer_item footer_social_links">
         <span class="footer_item_title">МЫ В СОЦ СЕТЯХ</span>
         <div class="social_link_container">
-            <a class="solcial_link" href="https://vk.com/club134747802"><span class="icon-vk"></span></a>
+            <a class="solcial_link" href="https://vk.com/club134747802" target="_blank"><span class="icon-vk"></span></a>
         </div>
         <button class="online_apply_content_style footer_apply_form__btn" type="submit" onclick="modal_on_second()">
             Онлайн
@@ -1894,7 +1896,7 @@ $img_url = "../tiger.img/services_" . $_GET["tag"] . ".jpg";
                placeholder="Контактный телефон" required/>
         <button class="modal_window_submit_btn" name="modal_btn" type="submit">Оставить заявку</button>
     </form>
-    <p class="modal_agreement">Отправляя заявку, вы подтверждаете свое согласие с <a href="">политикой
+    <p class="modal_agreement">Отправляя заявку, вы подтверждаете свое согласие с <a href="../politikaconf.pdf" target="_blank">политикой
             конфиденциальности</a></p>
 </section>
 <div id="modal_overlay"></div>

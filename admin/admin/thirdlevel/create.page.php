@@ -4,11 +4,11 @@ session_start();
 
 header('Refresh: 3; url=index.php', true, 301);
 
-require "../database/db.php";
+require __DIR__ . "/../../database/db.php";
 
 $page = R::dispense("pages");
 
-$uploaddir = '../../tiger.img/';
+$uploaddir = __DIR__ . '/../../../tiger.img/';
 
 if (isset($_SESSION["user"]) && $_SESSION["user"] === "admin") {
     if (isset($_POST["add_page"])) {

@@ -4,7 +4,7 @@ session_start();
 
 require("../database/db.php");
 
-$uploaddir = '../../tiger.img/';
+$uploaddir = __DIR__ . '../../../tiger.img/';
 
 if (isset($_SESSION["user"]) && $_SESSION["user"] === "admin") {
 
@@ -45,7 +45,7 @@ if (isset($_SESSION["user"]) && $_SESSION["user"] === "admin") {
     <head>
         <meta charset="utf-8">
         <title>Администратор :: Tiger Logistics</title>
-        <link rel="stylesheet" type="text/css" href="../css/admin.css">
+        <link rel="stylesheet" type="text/css" href="../../css/admin.css">
 
     </head>
 <body>
@@ -135,20 +135,6 @@ if (isset($_SESSION["user"]) && $_SESSION["user"] === "admin") {
         ],
         content_css: '../css/admin.css',
         toolbar: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | print preview media fullpage | forecolor backcolor emoticons'
-    });
-
-    $("span").on("click", function (e) {
-        $("span").attr("class", "");
-        $(e.currentTarget).attr("class", "active");
-
-        if (e.currentTarget.id === "wrapper") {
-            $("div.pages").attr("class", "pages hidden");
-            $("div.wrapper").attr("class", "wrapper active");
-        }
-        if (e.currentTarget.id === "pages") {
-            $("div.pages").attr("class", "pages active");
-            $("div.wrapper").attr("class", "wrapper hidden");
-        }
     });
 
     $(document).ready(function () {

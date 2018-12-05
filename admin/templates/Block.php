@@ -4,18 +4,33 @@ namespace Templates;
 
 class Block
 {
-    public static function generate($page)
+    public static function generate_third($page)
     {
 
         $result = "<div class='generated_block'>
                     <div style='width: 33.3333%;margin-left: 10px;'>
-                        <a href='../../$page->tag/$page->url'>" . $page->title . "</a>
+                        <a href='../../../$page->tag/$page->url'>" . $page->title . "</a>
                     </div>
                     
                     <div style='width: 33.3333%;'>$page->date</div>
                     
                     <div style='width: 33.3333%;'>
-                        <a href='../admin/update.page.php?id=$page->id'>Редактировать</a>/<a href='../admin/delete.page.php?id=$page->id'>Удалить</a>
+                        <a href='../thirdlevel/update.page.php?id=$page->id'>Редактировать</a>/<a href='../thirdlevel/delete.page.php?id=$page->id'>Удалить</a>
+                    </div>
+                   
+                   </div>";
+
+        return $result;
+    }
+
+    public static function generate_second($page) {
+        $result = "<div class='generated_block' style='height: 50px;'>
+                    <div style='width: 50%;margin-left: 10px;'>
+                        <a href='../../../$page->tag/'>" . $page->offer . "</a>
+                    </div>
+                  
+                    <div style='width: 50%;'>
+                        <a href='../secondlevel/update.page.php?id=$page->id'>Редактировать</a>
                     </div>
                    
                    </div>";
@@ -61,33 +76,33 @@ class Block
         return $result;
     }
 
-    public static function get_offer($tag)
-    {
-        switch ($tag) {
-            case "gruzoperevozki-po-rossii":
-                return "Грузоперевозки по России отдельным транспортом от 1.5 до 20
-                        тонн";
-            case "gruzoperevozki-furami":
-                return "Грузоперевозки фурами";
-            case "gruzoperevozki-refrizheratorom":
-                return "Грузоперевозки рефрижераторами (с заданным температурным
-                        режимом)";
-            case "poputnye-gruzoperevozki"   :
-                return "Попутные грузоперевозки";
-            case "dostavka-sbornyh-gruzov"  :
-                return "Доставка сборных грузов по России от 50 до 800 кг (догрузом)";
-            case "pereezd-mezhgorod"   :
-                return "Переезды межгород";
-            case "perevozka-lichnykh-vechey"  :
-                return "Перевозка личных вещей от 50 кг";
-            case "perevozka-konkretnyh-vidov-gruza" :
-                return "Перевозка конкретных видов груза";
-            case "gruzoperevozki-kamazom":
-                return "Грузоперевозки КамАЗом от 5 до 10 тонн";
-            default:
-                return null;
-        }
-    }
+//    public static function get_offer($tag)
+//    {
+//        switch ($tag) {
+//            case "gruzoperevozki-po-rossii":
+//                return "Грузоперевозки по России отдельным транспортом от 1.5 до 20
+//                        тонн";
+//            case "gruzoperevozki-furami":
+//                return "Грузоперевозки фурами";
+//            case "gruzoperevozki-refrizheratorom":
+//                return "Грузоперевозки рефрижераторами (с заданным температурным
+//                        режимом)";
+//            case "poputnye-gruzoperevozki"   :
+//                return "Попутные грузоперевозки";
+//            case "dostavka-sbornyh-gruzov"  :
+//                return "Доставка сборных грузов по России от 50 до 800 кг (догрузом)";
+//            case "pereezd-mezhgorod"   :
+//                return "Переезды межгород";
+//            case "perevozka-lichnykh-vechey"  :
+//                return "Перевозка личных вещей от 50 кг";
+//            case "perevozka-konkretnyh-vidov-gruza" :
+//                return "Перевозка конкретных видов груза";
+//            case "gruzoperevozki-kamazom":
+//                return "Грузоперевозки КамАЗом от 5 до 10 тонн";
+//            default:
+//                return null;
+//        }
+//    }
 
     public static function get_special_settings($tag, $img_url)
     {

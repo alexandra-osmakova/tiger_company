@@ -205,7 +205,7 @@ $tagged_pages = R::getAll("SELECT * FROM pages WHERE tag=:tag", ["tag" => $page-
                 <button id="next" class="header_count_form__btn invisible_header_btn">Далее</button>
                 <input class="header_count_form__btn" id="form1_btn" name="form1" type="submit" value="Быстрый рассчет">
             </form>
-            <div class="policy">*оставляя заявку, вы соглашаетесь с <a href="">политикой конфиденциальности сайта</a></div>
+            <div class="policy">*оставляя заявку, вы соглашаетесь с <a href="../politikaconf.pdf" target="_blank">политикой конфиденциальности сайта</a></div>
         </div>
     </div>
     <div class="header_decoration_line">
@@ -299,7 +299,7 @@ $tagged_pages = R::getAll("SELECT * FROM pages WHERE tag=:tag", ["tag" => $page-
                 </button>
             </div>
         </form>
-        <div class="policy">*оставляя заявку, вы соглашаетесь с <a href="">политикой конфиденциальности сайта</a></div>
+        <div class="policy">*оставляя заявку, вы соглашаетесь с <a href="../politikaconf.pdf" target="_blank">политикой конфиденциальности сайта</a></div>
     </div>
 </section>
 <section class="blog">
@@ -435,7 +435,7 @@ $tagged_pages = R::getAll("SELECT * FROM pages WHERE tag=:tag", ["tag" => $page-
             клиентов и развитии инфраструктуры за счёт быстрых и систематизированных грузоперевозок во всех
             регионах России. Работая с 2010 года, мы успели провести более 11500 тысяч успешных грузоперевозок. Наш
             автотранспорт позволяет перевозить груз с любыми характеристиками и габаритами.</p>
-        <a class="confidential_politics" href="">Политика конфиденциальности</a>
+        <a class="confidential_politics" href="../politikaconf.pdf" target="_blank">Политика конфиденциальности</a>
         <span class="rights_reserved">Все права защищены. © Тайгер Логистик 2018</span>
         <div class="creator_logo">
             <div class="drim_logo"></div>
@@ -456,7 +456,7 @@ $tagged_pages = R::getAll("SELECT * FROM pages WHERE tag=:tag", ["tag" => $page-
     <div class="footer_item footer_social_links">
         <span class="footer_item_title">МЫ В СОЦ СЕТЯХ</span>
         <div class="social_link_container">
-            <a class="solcial_link" href="https://vk.com/club134747802"><span class="icon-vk"></span></a>
+            <a class="solcial_link" href="https://vk.com/club134747802" target="_blank"><span class="icon-vk"></span></a>
         </div>
         <button class="online_apply_content_style footer_apply_form__btn" type="submit" onclick="modal_on_second()">
             Онлайн
@@ -512,7 +512,7 @@ $tagged_pages = R::getAll("SELECT * FROM pages WHERE tag=:tag", ["tag" => $page-
                placeholder="Контактный телефон">
         <button class="modal_window_submit_btn" name="modal_btn" type="submit">Оставить заявку</button>
     </form>
-    <p class="modal_agreement">Отправляя заявку, вы подтверждаете свое согласие с <a href="">политикой
+    <p class="modal_agreement">Отправляя заявку, вы подтверждаете свое согласие с <a href="../politikaconf.pdf" target="_blank">политикой
             конфиденциальности</a></p>
 </section>
 <div id="modal_overlay"></div>
