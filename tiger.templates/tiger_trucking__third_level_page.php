@@ -620,12 +620,9 @@ $tagged_pages = R::getAll("SELECT * FROM pages WHERE tag=:tag", ["tag" => $page-
     let count = 0;
 
     $("input#next").on("click", function (e) {
-        if ($(e.currentTarget).val() === "Рассчитать стоимость" && count === 3) {
+        if ($(e.currentTarget).val() === "Рассчитать стоимость") {
             $("input#form1_btn").click();
         }
-
-        if(count === 3 && $(e.currentTarget.previousElementSibling).val() === ""){}
-        else count++;
     });
 </script>
 </body>

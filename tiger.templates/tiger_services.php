@@ -207,7 +207,8 @@ $tag = R::findOne("tags", "WHERE tag=:tag", array("tag" => $_GET["tag"]));
                 <button id="next" class="header_count_form__btn invisible_header_btn">Далее</button>
                 <input class="header_count_form__btn" id="form1_btn" name="form1" type="submit" value="Быстрый рассчет">
             </form>
-            <div class="policy">*оставляя заявку, вы соглашаетесь с <a href="../politikaconf.pdf" target="_blank">политикой конфиденциальности сайта</a></div>
+            <div class="policy">*оставляя заявку, вы соглашаетесь с <a href="../politikaconf.pdf" target="_blank">политикой
+                    конфиденциальности сайта</a></div>
         </div>
     </div>
     <div class="header_decoration_line">
@@ -830,7 +831,8 @@ $tag = R::findOne("tags", "WHERE tag=:tag", array("tag" => $_GET["tag"]));
                         <input class="finish_form__btn btn" type="submit" name="quiz_btn" value="Узнать стоимость">
                     </form>
                 </div>
-                <div class="policy">*оставляя заявку, вы соглашаетесь с <a href="../politikaconf.pdf" target="_blank">политикой конфиденциальности сайта</a></div>
+                <div class="policy">*оставляя заявку, вы соглашаетесь с <a href="../politikaconf.pdf" target="_blank">политикой
+                        конфиденциальности сайта</a></div>
             </div>
         </div>
         <div class="price_decoration_line">
@@ -1003,7 +1005,8 @@ $tag = R::findOne("tags", "WHERE tag=:tag", array("tag" => $_GET["tag"]));
                 <div class="vk_review__footer">
                     <div class="vk_review__footer_wrap">
                         <div class="vk_review__footer_item">
-                            <a href="https://vk.com/club134747802?z=photo-134747802_456239050%2Falbum-134747802_00%2Frev" target="_blank">
+                            <a href="https://vk.com/club134747802?z=photo-134747802_456239050%2Falbum-134747802_00%2Frev"
+                               target="_blank">
                                 <svg class="vk_review__footer_item_image">
                                     <path xmlns="http://www.w3.org/2000/svg"
                                           d="M17,2.9A6.43,6.43,0,0,1,23.4,9.33c0,3.57-1.43,5.36-7.45,10l-2.78,2.16a1.9,1.9,0,0,1-2.33,0L8.05,19.37C2,14.69.6,12.9.6,9.33A6.43,6.43,0,0,1,7,2.9a6.46,6.46,0,0,1,5,2.54A6.46,6.46,0,0,1,17,2.9ZM7,4.7A4.63,4.63,0,0,0,2.4,9.33c0,2.82,1.15,4.26,6.76,8.63l2.78,2.16a.1.1,0,0,0,.12,0L14.84,18c5.61-4.36,6.76-5.8,6.76-8.63A4.63,4.63,0,0,0,17,4.7c-1.56,0-3,.88-4.23,2.73L12,8.5l-.74-1.07C10,5.58,8.58,4.7,7,4.7Z"/>
@@ -1011,7 +1014,8 @@ $tag = R::findOne("tags", "WHERE tag=:tag", array("tag" => $_GET["tag"]));
                             </a>
                         </div>
                         <div class="vk_review__footer_item">
-                            <a href="https://vk.com/club134747802?z=photo-134747802_456239050%2Falbum-134747802_00%2Frev" target="_blank">
+                            <a href="https://vk.com/club134747802?z=photo-134747802_456239050%2Falbum-134747802_00%2Frev"
+                               target="_blank">
                                 <svg class="vk_review__footer_item_image">
                                     <path xmlns="http://www.w3.org/2000/svg"
                                           d="M7.84,22.53A2,2,0,0,1,7.1,21V18.9H5.5a3.26,3.26,0,0,1-3.4-3.4v-9A3.26,3.26,0,0,1,5.5,3.1h13a3.26,3.26,0,0,1,3.4,3.4v9a3.26,3.26,0,0,1-3.4,3.4H13.84l-3.72,3.26A1.69,1.69,0,0,1,7.84,22.53Zm4.93-5.09a1.4,1.4,0,0,1,.92-.35H18.5a1.47,1.47,0,0,0,1.6-1.6v-9a1.47,1.47,0,0,0-1.6-1.6H5.5A1.47,1.47,0,0,0,3.9,6.5v9a1.47,1.47,0,0,0,1.6,1.6H8c.7.2.7.2.9.9v2.83Z"
@@ -1020,7 +1024,8 @@ $tag = R::findOne("tags", "WHERE tag=:tag", array("tag" => $_GET["tag"]));
                             </a>
                         </div>
                         <div class="vk_review__footer_item">
-                            <a href="https://vk.com/club134747802?z=photo-134747802_456239050%2Falbum-134747802_00%2Frev" target="_blank">
+                            <a href="https://vk.com/club134747802?z=photo-134747802_456239050%2Falbum-134747802_00%2Frev"
+                               target="_blank">
                                 <svg class="vk_review__footer_item_image">
                                     <path xmlns="http://www.w3.org/2000/svg"
                                           d="M12.1,7.87V4.4a1.32,1.32,0,0,1,2.17-1L23.21,11a1.32,1.32,0,0,1,.15,1.86l-.15.15-8.94,7.6a1.32,1.32,0,0,1-2.17-1V16.16c-4.68.11-8,1.09-9.89,2.87a1.15,1.15,0,0,1-1.9-1.11C1.84,11.56,5.82,8.16,12.1,7.87Zm1.8-2.42v4.2H13c-5.3,0-8.72,2.25-10.39,6.86C5.06,15.06,8.53,14.35,13,14.35h.9v4.2L21.61,12Z"
@@ -1142,7 +1147,8 @@ $tag = R::findOne("tags", "WHERE tag=:tag", array("tag" => $_GET["tag"]));
                 <div class="vk_review__footer">
                     <div class="vk_review__footer_wrap">
                         <div class="vk_review__footer_item">
-                            <a href="https://vk.com/club134747802?z=photo-134747802_456239049%2Falbum-134747802_00%2Frev" target="_blank">
+                            <a href="https://vk.com/club134747802?z=photo-134747802_456239049%2Falbum-134747802_00%2Frev"
+                               target="_blank">
                                 <svg class="vk_review__footer_item_image">
                                     <path xmlns="http://www.w3.org/2000/svg"
                                           d="M17,2.9A6.43,6.43,0,0,1,23.4,9.33c0,3.57-1.43,5.36-7.45,10l-2.78,2.16a1.9,1.9,0,0,1-2.33,0L8.05,19.37C2,14.69.6,12.9.6,9.33A6.43,6.43,0,0,1,7,2.9a6.46,6.46,0,0,1,5,2.54A6.46,6.46,0,0,1,17,2.9ZM7,4.7A4.63,4.63,0,0,0,2.4,9.33c0,2.82,1.15,4.26,6.76,8.63l2.78,2.16a.1.1,0,0,0,.12,0L14.84,18c5.61-4.36,6.76-5.8,6.76-8.63A4.63,4.63,0,0,0,17,4.7c-1.56,0-3,.88-4.23,2.73L12,8.5l-.74-1.07C10,5.58,8.58,4.7,7,4.7Z"/>
@@ -1150,7 +1156,8 @@ $tag = R::findOne("tags", "WHERE tag=:tag", array("tag" => $_GET["tag"]));
                             </a>
                         </div>
                         <div class="vk_review__footer_item">
-                            <a href="https://vk.com/club134747802?z=photo-134747802_456239049%2Falbum-134747802_00%2Frev" target="_blank">
+                            <a href="https://vk.com/club134747802?z=photo-134747802_456239049%2Falbum-134747802_00%2Frev"
+                               target="_blank">
                                 <svg class="vk_review__footer_item_image">
                                     <path xmlns="http://www.w3.org/2000/svg"
                                           d="M7.84,22.53A2,2,0,0,1,7.1,21V18.9H5.5a3.26,3.26,0,0,1-3.4-3.4v-9A3.26,3.26,0,0,1,5.5,3.1h13a3.26,3.26,0,0,1,3.4,3.4v9a3.26,3.26,0,0,1-3.4,3.4H13.84l-3.72,3.26A1.69,1.69,0,0,1,7.84,22.53Zm4.93-5.09a1.4,1.4,0,0,1,.92-.35H18.5a1.47,1.47,0,0,0,1.6-1.6v-9a1.47,1.47,0,0,0-1.6-1.6H5.5A1.47,1.47,0,0,0,3.9,6.5v9a1.47,1.47,0,0,0,1.6,1.6H8c.7.2.7.2.9.9v2.83Z"
@@ -1159,7 +1166,8 @@ $tag = R::findOne("tags", "WHERE tag=:tag", array("tag" => $_GET["tag"]));
                             </a>
                         </div>
                         <div class="vk_review__footer_item">
-                            <a href="https://vk.com/club134747802?z=photo-134747802_456239049%2Falbum-134747802_00%2Frev" target="_blank">
+                            <a href="https://vk.com/club134747802?z=photo-134747802_456239049%2Falbum-134747802_00%2Frev"
+                               target="_blank">
                                 <svg class="vk_review__footer_item_image">
                                     <path xmlns="http://www.w3.org/2000/svg"
                                           d="M12.1,7.87V4.4a1.32,1.32,0,0,1,2.17-1L23.21,11a1.32,1.32,0,0,1,.15,1.86l-.15.15-8.94,7.6a1.32,1.32,0,0,1-2.17-1V16.16c-4.68.11-8,1.09-9.89,2.87a1.15,1.15,0,0,1-1.9-1.11C1.84,11.56,5.82,8.16,12.1,7.87Zm1.8-2.42v4.2H13c-5.3,0-8.72,2.25-10.39,6.86C5.06,15.06,8.53,14.35,13,14.35h.9v4.2L21.61,12Z"
@@ -1797,7 +1805,8 @@ $tag = R::findOne("tags", "WHERE tag=:tag", array("tag" => $_GET["tag"]));
                 </button>
             </div>
         </form>
-        <div class="policy">*оставляя заявку, вы соглашаетесь с <a href="../politikaconf.pdf" target="_blank">политикой конфиденциальности сайта</a></div>
+        <div class="policy">*оставляя заявку, вы соглашаетесь с <a href="../politikaconf.pdf" target="_blank">политикой
+                конфиденциальности сайта</a></div>
     </div>
 </section>
 <footer>
@@ -1830,7 +1839,8 @@ $tag = R::findOne("tags", "WHERE tag=:tag", array("tag" => $_GET["tag"]));
     <div class="footer_item footer_social_links">
         <span class="footer_item_title">МЫ В СОЦ СЕТЯХ</span>
         <div class="social_link_container">
-            <a class="solcial_link" href="https://vk.com/club134747802" target="_blank"><span class="icon-vk"></span></a>
+            <a class="solcial_link" href="https://vk.com/club134747802" target="_blank"><span
+                        class="icon-vk"></span></a>
         </div>
         <button class="online_apply_content_style footer_apply_form__btn" type="submit" onclick="modal_on_second()">
             Онлайн
@@ -1896,7 +1906,8 @@ $tag = R::findOne("tags", "WHERE tag=:tag", array("tag" => $_GET["tag"]));
                placeholder="Контактный телефон" required/>
         <button class="modal_window_submit_btn" name="modal_btn" type="submit">Оставить заявку</button>
     </form>
-    <p class="modal_agreement">Отправляя заявку, вы подтверждаете свое согласие с <a href="../politikaconf.pdf" target="_blank">политикой
+    <p class="modal_agreement">Отправляя заявку, вы подтверждаете свое согласие с <a href="../politikaconf.pdf"
+                                                                                     target="_blank">политикой
             конфиденциальности</a></p>
 </section>
 <div id="modal_overlay"></div>
@@ -2001,15 +2012,10 @@ $tag = R::findOne("tags", "WHERE tag=:tag", array("tag" => $_GET["tag"]));
         }
     });
 
-    let count = 0;
-
     $("input#next").on("click", function (e) {
-        if ($(e.currentTarget).val() === "Рассчитать стоимость" && count === 3) {
+        if ($(e.currentTarget).val() === "Рассчитать стоимость") {
             $("input#form1_btn").click();
         }
-
-        if(count === 3 && $(e.currentTarget.previousElementSibling).val() === ""){}
-        else count++;
     });
 </script>
 </body>

@@ -311,21 +311,23 @@ var invisible_header_counter_item = document.getElementsByClassName('invisible_h
 invisible_header_btn.addEventListener('click', function () {
     if (header_input_count < 3) {
         if (invisible_header_input[header_input_count].value.length > 0) {
-            headerCounter()
+            headerCounter();
             invisible_header_input[header_input_count].classList.add('animated_elem');
             invisible_header_input[header_input_count].classList.add('animated_transform');
-            header_input_count++
+            header_input_count++;
             console.log(header_input_count);
-        } if (header_input_count == 3) {
-            invisible_header_btn.innerHTML = "Рассчитать стоимость"
+
+            if(header_input_count === 3) {
+                invisible_header_btn.value = "Рассчитать стоимость";
+            }
         }
     }
-})
+});
 
 function headerCounter() {
-    if (Number(invisible_header_counter_item.innerHTML) != 4) {
+    if (Number(invisible_header_counter_item.innerHTML) !== 4) {
         invisible_header_counter_item.innerHTML = Number(invisible_header_counter_item.innerHTML) + 1;
-    } else if (Number(invisible_header_counter_item.innerHTML) == 4) {
+    } else if (Number(invisible_header_counter_item.innerHTML) === 4) {
         invisible_header_counter_item.innerHTML = 1;
     }
 }
