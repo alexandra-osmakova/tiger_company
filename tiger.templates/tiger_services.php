@@ -201,7 +201,7 @@ $tag = R::findOne("tags", "WHERE tag=:tag", array("tag" => $_GET["tag"]));
                        class="header_count_form_input invisible_header_input"
                        type="text" placeholder="Город доставки" required>
                 <input class="header_count_form_input invisible_header_input" name="weight" type="text"
-                       placeholder="Масса груза, кг">
+                       placeholder="Масса груза, кг" required>
                 <input class="header_count_form_input invisible_header_input" name="header_telephone" type="text"
                        placeholder="Контактный телефон" required>
                 <button id="next" class="header_count_form__btn invisible_header_btn">Далее</button>
