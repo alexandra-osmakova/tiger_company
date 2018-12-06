@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="546706ad-c709-4daa-b8f7-cbd02ce58ba6" name="Default Changelist" comment="Script error fixed">
+    <list default="true" id="546706ad-c709-4daa-b8f7-cbd02ce58ba6" name="Default Changelist" comment="Admin section reconstructed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/admin/admin/index.php" afterPath="$PROJECT_DIR$/admin/admin/index.php" />
-      <change beforePath="$PROJECT_DIR$/admin/css/admin.css" afterPath="$PROJECT_DIR$/admin/css/admin.css" />
+      <change beforePath="$PROJECT_DIR$/admin/admin/secondlevel/update.page.php" afterPath="$PROJECT_DIR$/admin/admin/secondlevel/update.page.php" />
+      <change beforePath="$PROJECT_DIR$/tiger.templates/tiger_services.php" afterPath="$PROJECT_DIR$/tiger.templates/tiger_services.php" />
+      <change beforePath="$PROJECT_DIR$/tiger.templates/tiger_trucking__third_level_page.php" afterPath="$PROJECT_DIR$/tiger.templates/tiger_trucking__third_level_page.php" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -48,90 +49,102 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/admin/index.php">
+      <file leaf-file-name="tiger.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tiger.js/tiger.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="67" lean-forward="false" selection-start-line="22" selection-start-column="67" selection-end-line="22" selection-end-column="67" />
+            <state relative-caret-position="493">
+              <caret line="334" column="20" lean-forward="true" selection-start-line="334" selection-start-column="20" selection-end-line="334" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/admin/css/admin.css">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="373">
-              <caret line="88" column="1" lean-forward="false" selection-start-line="88" selection-start-column="1" selection-end-line="88" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="auth.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/auth/auth.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="11" lean-forward="true" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+            <state relative-caret-position="617">
+              <caret line="2003" column="0" lean-forward="false" selection-start-line="2003" selection-start-column="0" selection-end-line="2003" selection-end-column="0" />
               <folding>
-                <marker date="1543580220746" expanded="true" signature="330:340" ph="..." />
+                <element signature="n#style#0;n#svg#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#svg#0;n#div#1;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#2;n#div#0;n#div#2;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#2;n#div#1;n#div#2;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#2;n#div#2;n#div#2;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#2;n#div#3;n#div#2;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#2;n#div#4;n#div#2;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#2;n#div#5;n#div#2;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#2;n#div#6;n#div#2;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#2;n#div#7;n#div#2;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#2;n#div#8;n#div#2;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#svg#0;n#div#3;n#section#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#section#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#svg#0;n#div#1;n#section#6;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#svg#0;n#div#2;n#section#6;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#svg#0;n#div#5;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="thanks_window.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/thanks_window.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="create.page.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/admin/create.page.php">
+        <entry file="file://$PROJECT_DIR$/admin/admin/thirdlevel/create.page.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="47" lean-forward="false" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
+            <state relative-caret-position="28">
+              <caret line="4" column="24" lean-forward="false" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
               <folding>
-                <marker date="1543583941954" expanded="true" signature="1157:1169" ph="..." />
-                <marker date="1543583941954" expanded="true" signature="1236:1248" ph="..." />
+                <marker date="1544084113825" expanded="true" signature="1285:1297" ph="..." />
+                <marker date="1544084113825" expanded="true" signature="1425:1434" ph="..." />
+                <marker date="1544084113825" expanded="true" signature="1534:1544" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/index.php">
+        <entry file="file://$PROJECT_DIR$/admin/admin/thirdlevel/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="300">
+              <caret line="116" column="4" lean-forward="false" selection-start-line="116" selection-start-column="4" selection-end-line="116" selection-end-column="75" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="delete.page.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/admin/delete.page.php">
+      <file leaf-file-name="tiger_services.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tiger.templates/tiger_services.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="323">
+              <caret line="19" column="58" lean-forward="false" selection-start-line="19" selection-start-column="58" selection-end-line="19" selection-end-column="58" />
               <folding>
-                <marker date="1543580220740" expanded="true" signature="250:261" ph="..." />
+                <marker date="1544109337502" expanded="true" signature="126:160" ph="SELECT * FRO... pages" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tiger_trucking__third_level_page.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tiger.templates/tiger_trucking__third_level_page.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="21" column="4" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+              <folding>
+                <marker date="1544109371448" expanded="true" signature="254:288" ph="SELECT * FRO... pages" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="update.page.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/admin/update.page.php">
+        <entry file="file://$PROJECT_DIR$/admin/admin/secondlevel/update.page.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="390">
+              <caret line="55" column="47" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="86" selection-end-column="1" />
               <folding>
-                <marker date="1543580220743" expanded="true" signature="6900:6911" ph="..." />
+                <element signature="e#1548#1579#0#HTML" expanded="true" />
+                <element signature="e#1723#1754#0#HTML" expanded="true" />
+                <element signature="e#2070#2092#0#HTML" expanded="true" />
+                <element signature="e#2246#2277#0#HTML" expanded="true" />
+                <marker date="1544109238653" expanded="true" signature="3513:3524" ph="..." />
               </folding>
             </state>
           </provider>
@@ -141,64 +154,84 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>pro,</find>
+      <find>g_rus</find>
+      <find>gruzopere</find>
+      <find>action</find>
+      <find>form</find>
+      <find>header_logo</find>
+      <find>src</find>
+      <find>href</find>
+      <find>throttle</find>
+      <find>icon-v</find>
+      <find>target</find>
+      <find>город</find>
+      <find>header</find>
+      <find>to_pa</find>
+      <find>to_p</find>
+      <find>header_count</find>
+      <find>@media</find>
       <find>form1</find>
-      <find>ADDRESS_</find>
-      <find>modal</find>
-      <find>modal_w</find>
-      <find>ADDRESS</find>
-      <find>empty</find>
-      <find>form2</find>
-      <find>quiz</find>
-      <find>lol</find>
-      <find>form=&quot;quiz_form</find>
-      <find>answer</find>
-      <find>_form2</find>
-      <find>type=&quot;text&quot;</find>
-      <find>name=&quot;form1&quot;</find>
-      <find>text_wrap</find>
-      <find>article_content</find>
-      <find>break;</find>
-      <find>header_content</find>
-      <find>blog_content</find>
-      <find>service</find>
-      <find>service_types</find>
-      <find>xml</find>
-      <find>generate</find>
-      <find>services_</find>
-      <find>service_type__item:</find>
-      <find>ADDRESS_FROM_HEADER</find>
-      <find>img_ufrl</find>
+      <find>form_</find>
+      <find>finish_</find>
+      <find>finish</find>
+      <find>form_item</find>
+      <find>max-width: 1210</find>
+      <find>invisible_header_counter</find>
+      <find>policy</find>
+      <find>button</find>
+      <find>font</find>
+      <find>invisible_header_btn</find>
+      <find>invisible_header_bt</find>
+      <find>iframe</find>
+      <find>additiona</find>
     </findStrings>
     <replaceStrings>
       <replace>../</replace>
+      <replace>&lt;a target=&quot;_blank&quot;</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="dev_azamat" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/test.php" />
         <option value="$PROJECT_DIR$/thanks_window_second.php" />
         <option value="$PROJECT_DIR$/thanks_window.php" />
         <option value="$PROJECT_DIR$/admin/templates/tiger_trucking__third_level_page.php" />
         <option value="$PROJECT_DIR$/admin/database/Repo.php" />
-        <option value="$PROJECT_DIR$/tiger.templates/tiger_trucking__third_level_page.php" />
-        <option value="$PROJECT_DIR$/admin/admin/update.page.php" />
         <option value="$PROJECT_DIR$/admin/auth/Verificator.php" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/tiger.templates/tiger_services.php" />
-        <option value="$PROJECT_DIR$/admin/templates/Block.php" />
+        <option value="$PROJECT_DIR$/admin/database/db.php" />
+        <option value="$PROJECT_DIR$/admin/.htaccess" />
+        <option value="$PROJECT_DIR$/tiger.templates/.htaccess" />
+        <option value="$PROJECT_DIR$/test.php" />
+        <option value="$PROJECT_DIR$/tiger.css/pages.css" />
+        <option value="$PROJECT_DIR$/tiger.templates/pages.php" />
+        <option value="$PROJECT_DIR$/.htaccess" />
+        <option value="$PROJECT_DIR$/admin/admin/update.page.php" />
         <option value="$PROJECT_DIR$/admin/admin/create.page.php" />
+        <option value="$PROJECT_DIR$/tiger.css/tiger.css" />
+        <option value="$PROJECT_DIR$/tiger.css/tiger.min.css" />
+        <option value="$PROJECT_DIR$/admin/admin/secondlevel/create.page.php" />
+        <option value="$PROJECT_DIR$/admin/admin/thirdlevel/delete.page.php" />
+        <option value="$PROJECT_DIR$/admin/admin/thirdlevel/create.page.php" />
+        <option value="$PROJECT_DIR$/admin/admin/secondlevel/index.php" />
+        <option value="$PROJECT_DIR$/admin/admin/thirdlevel/index.php" />
         <option value="$PROJECT_DIR$/admin/admin/index.php" />
         <option value="$PROJECT_DIR$/admin/css/admin.css" />
+        <option value="$PROJECT_DIR$/admin/templates/Block.php" />
+        <option value="$PROJECT_DIR$/admin/admin/thirdlevel/update.page.php" />
+        <option value="$PROJECT_DIR$/tiger.js/t.js" />
+        <option value="$PROJECT_DIR$/tiger.js/tiger.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/admin/admin/secondlevel/update.page.php" />
+        <option value="$PROJECT_DIR$/tiger.templates/tiger_services.php" />
+        <option value="$PROJECT_DIR$/tiger.templates/tiger_trucking__third_level_page.php" />
       </list>
     </option>
   </component>
@@ -215,8 +248,9 @@
     </packageJsonPaths>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds">
-    <option name="x" value="953" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="828" />
+    <option name="y" value="-22" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
@@ -236,6 +270,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -258,13 +293,27 @@
               <item name="tiger_company" type="b2602c69:ProjectViewProjectNode" />
               <item name="tiger_company" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="auth" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="secondlevel" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="tiger_company" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tiger_company" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="thirdlevel" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="tiger_company" type="b2602c69:ProjectViewProjectNode" />
               <item name="tiger_company" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="tiger_company" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tiger_company" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="tiger_company" type="b2602c69:ProjectViewProjectNode" />
@@ -280,7 +329,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -291,171 +339,16 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Новая папка\OSPanel\domains\localhost\tiger_company\admin\admin\thirdlevel" />
+      <recent name="E:\Новая папка\OSPanel\domains\localhost\tiger_company" />
       <recent name="E:\Новая папка\OSPanel\domains\localhost\tiger_company\tiger.templates" />
       <recent name="E:\Новая папка\OSPanel\domains\localhost\tiger_company\admin\templates" />
       <recent name="E:\Новая папка\OSPanel\domains\localhost\tiger_company\admin" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Новая папка\OSPanel\domains\localhost\tiger_company\admin\admin\secondlevel" />
       <recent name="E:\Новая папка\OSPanel\domains\localhost\tiger_company\admin" />
     </key>
-  </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/dostavka-sbornih-gruzov.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/gruzoperevozki-furami.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/index.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/pereezd-mezhgorod.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/perevozka-konretnyh-vidov-gruza.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/perevozka-lichnyh-vechey.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/perevozki-kamazom.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/perevozki-refridgerator.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/popynie-perevozki.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tiger.css/tiger.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tiger.js/tiger.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tiger_services.html</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/LICENSE</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/admin/delete.page.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/admin/index.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/admin/update.page.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/auth/Verificator.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/auth/auth.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/css/admin.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/database/db.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/database/rb.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/img/tiger_logo.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/index.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/templates/Block.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/templates/page.block.template.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/tiger_page_db.sql</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tiger.img/MAN-18.240-1.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tiger.img/services_dsg.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tiger.img/services_g_fur.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tiger.img/services_g_kamaz.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tiger.img/services_g_ref.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tiger.img/services_g_rus.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tiger.img/services_pg.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tiger.img/services_pkvg.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tiger.img/services_plv.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tiger.img/services_pm.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tiger.templates/tiger_services.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tiger.templates/tiger_trucking__third_level_page.php</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tiger.img/Movers-And-Packers-Services-In-USA.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tiger.img/ekspress_piegade.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tiger.img/gallagher-delivers-on-their-promise.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tiger.img/hey.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tiger.img/kamaz_4308-n3_2.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tiger.img/logistics-lorry-mountains-933981.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tiger.img/original_1e5853df4cfc9a6c.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tiger.img/shutterstock_1039216024-e1535033228887.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tiger.img/tiger_services_header.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tiger_trucking__third_level_page.html</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -499,6 +392,17 @@
       <workItem from="1543340705971" duration="513000" />
       <workItem from="1543396247710" duration="12501000" />
       <workItem from="1543510879246" duration="871000" />
+      <workItem from="1543586326342" duration="99000" />
+      <workItem from="1543582795345" duration="1595000" />
+      <workItem from="1543665073747" duration="99000" />
+      <workItem from="1543839012706" duration="132000" />
+      <workItem from="1543839343837" duration="10379000" />
+      <workItem from="1543864329859" duration="9692000" />
+      <workItem from="1543914913337" duration="3183000" />
+      <workItem from="1543926239405" duration="18727000" />
+      <workItem from="1544006029461" duration="130000" />
+      <workItem from="1544008870640" duration="9434000" />
+      <workItem from="1544083253928" duration="6741000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed form submission on mobile version @Azamat">
       <created>1543338536764</created>
@@ -549,46 +453,140 @@
       <option name="project" value="LOCAL" />
       <updated>1543583289928</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Fixed form problems">
+      <created>1543586365801</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1543586365801</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Fixed form problems">
+      <created>1543604682183</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1543604682183</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Fixed form problems">
+      <created>1543865960937</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1543865960937</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Added Friendly URL functionality&#10;Some bugfixes">
+      <created>1543880084502</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1543880084502</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Bugfixes">
+      <created>1543916244913</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1543916244913</updated>
+    </task>
+    <task id="LOCAL-00013" summary="BACKUP">
+      <created>1543917969503</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1543917969503</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Some fixes">
+      <created>1543918753660</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1543918753660</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Fixed form problems">
+      <created>1543937536584</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1543937536584</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Настроено ЧПУ">
+      <created>1543939148439</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1543939148439</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Fixed form problems">
+      <created>1543941259198</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1543941259198</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Added policy">
+      <created>1543944490040</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1543944490040</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Fixes">
+      <created>1544008968598</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1544008968598</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Admin section reconstructed">
+      <created>1544018063211</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1544018063211</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Fix">
+      <created>1544084236193</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1544084236193</updated>
+    </task>
+    <task id="LOCAL-00022" summary="JS Fixes Added">
+      <created>1544086720213</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1544086720213</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27364000" />
+    <option name="totallyTimeSpent" value="87575000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2234375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19322917" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.359491" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.359491" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -603,36 +601,39 @@
     <MESSAGE value="Fixed all form problems" />
     <MESSAGE value="Fixed form problems in 2nd level page" />
     <MESSAGE value="Script error fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Script error fixed" />
+    <MESSAGE value="Added Friendly URL functionality&#10;Some bugfixes" />
+    <MESSAGE value="Bugfixes" />
+    <MESSAGE value="BACKUP" />
+    <MESSAGE value="Some fixes" />
+    <MESSAGE value="Настроено ЧПУ" />
+    <MESSAGE value="Fixed form problems" />
+    <MESSAGE value="Added policy" />
+    <MESSAGE value="Fixes" />
+    <MESSAGE value="Admin section reconstructed" />
+    <MESSAGE value="Fix" />
+    <MESSAGE value="JS Fixes Added" />
+    <option name="LAST_COMMIT_MESSAGE" value="JS Fixes Added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tiger.templates/tiger_services.php" />
-    <entry file="file://$PROJECT_DIR$/thanks_window_second.php">
+    <entry file="file://$PROJECT_DIR$/tiger.img/services_perevozka-konkretnyh-vidov-gruza.jpg" />
+    <entry file="file://$PROJECT_DIR$/tiger.img/tiger_services_page1.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/html5/core-scripting.rnc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="-4221">
+          <caret line="12" column="16" lean-forward="false" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/thanks_window.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="41" column="27" lean-forward="false" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29325">
-          <caret line="1725" column="26" lean-forward="false" selection-start-line="1725" selection-start-column="26" selection-end-line="1725" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/database/Repo.php" />
+    <entry file="file://$PROJECT_DIR$/admin/database/rb.php" />
     <entry file="file://$PROJECT_DIR$/dostavka-sbornih-gruzov.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -645,6 +646,8 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tiger_trucking__third_level_page.html" />
+    <entry file="file://$PROJECT_DIR$/admin/auth/Verificator.php" />
     <entry file="file://$PROJECT_DIR$/thanks_window_second.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -652,74 +655,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/thanks_window.php">
+    <entry file="file://$PROJECT_DIR$/tiger_services.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="41" column="27" lean-forward="false" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29325">
-          <caret line="1725" column="26" lean-forward="true" selection-start-line="1725" selection-start-column="26" selection-end-line="1725" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thanks_window_second.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state relative-caret-position="-11135">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/thanks_window.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="41" column="27" lean-forward="false" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/admin/database/db.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29325">
-          <caret line="1725" column="82" lean-forward="false" selection-start-line="1725" selection-start-column="82" selection-end-line="1725" selection-end-column="82" />
-          <folding />
+        <state relative-caret-position="68">
+          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/thanks_window_second.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
+    <entry file="file://$PROJECT_DIR$/tiger.img/services_poputnye-gruzoperevozki.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/thanks_window.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="39" column="27" lean-forward="true" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29325">
-          <caret line="1725" column="82" lean-forward="false" selection-start-line="1725" selection-start-column="82" selection-end-line="1725" selection-end-column="82" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/admin/templates/page.block.template.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/textolite/textolite.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/textolite/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/superglobals/_superglobals.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tiger.templates/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -728,27 +725,23 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test.php" />
-    <entry file="file://$PROJECT_DIR$/favicon.ico">
+    <entry file="file://$PROJECT_DIR$/tiger.css/pages.css" />
+    <entry file="file://$PROJECT_DIR$/tiger.img/12.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tiger.img/2.png">
+    <entry file="file://$PROJECT_DIR$/tiger.img/10 2.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tiger.img/3.png">
+    <entry file="file://$PROJECT_DIR$/tiger.img/company_logo_open_menu.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tiger.img/4.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tiger.img/header_menu.png">
+    <entry file="file://$PROJECT_DIR$/tiger.img/header_video_placeholder.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
@@ -758,189 +751,219 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tiger.img/services_pkvg.jpg" />
-    <entry file="file://$PROJECT_DIR$/tiger.img/tiger_services_page1.jpg">
+    <entry file="file://$PROJECT_DIR$/tiger.img/road.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/templates/page.block.template.php" />
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/html5/core-scripting.rnc">
+    <entry file="file://$PROJECT_DIR$/gruzoperevozki-furami.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4221">
-          <caret line="12" column="16" lean-forward="false" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/database/Repo.php" />
-    <entry file="file://$PROJECT_DIR$/admin/database/rb.php" />
-    <entry file="file://$PROJECT_DIR$/admin/database/db.php" />
-    <entry file="file://$PROJECT_DIR$/dostavka-sbornih-gruzov.html">
+    <entry file="file://$PROJECT_DIR$/tiger.templates/posts.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="51">
+          <caret line="3" column="12" lean-forward="false" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tiger.img/tiger_logo.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tiger_trucking__third_level_page.html">
+    <entry file="file://$PROJECT_DIR$/tiger.css/reset.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tiger.templates/tiger_trucking__third_level_page.php" />
-    <entry file="file://$PROJECT_DIR$/admin/auth/Verificator.php" />
-    <entry file="file://$PROJECT_DIR$/tiger.js/tiger.js">
+    <entry file="file://$PROJECT_DIR$/tiger.css/tiger.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="72" lean-forward="false" selection-start-line="23" selection-start-column="72" selection-end-line="23" selection-end-column="72" />
+        <state relative-caret-position="861">
+          <caret line="1163" column="1" lean-forward="false" selection-start-line="1163" selection-start-column="1" selection-end-line="1163" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tiger.css/tiger.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="577">
-          <caret line="984" column="47" lean-forward="false" selection-start-line="984" selection-start-column="47" selection-end-line="984" selection-end-column="47" />
+        <state relative-caret-position="793">
+          <caret line="6490" column="1" lean-forward="false" selection-start-line="6490" selection-start-column="1" selection-end-line="6490" selection-end-column="1" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thanks_window_second.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20737">
-          <caret line="2008" column="11" lean-forward="false" selection-start-line="2008" selection-start-column="11" selection-end-line="2008" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tiger_services.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-11135">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tiger.templates/tiger_services.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12427">
-          <caret line="831" column="41" lean-forward="true" selection-start-line="831" selection-start-column="41" selection-end-line="831" selection-end-column="41" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1543582612145" expanded="true" signature="126:160" ph="SELECT * FRO... pages" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/templates/Block.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="674">
-          <caret line="106" column="122" lean-forward="false" selection-start-line="106" selection-start-column="122" selection-end-line="106" selection-end-column="122" />
-          <folding>
-            <marker date="1543582947298" expanded="true" signature="140:756" ph="..." />
-            <marker date="1543582947298" expanded="false" signature="174:208" ph="..." />
-            <marker date="1543582947298" expanded="true" signature="209:367" ph="..." />
-            <marker date="1543582947298" expanded="false" signature="422:438" ph="..." />
-            <marker date="1543582947298" expanded="false" signature="516:532" ph="..." />
-            <marker date="1543582947298" expanded="true" signature="533:710" ph="..." />
-            <marker date="1543582947298" expanded="true" signature="3309:3373" ph="..." />
-            <marker date="1543582947298" expanded="true" signature="3375:3590" ph="..." />
-            <marker date="1543582947298" expanded="true" signature="3406:3559" ph="..." />
-            <marker date="1543582947298" expanded="true" signature="3431:3559" ph="..." />
-            <marker date="1543582947298" expanded="true" signature="3700:3767" ph="..." />
-            <marker date="1543582947298" expanded="true" signature="3885:3955" ph="..." />
-            <marker date="1543582947298" expanded="true" signature="4073:4106" ph="..." />
-            <marker date="1543582947298" expanded="true" signature="4108:4114" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thanks_window.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/admin/delete.page.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1543580220740" expanded="true" signature="250:261" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/admin/update.page.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1543580220743" expanded="true" signature="6900:6911" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/auth/auth.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
-          <caret line="14" column="11" lean-forward="true" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
-          <folding>
-            <marker date="1543580220746" expanded="true" signature="330:340" ph="..." />
-          </folding>
+          <caret line="14" column="11" lean-forward="false" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/admin/create.page.php">
+    <entry file="file://$PROJECT_DIR$/admin/admin/thirdlevel/delete.page.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="47" lean-forward="false" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
+        <state relative-caret-position="153">
+          <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/admin/secondlevel/create.page.php" />
+    <entry file="file://$PROJECT_DIR$/admin/admin/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="33" lean-forward="false" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
           <folding>
-            <marker date="1543583941954" expanded="true" signature="1157:1169" ph="..." />
-            <marker date="1543583941954" expanded="true" signature="1236:1248" ph="..." />
+            <marker date="1544084113811" expanded="true" signature="824:834" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="204">
+          <caret line="12" column="56" lean-forward="false" selection-start-line="12" selection-start-column="56" selection-end-line="12" selection-end-column="56" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/admin/index.php">
+    <entry file="file://$PROJECT_DIR$/admin/admin/secondlevel/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="67" lean-forward="false" selection-start-line="22" selection-start-column="67" selection-end-line="22" selection-end-column="67" />
+        <state relative-caret-position="391">
+          <caret line="23" column="44" lean-forward="false" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/templates/Block.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="53" lean-forward="false" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="53" />
+          <folding>
+            <element signature="e#1328#2025#0#PHP" expanded="false" />
+            <element signature="e#2031#2552#0#PHP" expanded="false" />
+            <element signature="e#4963#5798#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/admin/thirdlevel/update.page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="35" lean-forward="false" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/css/admin.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="88" column="1" lean-forward="false" selection-start-line="88" selection-start-column="1" selection-end-line="88" selection-end-column="1" />
+        <state relative-caret-position="476">
+          <caret line="28" column="17" lean-forward="false" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tiger.js/t.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="1" lean-forward="true" selection-start-line="35" selection-start-column="1" selection-end-line="49" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="617">
+          <caret line="2003" column="0" lean-forward="false" selection-start-line="2003" selection-start-column="0" selection-end-line="2003" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#svg#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#svg#0;n#div#1;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#2;n#div#0;n#div#2;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#2;n#div#1;n#div#2;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#2;n#div#2;n#div#2;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#2;n#div#3;n#div#2;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#2;n#div#4;n#div#2;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#2;n#div#5;n#div#2;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#2;n#div#6;n#div#2;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#2;n#div#7;n#div#2;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#2;n#div#8;n#div#2;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#svg#0;n#div#3;n#section#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#section#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#svg#0;n#div#1;n#section#6;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#svg#0;n#div#2;n#section#6;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#svg#0;n#div#5;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tiger.js/tiger.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="334" column="20" lean-forward="true" selection-start-line="334" selection-start-column="20" selection-end-line="334" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/admin/thirdlevel/create.page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="4" column="24" lean-forward="false" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+          <folding>
+            <marker date="1544084113825" expanded="true" signature="1285:1297" ph="..." />
+            <marker date="1544084113825" expanded="true" signature="1425:1434" ph="..." />
+            <marker date="1544084113825" expanded="true" signature="1534:1544" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/admin/thirdlevel/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="116" column="4" lean-forward="false" selection-start-line="116" selection-start-column="4" selection-end-line="116" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/admin/secondlevel/update.page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="55" column="47" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="86" selection-end-column="1" />
+          <folding>
+            <element signature="e#1548#1579#0#HTML" expanded="true" />
+            <element signature="e#1723#1754#0#HTML" expanded="true" />
+            <element signature="e#2070#2092#0#HTML" expanded="true" />
+            <element signature="e#2246#2277#0#HTML" expanded="true" />
+            <marker date="1544109238653" expanded="true" signature="3513:3524" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tiger.templates/tiger_services.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="58" lean-forward="false" selection-start-line="19" selection-start-column="58" selection-end-line="19" selection-end-column="58" />
+          <folding>
+            <marker date="1544109337502" expanded="true" signature="126:160" ph="SELECT * FRO... pages" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tiger.templates/tiger_trucking__third_level_page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="4" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+          <folding>
+            <marker date="1544109371448" expanded="true" signature="254:288" ph="SELECT * FRO... pages" />
+          </folding>
         </state>
       </provider>
     </entry>
