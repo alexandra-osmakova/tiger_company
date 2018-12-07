@@ -23,7 +23,8 @@ class Block
         return $result;
     }
 
-    public static function generate_second($page) {
+    public static function generate_second($page)
+    {
         $result = "<div class='generated_block' style='height: 50px;'>
                     <div style='width: 50%;margin-left: 10px;'>
                         <a href='../../../$page->tag/'>" . $page->offer . "</a>
@@ -59,13 +60,13 @@ class Block
         $result = "";
         $count = 0;
 
-        foreach ($pages as $page) {
+        for ($i = 0; $i < count($pages) - 6; $i++) {
             if ($count === 0) {
                 $result .= "<div><ul>";
             }
             $count++;
 
-            $result .= "<li><a href=../" . $page["tag"] . "/" . $page{"url"} . ">" . $page["offer"] . "</a></li>";
+            $result .= "<li><a href=../" . $pages[$i]["tag"] . "/" . $pages[$i]{"url"} . ">" . $pages[$i]["offer"] . "</a></li>";
 
             if ($count === 13) {
                 $result .= "</ul></div>";
@@ -133,11 +134,12 @@ class Block
         $result = "";
 
         foreach ($pages as $page) {
-            $page->img_first = str_replace("../", "", $page->img_first);
-            $page->text = strip_tags($page->text);
-            $page->text = (strlen($page->text) >= 200) ? mb_substr($page->text, 0, 200) . "..." : $page->text;
+            if ($page->least) {
+                $page->img_first = str_replace("../", "", $page->img_first);
+                $page->text = strip_tags($page->text);
+                $page->text = (strlen($page->text) >= 200) ? mb_substr($page->text, 0, 200) . "..." : $page->text;
 
-            $result .= "<a href=\"$page->tag/$page->url\">
+                $result .= "<a href=\"$page->tag/$page->url\">
                             <div class=\"block\">
                                 <h1>$page->title</h1>
                                 <h6>$page->date</h6>
@@ -145,6 +147,7 @@ class Block
                                 <p>$page->text</p>
                             </div>
                         </a>";
+            }
         }
 
         return $result;

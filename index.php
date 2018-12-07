@@ -1,3 +1,12 @@
+<?php
+require_once __DIR__ . "/admin/templates/Block.php";
+require_once __DIR__ . "/admin/database/db.php";
+
+use Templates\Block;
+
+$pages = R::findAll("pages", "WHERE most=:most", ["most" => true]);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -85,7 +94,7 @@
                     <div class="header_phone_info">
                         <a class="header_contacts_item__telephon" href='tel:8 (800) 700-09-35'>
                             <svg enable-background="new 0 0 348.1 348.1" version="1.1" viewBox="0 0 348.1 348.1"
-                                    xml:space="preserve">
+                                 xml:space="preserve">
                                     <path fill="#ffffff" d="m340.3 275.1l-53.8-53.8c-10.7-10.7-28.4-10.3-39.5 0.7l-27.1 27.1c-1.7-0.9-3.5-1.9-5.3-3-17.1-9.5-40.5-22.5-65.1-47.1-24.7-24.7-37.7-48.1-47.2-65.3-1-1.8-2-3.6-2.9-5.2l18.2-18.1 8.9-8.9c11.1-11.1 11.4-28.8 0.7-39.5l-53.8-53.8c-10.7-10.7-28.4-10.4-39.5 0.7l-15.2 15.3 0.4 0.4c-5.1 6.5-9.3 14-12.5 22-2.9 7.7-4.7 15-5.6 22.3-7 58.9 19.9 112.7 92.9 185.6 100.9 100.9 182.2 93.2 185.7 92.9 7.6-0.9 15-2.7 22.4-5.6 8-3.1 15.5-7.4 21.9-12.4l0.3 0.3 15.3-15c11.1-11.2 11.5-28.9 0.8-39.6z" />
                                 </svg>
                             8 (800) 700-09-35</a>
@@ -148,7 +157,7 @@
                 <div class="header_phone_info">
                     <a class="header_contacts_item__telephon" href='tel:8 (800) 700-09-35'>
                         <svg enable-background="new 0 0 348.1 348.1" version="1.1" viewBox="0 0 348.1 348.1"
-                                xml:space="preserve">
+                             xml:space="preserve">
                                 <path fill="#ffffff" d="m340.3 275.1l-53.8-53.8c-10.7-10.7-28.4-10.3-39.5 0.7l-27.1 27.1c-1.7-0.9-3.5-1.9-5.3-3-17.1-9.5-40.5-22.5-65.1-47.1-24.7-24.7-37.7-48.1-47.2-65.3-1-1.8-2-3.6-2.9-5.2l18.2-18.1 8.9-8.9c11.1-11.1 11.4-28.8 0.7-39.5l-53.8-53.8c-10.7-10.7-28.4-10.4-39.5 0.7l-15.2 15.3 0.4 0.4c-5.1 6.5-9.3 14-12.5 22-2.9 7.7-4.7 15-5.6 22.3-7 58.9 19.9 112.7 92.9 185.6 100.9 100.9 182.2 93.2 185.7 92.9 7.6-0.9 15-2.7 22.4-5.6 8-3.1 15.5-7.4 21.9-12.4l0.3 0.3 15.3-15c11.1-11.2 11.5-28.9 0.8-39.6z" />
                             </svg>
                         8 (800) 700-09-35</a>
@@ -186,7 +195,7 @@
                        placeholder="Город отправления" required>
                 <input id="ADDRESS_TO_HEADER" name="ADDRESS_TO_HEADER" class="header_count_form_input invisible_header_input " type="text"
                        placeholder="Город доставки" required>
-                <input class="header_count_form_input invisible_header_input " name="weight" type="text" placeholder="Масса груза, кг">
+                <input class="header_count_form_input invisible_header_input " name="weight" type="text" placeholder="Масса груза, кг" required>
                 <input class="header_count_form_input invisible_header_input " name="header_telephone" type="text" placeholder="Контактный телефон"
                        required>
                 <input type="text" id="next" class="header_count_form__btn invisible_header_btn" value="Далее" readonly>
@@ -206,11 +215,11 @@
                         fill: #E0E0E0;
                     }
                 </style>
-                <polygon class="st0" points="5350.5 904 -12.4 904 -29 559 1847 575 3770.1 435.9 5351 297.1" />
-                <polygon class="st0" points="-6.1 841.3 1889.5 685.3 3170.1 484.9 5340.8 289.4 5333.4 892.2 1.6 892.2" />
-                <polygon class="st1" points="5333 473 5333 283 3579.7 447" />
-                <polygon points="1.1 676 1876.3 625 3680.1 438.9 1848.9 558.3 0.2 548.9" />
-                <polygon class="st1" points="-1.4 672.8 1873.7 621.8 3173 494 1921 700 -1.8 862.5" />
+            <polygon class="st0" points="5350.5 904 -12.4 904 -29 559 1847 575 3770.1 435.9 5351 297.1" />
+            <polygon class="st0" points="-6.1 841.3 1889.5 685.3 3170.1 484.9 5340.8 289.4 5333.4 892.2 1.6 892.2" />
+            <polygon class="st1" points="5333 473 5333 283 3579.7 447" />
+            <polygon points="1.1 676 1876.3 625 3680.1 438.9 1848.9 558.3 0.2 548.9" />
+            <polygon class="st1" points="-1.4 672.8 1873.7 621.8 3173 494 1921 700 -1.8 862.5" />
             </svg>
     </div>
 </header>
@@ -819,10 +828,9 @@
 </section>
 <section id="services" class="services">
     <div class="services_decoration_line_first">
-        <?xml version="1.0" encoding="utf-8"?>
         <!-- Generator: Adobe Illustrator 20.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
         <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                x="0px" y="0px" viewBox="0 0 5333 265" style="enable-background:new 0 0 5333 265;" xml:space="preserve">
+             x="0px" y="0px" viewBox="0 0 5333 265" style="enable-background:new 0 0 5333 265;" xml:space="preserve">
                 <style type="text/css">
                     .st0 {
                         fill: #FFFFFF;
@@ -836,16 +844,15 @@
                         fill: #E0E0E0;
                     }
                 </style>
-                <polygon class="st0" points="5351,133 4323,33 -5,241 -0.8,-6.5 5350,-16 " />
-                <path class="st1" d="M-2.3,229.7c0,0,4039.3-105.9,4091.3-109.3c10-0.7,1244,127.3,1244,127.3v17.9H-0.8L-2.3,229.7z" />
-                <polygon class="st2" points="-5,231 4299,7 5333,99.1 5333,249.1 4103,123 " />
+            <polygon class="st0" points="5351,133 4323,33 -5,241 -0.8,-6.5 5350,-16 " />
+            <path class="st1" d="M-2.3,229.7c0,0,4039.3-105.9,4091.3-109.3c10-0.7,1244,127.3,1244,127.3v17.9H-0.8L-2.3,229.7z" />
+            <polygon class="st2" points="-5,231 4299,7 5333,99.1 5333,249.1 4103,123 " />
             </svg>
     </div>
     <div class="services_decoration_line_second">
-        <?xml version="1.0" encoding="utf-8"?>
         <!-- Generator: Adobe Illustrator 20.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
         <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                x="0px" y="0px" viewBox="0 0 5333 560" style="enable-background:new 0 0 5333 560;" xml:space="preserve">
+             x="0px" y="0px" viewBox="0 0 5333 560" style="enable-background:new 0 0 5333 560;" xml:space="preserve">
                 <style type="text/css">
                     .st0 {
                         fill: #FFFFFF;
@@ -865,10 +872,10 @@
                         fill: #D4D4D4;
                     }
                 </style>
-                <rect x="-12.6" y="-1.6" class="st0" width="5350.5" height="565" />
-                <polygon class="st1" points="3607,208 -1,316 3,0 5619,-4 " />
-                <polygon class="st2" points="-5.4,545.9 3811,286 5327,26 3463,210 -9,410 " />
-                <polygon class="st3" points="-13,304 3463,210 -9,410 " />
+            <rect x="-12.6" y="-1.6" class="st0" width="5350.5" height="565" />
+            <polygon class="st1" points="3607,208 -1,316 3,0 5619,-4 " />
+            <polygon class="st2" points="-5.4,545.9 3811,286 5327,26 3463,210 -9,410 " />
+            <polygon class="st3" points="-13,304 3463,210 -9,410 " />
             </svg>
     </div>
     <h2>НАШИ УСЛУГИ</h2>
@@ -1302,9 +1309,8 @@
         </div>
     </div>
     <div class="about_decoration_line">
-        <?xml version="1.0" encoding="UTF-8"?>
         <svg enable-background="new 0 0 5333 249.1" version="1.1" viewBox="0 0 5333 249.1" xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg">
+             xmlns="http://www.w3.org/2000/svg">
                 <style type="text/css">
                     .st0 {
                         fill: #FFFFFF;
@@ -1318,16 +1324,15 @@
                         fill: #FFDB4D;
                     }
                 </style>
-                <polygon class="st0" points="5373 175 1403.6 61.4 -5.3 247.3 -5.3 -6 5343.7 -6" />
-                <polygon class="st1" points="-13 246 1235 2 5335 174 1431 98" />
-                <polygon class="st2" points="-6.8 246.6 1234.8 2 -6.8 137.1" />
+            <polygon class="st0" points="5373 175 1403.6 61.4 -5.3 247.3 -5.3 -6 5343.7 -6" />
+            <polygon class="st1" points="-13 246 1235 2 5335 174 1431 98" />
+            <polygon class="st2" points="-6.8 246.6 1234.8 2 -6.8 137.1" />
             </svg>
     </div>
     <div class="about_decoration_line_second">
-        <?xml version="1.0" encoding="utf-8"?>
         <!-- Generator: Adobe Illustrator 20.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
         <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                x="0px" y="0px" viewBox="0 0 5332.9 452.5" style="enable-background:new 0 0 5332.9 452.5;" xml:space="preserve">
+             x="0px" y="0px" viewBox="0 0 5332.9 452.5" style="enable-background:new 0 0 5332.9 452.5;" xml:space="preserve">
                 <style type="text/css">
                     .st0 {
                         fill: #FFFFFF;
@@ -1343,9 +1348,9 @@
                         fill: #D4D4D4;
                     }
                 </style>
-                <polygon class="st0" points="5342,390 3786,86 -62,294 2.5,465.8 5329.4,465.8 " />
-                <polygon class="st1" points="-12,290.5 3815.2,8.6 5344.9,92.6 5340,340 3698.1,122.2 " />
-                <polygon class="st2" points="5345,429.2 5344.9,312.5 3836.1,138.2 " />
+            <polygon class="st0" points="5342,390 3786,86 -62,294 2.5,465.8 5329.4,465.8 " />
+            <polygon class="st1" points="-12,290.5 3815.2,8.6 5344.9,92.6 5340,340 3698.1,122.2 " />
+            <polygon class="st2" points="5345,429.2 5344.9,312.5 3836.1,138.2 " />
             </svg>
 
     </div>
@@ -1394,10 +1399,10 @@
                 <div class="advantages_content__item_img_container">
                     <div class="advantages_content__item_img">
                         <svg enable-background="new 0 0 512 512" version="1.1" viewBox="0 0 512 512" xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg">
+                             xmlns="http://www.w3.org/2000/svg">
                                 <path fill="#ffdb4d" d="m491.73 112.97l-232.47-112.23c-2.061-0.994-4.461-0.994-6.521 0l-232.47 112.23c-2.592 1.251-4.239 3.876-4.239 6.754v272.55c0 2.878 1.647 5.503 4.239 6.754l232.47 112.23c1.03 0.497 2.146 0.746 3.261 0.746s2.23-0.249 3.261-0.746l232.47-112.23c2.592-1.251 4.239-3.876 4.239-6.754v-272.55c0-2.88-1.648-5.503-4.239-6.755zm-235.73-97.143l215.22 103.9-62.387 30.118c-0.395-0.301-0.812-0.579-1.27-0.8l-213.76-103.19 62.195-30.025zm-79.133 38.505l214.9 103.75-44.015 21.249-214.82-103.7 43.926-21.291zm219.93 117.97v78.546l-41.113 19.848v-78.546l41.113-19.848zm84.169 215.26l-217.47 104.98v-255.89l51.873-25.042c3.73-1.801 5.294-6.284 3.493-10.015-1.801-3.729-6.284-5.295-10.015-3.493l-52.851 25.515-20.796-10.04c-3.731-1.803-8.214-0.237-10.015 3.493s-0.237 8.214 3.493 10.015l19.818 9.567v255.89l-217.47-104.98v-255.89l165.6 79.945c1.051 0.508 2.162 0.748 3.255 0.748 2.788 0 5.466-1.562 6.759-4.241 1.801-3.73 0.237-8.214-3.493-10.015l-162.37-78.386 74.505-35.968 225.29 108.76c0.033 0.046 0.07 0.087 0.104 0.132v89.999c0 2.581 1.327 4.98 3.513 6.353 1.214 0.762 2.599 1.147 3.988 1.147 1.112 0 2.227-0.247 3.26-0.746l56.113-27.089c2.592-1.251 4.239-3.875 4.239-6.754v-90.495l69.169-33.392v255.89z" />
-                                <path fill="#ffdb4d" d="m92.926 358.48l-34.115-16.469c-3.732-1.803-8.214-0.237-10.015 3.493s-0.237 8.214 3.493 10.015l34.115 16.469c1.051 0.508 2.162 0.748 3.255 0.748 2.788 0 5.466-1.562 6.759-4.241 1.802-3.731 0.238-8.213-3.492-10.015z" />
-                                <path fill="#ffdb4d" d="m124.32 338.04l-65.465-31.604c-3.731-1.801-8.214-0.237-10.015 3.494-1.8 3.73-0.236 8.214 3.494 10.015l65.465 31.604c1.051 0.507 2.162 0.748 3.255 0.748 2.788 0 5.466-1.562 6.759-4.241 1.801-3.732 0.237-8.216-3.493-10.016z" />
+                            <path fill="#ffdb4d" d="m92.926 358.48l-34.115-16.469c-3.732-1.803-8.214-0.237-10.015 3.493s-0.237 8.214 3.493 10.015l34.115 16.469c1.051 0.508 2.162 0.748 3.255 0.748 2.788 0 5.466-1.562 6.759-4.241 1.802-3.731 0.238-8.213-3.492-10.015z" />
+                            <path fill="#ffdb4d" d="m124.32 338.04l-65.465-31.604c-3.731-1.801-8.214-0.237-10.015 3.494-1.8 3.73-0.236 8.214 3.494 10.015l65.465 31.604c1.051 0.507 2.162 0.748 3.255 0.748 2.788 0 5.466-1.562 6.759-4.241 1.801-3.732 0.237-8.216-3.493-10.016z" />
                             </svg>
                     </div>
                 </div>
@@ -1410,11 +1415,10 @@
             <div class="advantages_content__item_header">
                 <div class="advantages_content__item_img_container">
                     <div class="advantages_content__item_img">
-                        <?xml version="1.0" encoding="iso-8859-1"?>
                         <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                         <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                x="0px" y="0px" viewBox="0 0 511.998 511.998" style="enable-background:new 0 0 511.998 511.998;"
-                                xml:space="preserve">
+                             x="0px" y="0px" viewBox="0 0 511.998 511.998" style="enable-background:new 0 0 511.998 511.998;"
+                             xml:space="preserve">
                                 <g>
                                     <g>
                                         <path fill="#ffdb4d" d="M414.498,188.525h-32.234l9.712-111.509c0.018-0.202,0.021-0.401,0.022-0.6c0-0.017,0.002-0.033,0.002-0.05
@@ -1472,26 +1476,26 @@
                                                         c39.764,5.881,70.38,40.229,70.38,81.602C496.998,288.838,496.788,292.922,496.432,297.838z" />
                                     </g>
                                 </g>
+                            <g>
                                 <g>
-                                    <g>
-                                        <path fill="#ffdb4d" d="M171.008,358.524c-15.163,0-27.5,12.336-27.5,27.5s12.337,27.5,27.5,27.5c15.163,0,27.5-12.336,27.5-27.5
+                                    <path fill="#ffdb4d" d="M171.008,358.524c-15.163,0-27.5,12.336-27.5,27.5s12.337,27.5,27.5,27.5c15.163,0,27.5-12.336,27.5-27.5
                                                         C198.508,370.861,186.171,358.524,171.008,358.524z M171.008,398.524c-6.893,0-12.5-5.607-12.5-12.5s5.607-12.5,12.5-12.5
                                                         s12.5,5.607,12.5,12.5S177.9,398.524,171.008,398.524z" />
-                                    </g>
                                 </g>
+                            </g>
+                            <g>
                                 <g>
-                                    <g>
-                                        <path fill="#ffdb4d" d="M404.496,358.524c-15.163,0-27.5,12.336-27.5,27.5s12.337,27.5,27.5,27.5c15.163,0,27.5-12.336,27.5-27.5
+                                    <path fill="#ffdb4d" d="M404.496,358.524c-15.163,0-27.5,12.336-27.5,27.5s12.337,27.5,27.5,27.5c15.163,0,27.5-12.336,27.5-27.5
                                                         C431.996,370.861,419.659,358.524,404.496,358.524z M404.496,398.524c-6.893,0-12.5-5.607-12.5-12.5s5.607-12.5,12.5-12.5
                                                         s12.5,5.607,12.5,12.5S411.389,398.524,404.496,398.524z" />
-                                    </g>
                                 </g>
+                            </g>
+                            <g>
                                 <g>
-                                    <g>
-                                        <path fill="#ffdb4d" d="M71,188.527H34.334c-4.143,0-7.5,3.358-7.5,7.5c0,4.142,3.357,7.5,7.5,7.5H71c4.143,0,7.5-3.358,7.5-7.5
+                                    <path fill="#ffdb4d" d="M71,188.527H34.334c-4.143,0-7.5,3.358-7.5,7.5c0,4.142,3.357,7.5,7.5,7.5H71c4.143,0,7.5-3.358,7.5-7.5
                                                         C78.5,191.885,75.143,188.527,71,188.527z" />
-                                    </g>
                                 </g>
+                            </g>
                             </svg>
 
                     </div>
@@ -1508,13 +1512,13 @@
                 <div class="advantages_content__item_img_container">
                     <div class="advantages_content__item_img">
                         <svg enable-background="new 0 0 60 60" version="1.1" viewBox="0 0 60 60" xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg">
+                             xmlns="http://www.w3.org/2000/svg">
                                 <path fill="#ffdb4d" d="m45 25h-25c-0.552 0-1 0.447-1 1s0.448 1 1 1h25c0.552 0 1-0.447 1-1s-0.448-1-1-1z" />
-                                <path fill="#ffdb4d" d="m20 19h10c0.552 0 1-0.447 1-1s-0.448-1-1-1h-10c-0.552 0-1 0.447-1 1s0.448 1 1 1z" />
-                                <path fill="#ffdb4d" d="m45 33h-25c-0.552 0-1 0.447-1 1s0.448 1 1 1h25c0.552 0 1-0.447 1-1s-0.448-1-1-1z" />
-                                <path fill="#ffdb4d" d="m45 41h-25c-0.552 0-1 0.447-1 1s0.448 1 1 1h25c0.552 0 1-0.447 1-1s-0.448-1-1-1z" />
-                                <path fill="#ffdb4d" d="m45 49h-25c-0.552 0-1 0.447-1 1s0.448 1 1 1h25c0.552 0 1-0.447 1-1s-0.448-1-1-1z" />
-                                <path fill="#ffdb4d" d="M49,14.586V0H6v55h5v5h43V19.586L49,14.586z M40,8.414l9,9L50.586,19H40V8.414z M8,53V2h39v10.586L39.414,5H11v48H8z    M13,58v-3V7h25v14h14v37H13z" />
+                            <path fill="#ffdb4d" d="m20 19h10c0.552 0 1-0.447 1-1s-0.448-1-1-1h-10c-0.552 0-1 0.447-1 1s0.448 1 1 1z" />
+                            <path fill="#ffdb4d" d="m45 33h-25c-0.552 0-1 0.447-1 1s0.448 1 1 1h25c0.552 0 1-0.447 1-1s-0.448-1-1-1z" />
+                            <path fill="#ffdb4d" d="m45 41h-25c-0.552 0-1 0.447-1 1s0.448 1 1 1h25c0.552 0 1-0.447 1-1s-0.448-1-1-1z" />
+                            <path fill="#ffdb4d" d="m45 49h-25c-0.552 0-1 0.447-1 1s0.448 1 1 1h25c0.552 0 1-0.447 1-1s-0.448-1-1-1z" />
+                            <path fill="#ffdb4d" d="M49,14.586V0H6v55h5v5h43V19.586L49,14.586z M40,8.414l9,9L50.586,19H40V8.414z M8,53V2h39v10.586L39.414,5H11v48H8z    M13,58v-3V7h25v14h14v37H13z" />
                             </svg>
 
                     </div>
@@ -1529,7 +1533,7 @@
                 <div class="advantages_content__item_img_container">
                     <div class="advantages_content__item_img">
                         <svg enable-background="new 0 0 512 512" version="1.1" viewBox="0 0 512 512" xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg">
+                             xmlns="http://www.w3.org/2000/svg">
                                 <g transform="translate(1 1)">
                                     <path fill="#ffdb4d" d="m101.4 383c-9.387 0-17.067 7.68-17.067 17.067s7.68 17.067 17.067 17.067 17.067-7.68 17.067-17.067-7.68-17.067-17.067-17.067z" />
                                     <path fill="#ffdb4d" d="m323.27 383c-9.387 0-17.067 7.68-17.067 17.067s7.68 17.067 17.067 17.067 17.067-7.68 17.067-17.067-7.681-17.067-17.067-17.067z" />
@@ -1567,10 +1571,10 @@
                 <div class="advantages_content__item_img_container">
                     <div class="advantages_content__item_img">
                         <svg enable-background="new 0 0 512 512" version="1.1" viewBox="0 0 512 512" xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg">
+                             xmlns="http://www.w3.org/2000/svg">
                                 <path fill="#ffdb4d" d="m85.072 454.93c-1.859-1.861-4.439-2.93-7.069-2.93s-5.21 1.069-7.07 2.93-2.93 4.44-2.93 7.07 1.069 5.21 2.93 7.069c1.86 1.86 4.44 2.931 7.07 2.931s5.21-1.07 7.069-2.931c1.86-1.859 2.931-4.439 2.931-7.069s-1.07-5.21-2.931-7.07z" />
-                                <path fill="#ffdb4d" d="m469.52 182.94c-1.86-1.861-4.43-2.93-7.07-2.93-2.63 0-5.21 1.069-7.07 2.93-1.859 1.86-2.93 4.44-2.93 7.07s1.07 5.21 2.93 7.069c1.86 1.86 4.44 2.931 7.07 2.931 2.64 0 5.21-1.07 7.07-2.931 1.869-1.859 2.939-4.439 2.939-7.069s-1.07-5.21-2.939-7.07z" />
-                                <path fill="#ffdb4d" d="m509.06 2.929c-1.876-1.875-4.42-2.929-7.073-2.929l-245.99 0.013c-5.522 0-9.999 4.478-9.999 10v28.597l-94.789 25.399c-5.335 1.43-8.501 6.913-7.071 12.247l49.127 183.34-42.499 42.499c-5.409-7.898-14.491-13.092-24.764-13.092h-95.997c-16.542 0-29.999 13.458-29.999 29.999v163c0 16.542 13.457 30 29.999 30h95.998c14.053 0 25.875-9.716 29.115-22.78l11.89 10.369c9.179 8.004 20.939 12.412 33.118 12.412h301.87c5.522 0 10-4.478 10-10v-492c-2e-3 -2.652-1.054-5.196-2.929-7.071zm-373.06 479.07c0 5.513-4.486 10-10 10h-95.997c-5.514 0-10-4.486-10-10v-163c0-5.514 4.486-10 10-10h37.999v115.2c0 5.522 4.478 10 10 10s10-4.478 10-10v-115.2h37.999c5.514 0 10 4.486 10 10v163zm30.043-401.26l79.954-21.424v37.055l-6.702 1.796c-2.563 0.687-4.746 2.362-6.072 4.659s-1.686 5.026-0.999 7.588c3.843 14.341-4.698 29.134-19.039 32.977-2.565 0.688-4.752 2.366-6.077 4.668-1.325 2.301-1.682 5.035-0.989 7.599l38.979 144.34h-20.07l-10.343-40.464c-0.329-1.288-0.905-2.475-1.676-3.507l-46.966-175.28zm79.954 61.49v84.381l-18.239-67.535c7.619-3.934 13.854-9.82 18.239-16.846zm143.66 349.77h-189.54c-7.345 0-14.438-2.658-19.974-7.485l-24.149-21.061v-138.31l43.658-43.658 7.918 30.98c1.132 4.427 5.119 7.523 9.688 7.523l196.6 0.012c7.72 0 14 6.28 14 14s-6.28 14-14 14h-100.74c-5.522 0-10 4.478-10 10s4.478 10 10 10h132.04c7.72 0 14 6.28 14 14s-6.28 14-14 14h-132.04c-5.522 0-10 4.478-10 10s4.478 10 10 10h110.64c7.72 0 14 6.28 14 14s-6.28 14-14 14h-110.64c-5.522 0-10 4.478-10 10s4.478 10 10 10h76.533c7.72 0 14 6.28 14 14-1e-3 7.716-6.281 13.996-14 13.996zm102.33 0h-71.36c1.939-4.273 3.028-9.01 3.028-14s-1.089-9.727-3.028-14h3.139c18.747 0 33.999-15.252 33.999-33.999 0-5.468-1.305-10.635-3.609-15.217 14.396-3.954 25.005-17.149 25.005-32.782 0-7.584-2.498-14.595-6.711-20.255v-126.74c0-5.522-4.478-10-10-10s-10 4.478-10 10v113.79c-2.35-0.515-4.787-0.795-7.289-0.795h-0.328c1.939-4.273 3.028-9.01 3.028-14 0-18.748-15.252-33.999-33.999-33.999h-16.075c17.069-7.32 29.057-24.286 29.057-44.005 0-26.389-21.468-47.858-47.857-47.858-26.388 0-47.857 21.469-47.857 47.858 0 19.719 11.989 36.685 29.057 44.005h-54.663v-190.14c17.864-3.893 31.96-17.988 35.852-35.853h75.221c3.892 17.865 17.988 31.96 35.852 35.853v31.09c0 5.522 4.478 10 10 10s10-4.478 10-10v-40.018c0-5.522-4.478-10-10-10-14.847 0-26.924-12.079-26.924-26.925 0-5.522-4.478-10-10-10h-93.076c-5.522 0-10 4.478-10 10 0 14.847-12.078 26.925-26.924 26.925-5.522 0-10 4.478-10 10v199.07h-19.532v-279.99l225.99-0.011v472zm-113-208.14c-15.361 0-27.857-12.497-27.857-27.857s12.497-27.858 27.857-27.858 27.857 12.497 27.857 27.857-12.496 27.858-27.857 27.858z" />
+                            <path fill="#ffdb4d" d="m469.52 182.94c-1.86-1.861-4.43-2.93-7.07-2.93-2.63 0-5.21 1.069-7.07 2.93-1.859 1.86-2.93 4.44-2.93 7.07s1.07 5.21 2.93 7.069c1.86 1.86 4.44 2.931 7.07 2.931 2.64 0 5.21-1.07 7.07-2.931 1.869-1.859 2.939-4.439 2.939-7.069s-1.07-5.21-2.939-7.07z" />
+                            <path fill="#ffdb4d" d="m509.06 2.929c-1.876-1.875-4.42-2.929-7.073-2.929l-245.99 0.013c-5.522 0-9.999 4.478-9.999 10v28.597l-94.789 25.399c-5.335 1.43-8.501 6.913-7.071 12.247l49.127 183.34-42.499 42.499c-5.409-7.898-14.491-13.092-24.764-13.092h-95.997c-16.542 0-29.999 13.458-29.999 29.999v163c0 16.542 13.457 30 29.999 30h95.998c14.053 0 25.875-9.716 29.115-22.78l11.89 10.369c9.179 8.004 20.939 12.412 33.118 12.412h301.87c5.522 0 10-4.478 10-10v-492c-2e-3 -2.652-1.054-5.196-2.929-7.071zm-373.06 479.07c0 5.513-4.486 10-10 10h-95.997c-5.514 0-10-4.486-10-10v-163c0-5.514 4.486-10 10-10h37.999v115.2c0 5.522 4.478 10 10 10s10-4.478 10-10v-115.2h37.999c5.514 0 10 4.486 10 10v163zm30.043-401.26l79.954-21.424v37.055l-6.702 1.796c-2.563 0.687-4.746 2.362-6.072 4.659s-1.686 5.026-0.999 7.588c3.843 14.341-4.698 29.134-19.039 32.977-2.565 0.688-4.752 2.366-6.077 4.668-1.325 2.301-1.682 5.035-0.989 7.599l38.979 144.34h-20.07l-10.343-40.464c-0.329-1.288-0.905-2.475-1.676-3.507l-46.966-175.28zm79.954 61.49v84.381l-18.239-67.535c7.619-3.934 13.854-9.82 18.239-16.846zm143.66 349.77h-189.54c-7.345 0-14.438-2.658-19.974-7.485l-24.149-21.061v-138.31l43.658-43.658 7.918 30.98c1.132 4.427 5.119 7.523 9.688 7.523l196.6 0.012c7.72 0 14 6.28 14 14s-6.28 14-14 14h-100.74c-5.522 0-10 4.478-10 10s4.478 10 10 10h132.04c7.72 0 14 6.28 14 14s-6.28 14-14 14h-132.04c-5.522 0-10 4.478-10 10s4.478 10 10 10h110.64c7.72 0 14 6.28 14 14s-6.28 14-14 14h-110.64c-5.522 0-10 4.478-10 10s4.478 10 10 10h76.533c7.72 0 14 6.28 14 14-1e-3 7.716-6.281 13.996-14 13.996zm102.33 0h-71.36c1.939-4.273 3.028-9.01 3.028-14s-1.089-9.727-3.028-14h3.139c18.747 0 33.999-15.252 33.999-33.999 0-5.468-1.305-10.635-3.609-15.217 14.396-3.954 25.005-17.149 25.005-32.782 0-7.584-2.498-14.595-6.711-20.255v-126.74c0-5.522-4.478-10-10-10s-10 4.478-10 10v113.79c-2.35-0.515-4.787-0.795-7.289-0.795h-0.328c1.939-4.273 3.028-9.01 3.028-14 0-18.748-15.252-33.999-33.999-33.999h-16.075c17.069-7.32 29.057-24.286 29.057-44.005 0-26.389-21.468-47.858-47.857-47.858-26.388 0-47.857 21.469-47.857 47.858 0 19.719 11.989 36.685 29.057 44.005h-54.663v-190.14c17.864-3.893 31.96-17.988 35.852-35.853h75.221c3.892 17.865 17.988 31.96 35.852 35.853v31.09c0 5.522 4.478 10 10 10s10-4.478 10-10v-40.018c0-5.522-4.478-10-10-10-14.847 0-26.924-12.079-26.924-26.925 0-5.522-4.478-10-10-10h-93.076c-5.522 0-10 4.478-10 10 0 14.847-12.078 26.925-26.924 26.925-5.522 0-10 4.478-10 10v199.07h-19.532v-279.99l225.99-0.011v472zm-113-208.14c-15.361 0-27.857-12.497-27.857-27.857s12.497-27.858 27.857-27.858 27.857 12.497 27.857 27.857-12.496 27.858-27.857 27.858z" />
                             </svg>
                     </div>
                 </div>
@@ -1697,10 +1701,9 @@
         </div>
     </div>
     <div class="payment_decoration_line_first">
-        <?xml version="1.0" encoding="utf-8"?>
         <!-- Generator: Adobe Illustrator 20.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
         <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                x="0px" y="0px" viewBox="0 0 5332.9 380.1" style="enable-background:new 0 0 5332.9 380.1;" xml:space="preserve">
+             x="0px" y="0px" viewBox="0 0 5332.9 380.1" style="enable-background:new 0 0 5332.9 380.1;" xml:space="preserve">
                 <style type="text/css">
                     .st0 {
                         fill: #FFFFFF;
@@ -1714,16 +1717,15 @@
                         fill: #E0E0E0;
                     }
                 </style>
-                <rect x="-18.2" y="-23.6" class="st0" width="5356" height="400.3" />
-                <polygon class="st1" points="5372,266 3226.2,102.4 -118,384 5373.8,384.3 " />
-                <polygon class="st2" points="-8.9,373.1 3439.1,9.1 5335.1,85.1 5339.1,277.1 3279.1,145.1 " />
+            <rect x="-18.2" y="-23.6" class="st0" width="5356" height="400.3" />
+            <polygon class="st1" points="5372,266 3226.2,102.4 -118,384 5373.8,384.3 " />
+            <polygon class="st2" points="-8.9,373.1 3439.1,9.1 5335.1,85.1 5339.1,277.1 3279.1,145.1 " />
             </svg>
     </div>
     <div class="payment_decoration_line_second">
-        <?xml version="1.0" encoding="utf-8"?>
         <!-- Generator: Adobe Illustrator 20.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
         <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                x="0px" y="0px" viewBox="0 0 5348.7 450.9" style="enable-background:new 0 0 5348.7 450.9;" xml:space="preserve">
+             x="0px" y="0px" viewBox="0 0 5348.7 450.9" style="enable-background:new 0 0 5348.7 450.9;" xml:space="preserve">
                 <style type="text/css">
                     .st0 {
                         fill: #FFFFFF;
@@ -1737,9 +1739,9 @@
                         fill: #E0E0E0;
                     }
                 </style>
-                <rect x="-71.1" y="-102.6" class="st0" width="5488.9" height="587.9" />
-                <polygon class="st1" points="5399.8,293.3 822.7,71.4 -48,179 -41.1,-18.6 5381.8,-6.6 " />
-                <polygon class="st2" points="-19.3,175.9 736.7,7.9 5344.7,227.9 5356.7,439.9 832.7,95.9 " />
+            <rect x="-71.1" y="-102.6" class="st0" width="5488.9" height="587.9" />
+            <polygon class="st1" points="5399.8,293.3 822.7,71.4 -48,179 -41.1,-18.6 5381.8,-6.6 " />
+            <polygon class="st2" points="-19.3,175.9 736.7,7.9 5344.7,227.9 5356.7,439.9 832.7,95.9 " />
             </svg>
     </div>
 </section>
@@ -1803,6 +1805,87 @@
         <div class="policy">*оставляя заявку, вы соглашаетесь с <a href="politikaconf.pdf" target="_blank">политикой конфиденциальности сайта</a></div>
     </div>
 </section>
+
+<section class="blog">
+    <h2>НАШИ УСЛУГИ <br>
+        грузоперевозок по россии <br>
+        отдельным транспортом</h2>
+    <div class="blog_decoration_line_first">
+        <!--?xml version="1.0" encoding="utf-8"?-->
+        <!-- Generator: Adobe Illustrator 20.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+        <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+             x="0px" y="0px" viewBox="0 0 5333 265" style="enable-background:new 0 0 5333 265;" xml:space="preserve">
+                <style type="text/css">
+                    .st0 {
+                        fill: #FFFFFF;
+                    }
+
+                    .st1 {
+                        fill: #F6F6F6;
+                    }
+
+                    .st2 {
+                        fill: #E0E0E0;
+                    }
+                </style>
+            <polygon class="st0" points="5351,133 4323,33 -5,241 -0.8,-6.5 5350,-16 "></polygon>
+            <path class="st1"
+                  d="M-2.3,229.7c0,0,4039.3-105.9,4091.3-109.3c10-0.7,1244,127.3,1244,127.3v17.9H-0.8L-2.3,229.7z"></path>
+            <polygon class="st2" points="-5,231 4299,7 5333,99.1 5333,249.1 4103,123 "></polygon>
+            </svg>
+    </div>
+    <div class="blog_decoration_line_second">
+        <!--?xml version="1.0" encoding="utf-8"?-->
+        <!-- Generator: Adobe Illustrator 20.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+        <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+             x="0px" y="0px" viewBox="0 0 5333 560" style="enable-background:new 0 0 5333 560;" xml:space="preserve">
+                <style type="text/css">
+                    .st0 {
+                        fill: #FFFFFF;
+                        stroke: #000000;
+                        stroke-miterlimit: 10;
+                    }
+
+                    .st1 {
+                        fill: #F6F6F6;
+                    }
+
+                    .st2 {
+                        fill: #E0E0E0;
+                    }
+
+                    .st3 {
+                        fill: #D4D4D4;
+                    }
+                </style>
+            <rect x="-12.6" y="-1.6" class="st0" width="5350.5" height="565"></rect>
+            <polygon class="st1" points="3607,208 -1,316 3,0 5619,-4 "></polygon>
+            <polygon class="st2" points="-5.4,545.9 3811,286 5327,26 3463,210 -9,410 "></polygon>
+            <polygon class="st3" points="-13,304 3463,210 -9,410 "></polygon>
+            </svg>
+    </div>
+    <div class="blog_content">
+        <div class="blog_content__images">
+            <?
+            $pages = array_reverse($pages, true);
+            $count = 0;
+
+            foreach($pages as $page) {
+                if($count === 6) break;
+                echo Block::generate_tagged_block($page["offer"], $page["img_first"]);
+                $count++;
+            }
+            ?>
+        </div>
+        <div class="blog_content__text">
+            <span>А также:</span>
+            <div class="my-blog-slider">
+                <?= Block::generate_slider_blocks(array_reverse($pages, true)) ?>
+            </div>
+        </div>
+    </div>
+</section>
+
 <footer>
     <div class="logo_section">
         <div class="footer_logo"></div>
@@ -1853,10 +1936,9 @@
         </div>
     </div>
     <div class="footer_decoration_line">
-        <?xml version="1.0" encoding="utf-8"?>
         <!-- Generator: Adobe Illustrator 20.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
         <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                x="0px" y="0px" viewBox="0 0 5348.7 278.9" style="enable-background:new 0 0 5348.7 278.9;" xml:space="preserve">
+             x="0px" y="0px" viewBox="0 0 5348.7 278.9" style="enable-background:new 0 0 5348.7 278.9;" xml:space="preserve">
                 <style type="text/css">
                     .st0 {
                         fill: #FFFFFF;
@@ -1870,9 +1952,9 @@
                         fill: #E0E0E0;
                     }
                 </style>
-                <rect x="-2.8" y="-15.8" class="st0" width="5366" height="310" />
-                <polygon class="st1" points="5362,257 3096.3,69.4 -10,182 -16,282 5363.2,294.3 " />
-                <polygon class="st2" points="-43.3,182.9 3136.7,10.9 5388.7,138.9 5388.7,266.9 3048.7,98.9 " />
+            <rect x="-2.8" y="-15.8" class="st0" width="5366" height="310" />
+            <polygon class="st1" points="5362,257 3096.3,69.4 -10,182 -16,282 5363.2,294.3 " />
+            <polygon class="st2" points="-43.3,182.9 3136.7,10.9 5388.7,138.9 5388.7,266.9 3048.7,98.9 " />
             </svg>
 
     </div>
@@ -1899,7 +1981,7 @@
         <button class="modal_window_submit_btn" name="modal_btn" type="submit">Оставить заявку</button>
     </form>
     <p class="modal_agreement">Отправляя заявку, вы подтверждаете свое согласие с <a href="politikaconf.pdf" target="_blank">политикой
-        конфиденциальности</a></p>
+            конфиденциальности</a></p>
 </section>
 <div id="modal_overlay"></div>
 <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@14/dist/smooth-scroll.polyfills.min.js"></script>

@@ -1,5 +1,5 @@
 <?php 
-    header('Refresh: 5; url=index.html', true, 301);
+    header('Refresh: 5; url=index.php', true, 301);
 
     $transport = $_POST["transport"];
     $type_of_parcel = $_POST["type_of_parcel"];

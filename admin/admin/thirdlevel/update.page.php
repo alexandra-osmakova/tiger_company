@@ -2,7 +2,7 @@
 
 session_start();
 
-require("../database/db.php");
+require("../../database/db.php");
 
 $uploaddir = __DIR__ . '../../../tiger.img/';
 
@@ -11,6 +11,7 @@ if (isset($_SESSION["user"]) && $_SESSION["user"] === "admin") {
     $page = R::load("pages", $_GET["id"]);
 
     if (isset($_POST["update"])) {
+
         if ($_FILES['img_first']["name"] !== "") {
             $file_path_first = $uploaddir . $_FILES['img_first']['name'];
             move_uploaded_file($_FILES['img_first']['tmp_name'], $file_path_first);
@@ -35,6 +36,8 @@ if (isset($_SESSION["user"]) && $_SESSION["user"] === "admin") {
         $page->text = $_POST["text"];
         $page->description = $_POST["description"];
         $page->date = date("Y-m-d H:i:s");
+        $page->least = ($_POST["least"] === "on") ? true : false;
+        $page->most = ($_POST["most"] === "on") ? true : false;
 
         R::store($page);
     }
@@ -100,6 +103,20 @@ if (isset($_SESSION["user"]) && $_SESSION["user"] === "admin") {
                         </div>
                         <input type="text" id="filename_second" class="filename" disabled>
                     </div>
+                </div>
+
+                <div class="toggles">
+                    <label for="least" style="margin: 0">Выгрузка в Posts</label>
+                    <input type="checkbox" id="least" name="least" <?=($page->least) ? "checked" : ""?>>
+
+                    <label for="most" style="margin: 0;">Выгрузка на главную</label>
+                    <input type="checkbox" id="most" name="most" <?=($page->most) ? "checked" : ""?>>
+
+                    <style>
+                        .toggles {
+                            display: flex;
+                        }
+                    </style>
                 </div>
 
                 <label for="tag">Тег страницы</label>

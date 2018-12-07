@@ -364,15 +364,20 @@ $tagged_pages = R::getAll("SELECT * FROM pages WHERE tag=:tag", ["tag" => $page-
     <div class="blog_content">
         <div class="blog_content__images">
             <?
-            for ($i = 5; $i >= 0; $i--) {
-                echo Block::generate_tagged_block($tagged_pages[$i]["offer"], $tagged_pages[$i]["img_first"]);
+            $tagged_pages = array_reverse($tagged_pages, true);
+            $count = 0;
+
+            foreach($tagged_pages as $page) {
+                if($count === 6) break;
+                echo Block::generate_tagged_block($page["offer"], $page["img_first"]);
+                $count++;
             }
             ?>
         </div>
         <div class="blog_content__text">
             <span>А также:</span>
             <div class="my-blog-slider">
-                <?= Block::generate_slider_blocks($tagged_pages) ?>
+                <?= Block::generate_slider_blocks(array_reverse($tagged_pages, true))?>
             </div>
         </div>
     </div>
