@@ -1810,60 +1810,60 @@ $pages = R::findAll("pages", "WHERE most=:most", ["most" => true]);
     <h2>НАШИ УСЛУГИ <br>
         грузоперевозок по россии <br>
         отдельным транспортом</h2>
-    <div class="blog_decoration_line_first">
-        <!--?xml version="1.0" encoding="utf-8"?-->
-        <!-- Generator: Adobe Illustrator 20.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-        <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-             x="0px" y="0px" viewBox="0 0 5333 265" style="enable-background:new 0 0 5333 265;" xml:space="preserve">
-                <style type="text/css">
-                    .st0 {
-                        fill: #FFFFFF;
-                    }
-
-                    .st1 {
-                        fill: #F6F6F6;
-                    }
-
-                    .st2 {
-                        fill: #E0E0E0;
-                    }
-                </style>
-            <polygon class="st0" points="5351,133 4323,33 -5,241 -0.8,-6.5 5350,-16 "></polygon>
-            <path class="st1"
-                  d="M-2.3,229.7c0,0,4039.3-105.9,4091.3-109.3c10-0.7,1244,127.3,1244,127.3v17.9H-0.8L-2.3,229.7z"></path>
-            <polygon class="st2" points="-5,231 4299,7 5333,99.1 5333,249.1 4103,123 "></polygon>
-            </svg>
-    </div>
-    <div class="blog_decoration_line_second">
-        <!--?xml version="1.0" encoding="utf-8"?-->
-        <!-- Generator: Adobe Illustrator 20.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-        <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-             x="0px" y="0px" viewBox="0 0 5333 560" style="enable-background:new 0 0 5333 560;" xml:space="preserve">
-                <style type="text/css">
-                    .st0 {
-                        fill: #FFFFFF;
-                        stroke: #000000;
-                        stroke-miterlimit: 10;
-                    }
-
-                    .st1 {
-                        fill: #F6F6F6;
-                    }
-
-                    .st2 {
-                        fill: #E0E0E0;
-                    }
-
-                    .st3 {
-                        fill: #D4D4D4;
-                    }
-                </style>
-            <rect x="-12.6" y="-1.6" class="st0" width="5350.5" height="565"></rect>
-            <polygon class="st1" points="3607,208 -1,316 3,0 5619,-4 "></polygon>
-            <polygon class="st2" points="-5.4,545.9 3811,286 5327,26 3463,210 -9,410 "></polygon>
-            <polygon class="st3" points="-13,304 3463,210 -9,410 "></polygon>
-            </svg>
-    </div>
+<!--    <div class="blog_decoration_line_first">-->
+<!--        <!--?xml version="1.0" encoding="utf-8"?-->
+<!--        <!-- Generator: Adobe Illustrator 20.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!--        <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"-->
+<!--             x="0px" y="0px" viewBox="0 0 5333 265" style="enable-background:new 0 0 5333 265;" xml:space="preserve">-->
+<!--                <style type="text/css">-->
+<!--                    .st0 {-->
+<!--                        fill: #FFFFFF;-->
+<!--                    }-->
+<!---->
+<!--                    .st1 {-->
+<!--                        fill: #F6F6F6;-->
+<!--                    }-->
+<!---->
+<!--                    .st2 {-->
+<!--                        fill: #E0E0E0;-->
+<!--                    }-->
+<!--                </style>-->
+<!--            <polygon class="st0" points="5351,133 4323,33 -5,241 -0.8,-6.5 5350,-16 "></polygon>-->
+<!--            <path class="st1"-->
+<!--                  d="M-2.3,229.7c0,0,4039.3-105.9,4091.3-109.3c10-0.7,1244,127.3,1244,127.3v17.9H-0.8L-2.3,229.7z"></path>-->
+<!--            <polygon class="st2" points="-5,231 4299,7 5333,99.1 5333,249.1 4103,123 "></polygon>-->
+<!--            </svg>-->
+<!--    </div>-->
+<!--    <div class="blog_decoration_line_second">-->
+<!--        <!--?xml version="1.0" encoding="utf-8"?-->
+<!--        <!-- Generator: Adobe Illustrator 20.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!--        <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"-->
+<!--             x="0px" y="0px" viewBox="0 0 5333 560" style="enable-background:new 0 0 5333 560;" xml:space="preserve">-->
+<!--                <style type="text/css">-->
+<!--                    .st0 {-->
+<!--                        fill: #FFFFFF;-->
+<!--                        stroke: #000000;-->
+<!--                        stroke-miterlimit: 10;-->
+<!--                    }-->
+<!---->
+<!--                    .st1 {-->
+<!--                        fill: #F6F6F6;-->
+<!--                    }-->
+<!---->
+<!--                    .st2 {-->
+<!--                        fill: #E0E0E0;-->
+<!--                    }-->
+<!---->
+<!--                    .st3 {-->
+<!--                        fill: #D4D4D4;-->
+<!--                    }-->
+<!--                </style>-->
+<!--            <rect x="-12.6" y="-1.6" class="st0" width="5350.5" height="565"></rect>-->
+<!--            <polygon class="st1" points="3607,208 -1,316 3,0 5619,-4 "></polygon>-->
+<!--            <polygon class="st2" points="-5.4,545.9 3811,286 5327,26 3463,210 -9,410 "></polygon>-->
+<!--            <polygon class="st3" points="-13,304 3463,210 -9,410 "></polygon>-->
+<!--            </svg>-->
+<!--    </div>-->
     <div class="blog_content">
         <div class="blog_content__images">
             <?
