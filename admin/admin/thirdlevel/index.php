@@ -76,6 +76,20 @@ if (isset($_SESSION["user"])) {
                         </div>
                     </div>
 
+                    <div class="toggles">
+                        <label for="least" style="margin: 0">Выгрузка в Posts</label>
+                        <input type="checkbox" id="least" name="least" <?=($page->least) ? "checked" : ""?>>
+
+                        <label for="most" style="margin: 0;">Выгрузка на главную</label>
+                        <input type="checkbox" id="most" name="most" <?=($page->most) ? "checked" : ""?>>
+
+                        <style>
+                            .toggles {
+                                display: flex;
+                            }
+                        </style>
+                    </div>
+
                     <label for="tag">Тег страницы</label>
                     <select name="tag" id="tag">
                         <option value="gruzoperevozki-po-rossii" selected>Грузоперевозки по России</option>

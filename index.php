@@ -1872,7 +1872,7 @@ $pages = R::findAll("pages", "WHERE most=:most", ["most" => true]);
 
             foreach($pages as $page) {
                 if($count === 6) break;
-                echo Block::generate_tagged_block($page["offer"], $page["img_first"]);
+                echo Block::generate_tagged_block($page);
                 $count++;
             }
             ?>
@@ -1905,11 +1905,11 @@ $pages = R::findAll("pages", "WHERE most=:most", ["most" => true]);
     <div class="footer_item">
         <span class="footer_item_title">ИНФОРМАЦИЯ</span>
         <ul>
-            <li class="footer_item_info_links">Наши услуги</li>
-            <li class="footer_item_info_links">Наши преимущества</li>
-            <li class="footer_item_info_links">О компании</li>
-            <li class="footer_item_info_links">Отзывы</li>
-            <li class="footer_item_info_links">Информация об оплате</li>
+            <li class="footer_item_info_links"><a data-scroll href="#services">Наши услуги</a></li>
+            <li class="footer_item_info_links"><a data-scroll href="#advantages">Наши преимущества</a></li>
+            <li class="footer_item_info_links"><a data-scroll href="#about">О компании</a></li>
+            <li class="footer_item_info_links"><a data-scroll href="#clients_review">Отзывы</a></li>
+            <li class="footer_item_info_links"><a data-scroll href="#to_payment_info">Информация об оплате</a></li>
         </ul>
 
     </div>

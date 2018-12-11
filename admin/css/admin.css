@@ -244,7 +244,7 @@ input[type="submit"] {
 
 #admin .generated_block {
     width: 710px;
-    height: 38px;
+    min-height: 38px;
     background: #E8E8E8;
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);

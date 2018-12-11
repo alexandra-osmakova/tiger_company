@@ -2050,6 +2050,11 @@ footer {
     text-decoration: underline;
 }
 
+.footer_item_info_links > a {
+    color: black;
+    text-decoration: none;
+}
+
 .footer_item ul {
     margin-top: 1.8125rem;
 }

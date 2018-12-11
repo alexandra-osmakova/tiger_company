@@ -9,7 +9,7 @@ class Block
 
         $result = "<div class='generated_block'>
                     <div style='width: 33.3333%;margin-left: 10px;'>
-                        <a href='../../../$page->tag/$page->url'>" . $page->title . "</a>
+                        <a href='../../../$page->tag/$page->url' style='overflow-wrap: break-word'>" . $page->title . "</a>
                     </div>
                     
                     <div style='width: 33.3333%;'>$page->date</div>
@@ -39,16 +39,16 @@ class Block
         return $result;
     }
 
-    public static function generate_tagged_block($offer, $img)
+    public static function generate_tagged_block($page)
     {
-        $result = "<div class='blog_content__images_item' style='background-image: url(" . $img . ")'>
+        $result = "<div class='blog_content__images_item' style='background-image: url(" . $page['img_first'] . ")'>
                     <div class='blog_type__item_wrap'></div>
                     <div class='blog_type__content'>
-                        <span class='blog_type__text'>$offer</span>
+                        <span class='blog_type__text'>" . $page['offer'] . "</span>
                     </div>
                     <div class='blog_type__content_hover'>
-                        <span class='blog_type__text_hover'>$offer</span>
-                        <button class='blog_type__btn btn' onclick='modal_on_second()'>Заказать</button>
+                        <span class='blog_type__text_hover'>" . $page['offer'] . "</span>
+                        <a href='/" . $page{'tag'} . "/" . $page['url'] . "' style='text-decoration: none;'><button class='blog_type__btn btn'>Подробнее</button></a>
                     </div>
                 </div>";
 
@@ -132,6 +132,7 @@ class Block
     public static function generate_all_blocks($pages)
     {
         $result = "";
+        $pages = array_reverse($pages, true);
 
         foreach ($pages as $page) {
             if ($page->least) {

@@ -33,11 +33,14 @@ if (isset($_SESSION["user"]) && $_SESSION["user"] === "admin") {
         $page->text = $_POST["text"];
         $page->description = $_POST["description"];
         $page->date = date("Y-m-d H:i:s");
+        $page->least = ($_POST["least"] === "on") ? true : false;
+        $page->most = ($_POST["most"] === "on") ? true : false;
 
         try {
             R::store($page);
             echo "<div><h1 style='color: green'>Успешно</h1></div>";
         }catch (Exception $e) {
+            echo "<h1>" . $e->getMessage() . "</h1>";
             if($e->getLine() === 768) {
                 echo "<h1 style='color:red'>Такое ЧПУ уже существует<h1>";
             }
